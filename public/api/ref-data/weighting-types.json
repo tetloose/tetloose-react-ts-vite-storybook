@@ -1,0 +1,127 @@
+{
+    "weighting_types": [
+        {
+            "id": "Float Market Cap",
+            "name": "Float Market Cap",
+            "stock_event_rules": [
+                {
+                    "id": "IWF Change",
+                    "name": "IWF Change",
+                    "value": "N"
+                },
+                {
+                    "id": "Price Adjustment",
+                    "name": "Price Adjustment",
+                    "value": "N"
+                },
+                {
+                    "id": "Reverse split",
+                    "name": "Reverse split",
+                    "value": "N"
+                },
+                {
+                    "id": "Rights Issue",
+                    "name": "Rights Issue",
+                    "value": "N"
+                },
+                {
+                    "id": "Share Issuance",
+                    "name": "Share Issuance",
+                    "value": "N"
+                },
+                {
+                    "id": "Special dividend",
+                    "name": "Special dividend",
+                    "value": "N"
+                },
+                {
+                    "id": "Stock split",
+                    "name": "Stock split",
+                    "value": "N"
+                }
+            ]
+        },
+        {
+            "id": "Equal Weighted",
+            "name": "Equal Weighted",
+            "stock_event_rules": [
+                {
+                    "id": "IWF Change",
+                    "name": "IWF Change",
+                    "value": "N"
+                },
+                {
+                    "id": "Price Adjustment",
+                    "name": "Price Adjustment",
+                    "value": "N"
+                },
+                {
+                    "id": "Reverse split",
+                    "name": "Reverse split",
+                    "value": "N"
+                },
+                {
+                    "id": "Rights Issue",
+                    "name": "Rights Issue",
+                    "value": "N"
+                },
+                {
+                    "id": "Share Issuance",
+                    "name": "Share Issuance",
+                    "value": "N"
+                },
+                {
+                    "id": "Special dividend",
+                    "name": "Special dividend",
+                    "value": "Y"
+                },
+                {
+                    "id": "Stock split",
+                    "name": "Stock split",
+                    "value": "N"
+                }
+            ]
+        },
+        {
+            "id": "Custom Stock Weighted",
+            "name": "Custom Stock Weighted",
+            "stock_event_rules": [
+                {
+                    "id": "IWF Change",
+                    "name": "IWF Change",
+                    "value": "Y"
+                },
+                {
+                    "id": "Price Adjustment",
+                    "name": "Price Adjustment",
+                    "value": "Y"
+                },
+                {
+                    "id": "Reverse split",
+                    "name": "Reverse split",
+                    "value": "N"
+                },
+                {
+                    "id": "Rights Issue",
+                    "name": "Rights Issue",
+                    "value": "N"
+                },
+                {
+                    "id": "Share Issuance",
+                    "name": "Share Issuance",
+                    "value": "N"
+                },
+                {
+                    "id": "Special dividend",
+                    "name": "Special dividend",
+                    "value": "Y"
+                },
+                {
+                    "id": "Stock split",
+                    "name": "Stock split",
+                    "value": "N"
+                }
+            ]
+        }
+    ]
+}

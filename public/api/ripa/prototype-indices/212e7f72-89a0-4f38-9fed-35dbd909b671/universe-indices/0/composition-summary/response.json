@@ -1,0 +1,50 @@
+{
+    "last_rebalance_date": "20240321",
+    "stock_count": {
+        "value": 1252,
+        "change": -78
+    },
+    "active_share": {
+        "value": 24.2,
+        "change": 0.32
+    },
+    "top_5_stocks": [
+        {
+            "rank": 1,
+            "name": "Universe Apple Inc.",
+            "weight": 9.8
+        },
+        {
+            "rank": 2,
+            "name": "Microsoft Corporation",
+            "weight": 9.56
+        },
+        {
+            "rank": 3,
+            "name": "Alphabet Inc.",
+            "weight": 8.44
+        },
+        {
+            "rank": 4,
+            "name": "Amazon Inc.",
+            "weight": 7.32
+        },
+        {
+            "rank": 5,
+            "name": "Intel Corporation",
+            "weight": 6.8
+        }
+    ],
+    "sector_breakdowns": [
+        {
+            "name": "Energy",
+            "code": 10,
+            "weight": 23.71
+        },
+        {
+            "name": "Materials",
+            "code": 15,
+            "weight": 4.12
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "S&P 500 High Yield Low Volatility",
+    "description": "Free flow text",
+    "id": "112e7f72-89a0-4f38-9fed-35dbd909b671",
+    "last_modified": "2024-04-15T08:42:22.999Z",
+    "asset_class": "Equity",
+    "type": "S&P DJI Owned",
+    "is_archive": false,
+    "created_by": {
+        "id": 1112,
+        "first_name": "John",
+        "last_name": "Doe"
+    },
+    "methodologies": [
+        {
+            "name": "Default version",
+            "id": 0,
+            "last_modified": "2024-04-15T08:42:22.999Z",
+            "index_calc_status": "SUCCESS",
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 0,
+                "first_name": "James",
+                "last_name": "Tetley"
+            }
+        },
+        {
+            "name": "Default version",
+            "id": 1,
+            "last_modified": "2024-04-15T08:42:22.999Z",
+            "index_calc_status": "FAILURE",
+            "index_calc_errors": "There was an error in lorem.",
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 1,
+                "first_name": "Pamela",
+                "last_name": "Lu"
+            }
+        },
+        {
+            "name": "Default version",
+            "id": 2,
+            "last_modified": "2024-04-15T08:42:22.999Z",
+            "index_calc_status": "IN PROGRESS",
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 2,
+                "first_name": "Ricardo",
+                "last_name": "Pumanes"
+            }
+        },
+        {
+            "name": "Default version",
+            "id": 3,
+            "last_modified": "2024-04-15T08:42:22.999Z",
+            "index_calc_status": "PARTIAL",
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 3,
+                "first_name": "Will",
+                "last_name": "Halling"
+            }
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "files.insertFinalNewline": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "CSS": "CSS",
+        "SCSS": "CSS",
+        "typescript": "typescriptreact"
+    },
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    "files.exclude": {
+        ".azuredevops": false,
+        ".d.ts": false,
+        ".husky": false,
+        ".scripts": false,
+        ".vitest": false,
+        ".vscode": false,
+        "node_modules": false,
+        ".editorconfig": false,
+        ".eslintrc.cjs": false,
+        ".gitignore": false,
+        ".stylelintrc.cjs": false,
+        "package.json": false,
+        "toolkit": false,
+        "tsconfig.app.json": false,
+        "tsconfig.json": false,
+        "tsconfig.node.json": false,
+        "vite.config.ts": false,
+        "yarn.lock": false
+    },
+    "search.exclude": {
+        "node_modules": true,
+        "build": true,
+        "storybook-static": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[md]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[mdx]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

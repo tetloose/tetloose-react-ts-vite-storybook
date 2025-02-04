@@ -1,0 +1,29 @@
+{
+    "rebalance_schedule_description": "Rebalance description goes here!",
+    "rebalance_schedules": [
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20220617",
+            "data_reference_date": "20220610",
+            "universe_reference_date": "20220608"
+        },
+        {
+            "rebalance_type": "Reweight",
+            "rebalance_date": "20221216",
+            "data_reference_date": "20221209",
+            "universe_reference_date": "20221207"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20230616",
+            "data_reference_date": "20230609",
+            "universe_reference_date": "20230607"
+        },
+        {
+            "rebalance_type": "Reweight",
+            "rebalance_date": "20231215",
+            "data_reference_date": "20231208",
+            "universe_reference_date": "20231206"
+        }
+    ]
+}

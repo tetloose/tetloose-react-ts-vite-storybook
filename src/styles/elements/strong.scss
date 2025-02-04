@@ -1,0 +1,5 @@
+.typography strong,
+.content strong,
+strong {
+	@extend %f-bold;
+}

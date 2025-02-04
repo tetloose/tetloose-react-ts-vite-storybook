@@ -1,0 +1,280 @@
+{
+    "average": [
+        {
+            "name": "Energy",
+            "weight": 6.58,
+            "code": "36937266",
+            "count": 4
+        },
+        {
+            "name": "Materials",
+            "weight": 3.63,
+            "code": "69880965",
+            "count": 2
+        },
+        {
+            "name": "Industrials",
+            "weight": 8.39,
+            "code": "22447225",
+            "count": 3
+        },
+        {
+            "name": "Consumer Discretionary",
+            "weight": 1.04,
+            "code": "17795479",
+            "count": 5
+        },
+        {
+            "name": "Consumer Staples",
+            "weight": 3.07,
+            "code": "90275769",
+            "count": 5
+        },
+        {
+            "name": "Health Care",
+            "weight": 1.31,
+            "code": "81741248",
+            "count": 3
+        },
+        {
+            "name": "Financials",
+            "weight": 10.65,
+            "code": "56852288",
+            "count": 1
+        },
+        {
+            "name": "Information Technology",
+            "weight": 12.06,
+            "code": "64246406",
+            "count": 2
+        },
+        {
+            "name": "Communication Services",
+            "weight": 14.31,
+            "code": "38306902",
+            "count": 1
+        },
+        {
+            "name": "Utilities",
+            "weight": 10.47,
+            "code": "46971653",
+            "count": 2
+        },
+        {
+            "name": "Real Estate",
+            "weight": 4.6,
+            "code": "42987388",
+            "count": 1
+        }
+    ],
+    "gics_breakdowns": [
+        {
+            "rebalance_date": "20150327",
+            "gics_breakdown": [
+                {
+                    "name": "Energy",
+                    "weight": 9.54,
+                    "change": 2.7,
+                    "code": "25502020",
+                    "change_weight": 2.7,
+                    "count": 1,
+                    "change_count": 3
+                },
+                {
+                    "name": "Materials",
+                    "weight": 0.88,
+                    "change": -14.32,
+                    "code": "25101010",
+                    "change_weight": -14.32,
+                    "count": 4,
+                    "change_count": 1
+                },
+                {
+                    "name": "Industrials",
+                    "weight": 10.47,
+                    "change": 2.81,
+                    "code": "35202010",
+                    "change_weight": 2.81,
+                    "count": 5,
+                    "change_count": -3
+                },
+                {
+                    "name": "Consumer Discretionary",
+                    "weight": 8.74,
+                    "change": -1.52,
+                    "code": "45103010",
+                    "change_weight": -1.52,
+                    "count": 4,
+                    "change_count": -3
+                },
+                {
+                    "name": "Consumer Staples",
+                    "weight": 8.91,
+                    "change": 2.83,
+                    "code": "60101010",
+                    "change_weight": 2.83,
+                    "count": 2,
+                    "change_count": 0
+                },
+                {
+                    "name": "Health Care",
+                    "weight": 11.4,
+                    "change": 0.78,
+                    "code": "40202010",
+                    "change_weight": 0.78,
+                    "count": 3,
+                    "change_count": 0
+                },
+                {
+                    "name": "Financials",
+                    "weight": 6.76,
+                    "change": -3.31,
+                    "code": "35102010",
+                    "change_weight": -3.31,
+                    "count": 5,
+                    "change_count": 3
+                },
+                {
+                    "name": "Information Technology",
+                    "weight": 11.19,
+                    "change": 3.7,
+                    "code": "10102010",
+                    "change_weight": 3.7,
+                    "count": 3,
+                    "change_count": -3
+                },
+                {
+                    "name": "Communication Services",
+                    "weight": 10.46,
+                    "change": 2.25,
+                    "code": "30301010",
+                    "change_weight": 2.25,
+                    "count": 1,
+                    "change_count": -1
+                },
+                {
+                    "name": "Utilities",
+                    "weight": 12.66,
+                    "change": 6.38,
+                    "code": "25501010",
+                    "change_weight": 6.38,
+                    "count": 2,
+                    "change_count": 3
+                },
+                {
+                    "name": "Real Estate",
+                    "weight": 8.99,
+                    "change": -0.26,
+                    "code": "45301010",
+                    "change_weight": -0.26,
+                    "count": 1,
+                    "change_count": 3
+                }
+            ]
+        },
+        {
+            "rebalance_date": "20150625",
+            "gics_breakdown": [
+                {
+                    "name": "Energy",
+                    "weight": 6.5,
+                    "change": 1.37,
+                    "code": "25502020",
+                    "change_weight": 1.37,
+                    "count": 5,
+                    "change_count": 0
+                },
+                {
+                    "name": "Materials",
+                    "weight": 13.06,
+                    "change": 1.42,
+                    "code": "25101010",
+                    "change_weight": 1.42,
+                    "count": 4,
+                    "change_count": -2
+                },
+                {
+                    "name": "Industrials",
+                    "weight": 4.03,
+                    "change": -2.3,
+                    "code": "35202010",
+                    "change_weight": -2.3,
+                    "count": 5,
+                    "change_count": -1
+                },
+                {
+                    "name": "Consumer Discretionary",
+                    "weight": 14.58,
+                    "change": -4.02,
+                    "code": "45103010",
+                    "change_weight": -4.02,
+                    "count": 1,
+                    "change_count": 2
+                },
+                {
+                    "name": "Consumer Staples",
+                    "weight": 14.76,
+                    "change": 0.55,
+                    "code": "60101010",
+                    "change_weight": 0.55,
+                    "count": 3,
+                    "change_count": 2
+                },
+                {
+                    "name": "Health Care",
+                    "weight": 9.74,
+                    "change": -1.22,
+                    "code": "40202010",
+                    "change_weight": -1.22,
+                    "count": 4,
+                    "change_count": -2
+                },
+                {
+                    "name": "Financials",
+                    "weight": 10.35,
+                    "change": 0.88,
+                    "code": "35102010",
+                    "change_weight": 0.88,
+                    "count": 1,
+                    "change_count": 1
+                },
+                {
+                    "name": "Information Technology",
+                    "weight": 12.23,
+                    "change": -2.92,
+                    "code": "10102010",
+                    "change_weight": -2.92,
+                    "count": 1,
+                    "change_count": 3
+                },
+                {
+                    "name": "Communication Services",
+                    "weight": 3.04,
+                    "change": -0.8,
+                    "code": "30301010",
+                    "change_weight": -0.8,
+                    "count": 1,
+                    "change_count": 2
+                },
+                {
+                    "name": "Utilities",
+                    "weight": 9.98,
+                    "change": 0.59,
+                    "code": "25501010",
+                    "change_weight": 0.59,
+                    "count": 3,
+                    "change_count": 1
+                },
+                {
+                    "name": "Real Estate",
+                    "weight": 3.75,
+                    "change": 3.45,
+                    "code": "45301010",
+                    "change_weight": 3.45,
+                    "count": 4,
+                    "change_count": -2
+                }
+            ]
+        }
+    ]
+}

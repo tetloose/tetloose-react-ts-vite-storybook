@@ -1,0 +1,36 @@
+{
+    "top_n_stocks": [
+        {
+            "company": "Amazon",
+            "weight": 11.02
+        },
+        {
+            "company": "Tesla",
+            "weight": 10.62
+        }
+    ],
+    "sector_breakdown": [
+        {
+            "sector_name": "Information Technology",
+            "weight": 11.21,
+            "constituent_count": 12
+        },
+        {
+            "sector_name": "Financials",
+            "weight": 14.78,
+            "constituent_count": 15
+        }
+    ],
+    "country_breakdown": [
+        {
+            "country_name": "United States",
+            "weight": 12.91,
+            "constituent_count": 123
+        },
+        {
+            "country_name": "Canada",
+            "weight": 3.18,
+            "constituent_count": 16
+        }
+    ]
+}

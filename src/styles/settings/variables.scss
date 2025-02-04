@@ -1,0 +1,121 @@
+@function vars($name, $variant) {
+    @if $variant {
+        @return map-get(map-get($vars, $name), $variant);
+    } @else {
+        @return map-get($vars, $name);
+    }
+}
+
+$transition-slow: 500ms;
+$transition-med: 250ms;
+$transition-fast: 75ms;
+$vars: (
+    z-index: (
+        hidden: -1,
+        none: 0,
+        sml: 1,
+        med: 2,
+        lrg: 3,
+        xlrg: 4,
+        xxlrg: 5
+    ),
+    headings: (
+        d1: 56px,
+        d2: 39px,
+        h1: 28px,
+        h2: 24px,
+        h3: 20px,
+        h4: 16px,
+        h5: 14px,
+        h6: 12px
+    ),
+    button: (
+        sml: 12px,
+        lh-sml: 12px,
+        med: 14px,
+        lh-med: 14px,
+        lrg: 16px,
+        lh-lrg: 16px,
+        xlrg: 18px,
+        lh-xlrg: 18px
+    ),
+    input: (
+        sml: 12px,
+        med: 14px,
+        lrg: 16px,
+        xlrg: 18px
+    ),
+    label: (
+        sml: 12px,
+        med: 14px,
+        lrg: 16px,
+        xlrg: 18px
+    ),
+    body: (
+        xsml: 11px,
+        sml: 12px,
+        med: 14px,
+        lrg: 16px,
+        xlrg: 18px
+    ),
+    icons: (
+        xsml: 16px,
+        sml: 20px,
+        med: 22px,
+        lrg: 24px,
+        xlrg: 26px,
+        xxlrg: 34px
+    ),
+    layout: (
+        browser-context: 16px,
+        spacing: 4px
+    ),
+    breakpoint: (
+        sml: 420px,
+        med: 768px,
+        lrg: 1081px,
+        xlrg: 1440px,
+        xxlrg: 1920px
+    ),
+    vw: (
+        fullscreen: 100vw
+    ),
+    vh: (
+        fullscreen: 100vh
+    ),
+    transition-delay: (
+        slow: $transition-slow,
+        med: $transition-med,
+        fast: $transition-fast
+    ),
+    transition-duration: (
+        slow: $transition-slow,
+        med: $transition-med,
+        fast: $transition-fast
+    ),
+    transition-timing: (
+        slow: cubic-bezier(.25, .3, .25, 1),
+        med: cubic-bezier(.25, .3, .25, 1),
+        fast: cubic-bezier(0, 0, .25, 1)
+    ),
+    radius: (
+        round: 50%,
+        sml: 4px,
+        med: 8px,
+        lrg: 10px,
+        xlrg: 12px,
+        xxlrg: 14px
+    ),
+    padding: (
+        sml: 8,
+        med: 16,
+        lrg: 32,
+        xlrg: 48,
+        xxlrg: 64
+    )
+);
+$vw-min: vars(breakpoint, med);
+$vw-max: vars(breakpoint, xxlrg);
+$vw-context: calc($vw-max * .01);
+$vw-adjustment-min: 3vw;
+$vw-adjustment-max: 1vw;

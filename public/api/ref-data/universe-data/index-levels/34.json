@@ -1,0 +1,65 @@
+
+{
+    "index_levels": [
+        {
+            "date": "19900101",
+            "index_level": 1872
+        },
+        {
+            "date": "19910201",
+            "index_level": 1540
+        },
+        {
+            "date": "19920301",
+            "index_level": 896
+        },
+        {
+            "date": "19930401",
+            "index_level": 1203
+        },
+        {
+            "date": "19940501",
+            "index_level": 2087
+        },
+        {
+            "date": "19950601",
+            "index_level": 1230
+        },
+        {
+            "date": "19960701",
+            "index_level": 1610
+        },
+        {
+            "date": "19970801",
+            "index_level": 2417
+        },
+        {
+            "date": "19980901",
+            "index_level": 1569
+        },
+        {
+            "date": "19991001",
+            "index_level": 2407
+        },
+        {
+            "date": "20000208",
+            "index_level": 865
+        },
+        {
+            "date": "20010202",
+            "index_level": 2089
+        },
+        {
+            "date": "20020908",
+            "index_level": 1578
+        },
+        {
+            "date": "20030908",
+            "index_level": 2897
+        },
+        {
+            "date": "20040208",
+            "index_level": 2665
+        }
+    ]
+}

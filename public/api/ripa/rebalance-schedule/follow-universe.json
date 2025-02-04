@@ -1,0 +1,59 @@
+{
+    "rebalance_schedule_description": "Rebalance description goes here!",
+    "rebalance_schedules": [
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170323",
+            "data_reference_date": "20170324",
+            "universe_reference_date": "20170325"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170415",
+            "data_reference_date": "20170416",
+            "universe_reference_date": "20170417"
+        },
+        {
+            "rebalance_type": "Reweight",
+            "rebalance_date": "20170520",
+            "data_reference_date": "20170521",
+            "universe_reference_date": "20170522"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170610",
+            "data_reference_date": "20170611",
+            "universe_reference_date": "20170612"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170705",
+            "data_reference_date": "20170706",
+            "universe_reference_date": "20170707"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170818",
+            "data_reference_date": "20170819",
+            "universe_reference_date": "20170820"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20170930",
+            "data_reference_date": "20171001",
+            "universe_reference_date": "20171002"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20171111",
+            "data_reference_date": "20171112",
+            "universe_reference_date": "20171113"
+        },
+        {
+            "rebalance_type": "Reconstitution",
+            "rebalance_date": "20171225",
+            "data_reference_date": "20171226",
+            "universe_reference_date": "20171227"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "country_breakdowns": [
+        {
+            "rebalance_date": "20230401",
+            "country_breakdown": [
+                { "name": "China", "code": "CN", "weight": 12.19, "count": 17 },
+                {
+                    "name": "Malaysia",
+                    "code": "MY",
+                    "weight": 4.82,
+                    "count": 67
+                },
+                { "name": "Spain", "code": "ES", "weight": 4.82, "count": 52 },
+                { "name": "Israel", "code": "IL", "weight": 4.82, "count": 36 },
+                {
+                    "name": "Ukraine",
+                    "code": "UA",
+                    "weight": 21.49,
+                    "count": 98
+                },
+                {
+                    "name": "Mexico",
+                    "code": "MX",
+                    "weight": 21.49,
+                    "count": 99
+                },
+                {
+                    "name": "United Kingdom",
+                    "code": "GB",
+                    "weight": 21.49,
+                    "count": 46
+                },
+                {
+                    "name": "Switzerland",
+                    "code": "CH",
+                    "weight": 2.06,
+                    "count": 26
+                },
+                { "name": "Egypt", "code": "EG", "weight": 2.06, "count": 26 },
+                {
+                    "name": "Thailand",
+                    "code": "TH",
+                    "weight": 2.06,
+                    "count": 62
+                }
+            ]
+        },
+        {
+            "rebalance_date": "20230415",
+            "country_breakdown": [
+                { "name": "China", "code": "CN", "weight": 12.19, "count": 14 },
+                {
+                    "name": "Malaysia",
+                    "code": "MY",
+                    "weight": 4.82,
+                    "count": 83
+                },
+                { "name": "Spain", "code": "ES", "weight": 4.82, "count": 35 },
+                { "name": "Israel", "code": "IL", "weight": 4.82, "count": 86 },
+                {
+                    "name": "Ukraine",
+                    "code": "UA",
+                    "weight": 21.49,
+                    "count": 38
+                },
+                {
+                    "name": "Mexico",
+                    "code": "MX",
+                    "weight": 21.49,
+                    "count": 95
+                },
+                {
+                    "name": "United Kingdom",
+                    "code": "GB",
+                    "weight": 21.49,
+                    "count": 16
+                },
+                {
+                    "name": "Switzerland",
+                    "code": "CH",
+                    "weight": 2.06,
+                    "count": 90
+                },
+                { "name": "Egypt", "code": "EG", "weight": 2.06, "count": 74 },
+                {
+                    "name": "Thailand",
+                    "code": "TH",
+                    "weight": 2.06,
+                    "count": 22
+                }
+            ]
+        },
+        {
+            "rebalance_date": "20230429",
+            "country_breakdown": [
+                { "name": "China", "code": "CN", "weight": 12.19, "count": 88 },
+                {
+                    "name": "Malaysia",
+                    "code": "MY",
+                    "weight": 4.82,
+                    "count": 56
+                },
+                { "name": "Spain", "code": "ES", "weight": 4.82, "count": 65 },
+                { "name": "Israel", "code": "IL", "weight": 4.82, "count": 58 },
+                {
+                    "name": "Ukraine",
+                    "code": "UA",
+                    "weight": 21.49,
+                    "count": 46
+                },
+                {
+                    "name": "Mexico",
+                    "code": "MX",
+                    "weight": 21.49,
+                    "count": 63
+                },
+                {
+                    "name": "United Kingdom",
+                    "code": "GB",
+                    "weight": 21.49,
+                    "count": 69
+                },
+                {
+                    "name": "Switzerland",
+                    "code": "CH",
+                    "weight": 2.06,
+                    "count": 71
+                },
+                { "name": "Egypt", "code": "EG", "weight": 2.06, "count": 11 },
+                {
+                    "name": "Thailand",
+                    "code": "TH",
+                    "weight": 2.06,
+                    "count": 11
+                }
+            ]
+        }
+    ]
+}

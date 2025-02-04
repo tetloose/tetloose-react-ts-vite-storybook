@@ -1,0 +1,9 @@
+%bg {
+	&.bg-dark {
+		background-color: color(default, dark);
+	}
+
+	&.bg-light {
+		background-color: color(default, light);
+	}
+}

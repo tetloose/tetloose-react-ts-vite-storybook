@@ -1,0 +1,6 @@
+{
+    "index_name": "S&P 500",
+    "start_date": "20240701",
+    "user_subscription_start_date": "20240701",
+    "rebalance_schedule_description": "Rebalance after the close of 3rd Friday of March, June, September & December"
+}

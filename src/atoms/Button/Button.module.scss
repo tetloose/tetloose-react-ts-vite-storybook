@@ -1,0 +1,102 @@
+@import '@styles/settings';
+
+$button-font-size: (
+    xlrg: vars(button, xlrg),
+    lrg: vars(button, lrg),
+    med: vars(button, med),
+    sml: vars(button, sml)
+);
+$button-line-height: (
+    xlrg: vars(button, lh-xlrg),
+    lrg: vars(button, lh-lrg),
+    med: vars(button, lh-med),
+    sml: vars(button, lh-sml)
+);
+
+%type-button {
+    @extend %f-heading;
+    @extend %f-bold;
+    @extend %f-uppercase;
+}
+
+@each $size, $font-value in $button-font-size {
+    %type-button-#{$size} {
+        @extend %type-button;
+        @include sizing('font-size', $font-value);
+        @include sizing('line-height', map-get($button-line-height, $size));
+    }
+}
+
+.button {
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    outline-style: solid;
+    outline-color: transparent;
+    text-decoration: none;
+    user-select: none;
+
+    @include mq-hover {
+        cursor: pointer;
+    }
+
+    &:global([disabled]) {
+        @include disable(true);
+    }
+
+    &.is-primary {
+        display: inline-flex;
+        align-items: center;
+        background-color: color(default, dark);
+        color: color(default, light);
+
+        @include sizing('padding', size(8));
+        @include sizing('outline-width', size(.5));
+
+        @include mq-hover {
+            &:hover,
+            &:focus {
+                background-color: color(default, light);
+                color: color(default, dark);
+                outline-color: color(default, dark);
+            }
+        }
+    }
+
+    &.is-secondary {
+        display: inline-flex;
+        align-items: center;
+        background-color: color(default, light);
+        color: color(default, dark);
+
+        @include sizing('padding', size(8));
+        @include sizing('outline-width', size(.5));
+
+        @include mq-hover {
+            &:hover,
+            &:focus {
+                background-color: color(default, dark);
+                color: color(default, light);
+                outline-color: color(default, light);
+            }
+        }
+    }
+
+    &.is-sml {
+        @extend %type-button-sml;
+    }
+
+    &.is-med {
+        @extend %type-button-med;
+    }
+
+    &.is-lrg {
+        @extend %type-button-lrg;
+    }
+
+    &.is-xlrg {
+        @extend %type-button-xlrg;
+    }
+}

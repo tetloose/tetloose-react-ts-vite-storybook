@@ -1,0 +1,392 @@
+{
+    "reconstitution": {
+        "attributes": [
+            {
+                "id": "EQUITY_ICD.SPDJI.SHARES_OUTSTANDING",
+                "alias": "CalculatedAttribute1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.SHARES_OUTSTANDING",
+                "alias": "CalculatedAttribute2",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.SHARES_OUTSTANDING",
+                "alias": "RankedAttribute1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.GICS_SECTOR_CODE",
+                "alias": "GICS_SECTOR_CODE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.GICS_INDUSTRY_GROUP_CODE",
+                "alias": "GICS_INDUSTRY_GROUP_CODE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "DAY",
+                            "period": 2
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.LOCAL_PRICE",
+                "alias": "LOCAL_PRICE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "DAY",
+                            "period": 2
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.INDEX_WEIGHT",
+                "alias": "INDEX_WEIGHT",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": true
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            }
+        ],
+        "rebalance_rules": {
+            "screening": {
+                "screening_rules": [
+                    {
+                        "id": 1,
+                        "category": "filter",
+                        "enabled": true,
+                        "category_type": "exclude",
+                        "logical_operator": "or",
+                        "conditions": [
+                            {
+                                "id": 2,
+                                "variant": "simple",
+                                "field": "LOCAL_PRICE",
+                                "operator": "equals",
+                                "values": ["1000000"]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "category": "conditional_logic",
+                        "enabled": true,
+                        "category_type": "if",
+                        "field": "COUNTRY_OF_DOMICILE",
+                        "operator": "in",
+                        "values": ["UK"],
+                        "if_rules": [
+                            {
+                                "id": 4,
+                                "category": "filter",
+                                "enabled": true,
+                                "category_type": "include",
+                                "logical_operator": "and",
+                                "conditions": [
+                                    {
+                                        "id": 5,
+                                        "variant": "simple",
+                                        "field": "INDEX_WEIGHT",
+                                        "operator": "less_than",
+                                        "values": ["10"]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "category": "group_constituents",
+                        "enabled": true,
+                        "field": "COUNTRY_OF_DOMICILE",
+                        "instructions": [
+                            {
+                                "id": 7,
+                                "category": "filter",
+                                "enabled": true,
+                                "category_type": "exclude",
+                                "logical_operator": "and",
+                                "conditions": [
+                                    {
+                                        "id": 8,
+                                        "variant": "simple",
+                                        "field": "COUNTRY_OF_DOMICILE",
+                                        "operator": "in",
+                                        "values": ["UK"]
+                                    },
+                                    {
+                                        "id": 9,
+                                        "variant": "simple",
+                                        "field": "INDEX_WEIGHT",
+                                        "operator": "less_than",
+                                        "values": ["8"]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "category": "select_by_rank",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "field": "INDEX_WEIGHT",
+                                "order_by": "asc"
+                            },
+                            {
+                                "field": "INDEX_MCAP",
+                                "order_by": "desc"
+                            }
+                        ],
+                        "target_count": 10,
+                        "buffer_enabled": true,
+                        "buffer_type": "pct_target",
+                        "buffer_value": 20
+                    },
+                    {
+                        "id": 5,
+                        "category": "calculated_attribute",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "field": "INDEX_MCAP"
+                            },
+                            {
+                                "field": "STOCK_MCAP"
+                            }
+                        ],
+                        "constants": [0.75],
+                        "operation": "min",
+                        "direction": "row",
+                        "output_field": "CalculatedAttribute1"
+                    },
+                    {
+                        "id": 6,
+                        "category": "ranked_attribute",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "field": "INDEX_WEIGHT",
+                                "order_by": "asc"
+                            },
+                            {
+                                "field": "INDEX_MCAP",
+                                "order_by": "desc"
+                            }
+                        ],
+                        "output_field": "RankedAttribute1"
+                    }
+                ]
+            },
+            "weighting": {
+                "weighting_type": "CUSTOM",
+                "weighting_rules": [
+                    {
+                        "id": 7,
+                        "category": "cumulative_weight_cap",
+                        "enabled": true,
+                        "top_groups_count": 2,
+                        "constraint_threshold": 0.45,
+                        "constraint_value": 0.4
+                    },
+                    {
+                        "id": 8,
+                        "category": "attribute_weight",
+                        "enabled": true,
+                        "field": "CalculatedAttribute1",
+                        "output_field": "Output-field-1"
+                    },
+                    {
+                        "id": 9,
+                        "category": "calculated_attribute",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "field": "INDEX_MCAP"
+                            },
+                            {
+                                "field": "STOCK_MCAP"
+                            }
+                        ],
+                        "constants": [0.1],
+                        "operation": "product",
+                        "direction": "row",
+                        "output_field": "CalculatedAttribute2"
+                    },
+                    {
+                        "id": 10,
+                        "category": "iterative_cap_floor",
+                        "enabled": true,
+                        "constraint_type": "cap",
+                        "apply_to": "all",
+                        "constraint_threshold": {
+                            "value": 0.12
+                        },
+                        "constraint_value": {
+                            "value": 0.1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "reweighting": {
+        "attributes": [
+            {
+                "id": "EQUITY_ICD.SPDJI.INDEX_WEIGHT",
+                "alias": "INDEX_WEIGHT",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": true
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            }
+        ],
+        "rebalance_rules": {
+            "weighting": {
+                "weighting_type": "CUSTOM",
+                "weighting_rules": [
+                    {
+                        "id": 1,
+                        "category": "attribute_weight",
+                        "enabled": true,
+                        "field": "CalculatedAttribute1",
+                        "output_field": "AttributeWeightField1"
+                    },
+                    {
+                        "id": 2,
+                        "category": "cumulative_weight_cap",
+                        "enabled": true,
+                        "top_groups_count": 2,
+                        "constraint_threshold": 0.45,
+                        "constraint_value": 0.4
+                    },
+                    {
+                        "id": 3,
+                        "category": "calculated_attribute",
+                        "enabled": true,
+                        "fields": [
+                            {
+                                "field": "INDEX_MCAP"
+                            },
+                            {
+                                "field": "STOCK_MCAP"
+                            }
+                        ],
+                        "constants": [0.1],
+                        "operation": "product",
+                        "direction": "row",
+                        "output_field": "CalculatedAttribute2"
+                    },
+                    {
+                        "id": 4,
+                        "category": "iterative_cap_floor",
+                        "enabled": true,
+                        "constraint_type": "cap",
+                        "apply_to": "all",
+                        "constraint_threshold": {
+                            "value": 0.12
+                        },
+                        "constraint_value": {
+                            "value": 0.1
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "category": "ucits_cap",
+                        "enabled": true,
+                        "group_by": "COUNTRY_OF_DOMICILE",
+                        "stock_threshold_value": 0.225,
+                        "stock_cap_value": 0.225,
+                        "ucits_threshold_value": 0.045,
+                        "ucits_group_cap_value": 0.45,
+                        "ucits_stock_cap_value": 0.045
+                    }
+                ]
+            }
+        }
+    }
+}

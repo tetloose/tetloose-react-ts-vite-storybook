@@ -1,0 +1,70 @@
+{
+    "sector_breakdown": [
+        {
+            "sector_name": "Information Technology",
+            "weight": 29.995,
+            "market_cap": 13130.5,
+            "constituent_count": 65
+        },
+        {
+            "sector_name": "Health Care",
+            "weight": 13.242,
+            "market_cap": 3632385.89,
+            "constituent_count": 70
+        },
+        {
+            "sector_name": "Financials",
+            "weight": 12.278,
+            "market_cap": 2213312.22,
+            "constituent_count": 71
+        },
+        {
+            "sector_name": "Consumer Discretionary",
+            "weight": 11.852,
+            "market_cap": 1552145.20,
+            "constituent_count": 66
+        },
+        {
+            "sector_name": "Communication Sevices",
+            "weight": 8.659,
+            "market_cap": 1231525.95,
+            "constituent_count": 66
+        },
+        {
+            "sector_name": "Industrials",
+            "weight": 8.659,
+            "market_cap": 973362.43,
+            "constituent_count": 64
+        },
+        {
+            "sector_name": "Consumer Staples",
+            "weight": 6.426,
+            "market_cap": 845942.21,
+            "constituent_count": 51
+        },
+        {
+            "sector_name": "Energy",
+            "weight": 5.315,
+            "market_cap": 639119.49,
+            "constituent_count": 52
+        },
+        {
+            "sector_name": "Real Estate",
+            "weight": 3.122,
+            "market_cap": 532895.63,
+            "constituent_count": 53
+        },
+        {
+            "sector_name": "Materials",
+            "weight": 1.290,
+            "market_cap": 142895.63,
+            "constituent_count": 56
+        },
+        {
+            "sector_name": "Utilities",
+            "weight": 0.512,
+            "market_cap": 92411.22,
+            "constituent_count": 57
+        }
+    ]
+}

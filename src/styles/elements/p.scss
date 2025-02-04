@@ -1,0 +1,9 @@
+.typography p,
+.content p,
+p {
+	@extend %type-body-med;
+
+	small {
+		@extend %type-body-sml;
+	}
+}

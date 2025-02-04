@@ -1,0 +1,6 @@
+{
+    "index_name": "S&P 500 Focused 50 Index",
+    "start_date": "Index start date: March 4, 1957",
+    "user_subscription_start_date": "user_subscription_start_date",
+    "rebalance_schedule_description": "Rebalances and reweights effective at the open of the Monday following the third Friday of March, June, September and December."
+}

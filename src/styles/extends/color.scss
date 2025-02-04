@@ -1,0 +1,9 @@
+%color {
+	&.color-dark {
+		color: color(default, dark);
+	}
+
+	&.color-light {
+		color: color(default, light);
+	}
+}

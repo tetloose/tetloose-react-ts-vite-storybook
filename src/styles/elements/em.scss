@@ -1,0 +1,5 @@
+.typography a,
+.content em,
+em {
+	@extend %f-italic;
+}

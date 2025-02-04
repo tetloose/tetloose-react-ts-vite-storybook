@@ -1,0 +1,81 @@
+{
+    "name": "S&P 500 High Yield Low Volatility",
+    "description": "Free flow text",
+    "id": "112e7f72-89a0-4f38-9fed-35dbd909b671",
+    "last_modified": "2024-04-15T08:42:22.999Z",
+    "asset_class": "Equity",
+    "type": "S&P DJI Owned",
+    "is_archived": false,
+    "created_by": {
+        "id": 1112,
+        "first_name": "John",
+        "last_name": "Doe"
+    },
+    "universe_index": {
+        "index_id": 410,
+        "index_key": "SPUSA-400-USDUF--P-US-M--",
+        "index_name": "S&P 400",
+        "index_code": "400"
+    },
+    "rebalance_schedule": {
+        "type": "Universe Schedule",
+        "description": "ABC",
+        "start_date": "20140101"
+    },
+    "methodologies": [
+        {
+            "id": 0,
+            "name": "Methodology A",
+            "description": "Methodology A",
+            "last_modified": "2024-01-12T13:01:40.932825",
+            "rebalance_calc_status": "SUCCESS",
+            "rebalance_calc_errors": null,
+            "has_calc_settings": true,
+            "index_calc_status": "SUCCESS",
+            "index_calc_errors": ["Failure 1"],
+            "launch_status": null,
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 0,
+                "first_name": "James",
+                "last_name": "Tetley"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Methodology B",
+            "description": "Methodology B",
+            "last_modified": "2024-01-12T13:01:40.932825",
+            "rebalance_calc_status": "SUCCESS",
+            "rebalance_calc_errors": null,
+            "has_calc_settings": true,
+            "index_calc_status": "SUCCESS",
+            "index_calc_errors": ["Failure 1"],
+            "launch_status": null,
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 0,
+                "first_name": "James",
+                "last_name": "Tetley"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Methodology C",
+            "description": "Methodology C",
+            "last_modified": "2024-01-12T13:01:40.932825",
+            "rebalance_calc_status": "SUCCESS",
+            "rebalance_calc_errors": null,
+            "has_calc_settings": true,
+            "index_calc_status": "SUCCESS",
+            "index_calc_errors": ["Failure 1"],
+            "launch_status": null,
+            "is_index_ordered": false,
+            "created_by": {
+                "id": 0,
+                "first_name": "James",
+                "last_name": "Tetley"
+            }
+        }
+    ]
+}

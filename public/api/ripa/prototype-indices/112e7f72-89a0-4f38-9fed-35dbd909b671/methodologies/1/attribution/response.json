@@ -1,0 +1,30 @@
+{
+    "effects": {
+        "total": -0.05,
+        "selection": -0.6,
+        "allocation": 0.45,
+        "interaction": 5.23
+    },
+    "sector_effects": [
+        {
+            "name": "Energy",
+            "code": 10,
+            "effects": {
+                "total": -0.05,
+                "selection": -0.6,
+                "allocation": 0.45,
+                "interaction": 5.23
+            }
+        },
+        {
+            "name": "Materials",
+            "code": 15,
+            "effects": {
+                "total": -0.05,
+                "selection": -0.6,
+                "allocation": 0.45,
+                "interaction": 5.23
+            }
+        }
+    ]
+}

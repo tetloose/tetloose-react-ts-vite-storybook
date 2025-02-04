@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Typography" />
+
+# Typography
+
+## Import fonts globally
+
+Add fonts to `src/fonts`.
+
+## Font Face Mixin
+
+The font-face mixin takes several augments:
+
+* font-family: Font name
+* file-path: Font location relative the generated css
+* weight: Font weight
+* exts: Font extensions 'eot woff2 woff ttf svg'
+* display: Change the font display
+
+`src/styles/mixins/font-face.scss`
+
+### Example usage:
+
+```
+@include font-face('icons', '@icons/icons', normal, svg woff ttf);
+@include font-face('Heading', '@fonts/Oswald-Light', 300, ttf);
+```
+
+## Font settings
+
+Font family's, weights, style, utilities and sizes are extended from here: `src/styles/settings/typography.scss`
+
+## Font Sizes
+
+Font sizes are stored within a deep map object called vars here: `src/styles/settings/variables.scss`
+
+```
+	type: (
+		h1: 60px,
+		h2: 55px,
+		h3: 50px,
+		h4: 45px,
+		h5: 35px,
+		h6: 30px,
+		body: 16px
+	),
+```
+
+Usage: `vars(type, med)`.

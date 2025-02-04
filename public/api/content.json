@@ -1,0 +1,3044 @@
+{
+    "api": {
+        "productionText": "In Production...",
+        "backtestingText": "Backtesting...",
+        "backtestingCompleteText": "Backtesting Complete",
+        "backtestingRefetch": 30000,
+        "recentCalculationsTimeFrame": 60,
+        "recentlyLunchedTimeFrame": 30,
+        "previewStatusRefetch": 30000,
+        "rebalanceStatusRefetch": 30000
+    },
+    "welcome": {
+        "title": "Welcome to SPICE Index Builder",
+        "subtitle": "Your powerful laboratory to test and launch financial indices.",
+        "items": [
+            {
+                "cube": {
+                    "type": "indexrebalancescheduleassigned"
+                },
+                "title": "Select a Universe",
+                "subtitle": "Define your scope from the extensive collection of S&P DJI indices"
+            },
+            {
+                "cube": {
+                    "type": "indexmethodologycreated",
+                    "color": "9"
+                },
+                "title": "Refine and Backtest",
+                "subtitle": "Experiment and compare various rebalancing rules and settings"
+            },
+            {
+                "cube": {
+                    "type": "launched"
+                },
+                "title": "Order and Launch",
+                "subtitle": "Deploy your index into the financial ecosystem and live markets"
+            }
+        ],
+        "buttonText": "Get started"
+    },
+    "homeHeader": {
+        "userMessage": "Welcome",
+        "toggles": ["Sandbox", "Launched"]
+    },
+    "footerNav": [
+        {
+            "label": "Privacy Policy",
+            "url": "https://google.com",
+            "target": "_blank",
+            "iconLeft": false,
+            "divider": false
+        },
+        {
+            "label": "Data protection",
+            "url": "https://google.com",
+            "target": "_blank",
+            "iconLeft": false,
+            "divider": false
+        },
+        {
+            "label": "Regulatory",
+            "url": "https://google.com",
+            "target": "_blank",
+            "iconLeft": false,
+            "divider": false
+        },
+        {
+            "label": "SPICE IndexManager",
+            "url": "https://google.com",
+            "target": "_blank",
+            "iconLeft": "external-link",
+            "divider": true
+        }
+    ],
+    "messages": {
+        "welcome_message": {
+            "subject": "Welcome to Ripa",
+            "body": "Ultricies commodo ridiculus faucibus nullam enim. Est malesuada gravida quisque at. Penatibus ornare sollicitudin id amet tempor vitae. Congue volutpat aliquet sed sapien blandit est at mattis. Lacus vestibulum velit mollis purus.",
+            "cta": {
+                "label": "Button label",
+                "url": "https://google.com"
+            }
+        },
+        "order_complete_message": {
+            "subject": "reg-index-name has been published",
+            "body": "Ultricies commodo reg-launched-date ridiculus faucibus nullam enim. Est malesuada gravida quisque at. Penatibus ornare sollicitudin id amet tempor vitae. Congue volutpat aliquet sed sapien blandit est at mattis. Lacus vestibulum reg-spice-url velit mollis purus.",
+            "cta": {
+                "label": "Button label",
+                "url": "https://google.com"
+            }
+        },
+        "access_change_message": {
+            "subject": "Your permissions have been updated",
+            "body": "Ultricies commodo ridiculus faucibus nullam enim. Est malesuada gravida quisque at. Penatibus ornare sollicitudin id amet tempor vitae. Congue volutpat aliquet sed sapien blandit est at mattis. Lacus vestibulum velit mollis purus.",
+            "cta": {
+                "label": "Button label",
+                "url": "https://google.com"
+            }
+        },
+        "new_version_message": {
+            "subject": "Version 1.0 has been released",
+            "body": "Ultricies commodo ridiculus faucibus nullam enim. Est malesuada gravida quisque at. Penatibus ornare sollicitudin id amet tempor vitae. Congue volutpat aliquet sed sapien blandit est at mattis. Lacus vestibulum velit mollis purus.",
+            "version": 1,
+            "date": "2024-04-15T08:42:22"
+        },
+        "maintenance_update_message": {
+            "subject": "Maintenance Update",
+            "body": "Ultricies commodo ridiculus faucibus nullam enim. Est malesuada gravida quisque at. Penatibus ornare sollicitudin id amet tempor vitae. Congue volutpat aliquet sed sapien blandit est at mattis. Lacus vestibulum velit mollis purus.",
+            "date": "2024-04-15T08:42:22",
+            "maintenance": true,
+            "cta": {
+                "label": "Button label",
+                "url": "https://google.com"
+            }
+        }
+    },
+    "quickStart": {
+        "tagline": "Build, validate, and deploy your next",
+        "taglines": [
+            "strategic Index",
+            "innovative Index",
+            "global Index",
+            "strategic Index",
+            "diversified Index",
+            "data-driven Index",
+            "sector-specific Index",
+            "trend-focused Index",
+            "sustainable Index",
+            "proactive Index"
+        ],
+        "messages": {
+            "text1": "You have",
+            "text2": "new messages"
+        },
+        "iconList": [
+            {
+                "icon": "index",
+                "label": "Build New Index",
+                "value": "Refine and test your custom index",
+                "active": true,
+                "wizard": "build-index"
+            },
+            {
+                "icon": "folder-upload",
+                "label": "Build Index from Basket",
+                "value": "Start with your own portfolio",
+                "wizard": "build-index-client-owned"
+            },
+            {
+                "icon": "controls-play",
+                "label": "Take a tour",
+                "value": "Learn the basics in 4 minutes",
+                "video": {
+                    "src": "VOlqz66pIj8",
+                    "title": "Watch a video tour"
+                }
+            }
+        ]
+    },
+    "home": {
+        "prototypeDate": "Last edited",
+        "launchedDate": "Launched",
+        "allButtonLabel": "View all",
+        "video": {
+            "title": "Spice Index Builder",
+            "sources": [
+                {
+                    "src": "/assets/video/intro.mp4",
+                    "type": "video/mp4"
+                }
+            ]
+        },
+        "createTitle": "You haven't launched any Indices",
+        "createButtonLabel": "Build a New Index",
+        "createButtonWizard": "build-index"
+    },
+    "indices": {
+        "sandboxHeadings": [
+            {
+                "heading": "indices",
+                "className": "indices",
+                "team": false
+            },
+            {
+                "heading": "Methodologies",
+                "className": "method",
+                "team": false
+            },
+            {
+                "heading": "Licence",
+                "className": "licence",
+                "team": false
+            },
+            {
+                "heading": "Asset Type",
+                "className": "asset-class",
+                "team": false
+            },
+            {
+                "heading": "Transaction id",
+                "className": "transaction-id",
+                "team": false
+            },
+            {
+                "heading": "editor",
+                "className": "editor",
+                "team": true
+            },
+            {
+                "heading": "modified",
+                "className": "modified",
+                "team": false
+            }
+        ],
+        "sandboxOptions": [
+            {
+                "id": "change",
+                "label": "Change Index details",
+                "showDivider": true
+            },
+            {
+                "id": "duplicate",
+                "label": "Duplicate Index"
+            },
+            {
+                "id": "archive",
+                "label": "Archive Index",
+                "showDivider": true
+            },
+            {
+                "id": "unarchive",
+                "label": "Unarchive Index",
+                "showDivider": true
+            },
+            {
+                "id": "delete",
+                "label": "Delete Index",
+                "icon": "trash",
+                "iconColor": "red",
+                "labelColor": "red"
+            }
+        ],
+        "launchedHeadings": [
+            {
+                "heading": "indices",
+                "className": "indices"
+            },
+            {
+                "heading": "Symbol",
+                "className": "is-symbol"
+            },
+            {
+                "heading": "Licence",
+                "className": "licence",
+                "team": false
+            },
+            {
+                "heading": "Asset Type",
+                "className": "asset-class"
+            },
+            {
+                "heading": "Launched on",
+                "className": "launched-on"
+            }
+        ],
+        "launchedOptions": [
+            {
+                "id": "open",
+                "label": "Open in IndexManager",
+                "showDivider": true
+            },
+            {
+                "id": "download-factsheet",
+                "label": "Download Factsheet",
+                "showDivider": true
+            },
+            {
+                "id": "download-methodology",
+                "label": "Download Methodology"
+            }
+        ],
+        "loadMoreText": "Load More",
+        "sandboxTeams": "Show Team Indices",
+        "sandboxTeamsTooltip": "Toggle the ability to only display indices that are part of ",
+        "sandboxMenu": {
+            "label": "build new index",
+            "options": [
+                {
+                    "id": "build",
+                    "label": "Build a new Index",
+                    "subLabel": "Start from an S&P DJI universe",
+                    "showDivider": true,
+                    "icon": "index"
+                },
+                {
+                    "id": "basket",
+                    "label": "Build index from basket",
+                    "subLabel": "Start with your own portfolio",
+                    "showDivider": true,
+                    "icon": "folder-upload"
+                },
+                {
+                    "id": "difference",
+                    "label": "What's the difference?",
+                    "labelColor": "red",
+                    "iconColor": "red"
+                }
+            ]
+        },
+        "sandboxTitle": "Sandbox",
+        "sandboxTooltip": "A space to build, experiment and test custom Indices before launch.",
+        "sandboxArchive": ["Active", "Archived"],
+        "sandboxEmptyTitle": "Your Sandbox is empty.",
+        "sandboxEmptyButton": {
+            "label": "Build a New Index",
+            "wizard": "build-index"
+        },
+        "launchedLink": {
+            "label": "SPICe index Manager",
+            "url": "https://spice-index-manager.com"
+        },
+        "launchedTitle": "Launched",
+        "launchedTooltip": "Indices you have previously launched. Indices launched outside SPICE IndexBuilder will not be displayed here.",
+        "launchedSubTextFirst": "You have launched",
+        "launchedSubTextLast": "Indices",
+        "launchedEmptyTitle": "You haven't launched any Indices",
+        "launchedEmptyButton": {
+            "label": "Build a New Index",
+            "wizard": "build-index"
+        },
+        "modalTitle": "What is the difference between S&P Indices and Custom Indices?",
+        "modalBody": "<p><strong class=\"is-large\">S&P Indices</strong><br>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p><strong class=\"is-large\">Custom Indices</strong><br>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>"
+    },
+    "modals": {
+        "change": {
+            "title": "Change details",
+            "inputLabel": "Draft Index name",
+            "inputHint": "This is a temporary name for your index project",
+            "textareaLabel": "Description (optional)",
+            "applyLabel": "Apply changes",
+            "cancelLabel": "Discard changes"
+        },
+        "duplicate": {
+            "title": "Duplicate Index",
+            "intro": "This action will create a new index that replicates the configuration and methodologies of the current index. Give the new index a unique name.",
+            "inputLabel": "Draft Index name",
+            "inputHint": "This is a temporary name for your index project",
+            "textareaLabel": "Description (optional)",
+            "applyLabel": "Duplicate Index",
+            "cancelLabel": "Cancel"
+        },
+        "archive": {
+            "title": "Archive Index?",
+            "intro": "You are about to archive <strong>reg-index-name</strong>.<br />You will be able to access this index in the Sandbox under \"Archived\".",
+            "applyLabel": "yes, archive",
+            "cancelLabel": "no, keep"
+        },
+        "unarchive": {
+            "title": "Unarchive Index?",
+            "intro": "You are about to Unarchive <strong>reg-index-name</strong>.",
+            "applyLabel": "yes, unarchive",
+            "cancelLabel": "no, keep"
+        },
+        "delete": {
+            "title": "Delete Index?",
+            "intro": "You are about to delete Index <strong>reg-index-name</strong>.<br />Are you sure? You will not be able to recover this index once it has been deleted.",
+            "applyLabel": "yes, delete",
+            "cancelLabel": "no, keep"
+        },
+        "backtest": {
+            "title": "Run backtest?",
+            "intro": "This process might take up to 20 minutes. You will receive an email notification once it is completed",
+            "applyLabel": "Run backtest",
+            "cancelLabel": "Cancel"
+        }
+    },
+    "sort": {
+        "label": "Sort by",
+        "options": [
+            {
+                "label": "Latest first",
+                "value": "asc",
+                "selected": true
+            },
+            {
+                "label": "Oldest first",
+                "value": "desc"
+            },
+            {
+                "label": "Name (A-Z)",
+                "value": "name"
+            }
+        ]
+    },
+    "assetTypeFilter": {
+        "label": "Asset Type",
+        "options": [
+            {
+                "label": "Equity",
+                "value": "equity"
+            },
+            {
+                "label": "Fixed income",
+                "value": "fixed-income"
+            },
+            {
+                "label": "Commodity",
+                "value": "commodity"
+            },
+            {
+                "label": "Fixed Asset",
+                "value": "fixed-asset"
+            },
+            {
+                "label": "Land",
+                "value": "land"
+            },
+            {
+                "label": "Cash",
+                "value": "cash"
+            }
+        ]
+    },
+    "statusFilter": {
+        "label": "Status",
+        "options": [
+            {
+                "label": "Backtesting",
+                "value": "backtesting"
+            },
+            {
+                "label": "In production",
+                "value": "production"
+            }
+        ]
+    },
+    "dropdowns": {
+        "selectAll": "All"
+    },
+    "chartIQ": {
+        "tooltipDefaultDate": "Date",
+        "tooltipDefaultValue": "Value",
+        "screenreaderFieldHeader": "Field",
+        "screenreaderFieldValue": "Value"
+    },
+    "draggableElements": {
+        "prompt": "Drag rule here",
+        "active": "Drop here"
+    },
+    "createdDateFilter": {
+        "label": "Date Created",
+        "options": [
+            {
+                "label": "Today",
+                "value": "today"
+            },
+            {
+                "label": "Last 7 days",
+                "value": "last-7-days"
+            },
+            {
+                "label": "Last 30 days",
+                "value": "last-30-days"
+            },
+            {
+                "label": "This year (2024)",
+                "value": "2024"
+            },
+            {
+                "label": "Last year (2023)",
+                "value": "2023"
+            },
+            {
+                "label": "Custom Date Range",
+                "value": "custom"
+            }
+        ],
+        "customDateConfig": {
+            "customDateOptionValue": "custom",
+            "dateFromLabel": "After",
+            "dateToLabel": "Before",
+            "cancelButtonLabel": "Cancel",
+            "applyButtonLabel": "Apply"
+        }
+    },
+    "sidebar": {
+        "tooltip": {
+            "active": "Hide Sidebar",
+            "inActive": "Show Sidebar"
+        },
+        "top": [
+            {
+                "action": "",
+                "text": "Home",
+                "lottie": "home"
+            },
+            {
+                "action": "sandbox",
+                "text": "Sandbox",
+                "lottie": "sandbox"
+            },
+            {
+                "action": "launched",
+                "text": "Launched",
+                "lottie": "launched"
+            }
+        ],
+        "bottom": [
+            {
+                "action": "activity",
+                "icon": "backtest",
+                "text": "Activity"
+            },
+            {
+                "action": "messages",
+                "icon": "mail",
+                "text": "Messages"
+            },
+            {
+                "action": "support",
+                "icon": "question-circle",
+                "text": "Support"
+            },
+            {
+                "action": "account",
+                "icon": "profile-circle",
+                "text": "Account"
+            }
+        ]
+    },
+    "activityPanel": {
+        "heading": "Activity",
+        "inProgressText": "In Progress",
+        "completedText": "Completed",
+        "failedText": "Failed",
+        "noActivityText": "No activity",
+        "statusText": {
+            "in-progress": "Backtesting...",
+            "complete": "Backtesting completed",
+            "error": "Invalid Request: Universe Index data is missing"
+        }
+    },
+    "accountPanel": {
+        "heading": "Account",
+        "userHeading": "User Account",
+        "companyHeading": "Company Account",
+        "editDetailsButtonText": "Edit Details",
+        "changeEmailButtonText": "Change Email",
+        "changePasswordButtonText": "Change Password",
+        "logoutButtonText": "Log Out",
+        "editDetailsButtonUrl": "https://google.com",
+        "changeEmailButtonUrl": "https://google.com",
+        "changePasswordButtonUrl": "https://google.com",
+        "logoutUrl": "http://logout.com",
+        "fullNameLabel": "Full name",
+        "roleLabel": "Role",
+        "emailLabel": "Email",
+        "passwordLabel": "Password",
+        "companyLabel": "Company"
+    },
+    "supportPanel": {
+        "heading": "Support",
+        "support": [
+            {
+                "heading": "Watch a video tour",
+                "body": "Learn your way around in 4 minutes",
+                "icon": "controls-play",
+                "video": {
+                    "src": "VOlqz66pIj8",
+                    "title": "Watch a video tour",
+                    "poster": "https://via.placeholder.com/550x450"
+                },
+                "form": null,
+                "content": null
+            },
+            {
+                "heading": "Get in touch",
+                "body": "Contact our friendly team",
+                "icon": "message",
+                "video": null,
+                "form": {
+                    "heading": "Get Support",
+                    "body": "Please let us know how we can further support you and one of our team will be in touch in a few days.",
+                    "fail": "Message failed to send:",
+                    "select": {
+                        "label": "I need support with",
+                        "options": [
+                            {
+                                "id": "my-account",
+                                "label": "My Account"
+                            },
+                            {
+                                "id": "indices-in-my-sandbox",
+                                "label": "Indices in my Sandbox"
+                            },
+                            {
+                                "id": "launched-indices",
+                                "label": "Launched indices"
+                            },
+                            {
+                                "id": "creating-methodologies",
+                                "label": "Creating Methodologies"
+                            },
+                            {
+                                "id": "leave-feedback",
+                                "label": "Leave Feedback"
+                            },
+                            {
+                                "id": "others",
+                                "label": "Others"
+                            }
+                        ]
+                    },
+                    "textarea": {
+                        "id": "details",
+                        "label": "Please provide a few details..."
+                    },
+                    "submit": {
+                        "label": "Submit",
+                        "iconRight": "mail"
+                    }
+                },
+                "content": null
+            },
+            {
+                "heading": "Attributes Documentation",
+                "body": "Attribute details for methodologies",
+                "icon": "tag",
+                "video": null,
+                "form": null,
+                "content": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            }
+        ],
+        "faqsTitle": "Frequent Questions",
+        "faqs": [
+            {
+                "heading": "Is there a limit to the number of indices I can create?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            },
+            {
+                "heading": "Where are my published indices?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            },
+            {
+                "heading": "What if I encounter issues backtesting?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            },
+            {
+                "heading": "Can I share my Sandbox Indices with others?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            },
+            {
+                "heading": "How can I backtest against more specific rebalance dates?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": null
+                }
+            },
+            {
+                "heading": "Is there a fee associated with creating indices?",
+                "body": {
+                    "heading": "Attributes Documentation",
+                    "body": "<p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque <a target=\"_blnak\" href=\"https://google.com\">feugiat</a> ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p><p>Lorem ipsum dolor sit amet consectetur. Orci pretium fermentum risus cras. Pellentesque nec orci duis in tincidunt consectetur. Odio erat condimentum neque feugiat ipsum et et in iaculis. Eros tempus commodo sit et elit dolor aliquam odio aliquam.</p>",
+                    "cta": {
+                        "url": "https://google.com",
+                        "label": "Button Label"
+                    }
+                }
+            }
+        ]
+    },
+    "messagePanel": {
+        "heading": "Messages",
+        "tooltip": {
+            "teaser": "",
+            "body": "Message notifications"
+        },
+        "toggle": {
+            "unreadText": "Unread",
+            "allText": "All"
+        },
+        "deleteHint": "Delete message",
+        "deleteAllText": "Delete All",
+        "noMessageText": "No messages",
+        "modalTitle": "Delete all messages",
+        "modalIntro": "<p>You are about to delete all messages</p>",
+        "modalApplyText": "yes, delete",
+        "modalDiscardText": "no, keep"
+    },
+    "universeDetails": {
+        "layout": {
+            "title": "Select an S&P DJI universe",
+            "subtitle": "Choose a universe as the starting point for your new index. You can compare several indices to find the best fit.",
+            "backToTop": "Back to Top",
+            "description": "Description",
+            "asOf": "Data as of",
+            "downloadFactsheet": "Download Factsheet",
+            "downloadMethodology": "Download Methodology",
+            "viewInIndex": "View in IndexManager",
+            "details": "Details",
+            "selectUniverse": "Select Universe",
+            "exitComparison": "Exit Comparison",
+            "colors": [
+                "#2C71E8",
+                "#F1A649",
+                "#54BAA0",
+                "#782080",
+                "#1D3BAA",
+                "#125E1F",
+                "#CD6083",
+                "#EC8200",
+                "#B280B6",
+                "#E8AE92",
+                "#C94100"
+            ],
+            "grayColor": "#e8eae8",
+            "indexLevel": "Index Level"
+        },
+        "quickFacts": {
+            "title": "Quick Facts",
+            "weightingMethod": "Weighting Method",
+            "rebalancingFrequency": "Rebalancing Frequency"
+        },
+        "characteristics": {
+            "title": "Characteristics",
+            "numberOfConstituents": "Number of Constituents",
+            "constituentMarket": "Constituent Market",
+            "constituentTotalMarketCap": "Constituent Total Market Cap",
+            "meanMarketCap": "Mean Market Cap",
+            "largestMarketCap": "Largest Market Cap",
+            "smallestMarketCap": "Smallest Market Cap",
+            "medianMarketCap": "Median Market Cap",
+            "weightLargestConstituents": "Weight Largest Constituents",
+            "weightTop10Constituents": "Weight Top 10 Constituents"
+        },
+        "esgCharacteristics": {
+            "title": "ESG Characteristics",
+            "carbonToValueInvested": "Carbon to Value Invested (t/M$)",
+            "carbonToRevenue": "Carbon to Revenue ($/t)",
+            "weightedAverageCarbonIntensity": "Weighted Average Carbon Intensity (t/M$)",
+            "fossilFuelReverseEmissions": "Fossil Fuel Reverse Emissions (t/M$)"
+        },
+        "compositionBreakdown": {
+            "title": "Breakdown",
+            "dropdownOptionPrefix": "By",
+            "breakdownOptions": [
+                {
+                    "id": "sector",
+                    "label": "Sector"
+                },
+                {
+                    "id": "country",
+                    "label": "Country"
+                },
+                {
+                    "id": "currency",
+                    "label": "Currency"
+                }
+            ],
+            "weightHeading": "Weight",
+            "marketCapHeading": "Market Cap",
+            "countHeading": "Count",
+            "colors": [
+                "#2C71E8",
+                "#F1A649",
+                "#54BAA0",
+                "#782080",
+                "#1D3BAA",
+                "#125E1F",
+                "#CD6083",
+                "#EC8200",
+                "#B280B6",
+                "#E8AE92",
+                "#C94100"
+            ],
+            "disclaimer": "Sector breakdown is based on GICS® definitions."
+        },
+        "historicalPerformance": {
+            "title": "Historical Performance",
+            "indexTypes": [
+                {
+                    "id": "PR",
+                    "label": "Price Return"
+                },
+                {
+                    "id": "TR",
+                    "label": "Total Return"
+                },
+                {
+                    "id": "NTR",
+                    "label": "Net Total Return"
+                }
+            ],
+            "periods": ["MTD", "QTD", "YTD", "1Y", "3Y", "5Y", "10Y", "ALL"],
+            "rowLabels": {
+                "inception": "ALL",
+                "1_month": "MTD",
+                "3_months": "QTD",
+                "ytd": "YTD",
+                "1_year": "1Y",
+                "3_years": "3Y",
+                "5_years": "5Y",
+                "10_years": "10Y"
+            },
+            "cartesianGridColor": "#a0a0a0",
+            "gridLabelColor": "#767676",
+            "gridVerticalColor": "#000"
+        },
+        "fundamentals": {
+            "title": "Fundamentals",
+            "pETrailing": "P/E( Trailing)",
+            "pEProjected": "P/E (Projected)",
+            "pB": "P/B",
+            "indicatedDivYield": "Indicated Div Yield",
+            "pSales": "P/Sales",
+            "pCashFlow": "P/Cash Flow"
+        }
+    },
+    "universesTable": {
+        "tooltipContent": "Upgrade your data permissions to select this universe",
+        "maxCompareUniverses": 4,
+        "selectedPlaceholder": "Select universes to compare (max 4)",
+        "emptyMessage": "Select a universe to view details here",
+        "backToTop": "Back to Top",
+        "description": "Description",
+        "title": "Select an S&P DJI universe",
+        "subtitle": "Choose a universe as the starting point for your new index. You can compare several indices to find the best fit.",
+        "toggleText": "Show licensed only",
+        "toggleTooltipText": "Show or hide licensed universes",
+        "header": {
+            "searchPlaceholder": "SEARCH",
+            "filterButtonText": "Filters",
+            "compareButtonText": "Compare",
+            "exitCompareButtonText": "Exit Compare"
+        },
+        "footer": {
+            "compareButtonText": "Compare universes"
+        },
+        "tableHeaders": [
+            {
+                "dataIndex": "name",
+                "key": "name",
+                "title": "Universes"
+            },
+            {
+                "dataIndex": "constituent_count",
+                "key": "constituent_count",
+                "title": "Constituent Count"
+            },
+            {
+                "dataIndex": "geography",
+                "key": "geography",
+                "title": "Geography"
+            }
+        ]
+    },
+    "rebalanceSchedule": {
+        "title": "Set a Rebalance Schedule",
+        "subtitle": "Define when and how often your index should rebalance.",
+        "scheduleOption": {
+            "title": "Select a schedule option",
+            "tooltip": "This option will soon be available. Please contact support for more information",
+            "options": [
+                {
+                    "label": "Use Universe Schedule",
+                    "value": "Identical rebalance schedule to your selected universe",
+                    "id": "universe"
+                },
+                {
+                    "label": "Create Custom Schedule",
+                    "value": "Define your own flexible  rebalance schedule",
+                    "id": "custom"
+                },
+                {
+                    "label": "Upload Schedule",
+                    "value": "Manually upload your schedule dates in CSV format",
+                    "id": "upload"
+                }
+            ]
+        },
+        "startDate": {
+            "title": "Schedule start date",
+            "label": "Start Date",
+            "tooltip": "Start Date Tooltip"
+        },
+        "schedulePreview": {
+            "title": "Schedule Preview",
+            "tooltipData": "Data reference date:",
+            "tooltipUniverse": "Universe reference date:",
+            "helpText": "Set a schedule to preview rebalance dates",
+            "helpUploadText": "Upload a CSV file to preview rebalance dates",
+            "loadingText": "Fetching dates...",
+            "csvFilename": "test-csv-filename",
+            "csvHeaders": [
+                "Rebalance Type",
+                "Rebalance Date",
+                "Date Reference Date",
+                "Universe Reference Date"
+            ],
+            "ctas": {
+                "generate": {
+                    "url": "#",
+                    "label": "Generate Preview"
+                },
+                "preview": {
+                    "url": "#",
+                    "label": "Update Preview"
+                }
+            }
+        },
+        "universeSchedule": {
+            "dateText": "Index start date"
+        },
+        "universeScheduleSetup": {
+            "title": "Schedule setup",
+            "dateLabel": "Start Date",
+            "text": "Choose a start date for your index rebalance schedule."
+        },
+        "scheduleSetup": {
+            "title": "Schedule setup",
+            "dateLabel": "Start Date",
+            "presetLabel": "Schedule preset (optional)",
+            "text": "Choose a start date for your index rebalance schedule and select from common presets to set your reconstitution and reweighting frequency. This allows you to benchmark your index performance effectively.",
+            "items": [
+                {
+                    "id": "1",
+                    "label": "Schedule Preset 1"
+                },
+                {
+                    "id": "2",
+                    "label": "Schedule Preset 2"
+                }
+            ]
+        },
+        "concurrenceRulesCard": {
+            "title": "Schedule",
+            "addTextCta": {
+                "url": "#",
+                "label": "Add another Schedule"
+            },
+            "toggleNumberLabel": "Number",
+            "toggleUnitLabel": "Unit",
+            "rebalanceCycle": {
+                "title": "Rebalance cycle",
+                "cta": {
+                    "url": "#",
+                    "label": "Select All"
+                },
+                "months": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ]
+            },
+            "day": {
+                "title": "Day",
+                "frequency": {
+                    "label": "Frequency",
+                    "items": [
+                        {
+                            "id": "ON_THE_FIRST_BUSINESS_DAY",
+                            "label": "On the first business day",
+                            "selected": true
+                        },
+                        {
+                            "id": "ON_THE_LAST_BUSINESS_DAY",
+                            "label": "On the last business day"
+                        },
+                        {
+                            "id": "ON_THE_FIRST",
+                            "label": "On the first"
+                        },
+                        {
+                            "id": "ON_THE_LAST",
+                            "label": "On the last"
+                        },
+                        {
+                            "id": "ON_THE_SECOND",
+                            "label": "On the second"
+                        },
+                        {
+                            "id": "ON_THE_THIRD",
+                            "label": "On the third"
+                        },
+                        {
+                            "id": "ON_THE_FOURTH",
+                            "label": "On the fourth"
+                        },
+                        {
+                            "id": "ON_A_SPECIFIC_DAY",
+                            "label": "On a specific day"
+                        }
+                    ]
+                },
+                "dayOfTheMonth": {
+                    "label": "Day of the month"
+                },
+                "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+            },
+            "dataReferenceDate": {
+                "title": "Data reference date",
+                "text": "By default, this is the last business day of month prior to rebalance date.",
+                "switch": "ON",
+                "tooltip": "This is the specific date on which the data (like prices, dividends, and earnings) is captured to calculate the index's value.",
+                "toggleText": "Use custom date",
+                "afterText": "before the rebalance date"
+            },
+            "universeReferenceDate": {
+                "title": "Universe reference date",
+                "text": "By default, this is the last business day of month prior to rebalance date.",
+                "switch": "OFF",
+                "tooltip": "This refers to the date used to determine which stocks or assets are included in the index based on their eligibility criteria, such as market capitalization or liquidity.",
+                "toggleText": "Use a custom date",
+                "afterText": "before the rebalance date"
+            }
+        },
+        "universeScheduleHeader": {
+            "title": "Universe rebalance schedule",
+            "text": "Follows the schedule of the selected universe. Regularly updates the index by adding qualifying assets, removing those that no longer meet criteria, and adjusting their weights to reflect current market conditions.",
+            "reconstitutionIconText": "Reconstitution",
+            "reweightingIconText": "Reweighting"
+        },
+        "rebalanceScheduleHeader": {
+            "title": "Rebalance schedule",
+            "text": "Regularly updates the index by adding qualifying assets, removing those that no longer meet criteria, and adjusting their weights to reflect current market conditions.",
+            "reconstitutionIconText": "Reconstitution",
+            "reweightingIconText": "Reweighting"
+        },
+        "reweightingHeader": {
+            "title": "Custom Reweighting Schedule (Optional)",
+            "text": "Modifies the proportional weight of each component within the index. It aims to maintain balance and prevent any single asset from skewing the index's overall performance. By default, reweighting follows the reconstitution schedule.",
+            "reweightingIconText": "Reweighting"
+        },
+        "uploadDatesHeader": {
+            "title": "Upload Schedule",
+            "text": "Regularly updates the index by adding qualifying assets, removing those that no longer meet criteria, and adjusting their weights to reflect current market conditions.",
+            "reconstitutionIconText": "Reconstitution",
+            "reweightingIconText": "Reweighting"
+        },
+        "cta": {
+            "url": "#",
+            "label": "Confirm Schedule"
+        },
+        "uploadDates": {
+            "title": "How it works",
+            "howItWorks": [
+                "Download the",
+                "Fill out the template file with your custom dates",
+                "Re-upload the CSV file to validate and set your dates"
+            ],
+            "csvTemplateCta": {
+                "url": "/assets/rebalance/template.csv",
+                "label": "CSV Template"
+            },
+            "uploadCsvFile": {
+                "label": "Upload CSV File"
+            }
+        }
+    },
+    "buildNewIndex": {
+        "header": {
+            "title": "Build New Index",
+            "subtitle": "Establish fundamentals of your index"
+        },
+        "form": {
+            "projectDetails": {
+                "title": "Project details",
+                "nameInput": {
+                    "label": "Draft Index name",
+                    "placeholder": "'s new index",
+                    "hint": "You can change this name later"
+                },
+                "descriptionInput": {
+                    "id": "desc-input",
+                    "label": "Description"
+                }
+            },
+            "indexType": {
+                "title": "Index Type",
+                "assetClassInput": {
+                    "label": "Asset Class",
+                    "value": "EQUITY",
+                    "hint": "We currently exclusively support Equity indices",
+                    "options": [
+                        {
+                            "id": "1",
+                            "label": "Equity",
+                            "selected": true
+                        }
+                    ]
+                },
+                "type": {
+                    "value": "S&P DJI Owned"
+                }
+            },
+            "previousConfiguration": {
+                "title": "Apply Previous Configuration",
+                "description": "Use the universe and rebalance schedule from a previously created index",
+                "searchText": "Search",
+                "projects": [
+                    {
+                        "id": "1",
+                        "name": "Tech Sector Momentum Index"
+                    },
+                    {
+                        "id": "2",
+                        "name": "Dow Jones Sustainability North America Ex-Alcohol, Tobacco, Gambling, Armaments & Firearms, and Adult Entertainment Index"
+                    },
+                    {
+                        "id": "3",
+                        "name": "Emerging Markets Stability Index"
+                    },
+                    {
+                        "id": "4",
+                        "name": "Sustainable Finance Test Index"
+                    }
+                ],
+                "buttonText": "CHOOSE PROJECT"
+            },
+            "success": "Successfully created new index",
+            "fail": "Failed to create new index",
+            "validations": {
+                "name": {
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 2000
+                },
+                "description": {
+                    "required": false,
+                    "minLength": 10,
+                    "maxLength": 4000
+                }
+            },
+            "errors": {
+                "name": {
+                    "alreadyExists": "Name already exists",
+                    "tooShort": "Name should be at least 1 character in length",
+                    "tooLong": "Name should be under 2000 characters in length",
+                    "blank": "Name cannot be null"
+                },
+                "description": {
+                    "tooShort": "Description should be at least 10 characters in length and should contain at least 1 non whitespace",
+                    "tooLong": "Description should be under 4000 characters in length",
+                    "blank": "Description cannot be null"
+                }
+            }
+        },
+        "footer": {
+            "submitButtonText": "BUILD INDEX"
+        }
+    },
+    "notFound": {
+        "title": "404 Page not found",
+        "subtitle": "Please click the link below to goto the dashboard home",
+        "linkLabel": "Dashboard Home",
+        "linkUrl": "/"
+    },
+    "methodologySettings": {
+        "header": {
+            "title": "Methodology Settings",
+            "subtitle": "Set the framework that will sculpt your financial index."
+        },
+        "footer": {
+            "saveChangesButtonText": "Save Changes"
+        },
+        "tabs": [
+            {
+                "label": "Corporate Action Treatment"
+            },
+            {
+                "label": "Currency"
+            },
+            {
+                "label": "Return Type"
+            },
+            {
+                "label": "Fee Reduction/Decrement"
+            }
+        ],
+        "errors": {
+            "combinationError": "Combination is required.",
+            "decrementValueError": "Decrement value is required.",
+            "baseValueError": "Base value is required.",
+            "baseDateError": "Base date is required."
+        },
+        "corporateActionTreatment": {
+            "title": "Select Corporate Action Treatment",
+            "body": "Select how stocks influence the index's performance. Opt for float market cap to prioritize larger companies, equal weight for balance, or custom stock weight for tailored preferences. Your choice shapes the index's composition and aligns with your investment strategy.",
+            "header": "You can change your weighting type when creating your rebalance rules",
+            "spinOffTreatmentDropdown": {
+                "label": "Spin off treatment"
+            },
+            "weightingTypeDropdown": {
+                "label": "Weighting type"
+            },
+            "weightingTypeButtonLabel": "Change weighting",
+            "weightingTypeDescriptions": [
+                {
+                    "id": "Float Market Cap",
+                    "description": "Indices where constituent weights are determined by their float-adjusted market capitalization"
+                },
+                {
+                    "id": "Equal Weighted",
+                    "description": "Assigns the same weight to every stock during rebalancing, ensuring equal investment amounts in each instrument for a portfolio tracking the index."
+                },
+                {
+                    "id": "Custom Stock Weighted",
+                    "description": "Indices in which constituents’ weights are defined by a factor other than market capitalization. Between index rebalancings, corporate actions generally have no effect on index weights."
+                }
+            ]
+        },
+        "currency": {
+            "title": "Select Currency",
+            "body": "Select currencies for the index components. USD is the default. Choose additional currencies to include. Define decrement type to apply a fee reduction: single selection for reduction.",
+            "header": "You can change your weighting type when creating your rebalance rules",
+            "placeholder": "Search",
+            "dropdown": {
+                "label": "Select Currency"
+            }
+        },
+        "returnType": {
+            "title": "Select Return Type",
+            "body": "Your index naturally has a price return and total return, reflecting only price changes and dividends.",
+            "toggleLabel": "I want to set net total return",
+            "tableTitle": "Tax Rate Breakdown",
+            "tableTooltip": "Tooltip text",
+            "tableBody": "The countries displayed are related to the currencies of have selected for your index. You can find this in the Currency tab.",
+            "table": {
+                "tableHeaders": [
+                    "Country",
+                    "Effective from Date",
+                    "Effective to Date",
+                    "Payment Type",
+                    "Tax Rate"
+                ]
+            }
+        },
+        "feeReduction": {
+            "title": "Apply a Fee Reduction/Decrement",
+            "body": "Optionally apply a fee reduction to the selected currencies. Choose between two methods: index point or standard fee. Index point applies the fee based on index performance, while standard fee applies a fixed fee regardless of performance.",
+            "toggleLabel": "I want to set a fee reduction",
+            "header": "Combination",
+            "buttonLabel": "Remove",
+            "subTitle": "Select Combination to Apply Fee Reduction/Decrement To",
+            "decrementLabel": "Decrement Value *",
+            "dateLabel": "Base Date",
+            "baseLabel": "Base Value",
+            "combinationLabel": "with a",
+            "feeReductionTypeDefaultValue": "Fixed Percentage Fee Reduction",
+            "addCombinationButtonLabel": "Add another combination",
+            "radioOptions": [
+                {
+                    "label": "Fixed Percentage Fee Reduction",
+                    "value": "Fixed Percentage Fee Reduction"
+                },
+                {
+                    "label": "Standard Percentage Fee Reduction",
+                    "value": "Standard Percentage Fee Reduction"
+                }
+            ]
+        },
+        "stockEventRulesOptions": [
+            { "id": "Y", "label": "Yes" },
+            { "id": "N", "label": "No" }
+        ]
+    },
+    "indexEditor": {
+        "header": {
+            "createTitle": "Create Methodology",
+            "backtestTooltip": "Update backtest",
+            "benchmark": {
+                "title": "Benchmark",
+                "body": "Reference data used to measure the difference to your Methodology.",
+                "dropdown": [
+                    {
+                        "id": "universe_index",
+                        "label": "Universe Index"
+                    }
+                ]
+            },
+            "universeInView": {
+                "title": "Universe in view",
+                "body": "View your universe side-by-side with methodologies'",
+                "label": "Show universe"
+            },
+            "returnType": {
+                "title": "Return type",
+                "body": "View performance based on a specific index return type.",
+                "dropdown": [
+                    {
+                        "id": "tr",
+                        "label": "Total Return"
+                    },
+                    {
+                        "id": "pr",
+                        "label": "Price Return"
+                    },
+                    {
+                        "id": "ntr",
+                        "label": "Net Total Return"
+                    }
+                ]
+            },
+            "effectiveDate": {
+                "title": "Data preference",
+                "body": "Select how data is displayed",
+                "dropdown": [
+                    {
+                        "id": "recent",
+                        "label": "Most recent date"
+                    },
+                    {
+                        "id": "month_end",
+                        "label": "Most recent month end date"
+                    }
+                ]
+            },
+            "menu": {
+                "menuTooltip": "More Options",
+                "options": [
+                    {
+                        "id": "change",
+                        "label": "Change Index details",
+                        "showDivider": true
+                    },
+                    {
+                        "id": "duplicate",
+                        "label": "Duplicate Index"
+                    },
+                    {
+                        "id": "archive",
+                        "label": "Archive Index",
+                        "showDivider": true
+                    },
+                    {
+                        "id": "delete",
+                        "icon": "trash",
+                        "labelColor": "red",
+                        "label": "Delete Index"
+                    }
+                ]
+            },
+            "title": "Methodologies",
+            "body": "Construct and compare strategies to meet index goals",
+            "clientTitle": "Portfolio",
+            "clientBody": "Lorem ipsum dolor sit amet consectetur.",
+            "analyticsComposition": [
+                {
+                    "id": "composition-summary",
+                    "label": "Composition"
+                }
+            ],
+            "analyticsPerformance": [
+                {
+                    "id": "performance-summary",
+                    "label": "Performance Summary"
+                },
+                {
+                    "id": "index-levels",
+                    "label": "Index Levels"
+                },
+                {
+                    "id": "return",
+                    "label": "Return"
+                },
+                {
+                    "id": "volatility",
+                    "label": "Volatility"
+                },
+                {
+                    "id": "tracking-error",
+                    "label": "Tracking Error"
+                },
+                {
+                    "id": "drawdown",
+                    "label": "Drawdown"
+                },
+                {
+                    "id": "turnover",
+                    "label": "Turnover"
+                },
+                {
+                    "id": "attribution",
+                    "label": "Attribution"
+                }
+            ],
+            "analyticsPerformanceClient": [
+                {
+                    "id": "performance-summary",
+                    "label": "Performance Summary"
+                },
+                {
+                    "id": "index-levels",
+                    "label": "Index Levels"
+                },
+                {
+                    "id": "return",
+                    "label": "Return"
+                },
+                {
+                    "id": "tracking-error",
+                    "label": "Tracking Error"
+                },
+                {
+                    "id": "drawdown",
+                    "label": "Drawdown"
+                },
+                {
+                    "id": "turnover",
+                    "label": "Turnover"
+                }
+            ],
+            "analyticsTypeLabel": "as of last rebalance date",
+            "period": ["ytd", "1y", "3y", "5y", "10y", "all"]
+        },
+        "volatility": {
+            "yearlyVolatilityLabel": "Yearly Volatility",
+            "averageVolatilityLabel": "Av. Volatility"
+        },
+        "turnover": {
+            "yearlyVolatilityLabel": "Calendar Year Turnover",
+            "averageVolatilityLabel": "Av. Turnover",
+            "turnoverTooltipLabel": "Turnover"
+        },
+        "trackingError": {
+            "yearlyLabel": "Yearly Tracking Error",
+            "averageLabel": "Av. Tracking Error"
+        },
+        "return": {
+            "yearlyLabel": "Yearly Returns",
+            "averageLabel": "Av. Returns"
+        },
+        "performanceSummary": {
+            "indexLevelsLabel": "Index Levels",
+            "annualizedReturnLabel": "Annualized Return",
+            "annualizedVolatilityLabel": "Annualized Volatility",
+            "annualizedTrackingErrorLabel": "Annualized Tracking Error",
+            "totalTurnoverLabel": "Total Turnover",
+            "maximumDrawdownLabel": "Maximum Drawdown"
+        },
+        "drawdown": {
+            "longestDrawdownLabel": "Longest Drawdown",
+            "largestDrawdownLabel": "Largest Drawdowns"
+        },
+        "datapoint": {
+            "daysLabel": "days",
+            "onLabel": "on"
+        },
+        "otherView": {
+            "indexLevelsLabel": "Index Levels",
+            "outpeformdaysLabel": "Outpeform days",
+            "battingAverageLabel": "Batting average"
+        },
+        "attribution": {
+            "totalEffectLabel": "Total Effect",
+            "selectionEffectLabel": "Selection Effect",
+            "allocationEffectLabel": "Allocation Effect",
+            "interactionEffectLabel": "Interaction Effect"
+        },
+        "composition": {
+            "stockCountLabel": "Stock count",
+            "activeShareLabel": "Active share",
+            "top5StocksLabel": "Top 5 stocks",
+            "sectorBreakdownLabel": "Sector breakdown"
+        },
+        "cardStates": {
+            "addDescriptionLabel": "Add a description...",
+            "emptyLabel": "Add rules to generate a composition preview",
+            "emptyCta": "Add Rules",
+            "runBacktestLabel": "Run a backtest to view performance",
+            "runBacktestCta": "Run backtest",
+            "backtestingInProgressLabel": "Backtesting...",
+            "notApplicableLabel": "Tracking error not applicable"
+        },
+        "cardContext": {
+            "options": [
+                {
+                    "id": "change",
+                    "label": "Change Details",
+                    "showDivider": true
+                },
+                {
+                    "id": "duplicate",
+                    "label": "Duplicate",
+                    "showDivider": true
+                },
+                {
+                    "id": "delete",
+                    "label": "Delete",
+                    "labelColor": "red",
+                    "icon": "trash",
+                    "iconColor": "red"
+                }
+            ]
+        },
+        "methodologyModals": {
+            "change": {
+                "title": "Change Methodology Details",
+                "inputLabel": "Draft Methodology name",
+                "inputHint": "This is a temporary name for your index project",
+                "textareaLabel": "Description (optional)",
+                "applyLabel": "Apply changes",
+                "cancelLabel": "Discard changes"
+            },
+            "duplicate": {
+                "title": "Duplicate Methodology",
+                "intro": "This action will create a new methodology with the same configuration as this methodology. ",
+                "inputLabel": "Draft Methodology name",
+                "inputHint": "This is a temporary name for your index project",
+                "textareaLabel": "Description (optional)",
+                "applyLabel": "Duplicate Methodology",
+                "cancelLabel": "Cancel"
+            },
+            "delete": {
+                "title": "Delete {{methodologyName}}?",
+                "intro": "You are about to delete <strong>{{methodologyName}}</strong>.<br />Are you sure? You will not be able to recover this Methodology once it has been deleted.",
+                "applyLabel": "yes, delete",
+                "cancelLabel": "no, keep"
+            }
+        },
+        "universeCard": {
+            "captionLabel": "Universe Index"
+        },
+        "universeWindow": {
+            "name": "Choose a Universe Index",
+            "description": "Choose a S&P DJI index used as scope and initial benchmark for your index",
+            "label": "Choose universe"
+        },
+        "rebalanceWindow": {
+            "name": "Set a Rebalance Schedule",
+            "description": "Set the frequency in which the index adjusts the constituents",
+            "label": "Set schedule"
+        },
+        "createWindow": {
+            "name": "Create a Methodology",
+            "description": "Create a strategy to select constituents for your index",
+            "label": "Create Methodology"
+        },
+        "addWindow": {
+            "name": "Add a Methodology",
+            "description": "Create a strategy to select constituents for your index",
+            "label": "Add Methodology"
+        },
+        "portfolioWindow": {
+            "name": "Upload Portfolio",
+            "description": "Upload your own basket of stocks and reveal composition metrics",
+            "label": "Upload portfolio"
+        },
+        "settingsWindow": {
+            "description": "Define settings to run a backtest",
+            "label": "Configure settings"
+        },
+        "backtestWindow": {
+            "description": "Run a backtest to view performance",
+            "label": "Run Backtest"
+        },
+        "backtestingWindow": {
+            "name": "Backtesting…",
+            "description": "You will be notified once the backtest is in completed"
+        },
+        "panel": {
+            "djiTooltipTitle": "S&P DJI License",
+            "djiTooltip": "Tooltip content not found, client to supply",
+            "clientTooltipTitle": "Client License",
+            "clientTooltip": "Tooltip content not found, client to supply",
+            "portfolioCta": "Add a Portfolio",
+            "portfolioLabel": "Portfolio",
+            "configCta": "Configure settings",
+            "configLabel": "Index Settings",
+            "configValue": "Settings Configuration",
+            "orderButton": "Order Index",
+            "disabledText": "Complete setup to order index",
+            "editedText1": "Edited",
+            "editedText2": "by",
+            "inProductionText": "Index being published...",
+            "orderedText": "Index Ordered",
+            "indexOrderedText": "Index Ordered",
+            "setupText": "Complete setup to run backtest",
+            "backtestText": "Backtesting...",
+            "backtestCompleteText": "Backtest up to date",
+            "backtestButtonText": "Run backtest",
+            "modalTitleText": "Run backtest?",
+            "modalIntroText": "<p>This process might take up to 20 minutes. You will receive an email notification once it is completed</p>",
+            "modalApplyText": "Run Backtest",
+            "modalDiscardText": "Cancel",
+            "universe": {
+                "cta": "Choose a Universe",
+                "label": "Universe",
+                "tooltip": "Tooltip content not found, client to supply"
+            },
+            "rebalance": {
+                "cta": "Set a Rebalance Schedule",
+                "label": "Rebalance",
+                "tooltip": "Tooltip content not found, client to supply"
+            },
+            "methodology": {
+                "cta": "Choose a Methodology",
+                "label": "Methodology",
+                "tooltip": "Backtest methodology before you may use it to order the index"
+            }
+        }
+    },
+    "methodologyEditor": {
+        "header": {
+            "nav": [
+                {
+                    "id": "composition",
+                    "label": "Composition",
+                    "iconLeft": "methodology",
+                    "iconRight": "chevron-down",
+                    "tooltipTitle": "Composition views",
+                    "tooltipBody": "Explore detailed composition dashboards for your methodology",
+                    "selected": ["gics-breakdown"],
+                    "subMenu": {
+                        "dropdown": [
+                            {
+                                "id": "gics-breakdown",
+                                "label": "GICS Breakdown"
+                            },
+                            {
+                                "id": "country-breakdown",
+                                "label": "Country Breakdown"
+                            },
+                            { "id": "stock-count", "label": "Stock Counts" },
+                            { "id": "active-share", "label": "Active Share" }
+                        ]
+                    }
+                },
+                {
+                    "id": "performance",
+                    "label": "Perfomance",
+                    "iconLeft": "backtest",
+                    "iconRight": "chevron-down",
+                    "tooltipTitle": "View performance",
+                    "tooltipBody": "Analyse methodology performance based on your rebalance schedule",
+                    "selected": [""],
+                    "subMenu": {
+                        "dropdown": [
+                            { "id": "attribution", "label": "Attribution" }
+                        ]
+                    }
+                }
+            ],
+            "actions": {
+                "backtestTooltip": "Update backtest",
+                "settings": {
+                    "benchmark": {
+                        "title": "Benchmark",
+                        "body": "Reference data used to measure the difference to your Methodology."
+                    },
+                    "comparison": {
+                        "title": "Comparison",
+                        "maxSelection": 3,
+                        "body": "Which data is shown in the tables and graphs views."
+                    }
+                },
+                "menu": {
+                    "menuTooltip": "More Options",
+                    "options": [
+                        {
+                            "id": "change",
+                            "label": "Change details",
+                            "showDivider": true
+                        },
+                        {
+                            "id": "duplicate",
+                            "label": "Duplicate",
+                            "showDivider": true
+                        },
+                        {
+                            "id": "export",
+                            "label": "Export",
+                            "showDivider": true
+                        },
+                        {
+                            "id": "delete",
+                            "icon": "trash",
+                            "labelColor": "red",
+                            "label": "Delete"
+                        }
+                    ]
+                }
+            }
+        },
+        "panel": {
+            "orderButton": "Run backtest",
+            "disabledText": "Complete setup to run backtest",
+            "editedText1": "Edited",
+            "backtestHelperText": "Create rules for this methodology configuration before you can run a backtest",
+            "editedText2": "by",
+            "inProductionText": "Backtesting",
+            "orderedText": "Backtest up to date",
+            "rebalanceRules": {
+                "cta": "Create Rebalance Rules",
+                "label": "Rebalance Rules",
+                "tooltip": "",
+                "countSuffix": "Rules added"
+            },
+            "indexSettings": {
+                "cta": "Configure Settings",
+                "label": "Methodology settings",
+                "tooltip": "",
+                "countSuffix": "Settings Configuration"
+            }
+        },
+        "content": {
+            "emptyTitle": "Set your Rebalance Rules",
+            "emptyBody": "Setup rebalancing rules from S&P criteria to align with investment goals.",
+            "emptyCta": "Set Rebalance Rules",
+            "universeIndexName": "Universe Index",
+            "backToTopButtonLabel": "Back to top",
+            "gicsBreakdown": {
+                "title": "GICS Breakdown",
+                "subtitle": "Diversification across Global Industry Classification Standard sectors and exposure to sector-specific risks.",
+                "selectedValues": {
+                    "level-dropdown": ["Sector"],
+                    "units-dropdown": ["Weight"]
+                },
+                "dropdowns": [
+                    {
+                        "id": "level-dropdown",
+                        "label": "level",
+                        "items": [
+                            {
+                                "id": "Sector",
+                                "label": "Sector"
+                            },
+                            {
+                                "id": "Industry Group",
+                                "label": "Industry Group"
+                            },
+                            {
+                                "id": "Industry",
+                                "label": "Industry"
+                            },
+                            {
+                                "id": "Sub-Industry",
+                                "label": "Sub-Industry"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "units-dropdown",
+                        "label": "units",
+                        "items": [
+                            {
+                                "id": "Weight",
+                                "label": "Weight (%)"
+                            },
+                            {
+                                "id": "Count",
+                                "label": "Count"
+                            }
+                        ]
+                    }
+                ],
+                "rebalanceDropdownLabel": "Rebalance Date",
+                "colors": [
+                    "#006D89",
+                    "#F1A649",
+                    "#782080",
+                    "#54BAA0",
+                    "#B92051",
+                    "#AAB5DF",
+                    "#1D3BAA",
+                    "#B280B6",
+                    "#C94100",
+                    "#6DACBC",
+                    "#501555"
+                ],
+                "backToTopButtonLabel": "Back to top",
+                "tableHeader": {
+                    "title": "Rebalance Dates",
+                    "subtitle": "dates available"
+                }
+            },
+            "countryBreakdown": {
+                "title": "Country Breakdown",
+                "subtitle": "Global distribution of investments, showing geographic diversification.",
+                "selectedValues": {
+                    "level-dropdown": ["Country of Domicile"],
+                    "units-dropdown": ["Weight"]
+                },
+                "dropdowns": [
+                    {
+                        "id": "level-dropdown",
+                        "label": "view",
+                        "items": [
+                            {
+                                "id": "Country of Domicile",
+                                "label": "Country of Domicile"
+                            },
+                            {
+                                "id": "Country of Origin",
+                                "label": "Country of Origin"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "units-dropdown",
+                        "label": "units",
+                        "items": [
+                            {
+                                "id": "Weight",
+                                "label": "Weight (%)"
+                            },
+                            {
+                                "id": "Count",
+                                "label": "Count"
+                            }
+                        ]
+                    }
+                ],
+                "rebalanceDropdownLabel": "Rebalance Date",
+                "tableColumns": [
+                    { "id": "rebalance-dates", "label": "Rebalance Dates" },
+                    { "id": "countries", "label": "Countries" },
+                    { "id": "weight", "label": "Weight" }
+                ],
+                "tableHeader": {
+                    "title": "Rebalance Dates",
+                    "subtitle": "dates available"
+                },
+                "minValueColor": "#B3E3ED",
+                "maxValueColor": "#006D89",
+                "defaultValueColor": "#F5F4F6",
+                "weightColumnLabel": "Weight (%)"
+            },
+            "attribution": {
+                "title": "Attribution",
+                "subtitle": "Egestas pretium risus et dui eget. Nunc nulla amet non pharetra lorem in. Amet pretium sociis lectus lectus dictum et.",
+                "timeframe": ["YTD", "1Y", "3Y", "5Y", "10Y", "ALL"],
+                "selectedTimeframe": "YTD",
+                "timeframeLabel": "View",
+                "timeframeTooltip": "Select a period",
+                "xAxisLabel": "Sector",
+                "total": "Total",
+                "totalEffectLabel": "Total Effect",
+                "selectionEffectLabel": "Selection Effect",
+                "allocationEffectLabel": "Allocation Effect",
+                "interactionEffectLabel": "Interaction Effect"
+            },
+            "stockCount": {
+                "title": "Stock Counts",
+                "subtitle": "Number of holdings combined with their impact, reflecting diversity and influence.",
+                "dropdowns": [
+                    {
+                        "id": "type-dropdown",
+                        "label": "Type",
+                        "items": [
+                            {
+                                "id": "Stock Count",
+                                "label": "Stock Count"
+                            },
+                            {
+                                "id": "Effective Count",
+                                "label": "Effective Count"
+                            }
+                        ]
+                    }
+                ],
+                "rebalanceDatesHeader": "Rebalance Dates",
+                "datesAvailableCount": "dates available",
+                "rebalanceDatesColumnLabel": "Rebalance Dates",
+                "effectiveCountColumnLabel": "Effective Count",
+                "stockCountColumnLabel": "Stock Count"
+            },
+            "stockCountChart": {
+                "stockCount": "Stock count",
+                "effectiveCount": "Effective count",
+                "rebalanceDate": "Rebalance Dates"
+            },
+            "activeShare": {
+                "title": "Active Share",
+                "subtitle": "Extent of deviation from the benchmark index, highlighting active management decisions.",
+                "rebalanceDatesHeader": "Rebalance Dates",
+                "datesAvailableCount": "dates available",
+                "rebalanceDatesColumnLabel": "Rebalance Dates",
+                "activeShareColumnLabel": "Active Share (%)"
+            },
+            "activeShareChart": {
+                "seriesTitle": "Rebalance values",
+                "xAxisTitle": "Rebalance Date",
+                "yAxisTitle": "Active Share (%)",
+                "averageValues": "Average"
+            },
+            "setRebalanceRulesTitle": "Set your Rebalance Rules",
+            "setRebalanceRulesBody": "Setup rebalancing rules from S&P criteria to align with investment goals.",
+            "setRebalanceRulesCta": "Set Rebalance Rules",
+            "configureSettingsTitle": "",
+            "configureSettingsBody": "Define settings to run a backtest",
+            "configureSettingsCta": "Configure Settings",
+            "backtestLoadingTitle": "Backtesting...",
+            "backtestLoadingtBody": "You will be notified once the backtest is in completed",
+            "backtestBody": "Run a backtest to view performance",
+            "backtestCta": "Run Backtest"
+        }
+    },
+    "orderAndLaunch": {
+        "header": {
+            "title": "Order Index",
+            "subtitle": "Review your index and productionize it for launch."
+        },
+        "steps": [
+            {
+                "title": "1. Review Index Configuration",
+                "prevButtonText": "",
+                "nextButtonText": "Next step"
+            },
+            {
+                "title": "2. Select Distribution Method",
+                "prevButtonText": "Previous step",
+                "nextButtonText": "Next step"
+            },
+            {
+                "title": "3. Confirm and Order",
+                "prevButtonText": "Previous step",
+                "nextButtonText": "Confirm order"
+            }
+        ],
+        "stepOne": {
+            "step": "Step 1",
+            "header": "Review Index Configuration",
+            "body": "Review the selections you have made for your custom index. Ensure that the chosen components align with your investment objectives.",
+            "returnTypes": ["Price Return", "Total Return", "Net Total Return"],
+            "feeReductionLabel": "Fee Reduction",
+            "summaries": [
+                {
+                    "id": "index-details",
+                    "headerIcon": "info",
+                    "headerTitle": "Index Details",
+                    "headerEditable": false,
+                    "headerEditPath": "/methodology-settings",
+                    "rows": [
+                        {
+                            "label": "Project Name",
+                            "dataKey": "name",
+                            "value": "Tech Sector Momentum Index 300",
+                            "isEditable": true,
+                            "editPath": "/sandbox"
+                        },
+                        {
+                            "label": "Description",
+                            "dataKey": "description",
+                            "value": "Snapshot of the top 300 technology companies, showcasing those with the significant growth",
+                            "isEditable": true,
+                            "editPath": "/sandbox"
+                        },
+                        {
+                            "label": "Asset Class",
+                            "dataKey": "asset_class",
+                            "value": "Equity",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "License",
+                            "dataKey": "type",
+                            "value": "S&P DJI Licensed",
+                            "isEditable": false
+                        }
+                    ]
+                },
+                {
+                    "id": "portfolio",
+                    "headerIcon": "folder-upload",
+                    "headerTitle": "Portfolio",
+                    "rows": [
+                        {
+                            "label": "File uploaded",
+                            "dataKey": "fileuploaded",
+                            "value": "PortfolioAssetsIndex.csv",
+                            "isEditable": false
+                        }
+                    ]
+                },
+                {
+                    "id": "universe",
+                    "headerIcon": "universe",
+                    "headerTitle": "Universe",
+                    "rows": [
+                        {
+                            "label": "S&P DJI Universe",
+                            "dataKey": "index_name",
+                            "value": "S&P Composite 1500",
+                            "isEditable": false
+                        }
+                    ]
+                },
+                {
+                    "id": "rebalance-schedule",
+                    "headerIcon": "calendar",
+                    "headerTitle": "Rebalance Schedule",
+                    "rows": [
+                        {
+                            "label": "Schedule Type",
+                            "dataKey": "type",
+                            "value": "Universe Schedule",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Frequency",
+                            "dataKey": "description",
+                            "value": "Rebalances and reweights effective at the open of the Monday following the third Friday of March, June, September and December.",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Start Date",
+                            "dataKey": "start_date",
+                            "value": "Jan 01, 2000",
+                            "isEditable": false
+                        }
+                    ]
+                },
+                {
+                    "id": "rebalance-rules",
+                    "headerIcon": "rules",
+                    "headerTitle": "Rebalance Rules",
+                    "headerEditable": true,
+                    "headerEditPath": "/rebalance-schedule",
+                    "rows": [
+                        {
+                            "label": "Filter",
+                            "dataKey": "filter",
+                            "value": "6 rules added",
+                            "isEditable": false,
+                            "preIcon": "filter",
+                            "preIconColor": "gold",
+                            "tooltip": "Filter, Select by Rank"
+                        },
+                        {
+                            "label": "Weighters",
+                            "dataKey": "weighters",
+                            "value": "0 rules added",
+                            "isEditable": false,
+                            "preIcon": "scales",
+                            "preIconColor": "blue-1000",
+                            "tooltip": "Weighters, Select by Rank"
+                        },
+                        {
+                            "label": "Conditions and Logic",
+                            "dataKey": "conditions",
+                            "value": "3 rules added",
+                            "isEditable": false,
+                            "preIcon": "analytics-report",
+                            "preIconColor": "blue-1000",
+                            "tooltip": "Conditions and Logic, Select by Rank"
+                        },
+                        {
+                            "label": "Functions",
+                            "dataKey": "functions",
+                            "value": "3 attributes created",
+                            "isEditable": false,
+                            "preIcon": "ruler",
+                            "preIconColor": "teal",
+                            "tooltip": "Functions, Select by Rank"
+                        }
+                    ]
+                },
+                {
+                    "id": "settings",
+                    "headerIcon": "settings-list",
+                    "headerTitle": "Settings",
+                    "headerEditable": true,
+                    "headerEditPath": null,
+                    "rows": [
+                        {
+                            "label": "Spin off treatment",
+                            "dataKey": "spin_off_treatment.id",
+                            "value": "Drop next Day",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Weighting Type",
+                            "dataKey": "weighting_type.id",
+                            "value": "Float-adjusted market cap weighted",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "IWF Change",
+                            "dataKey": "weighting_type.id",
+                            "value": "Yes",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Price adjustment",
+                            "dataKey": "price_adjustment",
+                            "value": "Yes",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Reverse split",
+                            "dataKey": "reverse_split",
+                            "value": "No",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Rights Issue",
+                            "dataKey": "rights_issue",
+                            "value": "No",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Share Issuance",
+                            "dataKey": "share_issuance",
+                            "value": "No",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Special dividend",
+                            "dataKey": "special_dividend",
+                            "value": "Yes",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Stock split",
+                            "dataKey": "stock_split",
+                            "value": "No",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Calculation Frequency",
+                            "dataKey": "calculation_frequency",
+                            "value": "Real time",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Calculation Currency",
+                            "dataKey": "calculation_currency",
+                            "value": "USD",
+                            "isEditable": false
+                        },
+                        {
+                            "label": "Return Type",
+                            "dataKey": "return_type",
+                            "value": "Price Return, Total Return",
+                            "isEditable": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "stepTwo": {
+            "step": "Step 2",
+            "header": "Select Distribution Method",
+            "body": "Finalize your index by selecting the distribution method for receiveing the index data once the order is fulfilled and has been launched.",
+            "selectorHeader": "Select one or more methods"
+        },
+        "stepThree": {
+            "step": "Step 3",
+            "header": "Confirm and Order",
+            "body": "Confirm your index to initiate the production phase. This process takes approximately 3-5 days, after which you will receive an email notification once your custom index is ready for review",
+            "nextSteps": {
+                "header": "What happens after I place an order?",
+                "steps": [
+                    {
+                        "id": "1",
+                        "title": "Licensing",
+                        "body": "A member of our team will reach out to execute the appropriate license."
+                    },
+                    {
+                        "id": "2",
+                        "title": "Productionization",
+                        "body": "This process will take 3-5 days in order to launch your customised index."
+                    },
+                    {
+                        "id": "3",
+                        "title": "Index Launched",
+                        "body": "You will recieve an email when your index is ready to view."
+                    }
+                ]
+            },
+            "termsAndConditionsInput": {
+                "header": "Terms and Conditions",
+                "agreeCheckboxLabel": "I agree to the <a href=\"terms and \" target=\"_blank\" rel=\"noreferrer\">terms and conditions</a>",
+                "agreeDescription": "Tristique diam morbi sapien nulla lorem sapien. In feugiat luctus tempus neque a. Tempor feugiat tellus a nec ac tempus lacus. Purus sed arcu purus commodo etiam aliquam vitae blandit ornare. Mauris faucibus et mi faucibus ullamcorper donec cursus tempus adipiscing. Massa augue at est habitant vitae. Scelerisque faucibus et urna et placerat mi elementum. Arcu nec tortor magna sed ac eget felis."
+            }
+        },
+        "orderComplete": {
+            "title": "Order Confirmed",
+            "message": "Your order has been submitted for review",
+            "returnToDashboardText": "Return to Dashboard"
+        }
+    },
+    "uploadPortfolio": {
+        "header": {
+            "title": "Upload Portfolio",
+            "subtitle": "Upload your own basket of stocks to create a personalised, client-owned index"
+        },
+        "howItWorks": {
+            "title": "How it works",
+            "steps": [
+                "Download the",
+                "Fill out the template file to reflect your portfolio",
+                "Re-upload the CSV file"
+            ],
+            "csvTemplateCta": {
+                "label": "CSV Template"
+            },
+            "uploadCsvFile": {
+                "label": "Upload CSV File"
+            }
+        },
+        "csvUploadGuidelines": {
+            "title": "CSV Upload Guidelines",
+            "description": "<ul><li>Multiple CSV uploads are supported; each file must be under 20MB.</li><li>Your portfolio's constituents should be within the S&P DJI's scope. Check with <a target=\"_blank\" href=\"https://google.com\">S&P DJI Index Finder</a></li><li>Date format requirement: YYYYMMDD.</li><li>Weight values must be numeric.</li><li>Each effective date requires a unique rebalance date and duplicate stocks on the same date are not permitted.</li><li>At least one stock must be defined per rebalance date.</li><li>Security identifiers (CUSIP/ISIN/SEDOL) are not accepted.</li></ul>"
+        },
+        "placeholders": {
+            "{{DOWNLOAD_CSV_TEMPLATE}}": "CSV Template"
+        },
+        "includeComments": "yes",
+        "errorReportText": "Error Report"
+    },
+    "rebalanceEditor": {
+        "depthError": "Cannot insert rule card. Maximum depth reached.",
+        "header": {
+            "title": "Set Rebalance rules",
+            "subTitle": "Set the parameters to control the scope and weighting for index constituents"
+        },
+        "tabs": {
+            "rebalanceSchedule": "Rebalance Schedule",
+            "customReweighting": "Custom Reweighting Schedule",
+            "syncReweighting": "Sync Reweighting Rules"
+        },
+        "syncModal": {
+            "title": "How would you like to Sync Reweighting Rules?",
+            "content": "Copying will transfer Reweighting Rules from one schedule to the other, replacing the existing rules in the destination schedule. Please select the direction of the copy.",
+            "selectSync": "Select Sync Direction",
+            "confirm": "Sync rules",
+            "cancel": "Cancel",
+            "rebalanceToCustom": "Rebalance Schedule to Custom Reweighting Schedule",
+            "customToRebalance": "Custom Reweighting Schedule to Rebalance Schedule"
+        },
+        "ruleConnector": {
+            "rebalanceDate": "Data as of",
+            "indexConstituents": "Constituents",
+            "methodologyConstituents": "Constituents",
+            "excluded": "constituents excluded",
+            "created": "Created a custom attribute",
+            "update": "Update preview to view results",
+            "updating": "Updating preview",
+            "reweighted": "constituents reweighted"
+        },
+        "selectAttributeButton": {
+            "placeholder": "Select Attribute",
+            "tooltip": "Tooltip ipsum dolor sit amet"
+        },
+        "ruleCard": {
+            "menuDuplicate": "Duplicate",
+            "menuDeactivate": "Deactivate",
+            "menuActivate": "Activate",
+            "menuDelete": "Delete"
+        },
+        "attributeTooltip": {
+            "section1": "The extaction criteria for",
+            "section2": "is",
+            "section3": "to",
+            "section4": "before the",
+            "firstValueDate": "from first value date",
+            "dataReferenceDate": "on the data reference date",
+            "defaultTooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        "orderDropdown": [
+            {
+                "id": "asc",
+                "label": "Ascending",
+                "description": "Increasing in order or value"
+            },
+            {
+                "id": "desc",
+                "label": "Descending",
+                "description": "Decreasing in order or value"
+            }
+        ],
+        "normaliserCard": {
+            "title": "Normaliser",
+            "customAttribute": "Custom Attribute",
+            "normalise": "Normalise",
+            "selectAttribute": "Select Attribute",
+            "duplicateError": "Duplicate Placeholder - S&P to define error message",
+            "placeholder": "Value"
+        },
+        "ucitsRuleCard": {
+            "title": "Apply UCITS Cap",
+            "section1": "Cap all constituents with a weighting above",
+            "section2": " at ",
+            "section3": " and ",
+            "section4": "For constituents above ",
+            "section5": " that are cumulatively greater than ",
+            "section6": ", cap at ",
+            "section7": "Grouped by ",
+            "inputPlaceholder": "Value"
+        },
+        "conditionalRuleCard": {
+            "if": "If",
+            "then": "then"
+        },
+        "rankedAttributeRuleCard": {
+            "title": "Ranked Attribute",
+            "customAttribute": "Custom Attribute",
+            "rankBy": "Rank by",
+            "in": "in",
+            "order": "order",
+            "then": ", then",
+            "addRanking": "Add Ranking"
+        },
+        "selectByRankCard": {
+            "selectTop": "Select top",
+            "consituentsRanked": "constituents ranked by",
+            "in": "in",
+            "order": "order",
+            "addRanking": "Add Ranking",
+            "thenRankBy": "Then rank by",
+            "addBuffer": "Add buffer",
+            "defineBuffer": "Define buffer as",
+            "bufferTypeDropdown": [
+                {
+                    "id": "fixed_count",
+                    "label": "Fixed count",
+                    "description": "Lorem ipsum"
+                },
+                {
+                    "id": "pct_target",
+                    "label": "% of target",
+                    "description": "Lorem"
+                }
+            ]
+        },
+        "capTopRuleCard": {
+            "title": "Cumulative Weight Cap",
+            "section1": "Cap top",
+            "section2": "groups with a cumulative weighting above",
+            "section3": "at",
+            "section4": "Grouped by",
+            "inputPlaceholder": "Value"
+        },
+        "groupConstituentsCard": {
+            "groupBy": "Group By"
+        },
+        "calculatedAttributeCard": {
+            "title": "Calculated Attribute",
+            "customAttribute": "Custom Attribute",
+            "calculatedThe": "Calculate the",
+            "calculateFor": "of these attributes/constants for",
+            "addAttribute": "Add attribute",
+            "addConstant": "Add constant",
+            "constant": "Constant",
+            "forLabel": "For",
+            "andLabel": "and",
+            "frequencyItems": [
+                {
+                    "id": "min",
+                    "label": "Minimum",
+                    "description": "Lowest value"
+                },
+                {
+                    "id": "max",
+                    "label": "Maximum",
+                    "description": "Highest value"
+                },
+                {
+                    "id": "count",
+                    "label": "Count",
+                    "description": "Number of items"
+                },
+                {
+                    "id": "count_unique",
+                    "label": "Count Unique",
+                    "description": "Number of distinct items"
+                },
+                {
+                    "id": "median",
+                    "label": "Median",
+                    "description": "Middle value"
+                },
+                {
+                    "id": "avg",
+                    "label": "Average",
+                    "description": "Mean value"
+                },
+                {
+                    "id": "sum",
+                    "label": "Sum",
+                    "description": "Total value"
+                },
+                {
+                    "id": "product",
+                    "label": "Product",
+                    "description": "Multiplication result"
+                }
+            ],
+            "targetItems": [
+                {
+                    "id": "row",
+                    "label": "Stocks",
+                    "description": "Perform the calculation for each eligible stock"
+                },
+                {
+                    "id": "column",
+                    "label": "Eligible universe",
+                    "description": "Perform the calculation across the eligible universe"
+                },
+                {
+                    "id": "column2",
+                    "label": "Starting universe",
+                    "description": "Perform the calculation across the starting universe"
+                }
+            ]
+        },
+        "logicalOperators": {
+            "and": "and",
+            "or": "or",
+            "someOrAllDropdown": [
+                {
+                    "id": "or",
+                    "label": "Any / or",
+                    "description": "At least one condition must be true",
+                    "selectedText": "Any"
+                },
+                {
+                    "id": "and",
+                    "label": "All / and",
+                    "description": "All conditions must be true",
+                    "selectedText": "All"
+                }
+            ]
+        },
+        "filterCard": {
+            "title": "Filter",
+            "stocksWith": "stocks with",
+            "ofTheseConditions": "of these conditions:",
+            "addCondition": "Add condition",
+            "createGroup": "Create Group",
+            "exclusionDropdown": [
+                {
+                    "id": "exclude",
+                    "label": "Exclude",
+                    "description": "Remove these stocks from your index"
+                },
+                {
+                    "id": "include",
+                    "label": "Include",
+                    "description": "Add these stocks to your index"
+                }
+            ],
+            "anyOrDropdown": [
+                {
+                    "id": "or",
+                    "label": "Any / or",
+                    "description": "At least one condition must be true",
+                    "selectedText": "Any"
+                },
+                {
+                    "id": "and",
+                    "label": "All / and",
+                    "description": "All conditions must be true",
+                    "selectedText": "All"
+                }
+            ]
+        },
+        "capFloorCard": {
+            "title": "Cap/Floor Stocks",
+            "constituentsWeighting": "constituents with a weighting above",
+            "constituentsWeightingJoin": "at",
+            "inputPlaceholder": "Value",
+            "groupedByCondition": "Grouped by this condition:",
+            "capFloorDropdown": [
+                {
+                    "id": "cap",
+                    "label": "Cap",
+                    "description": "Set an upper limit"
+                },
+                {
+                    "id": "floor",
+                    "label": "Floor",
+                    "description": "Set a lower limit"
+                }
+            ],
+            "groupDropdown": [
+                {
+                    "id": "all",
+                    "label": "All"
+                },
+                {
+                    "id": "group",
+                    "label": "Grouped",
+                    "description": "Defined by an attribute"
+                }
+            ]
+        },
+        "attributeDialog": {
+            "searchPlaceholder": "SEARCH",
+            "noResults": "No Results Found"
+        },
+        "customAttributeDialog": {
+            "label": "or use custom attributes:",
+            "noResults": "No Results Found",
+            "tooltip": "Custom Attribute"
+        },
+        "conditionMenuOptions": {
+            "editExtractionDate": "Edit Extraction Date",
+            "duplicate": "Duplicate",
+            "delete": "Delete"
+        },
+        "attributeExtractionModal": {
+            "title": "Select the extraction date",
+            "ruleLabel": "This will affect all rules with the attribute:",
+            "cancelButton": "Cancel",
+            "confirmButton": "Confirm",
+            "opt1Id": "data_reference_date",
+            "opt1Title": "On the data reference data",
+            "opt1Label": "Data for the last business day of the month prior to the rebalance date",
+            "opt2Id": "relative_date",
+            "opt2Title": "On a relative date",
+            "opt2Label": "The latest value for a specific offset relative to other dates",
+            "from": "From",
+            "firstValueDate": "First value date",
+            "firstValueTooltip": "Lorem ipsum dolor sit amet",
+            "to": "To",
+            "addOffset": "Add offset",
+            "chainSeperator": "and",
+            "periodValues": [
+                {
+                    "id": "DAY",
+                    "label": "Day(s)"
+                },
+                {
+                    "id": "WEEK",
+                    "label": "Week(s)"
+                },
+                {
+                    "id": "MONTH",
+                    "label": "Month(s)"
+                },
+                {
+                    "id": "YEAR",
+                    "label": "Year(s)"
+                }
+            ],
+            "criteriaValues": [
+                {
+                    "id": "data_reference_date",
+                    "label": "Data reference date"
+                },
+                {
+                    "id": "universe_reference_date",
+                    "label": "Universe reference date"
+                },
+                {
+                    "id": "rebalance_date",
+                    "label": "Rebalance date"
+                }
+            ]
+        },
+        "weightOptions": [
+            {
+                "id": "greater_than",
+                "label": "Greater than",
+                "selectedText": "Is greater than",
+                "iconLeft": "greater-than"
+            },
+            {
+                "id": "less_than",
+                "label": "Less than",
+                "selectedText": "Is less than",
+                "iconLeft": "less-than"
+            },
+            {
+                "id": "greater_than_or_equal",
+                "label": "Greater than or equal",
+                "selectedText": "Is greater than or equal",
+                "iconLeft": "greater-than-equal"
+            },
+            {
+                "id": "less_than_or_equal",
+                "label": "Less than or equal",
+                "selectedText": "Is less than or equal",
+                "iconLeft": "less-than-equal"
+            },
+            {
+                "id": "equals",
+                "label": "Equal to",
+                "selectedText": "Is equal to",
+                "iconLeft": "equal"
+            }
+        ],
+        "isNotDropdown": {
+            "default": "Value",
+            "searchPlaceholder": "SEARCH"
+        },
+        "isNotOptions": [
+            {
+                "id": "in",
+                "label": "Is",
+                "description": "Matches the select value",
+                "selectedText": "Is"
+            },
+            {
+                "id": "not_in",
+                "label": "Is not",
+                "description": "Does not match the select value",
+                "selectedText": "Is not"
+            }
+        ],
+        "reconstitutionRulesHeader": {
+            "title": "Reconstitution",
+            "description": "Select constituents based on rebalance schedule",
+            "addRule": "Add rule"
+        },
+        "reweightingRulesHeader": {
+            "title": "Reweighting",
+            "description": "Define constituent weights based on reweighting schedule",
+            "dropdown": [
+                {
+                    "id": "FMC",
+                    "label": "Float Market Cap",
+                    "description": "Constituent weights are determined by their float-adjusted market capitalization."
+                },
+                {
+                    "id": "EQUAL",
+                    "label": "Equal Weighted",
+                    "description": "Assigns the same weight to every stock during rebalancing."
+                },
+                {
+                    "id": "CUSTOM",
+                    "label": "Custom Stock Weighted",
+                    "description": "Weighted by an attribute before applying custom rules."
+                }
+            ],
+            "tooltip": "Awaiting content from client",
+            "modalTitle": "Change weighting type?",
+            "modalIntro": "Changing the weighting type of your index will remove any Reweighting rules that you have previously added.",
+            "modalApplyLabel": "Change weighting type",
+            "modalDiscardLabel": "keep type"
+        },
+        "ruleCardMetaData": {
+            "filter": {
+                "title": "Filter",
+                "description": "Include or exclude stocks based on specific criteria.",
+                "icon": "filter",
+                "color": "gold"
+            },
+            "select_by_rank": {
+                "title": "Select By Rank",
+                "description": "Set first, second and third-choice criteria for filtering stocks.",
+                "icon": "filter-plus",
+                "color": "gold"
+            },
+            "group_constituents": {
+                "title": "Group Constituents",
+                "description": "Group stocks based on a specific attribute and independantly apply further functions to the grouping",
+                "icon": "group",
+                "color": "gray"
+            },
+            "conditional_logic": {
+                "title": "If/Else condition",
+                "description": "Create conditional if/else logic to determine rule execution paths.",
+                "icon": "condition",
+                "color": "gray"
+            },
+            "ranked_attribute": {
+                "title": "Ranked Attribute",
+                "icon": "rank",
+                "description": "Assign numerical rankings to stocks based on their order, either ascending or descending",
+                "color": "teal"
+            },
+            "ucits_cap": {
+                "title": "Apply UCITS Cap",
+                "description": "Cumulative Weight Cap",
+                "icon": "scales",
+                "color": "blue"
+            },
+            "calculated_attribute": {
+                "title": "Calculated Attribute",
+                "description": "Calculate aggregate values (min/max/average/sum, etc.) based on specified attributes and constants.",
+                "icon": "calculation",
+                "color": "teal"
+            },
+            "iterative_cap_floor": {
+                "title": "Cap / Floor stocks",
+                "description": "Cap or floor weights for constituents exceeding or falling below a specified threshold",
+                "icon": "scales",
+                "color": "blue"
+            },
+            "attribute_weight": {
+                "title": "Pro-Rata Weight",
+                "description": "Standardise attribute values to a common range or distribution",
+                "icon": "magic",
+                "color": "teal"
+            },
+            "cumulative_weight_cap": {
+                "title": "Cumulative Weight Cap",
+                "description": "Cap the groups of stocks with a cumulative weighting.",
+                "icon": "scales",
+                "color": "blue"
+            }
+        },
+        "reweightingAddRules": {
+            "createTitle": "Create Reweighting attribute (optional)",
+            "createButtonLabel": "Add rules",
+            "weightByTitle": "Weight by",
+            "weightByButtonLabel": "Add rules"
+        },
+        "reconstitutionRulesSidePanel": {
+            "title": "Add Rule",
+            "subtitle": "Reconstitution",
+            "types": [
+                {
+                    "name": "Filters",
+                    "color": "gold",
+                    "options": [
+                        {
+                            "id": "filter",
+                            "category": "screeningRules",
+                            "name": "Filter",
+                            "isCalculated": false,
+                            "icon": "filter",
+                            "description": "Include or exclude stocks based on specific criteria.",
+                            "tooltip": "Define conditions that must be met or avoided to tailor your index composition. This rule enables you to precisely control which stocks are part of your index.",
+                            "defaults": {
+                                "category_type": "exclude",
+                                "logical_operator": "or",
+                                "conditions": []
+                            }
+                        },
+                        {
+                            "id": "select_by_rank",
+                            "category": "screeningRules",
+                            "name": "Select By Rank",
+                            "isCalculated": false,
+                            "icon": "filter-plus",
+                            "description": "Set first, second and third-choice criteria for filtering stocks.",
+                            "tooltip": "Select the top constituents based on a specific attribute. Optionally, you can add a buffer to include additional constituents beyond the specified rank.",
+                            "defaults": {
+                                "fields": [
+                                    {
+                                        "field": "",
+                                        "order_by": "asc"
+                                    }
+                                ],
+                                "buffer_enabled": false,
+                                "buffer_type": "fixed_count"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Conditions and Logic",
+                    "color": "gray",
+                    "options": [
+                        {
+                            "id": "group_constituents",
+                            "category": "screeningRules",
+                            "name": "Group Constituents",
+                            "isCalculated": false,
+                            "icon": "group",
+                            "description": "Group stocks based on a specific attribute and independantly apply further functions to the grouping",
+                            "tooltip": "Group stocks based on a selected attribute and independently apply further rules to each group. For example, group stocks by sector and then apply ranking or calculation functions to each sector separately.",
+                            "defaults": {
+                                "instructions": [],
+                                "field": ""
+                            }
+                        },
+                        {
+                            "id": "conditional_logic",
+                            "category": "screeningRules",
+                            "name": "If/Else condition",
+                            "isCalculated": false,
+                            "icon": "condition",
+                            "description": "Create conditional if/else logic to determine rule execution paths.",
+                            "tooltip": "Use if/else condition to apply different rules based on dynamic conditions. For example, 'For all stocks with a P/E ratio greater than 20, apply a ranking function; for the remaining, assign a default weight.'",
+                            "defaults": {
+                                "category_type": "if",
+                                "logical_operator": "in",
+                                "if_rules": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Functions",
+                    "color": "teal",
+                    "options": [
+                        {
+                            "id": "ranked_attribute",
+                            "category": "screeningRules",
+                            "isCalculated": true,
+                            "name": "Ranked Attribute",
+                            "icon": "rank",
+                            "description": "Assign numerical rankings to stocks based on their order, either ascending or descending",
+                            "tooltip": "Rank by 'selected attribute' in ascending or descending order. Use multiple attributes to create a prioritised ranking list",
+                            "defaults": {
+                                "fields": [
+                                    {
+                                        "field": "",
+                                        "order_by": "asc"
+                                    }
+                                ],
+                                "output_field": ""
+                            }
+                        },
+                        {
+                            "id": "calculated_attribute",
+                            "category": "screeningRules",
+                            "isCalculated": true,
+                            "name": "Calculated Attribute",
+                            "icon": "calculation",
+                            "description": "Calculate aggregate values (min/max/average/sum, etc.) based on specified attributes and constants.",
+                            "tooltip": "Calculate specific mathematical values for selected attribute/s and constants across the eligible universe of stocks. For example find the average market cap of all eligible stocks, or the maximum P/E, P/S, P/B ratios for each stock. Attributes created with this rule can be used as input in other rules.",
+                            "defaults": {
+                                "fields": [],
+                                "constants": [],
+                                "operation": "min",
+                                "direction": "row",
+                                "output_field": ""
+                            }
+                        },
+                        {
+                            "id": "attribute_weight",
+                            "category": "screeningRules",
+                            "isCalculated": true,
+                            "name": "Pro-Rata Weight",
+                            "icon": "magic",
+                            "description": "Standardise attribute values to a common range or distribution",
+                            "tooltip": "Calculate the proportional weight for each stock based on the specified numerical attribute.",
+                            "defaults": {
+                                "field": "",
+                                "output_field": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "customAttributeSidePanel": {
+            "title": "Add Rule",
+            "subtitle": "Reweighting",
+            "types": [
+                {
+                    "name": "Weighters",
+                    "color": "blue",
+                    "options": [
+                        {
+                            "id": "iterative_cap_floor",
+                            "category": "weighting",
+                            "name": "Cap / Floor stocks",
+                            "icon": "scales",
+                            "description": "Cap or floor weights for constituents exceeding or falling below a specified threshold",
+                            "tooltip": "Set upper or lower limits on the weightings of either all stocks or a selected group of stocks based on a specific attribute by defining a threshold above/below that you wish to cap/floor weights at.",
+                            "defaults": {
+                                "constraint_type": "cap",
+                                "apply_to": "all",
+                                "constraint_threshold": {},
+                                "constraint_value": {}
+                            }
+                        },
+                        {
+                            "id": "cumulative_weight_cap",
+                            "category": "weighting",
+                            "name": "Cumulative Weight Cap",
+                            "icon": "scales",
+                            "description": "Cap the groups of stocks with a cumulative weighting.",
+                            "tooltip": "Cap the combined weightings of the top X groups that exceed a specified threshold value. Choose the attribute by which to group the stocks for cumulative weighting calculation.",
+                            "defaults": {}
+                        },
+                        {
+                            "id": "ucits_cap",
+                            "category": "weighting",
+                            "name": "Apply UCITS Cap",
+                            "icon": "scales",
+                            "description": "Cumulative Weight Cap",
+                            "tooltip": "Ensure that all constituents exceeding this threshold adhere to the specified UCITS threshold. This ensures compliance with UCITS regulations.",
+                            "defaults": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "reweightingRulesSidePanel": {
+            "title": "Add Rule",
+            "subtitle": "Create Custom attribute",
+            "types": [
+                {
+                    "name": "Conditions and Logic",
+                    "color": "gray",
+                    "options": [
+                        {
+                            "id": "group_constituents",
+                            "category": "weighting",
+                            "name": "Group Constituents",
+                            "isCalculated": false,
+                            "icon": "group",
+                            "description": "Group stocks based on a specific attribute and independantly apply further functions to the grouping",
+                            "tooltip": "Group stocks based on a selected attribute and independently apply further rules to each group. For example, group stocks by sector and then apply ranking or calculation functions to each sector separately.",
+                            "defaults": {
+                                "instructions": [],
+                                "field": ""
+                            }
+                        },
+                        {
+                            "id": "conditional_logic",
+                            "category": "weighting",
+                            "name": "If/Else condition",
+                            "isCalculated": false,
+                            "icon": "condition",
+                            "description": "Create conditional if/else logic to determine rule execution paths.",
+                            "tooltip": "Use if/else condition to apply different rules based on dynamic conditions. For example, 'For all stocks with a P/E ratio greater than 20, apply a ranking function; for the remaining, assign a default weight.'",
+                            "defaults": {
+                                "category_type": "if",
+                                "logical_operator": "in",
+                                "if_rules": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Functions",
+                    "color": "teal",
+                    "options": [
+                        {
+                            "id": "ranked_attribute",
+                            "category": "weighting",
+                            "name": "Ranked Attribute",
+                            "isCalculated": true,
+                            "icon": "rank",
+                            "description": "Assign numerical rankings to stocks based on their order, either ascending or descending",
+                            "tooltip": "Rank by 'selected attribute' in ascending or descending order. Use multiple attributes to create a prioritised ranking list",
+                            "defaults": {
+                                "fields": [
+                                    {
+                                        "field": "",
+                                        "order_by": "asc"
+                                    }
+                                ],
+                                "output_field": ""
+                            }
+                        },
+                        {
+                            "id": "calculated_attribute",
+                            "category": "weighting",
+                            "name": "Calculated Attribute",
+                            "isCalculated": true,
+                            "icon": "calculation",
+                            "description": "Calculate aggregate values (min/max/average/sum, etc.) based on specified attributes and constants.",
+                            "tooltip": "Calculate specific mathematical values for selected attribute/s and constants across the eligible universe of stocks. For example find the average market cap of all eligible stocks, or the maximum P/E, P/S, P/B ratios for each stock. Attributes created with this rule can be used as input in other rules.",
+                            "defaults": {
+                                "fields": [],
+                                "constants": [],
+                                "operation": "min",
+                                "direction": "row",
+                                "output_field": ""
+                            }
+                        },
+                        {
+                            "id": "attribute_weight",
+                            "category": "weighting",
+                            "name": "Pro-Rata Weight",
+                            "isCalculated": true,
+                            "icon": "magic",
+                            "description": "Standardise attribute values to a common range or distribution",
+                            "tooltip": "Calculate the proportional weight for each stock based on the specified numerical attribute.",
+                            "defaults": {
+                                "field": "",
+                                "output_field": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "compositionTitle": "Constituents",
+        "compositionBody": "As per last reconstitution date",
+        "compositionTooltip": "vs Universe",
+        "compositionHeaderTitle": "Composition Preview",
+        "compositionHeaderTooltip": "Awaiting content",
+        "compositionFooterButtonText": "Update preview",
+        "compositionFooterTooltip": "Complete rule configuration to update the preview",
+        "compositionFooterPreviewText": "Preview is up to date",
+        "compositionFooterSaveText": "Save Rules and Continue",
+        "compositionSwitcher": ["Constituents", "Breakdown"],
+        "compositionOptions": [
+            {
+                "id": "0",
+                "label": "By Sector"
+            },
+            {
+                "id": "1",
+                "label": "By Country"
+            }
+        ],
+        "compositionTopNStocksTh": ["Company", "Weight %"],
+        "compositionSectorBreakdownTh": ["Sector", "Weight %", "Count"],
+        "compositionCountryBreakdownTh": ["Country", "Weight %", "Count"],
+        "generateTitle": "Composition Preview",
+        "generateBody": "View a simulated snapshot of your index constituents",
+        "generateButtonText": "Generate preview",
+        "generatePreviewText": "No Custom Reweighting Preview"
+    },
+    "genericErrorMessage": "Placeholder - S&P to define error message"
+}

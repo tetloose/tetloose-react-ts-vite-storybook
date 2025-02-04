@@ -1,0 +1,196 @@
+{
+    "reconstitution": {
+        "attributes": [
+            {
+                "id": "CalculatedAttribute2",
+                "alias": "CalculatedAttribute1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "AttributeWeightField1",
+                "alias": "AttributeWeightField1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "Normaliser1",
+                "alias": "Normaliser1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "CalculatedAttribute2",
+                "alias": "CalculatedAttribute2",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.GICS_SECTOR_CODE",
+                "alias": "GICS_SECTOR_CODE",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.SHARES_OUTSTANDING",
+                "alias": "SHARES_OUTSTANDING",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "RankedAttribute1",
+                "alias": "RankedAttribute1",
+                "extraction_date": "data_reference_date"
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.GICS_SECTOR_CODE",
+                "alias": "GICS_SECTOR_CODE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.GICS_INDUSTRY_GROUP_CODE",
+                "alias": "GICS_INDUSTRY_GROUP_CODE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "DAY",
+                            "period": 2
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.LOCAL_PRICE",
+                "alias": "LOCAL_PRICE",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": false,
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "DAY",
+                            "period": 2
+                        }
+                    ]
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "EQUITY_ICD.SPDJI.INDEX_WEIGHT",
+                "alias": "INDEX_WEIGHT",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": true
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            }
+        ],
+        "rebalance_rules": {
+            "screening": {
+                "screening_rules": []
+            },
+            "weighting": {
+                "weighting_type": "CUSTOM",
+                "weighting_rules": [
+                    {
+                        "id": 1,
+                        "category": "attribute_weight",
+                        "enabled": true,
+                        "field": "LOCAL_PRICE"
+                    }
+                ]
+            }
+        }
+    },
+    "reweighting": {
+        "attributes": [
+            {
+                "id": "EQUITY_ICD.SPDJI.INDEX_WEIGHT",
+                "alias": "INDEX_WEIGHT",
+                "extraction_date": "relative_date",
+                "from_criteria": {
+                    "use_first_value_date": true
+                },
+                "to_criteria": {
+                    "as_of": "data_reference_date",
+                    "offsets": [
+                        {
+                            "unit": "WEEK",
+                            "period": 1
+                        },
+                        {
+                            "unit": "DAY",
+                            "period": 3
+                        }
+                    ]
+                }
+            }
+        ],
+        "rebalance_rules": {
+            "weighting": {
+                "weighting_type": "FMC",
+                "weighting_rules": [
+                    {
+                        "id": 1,
+                        "category": "attribute_weight",
+                        "enabled": true,
+                        "field": "LOCAL_PRICE"
+                    }
+                ]
+            }
+        }
+    }
+}

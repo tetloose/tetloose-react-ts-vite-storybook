@@ -1,0 +1,12 @@
+{
+    "spin_off_treatments": [
+        {
+            "id": "FOLLOW_UNIVERSE_TREATMENT",
+            "name": "Follow universe treatment"
+        },
+        {
+            "id": "DROP_NEXT_DAY",
+            "name": "Drop next day"
+        }
+    ]
+}

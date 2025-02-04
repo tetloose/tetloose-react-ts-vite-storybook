@@ -1,0 +1,113 @@
+{
+    "average": 20.55,
+    "active_shares": [
+        {
+            "rebalance_date": "20150327",
+            "value": 20.35
+        },
+        {
+            "rebalance_date": "20150625",
+            "value": 20.69
+        },
+        {
+            "rebalance_date": "20150703",
+            "value": 21.05
+        },
+        {
+            "rebalance_date": "20150711",
+            "value": 26.57
+        },
+        {
+            "rebalance_date": "20150716",
+            "value": 17.23
+        },
+        {
+            "rebalance_date": "20150724",
+            "value": 23.65
+        },
+        {
+            "rebalance_date": "20150729",
+            "value": 16.89
+        },
+        {
+            "rebalance_date": "20150806",
+            "value": 19.67
+        },
+        {
+            "rebalance_date": "20150811",
+            "value": 21.26
+        },
+        {
+            "rebalance_date": "20150816",
+            "value": 16.10
+        },
+        {
+            "rebalance_date": "20150824",
+            "value": 20.18
+        },
+        {
+            "rebalance_date": "20150901",
+            "value": 15.42
+        },
+        {
+            "rebalance_date": "20150909",
+            "value": 24.17
+        },
+        {
+            "rebalance_date": "20150914",
+            "value": 21.88
+        },
+        {
+            "rebalance_date": "20150922",
+            "value": 26.93
+        },
+        {
+            "rebalance_date": "20150927",
+            "value": 15.47
+        },
+        {
+            "rebalance_date": "20151002",
+            "value": 20.94
+        },
+        {
+            "rebalance_date": "20151010",
+            "value": 16.85
+        },
+        {
+            "rebalance_date": "20151015",
+            "value": 15.36
+        },
+        {
+            "rebalance_date": "20151020",
+            "value": 21.72
+        },
+        {
+            "rebalance_date": "20151025",
+            "value": 29.48
+        },
+        {
+            "rebalance_date": "20151030",
+            "value": 27.31
+        },
+        {
+            "rebalance_date": "20151107",
+            "value": 24.11
+        },
+        {
+            "rebalance_date": "20151115",
+            "value": 28.10
+        },
+        {
+            "rebalance_date": "20151123",
+            "value": 25.43
+        },
+        {
+            "rebalance_date": "20151201",
+            "value": 20.54
+        },
+        {
+            "rebalance_date": "20151206",
+            "value": 28.25
+        }
+    ]
+}

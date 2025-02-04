@@ -1,0 +1,18 @@
+{
+    "first_name": "James",
+    "last_name": "Tetley",
+    "email_address": "james@hugoandcat.com",
+    "company_name": "Hugo&Cat",
+    "role_title": "ETF",
+    "user_id": 1558,
+    "account_creation_date": "2024-04-12T08:42:22.999Z",
+    "access_level": "Client Account",
+    "access_modified_date": "2024-03-28T08:42:22.999Z",
+    "feature_flags": [
+        "universe",
+        "custom",
+        "upload",
+        "arc-rule",
+        "float-market-cap"
+    ]
+}

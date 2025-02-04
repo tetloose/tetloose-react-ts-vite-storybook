@@ -1,0 +1,219 @@
+%f-heading {
+    font-family: 'Akkurat Pro', sans-serif;
+}
+
+%f-body {
+    font-family: 'Akkurat Pro', sans-serif;
+}
+
+%f-light {
+    font-weight: 300;
+}
+
+%f-regular {
+    font-weight: 400;
+}
+
+%f-medium {
+    font-weight: 600;
+}
+
+%f-bold {
+    font-weight: 800;
+}
+
+%f-italic {
+    font-style: italic;
+}
+
+%f-uppercase {
+    text-transform: uppercase;
+}
+
+%f-capitalize {
+    text-transform: capitalize;
+}
+
+%f-lowercase {
+    text-transform: lowercase;
+}
+
+%f-underline {
+    text-decoration: underline;
+}
+
+%f-icons {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-family: icons, sans-serif;
+    line-height: 1;
+    text-transform: none;
+    text-rendering: auto;
+    speak: never;
+
+    @include font-smoothing;
+    @extend %f-regular;
+}
+
+%type-icon-xlrg {
+    @include sizing('font-size', vars(icons, xlrg));
+}
+
+%type-icon-lrg {
+    @include sizing('font-size', vars(icons, lrg));
+}
+
+%type-icon-med {
+    @include sizing('font-size', vars(icons, med));
+}
+
+%type-icon-sml {
+    @include sizing('font-size', vars(icons, sml));
+}
+
+%type-heading {
+    @extend %f-heading;
+    @extend %f-bold;
+}
+
+%type-d1 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, d1));
+    @include sizing('letter-spacing', size(-.28));
+    @include sizing('line-height', size(16.8));
+}
+
+%type-d2 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, d2));
+    @include sizing('letter-spacing', size(-.195));
+    @include sizing('line-height', size(11.7));
+}
+
+%type-h1 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h1));
+    @include sizing('letter-spacing', size(-.07));
+    @include sizing('line-height', size(8.4));
+}
+
+%type-h2 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h2));
+    @include sizing('line-height', size(7.2));
+    @include sizing('letter-spacing', size(-.06));
+}
+
+%type-h3 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h3));
+    @include sizing('line-height', size(6.5));
+    @include sizing('letter-spacing', size(-.05));
+}
+
+%type-h4 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h4));
+    @include sizing('line-height', size(5.2));
+    @include sizing('letter-spacing', size(-.04));
+}
+
+%type-h5 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h5));
+    @include sizing('line-height', size(4.5));
+}
+
+%type-h6 {
+    @extend %type-heading;
+    @include sizing('font-size', vars(headings, h6));
+    @include sizing('line-height', size(3.9));
+}
+
+%type-body {
+    @extend %f-body;
+    @extend %f-regular;
+}
+
+%type-body-xlrg {
+    @extend %type-body;
+    @include sizing('font-size', vars(body, xlrg));
+    @include sizing('line-height', size(6.75));
+}
+
+%type-body-lrg {
+    @extend %type-body;
+    @include sizing('font-size', vars(body, lrg));
+    @include sizing('line-height', size(6));
+}
+
+%type-body-med {
+    @extend %type-body;
+    @include sizing('font-size', vars(body, med));
+    @include sizing('line-height', size(5.25));
+}
+
+%type-body-sml {
+    @extend %type-body;
+    @include sizing('font-size', vars(body, sml));
+    @include sizing('line-height', size(4.6));
+}
+
+%type-input {
+    @extend %f-body;
+    @extend %f-regular;
+}
+
+%type-input-sml {
+    @extend %type-input;
+    @include sizing('font-size', vars(input, sml));
+    @include sizing('line-height', size(6));
+}
+
+%type-input-med {
+    @extend %type-input;
+    @include sizing('font-size', vars(input, med));
+    @include sizing('line-height', size(6));
+}
+
+%type-input-lrg {
+    @extend %type-input;
+    @include sizing('font-size', vars(input, lrg));
+    @include sizing('line-height', size(6));
+}
+
+%type-input-xlrg {
+    @extend %type-input;
+    @include sizing('font-size', vars(input, xlrg));
+    @include sizing('line-height', size(6));
+}
+
+%type-label {
+    @extend %f-body;
+    @extend %f-regular;
+}
+
+%type-label-sml {
+    @extend %type-label;
+    @include sizing('font-size', vars(label, sml));
+    @include sizing('line-height', size(6));
+}
+
+%type-label-med {
+    @extend %type-label;
+    @include sizing('font-size', vars(label, med));
+    @include sizing('line-height', size(6));
+}
+
+%type-label-lrg {
+    @extend %type-label;
+    @include sizing('font-size', vars(label, lrg));
+    @include sizing('line-height', size(6));
+}
+
+%type-label-xlrg {
+    @extend %type-label;
+    @include sizing('font-size', vars(label, xlrg));
+    @include sizing('line-height', size(6));
+}

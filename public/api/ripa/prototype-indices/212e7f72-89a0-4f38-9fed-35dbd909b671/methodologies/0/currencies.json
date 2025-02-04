@@ -1,0 +1,37 @@
+{
+    "currencies": [
+        {
+            "id": "USD",
+            "name": "US Dollar"
+        },
+        {
+            "id": "GBP",
+            "name": "GB Pound Sterling"
+        },
+        {
+            "id": "EUR",
+            "name": "Euro"
+        },
+        {
+            "id": "AUD",
+            "name": "Australian Dollar"
+        },
+        {
+            "id": "MXN",
+            "name": "MXC Pesos"
+        },
+        {
+            "id": "CHF",
+            "name": "Swiss Franc"
+        },
+        {
+            "id": "ZAR",
+            "name": "South African Rand"
+        },
+        {
+            "id": "INR",
+            "name": "Indian Rupee"
+        }
+    ],
+    "universe_base_currency": "USD"
+}

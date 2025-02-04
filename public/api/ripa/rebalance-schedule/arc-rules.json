@@ -1,0 +1,12 @@
+{
+    "rules": [
+        {
+            "rule_id": 2561,
+            "rule_description": "This rule is for Weighted indices rebalancing after the close of third Friday of each month. Reference and Proforma Date is 1 day prior to Rebalance date."
+        },
+        {
+            "rule_id": 1541,
+            "rule_description": "This rule is for weighted return indices rebalancing after the close of last business day of January  April  July and October. Reference date and Proforma date is 15 days prior to rebalance date."
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "average": {
+        "stock_count": 430,
+        "change_stock_count": 1.6,
+        "effective_count": 51,
+        "change_effective_count": 1.2
+    },
+    "stock_counts": [
+        {
+            "rebalance_date": "20230104",
+            "effective_count": 49,
+            "change_effective_count": -23.12,
+            "stock_count": 42,
+            "change_stock_count": -24.32
+        },
+        {
+            "rebalance_date": "20231504",
+            "effective_count": 14,
+            "change_effective_count": 16.32,
+            "stock_count": 22,
+            "change_stock_count": 12.32
+        },
+        {
+            "rebalance_date": "20232304",
+            "effective_count": 14,
+            "change_effective_count": -18.85,
+            "stock_count": 54,
+            "change_stock_count": 43.53
+        },
+        {
+            "rebalance_date": "20230105",
+            "effective_count": 12,
+            "change_effective_count": -15.21,
+            "stock_count": 62,
+            "change_stock_count": 8.85
+        },
+        {
+            "rebalance_date": "20230905",
+            "effective_count": 88,
+            "change_effective_count": 33.14,
+            "stock_count": 65,
+            "change_stock_count": 24.38
+        },
+        {
+            "rebalance_date": "20231705",
+            "effective_count": 80,
+            "change_effective_count": 30.48,
+            "stock_count": 35,
+            "change_stock_count": 26.06
+        },
+        {
+            "rebalance_date": "20232205",
+            "effective_count": 84,
+            "change_effective_count": -87.12,
+            "stock_count": 99,
+            "change_stock_count": -23.97
+        },
+        {
+            "rebalance_date": "20233005",
+            "effective_count": 72,
+            "change_effective_count": 16.26,
+            "stock_count": 79,
+            "change_stock_count": -20.74
+        },
+        {
+            "rebalance_date": "20230406",
+            "effective_count": 78,
+            "change_effective_count": 22.01,
+            "stock_count": 35,
+            "change_stock_count": 17.16
+        },
+        {
+            "rebalance_date": "20230906",
+            "effective_count": 86,
+            "change_effective_count": -10.97,
+            "stock_count": 61,
+            "change_stock_count": 21.0
+        },
+        {
+            "rebalance_date": "20231706",
+            "effective_count": 25,
+            "change_effective_count": 15.89,
+            "stock_count": 20,
+            "change_stock_count": -22.42
+        },
+        {
+            "rebalance_date": "20232206",
+            "effective_count": 65,
+            "change_effective_count": 25.83,
+            "stock_count": 78,
+            "change_stock_count": -10.5
+        },
+        {
+            "rebalance_date": "20232706",
+            "effective_count": 69,
+            "change_effective_count": 13.72,
+            "stock_count": 78,
+            "change_stock_count": 13.58
+        },
+        {
+            "rebalance_date": "20230207",
+            "effective_count": 33,
+            "change_effective_count": -22.51,
+            "stock_count": 92,
+            "change_stock_count": 10.82
+        },
+        {
+            "rebalance_date": "20230707",
+            "effective_count": 13,
+            "change_effective_count": 14.16,
+            "stock_count": 27,
+            "change_stock_count": -63.74
+        },
+        {
+            "rebalance_date": "20231507",
+            "effective_count": 71,
+            "change_effective_count": 16.9,
+            "stock_count": 17,
+            "change_stock_count": 17.78
+        },
+        {
+            "rebalance_date": "20232307",
+            "effective_count": 67,
+            "change_effective_count": 45.86,
+            "stock_count": 56,
+            "change_stock_count": 12.62
+        },
+        {
+            "rebalance_date": "20233107",
+            "effective_count": 66,
+            "change_effective_count": -20.69,
+            "stock_count": 14,
+            "change_stock_count": 6.33
+        }
+    ]
+}

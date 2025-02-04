@@ -1,0 +1,16 @@
+{
+    "currency_breakdown": [
+        {
+            "currency_name": "United states dollar",
+            "weight": 250.0,
+            "market_cap": 43280102,
+            "constituent_count": 505
+        },
+        {
+            "currency_name": "Canadian dollar",
+            "weight": 90.0,
+            "market_cap": 9280102,
+            "constituent_count": 205
+        }
+    ]
+}
