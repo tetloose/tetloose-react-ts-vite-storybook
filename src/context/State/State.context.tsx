@@ -2,7 +2,7 @@ import { createContext } from '@context'
 import { initialState } from './State.initial'
 import { StateProps } from './State.types'
 
-const {
+export const {
   Provider: StateProvider,
   useContextProvider: useStateContext
 } = createContext<StateProps, 'state', 'updateState'>(
@@ -11,8 +11,3 @@ const {
   'updateState',
   'StateContext'
 )
-
-export {
-  StateProvider,
-  useStateContext
-}
