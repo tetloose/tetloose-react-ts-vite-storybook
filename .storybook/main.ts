@@ -48,6 +48,9 @@ const config: StorybookConfig = {
       ],
       css: {
         devSourcemap: true
+      },
+      build: {
+        chunkSizeWarningLimit: 1000
       }
     })
   }
