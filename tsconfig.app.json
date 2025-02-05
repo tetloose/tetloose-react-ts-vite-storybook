@@ -111,7 +111,6 @@
         ]
     },
     "include": [
-        ".storybook/**/*.ts",
         "src",
         "src/**/*.ts",
         "src/**/*.tsx",
@@ -124,6 +123,7 @@
         ".azuredevops",
         ".husky",
         ".scripts",
+        ".storybook",
         ".vscode",
         "node_modules",
         "public",
