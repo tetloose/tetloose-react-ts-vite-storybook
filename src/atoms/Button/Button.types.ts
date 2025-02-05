@@ -2,16 +2,16 @@ import { ButtonHTMLAttributes } from 'react'
 import { GlobalChildren, GlobalModifiers, GlobalSizeProp } from '@global'
 
 type ButtonVariant =
-    | 'primary'
-    | 'secondary'
+  | 'primary'
+  | 'secondary'
 
 type ButtonType =
-    | 'button'
-    | 'submit'
-    | 'reset'
+  | 'button'
+  | 'submit'
+  | 'reset'
 
 export type ButtonProps = {
-    variant?: ButtonVariant
-    type?: ButtonType
-    label?: string
+  variant?: ButtonVariant
+  type?: ButtonType
+  label?: string
 } & ButtonHTMLAttributes<HTMLElement> & GlobalModifiers & GlobalSizeProp & GlobalChildren

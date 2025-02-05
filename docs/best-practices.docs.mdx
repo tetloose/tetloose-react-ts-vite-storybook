@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
 <Meta title="Documentation/Best Practices" />
 
@@ -8,33 +8,33 @@ This is a collection of best practices and conventions to follow with this proje
 
 ## PR Checklist
 
-* Your code builds clean without any errors or warnings
-* You are happy with your implementation, would you pass it?
-* You have adhered to agency coding standards
-* You have pulled the most recent develop branch
-* You have created unit tests where appropriate
-* You have tested your implementation and can’t find any bugs
-* You have run the project units test and they pass
-* You have added documentation to the project wiki on how to use any new features
+- Your code builds clean without any errors or warnings
+- You are happy with your implementation, would you pass it?
+- You have adhered to agency coding standards
+- You have pulled the most recent develop branch
+- You have created unit tests where appropriate
+- You have tested your implementation and can’t find any bugs
+- You have run the project units test and they pass
+- You have added documentation to the project wiki on how to use any new features
 
 ## Coding standards
 
-* Keep the components simple as possible
-* Keep code organised and tidy
-* Keep code dry
-* Split code into manageable chunks
-* Deconstruct Objects & Functions
-* All content must come from the API
+- Keep the components simple as possible
+- Keep code organised and tidy
+- Keep code dry
+- Split code into manageable chunks
+- Deconstruct Objects & Functions
+- All content must come from the API
 
 ```tsx
 export const ComponentName = ({
-    variant,
-    modifiers,
-    prop1,
-    prop2,
-    prop3,
-    tag,
-    ...rest
+  variant,
+  modifiers,
+  prop1,
+  prop2,
+  prop3,
+  tag,
+  ...rest
 }: ComponentNameProps) => {
     // functions
 
@@ -48,12 +48,12 @@ This is the structure for the components within components folder.
 
 ```
 Component-name
-    |-- Component-name.component.tsx
-    |-- Component-name.types.ts
-    |-- Component-name.module.scss
-    |-- Component-name.stories.tsx
-    |-- Component-name.stories.mdx
-    |-- Component-name.test.tsx
+  |-- Component-name.component.tsx
+  |-- Component-name.types.ts
+  |-- Component-name.module.scss
+  |-- Component-name.stories.tsx
+  |-- Component-name.stories.mdx
+  |-- Component-name.test.tsx
 ```
 
 ## Css Modules
@@ -67,27 +67,27 @@ Css modules allows styles to be included using dot notation within the component
 For ease of development and aligning the styles we use CSS modules this way:
 
 ```tsx
-import cs from 'classnames';
-import styles from './Component-name.module.css';
+import cs from "classnames";
+import styles from "./Component-name.module.css";
 
 export const ComponentName = ({
-    variant,
-    modifiers,
-    ...rest
+  variant,
+  modifiers,
+  ...rest
 }: ComponentNameProps) => {
-    // functions
+  // functions
 
-    return (
-        <div
-            className={cs(
-                styles['component-block'],
-                styles['component-block--modifier'],
-            )}
-        >
-            <span className={styles['component-block__element']}>/* content */</span>
-        </div>
-    )
-}
+  return (
+    <div
+      className={cs(
+        styles["component-block"],
+        styles["component-block--modifier"]
+      )}
+    >
+      <span className={styles["component-block__element"]}>/* content */</span>
+    </div>
+  );
+};
 ```
 
 It is important to note that we use the `classnames` package as a way of joining the classes together.

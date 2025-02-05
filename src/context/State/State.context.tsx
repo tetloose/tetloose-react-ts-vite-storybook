@@ -3,16 +3,16 @@ import { initialState } from './State.initial'
 import { StateProps } from './State.types'
 
 const {
-    Provider: StateProvider,
-    useContextProvider: useStateContext
+  Provider: StateProvider,
+  useContextProvider: useStateContext
 } = createContext<StateProps, 'state', 'updateState'>(
-    initialState,
-    'state',
-    'updateState',
-    'StateContext'
+  initialState,
+  'state',
+  'updateState',
+  'StateContext'
 )
 
 export {
-    StateProvider,
-    useStateContext
+  StateProvider,
+  useStateContext
 }

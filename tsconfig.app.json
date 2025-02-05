@@ -1,134 +1,134 @@
 {
-    "compilerOptions": {
-        "composite": true,
-        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-        "target": "ES2020",
-        "useDefineForClassFields": true,
-        "lib": [
-            "ES2020",
-            "DOM",
-            "DOM.Iterable"
-        ],
-        "module": "ESNext",
-        "skipLibCheck": true,
-        "types": [
-            "@types/node",
-            "@types/react",
-            "vitest/globals",
-            "vite-plugin-svgr/client",
-            "vite/client"
-        ],
-        "moduleResolution": "bundler",
-        "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
-        "noEmit": true,
-        "jsx": "react-jsx",
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "baseUrl": "./src",
-        "paths": {
-            "@context/*": [
-                "context/*"
-            ],
-            "@context": [
-                "context"
-            ],
-            "@atoms/*": [
-                "atoms/*"
-            ],
-            "@atoms": [
-                "atoms"
-            ],
-            "@components/*": [
-                "components/*"
-            ],
-            "@components": [
-                "components"
-            ],
-            "@layouts/*": [
-                "layouts/*"
-            ],
-            "@layouts": [
-                "layouts"
-            ],
-            "@hooks/*": [
-                "hooks/*"
-            ],
-            "@hooks": [
-                "hooks"
-            ],
-            "@loaders/*": [
-                "loaders/*"
-            ],
-            "@loaders": [
-                "loaders"
-            ],
-            "@crud/*": [
-                "crud/*"
-            ],
-            "@crud": [
-                "crud"
-            ],
-            "@utils/*": [
-                "utils/*"
-            ],
-            "@utils": [
-                "utils"
-            ],
-            "@global/*": [
-                "global/*"
-            ],
-            "@global": [
-                "global"
-            ],
-            "@styles": [
-                "styles"
-            ],
-            "@images": [
-                "images"
-            ],
-            "@constants": [
-                "constants"
-            ],
-            "@constants/*": [
-                "constants/*"
-            ],
-            "@routes": [
-                "routes"
-            ],
-            "@routes/*": [
-                "routes/*"
-            ]
-        },
-        "plugins": [
-            {
-                "name": "typescript-plugin-css-modules"
-            }
-        ]
-    },
-    "include": [
-        "src",
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/**/*.scss",
-        "src/**/*.json",
-        ".d.ts/*.d.ts",
-        ".vitest/vitest.setup.ts"
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
     ],
-    "exclude": [
-        ".azuredevops",
-        ".husky",
-        ".scripts",
-        ".storybook",
-        ".vscode",
-        "node_modules",
-        "public",
-        "build",
-        "storybook-static",
-        "coverage"
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "types": [
+      "@types/node",
+      "@types/react",
+      "vitest/globals",
+      "vite-plugin-svgr/client",
+      "vite/client"
+    ],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@context/*": [
+        "context/*"
+      ],
+      "@context": [
+        "context"
+      ],
+      "@atoms/*": [
+        "atoms/*"
+      ],
+      "@atoms": [
+        "atoms"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@components": [
+        "components"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@layouts": [
+        "layouts"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@hooks": [
+        "hooks"
+      ],
+      "@loaders/*": [
+        "loaders/*"
+      ],
+      "@loaders": [
+        "loaders"
+      ],
+      "@crud/*": [
+        "crud/*"
+      ],
+      "@crud": [
+        "crud"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@utils": [
+        "utils"
+      ],
+      "@global/*": [
+        "global/*"
+      ],
+      "@global": [
+        "global"
+      ],
+      "@styles": [
+        "styles"
+      ],
+      "@images": [
+        "images"
+      ],
+      "@constants": [
+        "constants"
+      ],
+      "@constants/*": [
+        "constants/*"
+      ],
+      "@routes": [
+        "routes"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
     ]
+  },
+  "include": [
+    "src",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.scss",
+    "src/**/*.json",
+    ".d.ts/*.d.ts",
+    ".vitest/vitest.setup.ts"
+  ],
+  "exclude": [
+    ".azuredevops",
+    ".husky",
+    ".scripts",
+    ".storybook",
+    ".vscode",
+    "node_modules",
+    "public",
+    "build",
+    "storybook-static",
+    "coverage"
+  ]
 }

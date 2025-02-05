@@ -3,206 +3,206 @@
 @use 'sass:map';
 
 %f-heading {
-    font-family: 'anton', sans-serif;;
+  font-family: 'anton', sans-serif;;
 }
 
 %f-body {
-    font-family: 'mencken-std', sans-serif;
+  font-family: 'mencken-std', sans-serif;
 }
 
 %f-light {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 %f-regular {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 %f-medium {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 %f-bold {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 %f-italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 %f-uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 %f-capitalize {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 %f-lowercase {
-    text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 %f-underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 %f-icons {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    font-family: icons, sans-serif;
-    line-height: 1;
-    text-transform: none;
-    text-rendering: auto;
-    speak: never;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-family: icons, sans-serif;
+  line-height: 1;
+  text-transform: none;
+  text-rendering: auto;
+  speak: never;
 
-    @include font-smoothing;
-    @extend %f-regular;
+  @include font-smoothing;
+  @extend %f-regular;
 }
 
 $icon-sizes: (
-    xlrg: vars(icons, xlrg),
-    lrg: vars(icons, lrg),
-    med: vars(icons, med),
-    sml: vars(icons, sml)
+xlrg: vars(icons, xlrg),
+lrg: vars(icons, lrg),
+med: vars(icons, med),
+sml: vars(icons, sml)
 );
 
 @each $size, $value in $icon-sizes {
-    %type-icon-#{$size} {
-        @include sizing('font-size', $value);
-    }
+  %type-icon-#{$size} {
+    @include sizing('font-size', $value);
+  }
 }
 
 %type-heading {
-    @extend %f-heading;
-    @extend %f-regular;
+  @extend %f-heading;
+  @extend %f-regular;
 }
 
 %type-d1 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, d1));
-    @include sizing('font-size', deep-get($vars, headings, line-height, d1));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, d1));
+  @include sizing('font-size', deep-get($vars, headings, line-height, d1));
 }
 
 %type-d2 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, d2));
-    @include sizing('line-height', deep-get($vars, headings, line-height, d2));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, d2));
+  @include sizing('line-height', deep-get($vars, headings, line-height, d2));
 }
 
 %type-h1 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h1));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h1));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h1));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h1));
 }
 
 %type-h2 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h2));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h2));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h2));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h2));
 }
 
 %type-h3 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h3));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h3));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h3));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h3));
 }
 
 %type-h4 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h4));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h4));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h4));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h4));
 }
 
 %type-h5 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h5));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h5));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h5));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h5));
 }
 
 %type-h6 {
-    @extend %type-heading;
-    @include sizing('font-size', deep-get($vars, headings, font-size, h6));
-    @include sizing('line-height', deep-get($vars, headings, line-height, h6));
+  @extend %type-heading;
+  @include sizing('font-size', deep-get($vars, headings, font-size, h6));
+  @include sizing('line-height', deep-get($vars, headings, line-height, h6));
 }
 
 %type-body {
-    @extend %f-body;
-    @extend %f-regular;
+  @extend %f-body;
+  @extend %f-regular;
 }
 
 $body-sizes: (
-    sml: (
-        font-size: deep-get($vars, body, font-size, sml),
-        line-height: deep-get($vars, body, line-height, sml)
-    ),
-    med: (
-        font-size: deep-get($vars, body, font-size, med),
-        line-height: deep-get($vars, body, line-height, med)
-    ),
-    lrg: (
-        font-size: deep-get($vars, body, font-size, lrg),
-        line-height: deep-get($vars, body, line-height, lrg)
-    ),
-    xlrg: (
-        font-size: deep-get($vars, body, font-size, xlrg),
-        line-height: deep-get($vars, body, line-height, xlrg)
-    )
+sml: (
+font-size: deep-get($vars, body, font-size, sml),
+line-height: deep-get($vars, body, line-height, sml)
+),
+med: (
+font-size: deep-get($vars, body, font-size, med),
+line-height: deep-get($vars, body, line-height, med)
+),
+lrg: (
+font-size: deep-get($vars, body, font-size, lrg),
+line-height: deep-get($vars, body, line-height, lrg)
+),
+xlrg: (
+font-size: deep-get($vars, body, font-size, xlrg),
+line-height: deep-get($vars, body, line-height, xlrg)
+)
 );
 
 @each $size, $settings in $body-sizes {
-    %type-body-#{$size} {
-        @extend %type-body;
-        @include sizing('font-size', map.get($settings, font-size));
-        @include sizing('line-height', map.get($settings, line-height));
-    }
+  %type-body-#{$size} {
+    @extend %type-body;
+    @include sizing('font-size', map.get($settings, font-size));
+    @include sizing('line-height', map.get($settings, line-height));
+  }
 }
 
 %type-button {
-    @extend %f-heading;
-    @extend %f-bold;
-    @extend %f-uppercase;
+  @extend %f-heading;
+  @extend %f-bold;
+  @extend %f-uppercase;
 }
 
 $button-sizes: (
-    sml: (
-        font-size: deep-get($vars, button, font-size, sml),
-        line-height: deep-get($vars, button, line-height, sml)
-    ),
-    med: (
-        font-size: deep-get($vars, button, font-size, med),
-        line-height: deep-get($vars, button, line-height, med)
-    ),
-    lrg: (
-        font-size: deep-get($vars, button, font-size, lrg),
-        line-height: deep-get($vars, button, line-height, lrg)
-    ),
-    xlrg: (
-        font-size: deep-get($vars, button, font-size, xlrg),
-        line-height: deep-get($vars, button, line-height, xlrg)
-    )
+sml: (
+font-size: deep-get($vars, button, font-size, sml),
+line-height: deep-get($vars, button, line-height, sml)
+),
+med: (
+font-size: deep-get($vars, button, font-size, med),
+line-height: deep-get($vars, button, line-height, med)
+),
+lrg: (
+font-size: deep-get($vars, button, font-size, lrg),
+line-height: deep-get($vars, button, line-height, lrg)
+),
+xlrg: (
+font-size: deep-get($vars, button, font-size, xlrg),
+line-height: deep-get($vars, button, line-height, xlrg)
+)
 );
 
 @each $size, $settings in $button-sizes {
-    %type-button-#{$size} {
-        @extend %type-button;
-        @include sizing('font-size', map.get($settings, font-size));
-        @include sizing('line-height', map.get($settings, line-height));
-    }
+  %type-button-#{$size} {
+    @extend %type-button;
+    @include sizing('font-size', map.get($settings, font-size));
+    @include sizing('line-height', map.get($settings, line-height));
+  }
 }
 
 %type-input {
-    @extend %f-body;
-    @extend %f-regular;
+  @extend %f-body;
+  @extend %f-regular;
 
-    @include sizing('font-size', vars(input, font-size));
-    @include sizing('line-height', vars(input, line-height));
+  @include sizing('font-size', vars(input, font-size));
+  @include sizing('line-height', vars(input, line-height));
 }
 
 %type-label {
-    @extend %f-body;
-    @extend %f-regular;
+  @extend %f-body;
+  @extend %f-regular;
 
-    @include sizing('font-size', vars(label, font-size));
-    @include sizing('line-height', vars(label, line-height));
+  @include sizing('font-size', vars(label, font-size));
+  @include sizing('line-height', vars(label, line-height));
 }

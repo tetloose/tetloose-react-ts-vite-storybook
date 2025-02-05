@@ -1,3 +1,3 @@
 export type StateProps = {
-    info: string
+  info: string
 }

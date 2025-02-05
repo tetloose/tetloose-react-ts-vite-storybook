@@ -4,25 +4,25 @@ import cs from 'classnames'
 import styles from './COMPONENT_NAME.module.scss'
 
 export const EXPORT_NAME = ({
-    variants,
-    modifiers,
-    ...rest
+  variants,
+  modifiers,
+  ...rest
 }: EXPORT_NAMEProps) => {
-    const { state, updateState } = useStateContext()
+  const { state, updateState } = useStateContext()
 
-    console.log(state)
-    console.log(updateState)
+  console.log(state)
+  console.log(updateState)
 
-    return (
-        <div
-            className={cs(
-                styles['CLASS_NAME'],
-                variants && variants.map(variant => styles[variant]),
-                ...(modifiers || [])
-            )}
-            {...rest}
-        >
-            Happy editing
-        </div>
-    )
+  return (
+    <div
+      className={cs(
+        styles['CLASS_NAME'],
+        variants && variants.map(variant => styles[variant]),
+        ...(modifiers || [])
+      )}
+      {...rest}
+    >
+      Happy editing
+    </div>
+  )
 }

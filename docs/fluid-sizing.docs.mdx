@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
 <Meta title="Documentation/Fluid Sizing" />
 
@@ -8,8 +8,8 @@ Sizing is based on base value of 4x called **spacing** -> `src/styles/settings/v
 
 ```
 layout: (
-    spacing: 4px,
-    ...
+  spacing: 4px,
+  ...
 ),
 ```
 
@@ -53,8 +53,8 @@ $vw-adjustment-max: 1vw;
 
 This will generate vw calculations on three breakpoints for each size.
 
-* Below $vw-min => 'larger size using 3vw as the adjustment'
-* $vw-min -> $vw-max => 'Scale from min to max'
-* Above $vw-max => 'Set the value as a Rem unit'
+- Below $vw-min => 'larger size using 3vw as the adjustment'
+- $vw-min -> $vw-max => 'Scale from min to max'
+- Above $vw-max => 'Set the value as a Rem unit'
 
 See: `src/styles/mixins/sizing.scss`

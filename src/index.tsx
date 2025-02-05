@@ -8,13 +8,11 @@ import '@styles/app.scss'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
-    <>
-        <BrowserRouter>
-            <React.StrictMode>
-                <StateProvider>
-                    <App />
-                </StateProvider>
-            </React.StrictMode>
-        </BrowserRouter>
-    </>
+  <BrowserRouter>
+    <React.StrictMode>
+      <StateProvider>
+        <App />
+      </StateProvider>
+    </React.StrictMode>
+  </BrowserRouter>
 )

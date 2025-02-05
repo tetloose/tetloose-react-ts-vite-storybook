@@ -1,31 +1,31 @@
 import { ReactNode } from 'react'
 
 export type GlobalColor =
-    | 'dark'
-    | 'light'
+  | 'dark'
+  | 'light'
 
 export type GlobalColorProp = {
-    color?: GlobalColor
+  color?: GlobalColor
 }
 
 export type GlobalBgProp = {
-    bg?: GlobalColor
+  bg?: GlobalColor
 }
 
 export type GlobalSize =
-    | 'sml'
-    | 'med'
-    | 'lrg'
-    | 'xlrg'
+  | 'sml'
+  | 'med'
+  | 'lrg'
+  | 'xlrg'
 
 export type GlobalSizeProp = {
-    size?: GlobalSize
+  size?: GlobalSize
 }
 
 export type GlobalModifiers = {
-    modifiers?: string[]
+  modifiers?: string[]
 }
 
 export type GlobalChildren = {
-    children?: ReactNode | ReactNode[]
+  children?: ReactNode | ReactNode[]
 }

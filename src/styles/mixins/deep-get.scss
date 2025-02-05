@@ -1,13 +1,13 @@
 @use 'sass:map';
 
 @function deep-get($map, $keys...) {
-    $result: $map;
+  $result: $map;
 
-    @each $key in $keys {
-      $result: map.get($result, $key);
-    }
+  @each $key in $keys {
+    $result: map.get($result, $key);
+  }
 
-    @return $result;
+  @return $result;
 }
 
 // Usage

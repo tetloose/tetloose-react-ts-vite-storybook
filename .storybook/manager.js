@@ -3,13 +3,13 @@ import { create } from '@storybook/theming'
 import logo from '../public/assets/images/logo.webp';
 
 const brandTheme = create({
-    base: 'dark',
-    brandTitle: 'Tetloose React TS Vite Storybook',
-    brandUrl: 'https://github.com/tetloose/tetloose-react-ts-vite-storybook',
-    brandImage: logo,
-    brandTarget: '_blank'
+  base: 'dark',
+  brandTitle: 'Tetloose React TS Vite Storybook',
+  brandUrl: 'https://github.com/tetloose/tetloose-react-ts-vite-storybook',
+  brandImage: logo,
+  brandTarget: '_blank'
 })
 
 addons.setConfig({
-    theme: brandTheme
+  theme: brandTheme
 })

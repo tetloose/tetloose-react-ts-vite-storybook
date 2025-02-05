@@ -1,75 +1,75 @@
 @use '@styles/settings' as *;
 
 .button {
-    background-color: transparent;
-    border-style: solid;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    outline-style: solid;
-    outline-color: transparent;
-    text-decoration: none;
-    user-select: none;
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  outline-style: solid;
+  outline-color: transparent;
+  text-decoration: none;
+  user-select: none;
+
+  @include mq-hover {
+    cursor: pointer;
+  }
+
+  &:global([disabled]) {
+    @include disable(true);
+  }
+
+  &.is-primary {
+    display: inline-flex;
+    align-items: center;
+    background-color: color(default, dark);
+    color: color(default, light);
+
+    @include sizing('padding', size(8));
+    @include sizing('outline-width', size(.5));
 
     @include mq-hover {
-        cursor: pointer;
-    }
-
-    &:global([disabled]) {
-        @include disable(true);
-    }
-
-    &.is-primary {
-        display: inline-flex;
-        align-items: center;
-        background-color: color(default, dark);
-        color: color(default, light);
-
-        @include sizing('padding', size(8));
-        @include sizing('outline-width', size(.5));
-
-        @include mq-hover {
-            &:hover,
-            &:focus {
-                background-color: color(default, light);
-                color: color(default, dark);
-                outline-color: color(default, dark);
-            }
-        }
-    }
-
-    &.is-secondary {
-        display: inline-flex;
-        align-items: center;
+      &:hover,
+      &:focus {
         background-color: color(default, light);
         color: color(default, dark);
-
-        @include sizing('padding', size(8));
-        @include sizing('outline-width', size(.5));
-
-        @include mq-hover {
-            &:hover,
-            &:focus {
-                background-color: color(default, dark);
-                color: color(default, light);
-                outline-color: color(default, light);
-            }
-        }
+        outline-color: color(default, dark);
+      }
     }
+  }
 
-    &.is-sml {
-        @extend %type-button-sml;
-    }
+  &.is-secondary {
+    display: inline-flex;
+    align-items: center;
+    background-color: color(default, light);
+    color: color(default, dark);
 
-    &.is-med {
-        @extend %type-button-med;
-    }
+    @include sizing('padding', size(8));
+    @include sizing('outline-width', size(.5));
 
-    &.is-lrg {
-        @extend %type-button-lrg;
+    @include mq-hover {
+      &:hover,
+      &:focus {
+        background-color: color(default, dark);
+        color: color(default, light);
+        outline-color: color(default, light);
+      }
     }
+  }
 
-    &.is-xlrg {
-        @extend %type-button-xlrg;
-    }
+  &.is-sml {
+    @extend %type-button-sml;
+  }
+
+  &.is-med {
+    @extend %type-button-med;
+  }
+
+  &.is-lrg {
+    @extend %type-button-lrg;
+  }
+
+  &.is-xlrg {
+    @extend %type-button-xlrg;
+  }
 }
