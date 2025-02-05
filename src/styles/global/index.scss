@@ -1,5 +1,5 @@
-@import 'fonts';
-@import 'html';
-@import 'selection';
-@import 'icons';
-@import 'animate';
+@forward 'fonts';
+@forward 'html';
+@forward 'selection';
+@forward 'icons';
+@forward 'animate';

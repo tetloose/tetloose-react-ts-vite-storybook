@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 @include font-face(
 	'Akkurat Pro',
 	'/assets/fonts/AkkuratProTT-Regular',

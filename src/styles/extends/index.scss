@@ -1,4 +1,4 @@
-@import 'typography';
-@import 'spacer';
-@import 'color';
-@import 'bg';
+@forward 'typography';
+@forward 'spacer';
+@forward 'color';
+@forward 'bg';

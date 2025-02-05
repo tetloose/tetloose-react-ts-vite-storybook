@@ -1,2 +1,2 @@
-@import 'boxsizing';
-@import 'dom';
+@use 'boxsizing' as *;
+@use 'dom' as *;

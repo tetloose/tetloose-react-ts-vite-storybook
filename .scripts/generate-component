@@ -6,26 +6,22 @@ clear
 read -p "Enter component location:
 
 [0] Atom
-[1] Partial
-[2] Component
-[3] Layouts
-[4] Context
+[1] Component
+[2] Layouts
+[3] Context
 
-[0/1/2/3/4]: " COMPONENT_SWITCH
+[0/1/2/3]: " COMPONENT_SWITCH
 
 if [ "$COMPONENT_SWITCH" = "0" ]; then
     DIR="src/atoms"
     TITLE="Atoms"
 elif [ "$COMPONENT_SWITCH" = "1" ]; then
-    DIR="src/partials"
-    TITLE="Partials"
-elif [ "$COMPONENT_SWITCH" = "2" ]; then
     DIR="src/components"
     TITLE="Components"
-elif [ "$COMPONENT_SWITCH" = "3" ]; then
+elif [ "$COMPONENT_SWITCH" = "2" ]; then
     DIR="src/layouts"
     TITLE="Layouts"
-elif [ "$COMPONENT_SWITCH" = "4" ]; then
+elif [ "$COMPONENT_SWITCH" = "3" ]; then
     DIR="src/context"
     TITLE="Context"
 fi

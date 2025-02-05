@@ -1,4 +1,4 @@
-# SPG DJI RIPA
+# Tetloose React TS Vite Storybook
 
 ## Recommended VSCode Extensions
 
@@ -41,7 +41,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 
 ## Setup
 
-1. `git clone git@ssh.dev.azure.com:v3/HugoAndCat/StandardAndPoor/spg.dji-ripa`
+1. `git clone ggit@github.com:tetloose/tetloose-react-ts-vite-storybook.git`
 2. `cmd shift p recommended` install recommended plugins
 3. `yarn setup`
 4. Web browser will open `http://localhost:6006/`

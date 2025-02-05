@@ -1,3 +1,5 @@
+@use '@styles/settings' as *;
+
 @include font-face('icons', '/assets/icons/icons', normal, ttf woff svg);
 
 [class*=icons-] {

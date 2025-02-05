@@ -1,12 +1,16 @@
+@use '@styles/settings/variables';
 @use 'sass:math';
+@use 'sass:meta';
 @use 'sass:list';
 
-@function rem($value, $baseline: vars(layout, browser-context)) {
+@function rem($value) {
+	$baseline: vars(layout, browser-context);
+
 	@if $value == 0 {
 		@return 0;
 	}
 
-	@if type-of($value) == list {
+	@if meta.type-of($value) == list {
 		$result: ();
 
 		@each $e in $value {
@@ -15,13 +19,15 @@
 
 		@return $result;
 	} @else {
-		@return if(type-of($value) == number and unit($value) == px, calc($value / $baseline) * 1rem, $value);
+		$new-value: calc(calc($value / $baseline) * 1rem);
+
+		@return if(meta.type-of($value) == number and math.unit($value) == px, $new-value, $value);
 	}
 }
 
 @mixin rem($properties) {
 	@each $property, $value in $properties {
-		@if type-of($value) == number and $value != 0 {
+		@if meta.type-of($value) == number and $value != 0 {
 			$value: if(math.is-unitless($value), $value * 1px, $value);
 		}
 

@@ -1,3 +1,5 @@
+@use '@styles/settings/colors' as *;
+
 %color {
 	&.color-dark {
 		color: color(default, dark);

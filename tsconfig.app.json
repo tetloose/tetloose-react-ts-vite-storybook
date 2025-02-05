@@ -43,12 +43,6 @@
             "@atoms": [
                 "atoms"
             ],
-            "@partials/*": [
-                "partials/*"
-            ],
-            "@partials": [
-                "partials"
-            ],
             "@components/*": [
                 "components/*"
             ],
@@ -97,12 +91,6 @@
             "@images": [
                 "images"
             ],
-            "@lottie": [
-                "lottie"
-            ],
-            "@lottie/*": [
-                "lottie/*"
-            ],
             "@constants": [
                 "constants"
             ],
@@ -123,6 +111,7 @@
         ]
     },
     "include": [
+        ".storybook/**/*.ts",
         "src",
         "src/**/*.ts",
         "src/**/*.tsx",
@@ -135,7 +124,6 @@
         ".azuredevops",
         ".husky",
         ".scripts",
-        ".storybook",
         ".vscode",
         "node_modules",
         "public",

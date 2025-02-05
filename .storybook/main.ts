@@ -1,10 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite'
-import { resolve, dirname } from 'path'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-const thePath = resolve(__dirname, '../src')
 
 const config: StorybookConfig = {
     stories: [
@@ -13,19 +7,20 @@ const config: StorybookConfig = {
         '../src/**/*.stories.@(ts|tsx)'
     ],
     addons: [
+        '@storybook/addon-a11y',
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-designs',
-        'storybook-addon-remix-react-router'
+        'storybook-addon-remix-react-router',
+        '@chromatic-com/storybook'
     ],
     docs: {
-        autodocs: false,
+        defaultName: 'Documentation'
     },
     core: {
         disableWhatsNewNotifications: true,
-        disableTelemetry: true,
-        builder: '@storybook/builder-vite'
+        disableTelemetry: true
     },
     framework: {
         name: '@storybook/react-vite',
@@ -43,12 +38,6 @@ const config: StorybookConfig = {
             plugins: [
                 checkerPlugin({
                     typescript: { buildMode: true },
-                    eslint: {
-                        lintCommand: `eslint ${thePath} --ext .ts`
-                    },
-                    stylelint: {
-                        lintCommand: `stylelint "${thePath}/**/*.{css,scss}"`
-                    },
                     overlay: {
                         initialIsOpen: true,
                         position: 'bl'
@@ -56,7 +45,10 @@ const config: StorybookConfig = {
                     enableBuild: false,
                     terminal: true
                 })
-            ]
+            ],
+            css: {
+                devSourcemap: true
+            }
         })
     }
 }

@@ -18,4 +18,6 @@ build-ssr
 *.sw?
 .env
 !.env.example
+!.gitkeep
+backup
 storybook-static

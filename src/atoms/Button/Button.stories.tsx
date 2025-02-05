@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button.component'
+import { action } from '@storybook/addon-actions'
 
 const meta: Meta<typeof Button> = {
     title: 'Atoms/Buttons',
@@ -10,7 +11,11 @@ const meta: Meta<typeof Button> = {
             url: ''
         },
         layout: 'fullscreen'
-    }
+    },
+    argTypes: {
+        onClick: { action: 'clicked' }
+    },
+    tags: ['autodocs']
 }
 
 export default meta
@@ -19,7 +24,8 @@ type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
     args: {
-        label: 'No Style'
+        label: 'No Style',
+        onClick: action('button-click')
     }
 }
 

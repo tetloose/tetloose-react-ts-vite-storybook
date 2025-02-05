@@ -1,31 +1,4 @@
-@import '@styles/settings';
-
-$button-font-size: (
-    xlrg: vars(button, xlrg),
-    lrg: vars(button, lrg),
-    med: vars(button, med),
-    sml: vars(button, sml)
-);
-$button-line-height: (
-    xlrg: vars(button, lh-xlrg),
-    lrg: vars(button, lh-lrg),
-    med: vars(button, lh-med),
-    sml: vars(button, lh-sml)
-);
-
-%type-button {
-    @extend %f-heading;
-    @extend %f-bold;
-    @extend %f-uppercase;
-}
-
-@each $size, $font-value in $button-font-size {
-    %type-button-#{$size} {
-        @extend %type-button;
-        @include sizing('font-size', $font-value);
-        @include sizing('line-height', map-get($button-line-height, $size));
-    }
-}
+@use '@styles/settings' as *;
 
 .button {
     background-color: transparent;

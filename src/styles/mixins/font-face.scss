@@ -23,7 +23,7 @@
 	@each $ext in $exts {
 		$extension: if(map.has-key($extensions, $ext), $ext + map.get($extensions, $ext), $ext);
 		$format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
-		$src: list.append($src, url(quote($file-path + '.' + $extension)) format(string.quote($format)), comma);
+		$src: list.append($src, url(string.quote($file-path + '.' + $extension)) format(string.quote($format)), comma);
 	}
 
 	@font-face {

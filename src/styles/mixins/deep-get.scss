@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+@function deep-get($map, $keys...) {
+    $result: $map;
+
+    @each $key in $keys {
+      $result: map.get($result, $key);
+    }
+
+    @return $result;
+}
+
+// Usage
+// $small-font-size: deep-get(vars(button, font-size), button, "font-size", sml);

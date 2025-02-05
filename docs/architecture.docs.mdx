@@ -1,10 +1,26 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
 <Meta title="Documentation/Architecture" />
 
 # Architecture
 
-In the context of coding and component-based architecture, the terms "atom," "partial,", "component" and "layout" are often used to describe different levels of abstraction and reusability within a webpage / web app.
+In the context of coding and component-based architecture, the terms "atom," "partial,", "component" and "layout" are often used to describe different levels of abstraction and reusability within a webpage / web-app.
+
+1. Atoms
+
+**Definition:**
+
+The most basic building blocks of your UI. In a React app, atoms can be individual HTML elements (or very simple React components) like buttons, input fields, labels, icons, and typography elements.
+
+**Key Points:**
+
+- Reusability: Atoms are designed to be reused across the app.
+- Simplicity: They are not broken down further; they provide the foundational elements.
+- Consistency: Using a well-defined set of atoms ensures a consistent look and feel.
+
+**Example:**
+
+A `<Button>` component that encapsulates styling and basic behavior can be an atom. It might accept props such as size, color, or disabled to adjust its appearance.
 
 ## Atom:
 
@@ -15,17 +31,7 @@ Atoms are typically not composed of other UI elements.
 
 A button, a text input, or an icon can be considered atoms.
 
-## Partial:
-
-Also known as a molecule or compound component, is a medium-level building block that combines multiple atoms together to create a more complex UI element.
-
-It represents a group of related atoms or other partials that work together to perform a specific function.
-
-Partials are more complex than atoms and may have their own internal structure and behavior.
-
-In the absence of a strict definition, a partial could be a UI element that is composed of multiple atoms but doesn't have the full functionality or complexity of a component.
-
-## Component:
+## 2. Components (Molecules & Organisms):
 
 Is a high-level, self-contained building block that encapsulates a specific functionality or feature.
 
@@ -41,3 +47,50 @@ A layout is the arrangement and positioning of components within a specific sect
 It defines the overall structure and organisation of the UI.
 
 A page layout might include a header component, a sidebar component, and a main content component arranged in a specific way to create the overall structure of a webpage / web app.
+
+## Foundations - Design Tokens
+
+What They Are:
+
+Variables, colors, typography settings, spacing values, and other style constants are often referred to as design tokens. They serve as the foundational elements or “DNA” of your design system.
+
+Purpose:
+
+Consistency: Ensures a uniform look and feel across all UI components.
+Maintainability: Changing a variable (like a primary color) in one place updates the design everywhere it’s used.
+Scalability: Facilitates theming and customization, allowing you to adapt your UI for different brands or modes (e.g., dark mode).
+
+- colours
+- typography
+- row col
+
+Implementing Atomic Design in React
+When building your React framework with Atomic Design:
+
+Organize Your Project Structure:
+Create directories for atoms, molecules, organisms, templates, and pages. This helps in maintaining a clear hierarchy and makes it easier to locate and reuse components.
+
+Focus on Reusability:
+Ensure that each atom and component is as generic as possible. Use props to customize behavior and appearance, so they can adapt to different contexts.
+
+Encapsulate Styles and Behavior:
+Use CSS-in-JS, CSS modules, or your preferred styling strategy to keep styles modular and scoped to individual components.
+
+Test at Multiple Levels:
+Write unit tests for atoms and molecules and integration tests for organisms and layouts to ensure that your UI remains consistent and bug-free as it scales.
+
+Layouts (Templates & Pages)
+Definition:
+Layouts represent the overall structure and composition of the UI. They provide context for where and how your components are arranged on a page.
+
+Templates: Define the page structure by positioning organisms and components in a layout without real content.
+Pages: Concrete instances of templates filled with actual content. They are used for testing the design with real data and fine-tuning the UI.
+Key Points:
+
+Structure: Layouts organize the placement and relationship of components to create a coherent and responsive interface.
+Responsiveness: They handle how components adapt to various screen sizes and devices.
+Context: Layouts provide the overall context that ties individual components together into a full UI experience.
+Examples:
+
+Template: A blog page layout that includes a header, sidebar, and main content area, where each area is a placeholder for more complex components.
+Page: A fully rendered blog page with actual articles, images, and navigation items populated within the template structure.

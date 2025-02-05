@@ -1,5 +1,9 @@
+@use '@styles/mixins/media-query' as *;
+@use '@styles/mixins/rem' as *;
+@use '@styles/settings/variables' as *;
 @use 'sass:list';
 @use 'sass:string';
+@use 'sass:meta';
 
 // calculate size based on layout spacing
 @function size($size) {
@@ -14,7 +18,7 @@
 @mixin sizing(
 	$css-property,
 	$values) {
-	@if type-of($values) == list {
+	@if meta.type-of($values) == 'list' {
 		@include mq($vw-max, max-width) {
 			$result: ();
 

@@ -17,7 +17,6 @@ const preview: Preview = {
         withRouter
     ],
     parameters: {
-        actions: { argTypesRegex: '^on[A-Z].*' },
         options: {
             storySort: {
                 order: [
@@ -36,7 +35,6 @@ const preview: Preview = {
                     ],
                     'Atoms',
                     'Components',
-                    'Partials',
                     'Layouts'
                 ]
             }
@@ -49,20 +47,10 @@ const preview: Preview = {
                     value: '#fff'
                 },
                 {
-                    name: 'Grey',
-                    value: '#f8f8f8'
-                },
-                {
                     name: 'Dark',
                     value: '#000'
                 }
             ]
-        },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/i
-            }
         }
     }
 }
