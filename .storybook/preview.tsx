@@ -7,7 +7,6 @@ import '../src/styles/app.scss'
 const preview: Preview = {
   decorators: [
     (Story) => {
-
       return (
         <StateProvider>
           <Story />

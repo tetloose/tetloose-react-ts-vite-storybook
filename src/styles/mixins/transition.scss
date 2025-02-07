@@ -3,26 +3,26 @@
 @use 'sass:string';
 
 @mixin transition(
-	$property: 'color',
-	$duration: deep-get($vars, transition, duration, fast),
-	$timing: deep-get($vars, transition, timing, fast),
-	$delay: null
+  $property: 'color',
+  $duration: deep-get($vars, transition, duration, fast),
+  $timing: deep-get($vars, transition, timing, fast),
+  $delay: null
 ) {
-	@if $property {
-		transition-property: string.unquote($property);
-	}
+  @if $property {
+    transition-property: string.unquote($property);
+  }
 
-	@if $duration {
-		transition-duration: $duration;
-	}
+  @if $duration {
+    transition-duration: $duration;
+  }
 
-	@if $timing {
-		transition-timing-function: $timing;
-	}
+  @if $timing {
+    transition-timing-function: $timing;
+  }
 
-	@if $delay {
-		transition-delay: $delay;
-	}
+  @if $delay {
+    transition-delay: $delay;
+  }
 }
 
 // Usage

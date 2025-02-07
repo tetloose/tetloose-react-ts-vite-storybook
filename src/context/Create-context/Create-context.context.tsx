@@ -22,18 +22,16 @@ export function createContext<T, S extends string, U extends string>(
       [updateStateName]: updateState
     } as ContextType<T, S, U>
 
-    return (
-      <Context.Provider value={value}>
-        {children}
-      </Context.Provider>
-    )
+    return <Context.Provider value={value}>{children}</Context.Provider>
   }
 
   const useContextProvider = (): ContextType<T, S, U> => {
     const context = useContext(Context)
 
     if (!context) {
-      throw new Error(`${contextName} must be used within its corresponding Provider`)
+      throw new Error(
+        `${contextName} must be used within its corresponding Provider`
+      )
     }
 
     return context

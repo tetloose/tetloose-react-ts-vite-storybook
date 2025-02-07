@@ -1,4 +1,10 @@
 import type { StorybookConfig } from '@storybook/react-vite'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const src = resolve(__dirname, '../src')
 
 const config: StorybookConfig = {
   stories: [
@@ -10,14 +16,11 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@chromatic-com/storybook',
     '@storybook/addon-interactions',
     '@storybook/addon-designs',
-    'storybook-addon-remix-react-router',
-    '@chromatic-com/storybook'
+    'storybook-addon-remix-react-router'
   ],
-  docs: {
-    defaultName: 'Documentation'
-  },
   core: {
     disableWhatsNewNotifications: true,
     disableTelemetry: true
@@ -25,6 +28,9 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/react-vite',
     options: {}
+  },
+  docs: {
+    autodocs: true
   },
   typescript: {
     reactDocgen: false
@@ -38,6 +44,13 @@ const config: StorybookConfig = {
       plugins: [
         checkerPlugin({
           typescript: { buildMode: true },
+          eslint: {
+            useFlatConfig: true,
+            lintCommand: `eslint ${src}`
+          },
+          stylelint: {
+            lintCommand: `stylelint ${src}/**/*.scss`
+          },
           overlay: {
             initialIsOpen: true,
             position: 'bl'
@@ -46,11 +59,10 @@ const config: StorybookConfig = {
           terminal: true
         })
       ],
-      css: {
-        devSourcemap: true
-      },
-      build: {
-        chunkSizeWarningLimit: 1000
+      server: {
+        hmr: {
+          overlay: false
+        }
       }
     })
   }

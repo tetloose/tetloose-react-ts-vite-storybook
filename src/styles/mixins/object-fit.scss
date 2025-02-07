@@ -1,7 +1,7 @@
 @mixin object-fit($fit: cover, $position: null) {
-	object-fit: $fit;
+  object-fit: $fit;
 
-	@if $position {
-		object-position: $position;
-	}
+  @if $position {
+    object-position: $position;
+  }
 }

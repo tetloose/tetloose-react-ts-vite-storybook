@@ -7,9 +7,9 @@ import 'vitest-canvas-mock'
 expect.extend(matchers)
 
 class ObserverMock {
-  observe() { }
-  disconnect() { }
-  unobserve() { }
+  observe() {}
+  disconnect() {}
+  unobserve() {}
 }
 
 global.ResizeObserver = ObserverMock

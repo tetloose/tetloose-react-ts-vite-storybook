@@ -4,10 +4,11 @@
 @use 'sass:list';
 @use 'sass:string';
 @use 'sass:meta';
+@use 'sass:map';
 
 // calculate size based on layout spacing
 @function size($size) {
-	@return calc(vars(layout, spacing) * $size);
+  @return calc(vars(layout, spacing) * $size);
 }
 
 // Usage
@@ -15,40 +16,42 @@
 // 42 / vars(layout, spacing) -> 4px = 42 / 4 = 10.5
 // padding-top: size(10.5)
 
-@mixin sizing(
-	$css-property,
-	$values) {
-	@if meta.type-of($values) == 'list' {
-		@include mq($vw-max, max-width) {
-			$result: ();
+@mixin sizing($css-property, $values) {
+  @if vars(layout, rem) {
+    #{$css-property}: rem($values);
+  } @else {
+    @if meta.type-of($values) == 'list' {
+      @include mq($vw-max, max-width) {
+        $result: ();
 
-			@each $value in $values {
-				$context: calc($value / $vw-context * $vw-adjustment-max);
-				$result: list.append($result, $context);
-			}
+        @each $value in $values {
+          $context: calc($value / $vw-context * $vw-adjustment-max);
+          $result: list.append($result, $context);
+        }
 
-			#{$css-property}: string.unquote('#{join($result, '')}');
-		}
+        #{$css-property}: string.unquote('#{join($result, '')}');
+      }
 
-		@include mq($vw-max) {
-			$result: ();
+      @include mq($vw-max) {
+        $result: ();
 
-			@each $value in $values {
-				$context: rem($value);
-				$result: list.append($result, $context);
-			}
+        @each $value in $values {
+          $context: rem($value);
+          $result: list.append($result, $context);
+        }
 
-			#{$css-property}: string.unquote('#{join($result, '')}');
-		}
-	} @else {
-		@include mq($vw-max, max-width) {
-			#{$css-property}: calc($values / $vw-context * $vw-adjustment-max);
-		}
+        #{$css-property}: string.unquote('#{join($result, '')}');
+      }
+    } @else {
+      @include mq($vw-max, max-width) {
+        #{$css-property}: calc($values / $vw-context * $vw-adjustment-max);
+      }
 
-		@include mq($vw-max) {
-			#{$css-property}: rem($values);
-		}
-	}
+      @include mq($vw-max) {
+        #{$css-property}: rem($values);
+      }
+    }
+  }
 }
 
 // Usage

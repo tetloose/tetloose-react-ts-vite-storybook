@@ -1,9 +1,5 @@
 const App = () => {
-  return (
-    <>
-      React BayBay
-    </>
-  )
+  return <>React BayBay</>
 }
 
 export default App

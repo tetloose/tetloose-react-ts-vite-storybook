@@ -1,13 +1,13 @@
+h2,
 .typography h2,
-.content h2,
-h2 {
-	@extend %type-h2;
+.content h2 {
+  @extend %type-h2;
 
-	&:global(.is-d1) {
-		@extend %type-d1;
-	}
+  &:global(.is-d1) {
+    @extend %type-d1;
+  }
 
-	&:global(.is-d2) {
-		@extend %type-d2;
-	}
+  &:global(.is-d2) {
+    @extend %type-d2;
+  }
 }

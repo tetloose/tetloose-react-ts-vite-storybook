@@ -1,11 +1,11 @@
 @use '@styles/mixins' as *;
 
 @for $i from 1 through 30 {
-	%spacer-padding-#{$i} {
-		@include sizing('padding-top', size($i));
-	}
+  %spacer-padding-#{$i} {
+    @include sizing('padding-top', size($i));
+  }
 
-	%spacer-margin-#{$i} {
-		@include sizing('margin-top', size($i));
-	}
+  %spacer-margin-#{$i} {
+    @include sizing('margin-top', size($i));
+  }
 }

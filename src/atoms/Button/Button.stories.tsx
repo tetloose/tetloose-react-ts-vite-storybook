@@ -1,6 +1,6 @@
+import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button.component'
-import { action } from '@storybook/addon-actions'
 
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Buttons',
@@ -17,7 +17,6 @@ const meta: Meta<typeof Button> = {
   },
   tags: ['autodocs']
 }
-
 export default meta
 
 type Story = StoryObj<typeof Button>
@@ -32,7 +31,12 @@ export const Default: Story = {
 export const Children: Story = {
   args: {
     label: 'No Style With Children',
-    children: <><br /><span>Child</span></>
+    children: (
+      <>
+        <br />
+        <span>Child</span>
+      </>
+    )
   }
 }
 

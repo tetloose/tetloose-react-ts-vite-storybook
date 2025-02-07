@@ -1,7 +1,7 @@
-.content hr,
-hr {
-	width: 100%;
-	background: color(default, dark);
+hr,
+.content hr {
+  width: 100%;
+  background: color(default, dark);
 
-	@include sizing('height', size(.25));
+  @include sizing('height', size(0.25));
 }

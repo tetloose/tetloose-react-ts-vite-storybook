@@ -8,9 +8,8 @@ read -p "Enter component location:
 [0] Atom
 [1] Component
 [2] Layouts
-[3] Context
 
-[0/1/2/3]: " COMPONENT_SWITCH
+[0/1/2]: " COMPONENT_SWITCH
 
 if [ "$COMPONENT_SWITCH" = "0" ]; then
   DIR="src/atoms"
@@ -21,9 +20,6 @@ elif [ "$COMPONENT_SWITCH" = "1" ]; then
 elif [ "$COMPONENT_SWITCH" = "2" ]; then
   DIR="src/layouts"
   TITLE="Layouts"
-elif [ "$COMPONENT_SWITCH" = "3" ]; then
-  DIR="src/context"
-  TITLE="Context"
 fi
 
 if [ "$COMPONENT_SWITCH" ]; then

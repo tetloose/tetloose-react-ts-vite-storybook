@@ -3,11 +3,11 @@
 @use 'sass:map';
 
 %f-heading {
-  font-family: 'anton', sans-serif;;
+  font-family: anton, sans-serif;
 }
 
 %f-body {
-  font-family: 'mencken-std', sans-serif;
+  font-family: mencken-std, sans-serif;
 }
 
 %f-light {
@@ -61,10 +61,10 @@
 }
 
 $icon-sizes: (
-xlrg: vars(icons, xlrg),
-lrg: vars(icons, lrg),
-med: vars(icons, med),
-sml: vars(icons, sml)
+  xlrg: vars(icons, xlrg),
+  lrg: vars(icons, lrg),
+  med: vars(icons, med),
+  sml: vars(icons, sml)
 );
 
 @each $size, $value in $icon-sizes {
@@ -132,22 +132,22 @@ sml: vars(icons, sml)
 }
 
 $body-sizes: (
-sml: (
-font-size: deep-get($vars, body, font-size, sml),
-line-height: deep-get($vars, body, line-height, sml)
-),
-med: (
-font-size: deep-get($vars, body, font-size, med),
-line-height: deep-get($vars, body, line-height, med)
-),
-lrg: (
-font-size: deep-get($vars, body, font-size, lrg),
-line-height: deep-get($vars, body, line-height, lrg)
-),
-xlrg: (
-font-size: deep-get($vars, body, font-size, xlrg),
-line-height: deep-get($vars, body, line-height, xlrg)
-)
+  sml: (
+    font-size: deep-get($vars, body, font-size, sml),
+    line-height: deep-get($vars, body, line-height, sml)
+  ),
+  med: (
+    font-size: deep-get($vars, body, font-size, med),
+    line-height: deep-get($vars, body, line-height, med)
+  ),
+  lrg: (
+    font-size: deep-get($vars, body, font-size, lrg),
+    line-height: deep-get($vars, body, line-height, lrg)
+  ),
+  xlrg: (
+    font-size: deep-get($vars, body, font-size, xlrg),
+    line-height: deep-get($vars, body, line-height, xlrg)
+  )
 );
 
 @each $size, $settings in $body-sizes {
@@ -165,22 +165,22 @@ line-height: deep-get($vars, body, line-height, xlrg)
 }
 
 $button-sizes: (
-sml: (
-font-size: deep-get($vars, button, font-size, sml),
-line-height: deep-get($vars, button, line-height, sml)
-),
-med: (
-font-size: deep-get($vars, button, font-size, med),
-line-height: deep-get($vars, button, line-height, med)
-),
-lrg: (
-font-size: deep-get($vars, button, font-size, lrg),
-line-height: deep-get($vars, button, line-height, lrg)
-),
-xlrg: (
-font-size: deep-get($vars, button, font-size, xlrg),
-line-height: deep-get($vars, button, line-height, xlrg)
-)
+  sml: (
+    font-size: deep-get($vars, button, font-size, sml),
+    line-height: deep-get($vars, button, line-height, sml)
+  ),
+  med: (
+    font-size: deep-get($vars, button, font-size, med),
+    line-height: deep-get($vars, button, line-height, med)
+  ),
+  lrg: (
+    font-size: deep-get($vars, button, font-size, lrg),
+    line-height: deep-get($vars, button, line-height, lrg)
+  ),
+  xlrg: (
+    font-size: deep-get($vars, button, font-size, xlrg),
+    line-height: deep-get($vars, button, line-height, xlrg)
+  )
 );
 
 @each $size, $settings in $button-sizes {
@@ -194,7 +194,6 @@ line-height: deep-get($vars, button, line-height, xlrg)
 %type-input {
   @extend %f-body;
   @extend %f-regular;
-
   @include sizing('font-size', vars(input, font-size));
   @include sizing('line-height', vars(input, line-height));
 }
@@ -202,7 +201,6 @@ line-height: deep-get($vars, button, line-height, xlrg)
 %type-label {
   @extend %f-body;
   @extend %f-regular;
-
   @include sizing('font-size', vars(label, font-size));
   @include sizing('line-height', vars(label, line-height));
 }

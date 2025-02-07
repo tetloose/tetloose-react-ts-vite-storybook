@@ -1,5 +1,4 @@
 {
-  "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
@@ -25,40 +24,29 @@
   ],
   "files.exclude": {
     ".d.ts": true,
+    ".husky": true,
     ".scripts": true,
-    ".storybook/manager.js": true,
+    ".storybook/images.d.ts": true,
     ".storybook/main.ts": true,
+    ".storybook/manager.js": true,
     ".vitest": true,
+    ".vscode": true,
     "node_modules": true,
-    "storybook-static": true,
-    "build": true,
+    ".editorconfig": true,
     ".gitignore": true,
+    "eslint.config.js": true,
+    "package-lock.json": true,
     "package.json": true,
+    "stylelint.config.js": true,
     "toolkit": true,
     "tsconfig.app.json": true,
     "tsconfig.json": true,
     "tsconfig.node.json": true,
-    "vite.config.ts": true,
-    "yarn.lock": true,
-    ".editorconfig": true,
-    ".vscode": true
+    "vite.config.ts": true
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[md]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "search.exclude": {
+    "node_modules": true,
+    "build": true,
+    "storybook-static": true
   }
 }

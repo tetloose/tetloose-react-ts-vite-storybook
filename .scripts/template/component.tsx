@@ -17,7 +17,7 @@ export const EXPORT_NAME = ({
     <div
       className={cs(
         styles['CLASS_NAME'],
-        variants && variants.map(variant => styles[variant]),
+        variants && variants.map((variant) => styles[variant]),
         ...(modifiers || [])
       )}
       {...rest}

@@ -1,16 +1,13 @@
-import { StateProvider } from '@context'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
+import { StateProvider } from '@context'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
 
 describe('EXPORT_NAME component', () => {
   it('renders EXPORT_NAME component with a modifier', () => {
     render(
       <StateProvider>
-        <EXPORT_NAME
-          data-testid="element"
-          modifiers={['test-modifier']}
-        />
+        <EXPORT_NAME data-testid='element' modifiers={['test-modifier']} />
       </StateProvider>
     )
 

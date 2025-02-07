@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
-import sass from 'sass'
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
@@ -10,27 +9,33 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      !process.env.VITEST
-        ? checker({
+      mode === 'development' &&
+        checker({
           typescript: { buildMode: true },
+          eslint: {
+            useFlatConfig: true,
+            lintCommand: 'eslint ./src'
+          },
+          stylelint: {
+            lintCommand: 'stylelint ./src/**/*.scss'
+          },
           overlay: {
             initialIsOpen: true,
             position: 'bl'
           },
           enableBuild: true,
           terminal: true
-        })
-        : undefined,
+        }),
       viteTsconfigPaths(),
       svgr()
-    ],
+    ].filter(Boolean),
+    esbuild: {
+      logLevel: 'error'
+    },
     build: {
       manifest: true,
       sourcemap: mode === 'development',
       outDir: resolve(__dirname, 'build')
-    },
-    esbuild: {
-      logLevel: 'error'
     },
     resolve: {
       alias: {
@@ -60,31 +65,28 @@ export default defineConfig(({ mode }) => {
         '@routes/*': resolve(__dirname, 'src/routes/*')
       }
     },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          implementation: sass,
-          quietDeps: false
-        }
-      }
-    },
     test: {
       globals: true,
       environment: 'jsdom',
       setupFiles: ['.vitest/vitest.setup.ts'],
       include: ['./src/**/*.test.{ts,tsx}'],
       exclude: [
+        '.husky',
         '.scripts',
+        '.vscode',
         'node_modules',
+        'public',
         'build',
         'storybook-static',
         'coverage'
       ]
     },
-    assetsInclude: ['/sb-preview/runtime.js'],
     server: {
       port: 3000,
-      open: true
+      open: true,
+      hmr: {
+        overlay: false
+      }
     }
   }
 })

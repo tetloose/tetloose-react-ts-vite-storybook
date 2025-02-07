@@ -1,9 +1,9 @@
+p,
 .typography p,
-.content p,
-p {
-	@extend %type-body-med;
+.content p {
+  @extend %type-body-med;
 
-	small {
-		@extend %type-body-sml;
-	}
+  small {
+    @extend %type-body-sml;
+  }
 }

@@ -1,5 +1,5 @@
+strong,
 .typography strong,
-.content strong,
-strong {
-	@extend %f-bold;
+.content strong {
+  @extend %f-bold;
 }

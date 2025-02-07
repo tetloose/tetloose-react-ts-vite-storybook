@@ -1,7 +1,7 @@
 textarea {
-	@extend %form-reset;
+  @extend %form-reset;
 
-	min-height: rem(200px);
-	overflow: auto;
-	resize: vertical;
+  min-height: rem(200px);
+  overflow: auto;
+  resize: vertical;
 }

@@ -1,30 +1,30 @@
 %form-reset {
-	display: block;
-	width: 100%;
-	border-style: solid;
-	border-color: transparent;
-	color: color(default, dark);
-	appearance: none;
+  display: block;
+  width: 100%;
+  border-style: solid;
+  border-color: transparent;
+  color: color(default, dark);
+  appearance: none;
 
-	@include sizing('border-width', size(.25));
-	@include sizing('padding', [size(3.25), size(3)]);
-	@extend %type-input;
+  @include sizing('border-width', size(0.25));
+  @include sizing('padding', [size(3.25), size(3)]);
+  @extend %type-input;
 
-	&::placeholder {
-		color: color(default, dark);
+  &::placeholder {
+    color: color(default, dark);
 
-		@include transition('color');
-	}
+    @include transition('color');
+  }
 
-	&[disabled] {
-		opacity: .3;
+  &[disabled] {
+    opacity: 0.3;
 
-		@include disable(true);
-	}
+    @include disable(true);
+  }
 
-	@include mq-hover {
-		cursor: pointer;
+  @include mq-hover {
+    cursor: pointer;
 
-		@include transition('color, background-color, border-color');
-	}
+    @include transition('color, background-color, border-color');
+  }
 }

@@ -1,3 +1,4 @@
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -5,10 +6,18 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
 node_modules
 build
-build-ssr
+storybook-static
+coverage
+dist
+dist-ssr
 *.local
+
+# Editor directories and files
+!.env.example
+!.gitkeep
 .idea
 .DS_Store
 *.suo
@@ -16,8 +25,5 @@ build-ssr
 *.njsproj
 *.sln
 *.sw?
-.env
-!.env.example
-!.gitkeep
-backup
-storybook-static
+
+*storybook.log

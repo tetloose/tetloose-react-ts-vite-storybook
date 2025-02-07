@@ -1,6 +1,6 @@
+import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
-import { action } from '@storybook/addon-actions'
 
 const meta: Meta<typeof EXPORT_NAME> = {
   title: 'TITLE_NAME',
