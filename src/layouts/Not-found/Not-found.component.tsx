@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Column, Container, Row, Spacer, Typography } from '@foundations'
 import { useAnimate } from '@hooks'
 import { Button } from '@atoms'
-import { useNotFoundContent } from './Hooks/use-not-found-content.hooks'
+import { useNotFoundContent } from './hooks/use-not-found-content.hooks'
 import { NotFoundProps } from './Not-found.types'
 
 export const NotFound = ({ error }: NotFoundProps) => {

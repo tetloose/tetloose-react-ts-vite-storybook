@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { NotFound } from './Not-found.component'
+import { Home } from './Home.component'
 
-const meta: Meta<typeof NotFound> = {
-  title: 'Layouts/Not Found',
-  component: NotFound,
+const meta: Meta<typeof Home> = {
+  title: 'Layouts/Home',
+  component: Home,
   parameters: {
     design: {
       type: 'figma',
@@ -15,6 +15,6 @@ const meta: Meta<typeof NotFound> = {
 
 export default meta
 
-type Story = StoryObj<typeof NotFound>
+type Story = StoryObj<typeof Home>
 
 export const Primary: Story = {}

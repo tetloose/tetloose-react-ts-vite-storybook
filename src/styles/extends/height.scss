@@ -2,10 +2,10 @@
 
 %height {
   &.height-fullscreen {
-    height: vars(vh, fullscreen);
+    min-height: vars(vh, fullscreen);
   }
 
   &.height-half {
-    height: vars(vh, half);
+    min-height: vars(vh, half);
   }
 }

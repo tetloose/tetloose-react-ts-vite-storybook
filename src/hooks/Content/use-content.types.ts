@@ -1,10 +1,8 @@
 import { QueryObserverResult } from '@tanstack/react-query'
+import { Card } from '@components/Card/Card.types'
 
 export type Content = {
-  homepage: {
-    title: string
-    content: string
-  }
+  homepage: Card[]
   notFound: {
     title: string
     subtitle: string

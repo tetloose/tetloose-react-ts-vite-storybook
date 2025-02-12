@@ -1,8 +1,21 @@
 {
-  "homepage": {
-    "title": "Home",
-    "content": "<p>Happy coding</p>"
-  },
+  "homepage": [
+    {
+      "image": "https://via.assets.so/game.png?id=1&q=95&w=360&h=360&fit=fill",
+      "title": "Lorem ipsum dolor sit amet consectetur",
+      "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?"
+    },
+    {
+      "image": "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill",
+      "title": "Lorem ipsum dolor sit amet consectetur",
+      "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?"
+    },
+    {
+      "image": "https://via.assets.so/movie.png?id=1&q=95&w=360&h=360&fit=fill",
+      "title": "Lorem ipsum dolor sit amet consectetur",
+      "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?"
+    }
+  ],
   "notFound": {
     "title": "404 Page not found",
     "subtitle": "Please click the link below to return home",

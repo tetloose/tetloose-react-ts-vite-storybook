@@ -3,6 +3,11 @@
 %bg {
   &.bg-dark {
     background-color: color(default, dark);
+
+    ::selection {
+      background-color: color(default, light);
+      color: color(default, dark);
+    }
   }
 
   &.bg-light {

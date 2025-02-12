@@ -10,7 +10,7 @@ import {
   queryClient,
   QueryClientProvider
 } from '../src/hooks/Query/query-client.hooks'
-import { HandleBoundary } from '../src/layouts/Not-found/Handle-boundary.util'
+import { HandleBoundary } from '../src/layouts/Not-found/utils/Handle-boundary.util'
 import '../src/styles/app.scss'
 
 const preview: Preview = {
