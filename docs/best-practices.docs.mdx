@@ -20,7 +20,7 @@ This is a collection of best practices and conventions to follow with this proje
 ## Coding standards
 
 - Keep the components simple as possible
-- Keep code organised and tidy
+- Keep code organized and tidy
 - Keep code dry
 - Split code into manageable chunks
 - Deconstruct Objects & Functions
@@ -48,6 +48,10 @@ This is the structure for the components within components folder.
 
 ```
 Component-name
+  |-- hooks
+    |-- Component-name.hooks.ts
+  |-- utils
+    |-- Component-name.utils.ts
   |-- Component-name.component.tsx
   |-- Component-name.types.ts
   |-- Component-name.module.scss
@@ -58,9 +62,7 @@ Component-name
 
 ## Css Modules
 
-The project makes use of CSS modules. The decision was taken to move away from styled components due to performance issues and problems with FOUC (flash of un-styled content).
-
-The projects modules where possible are written in BEM structure for familiarity.
+The projects modules where possible are written in BEM and SMACS for structure for familiarity.
 
 Css modules allows styles to be included using dot notation within the components. However due to using BEM we lose the Element and Modifier identifiers using dot notation.
 
@@ -80,14 +82,18 @@ export const ComponentName = ({
   return (
     <div
       className={cs(
-        styles["component-block"],
-        styles["component-block--modifier"]
+        styles['component-block'],
+        styles['component-block--modifier'],
+        styles['has-modifier'],
+        styles['is-modifier'],
+        styles['bg-dark'],
+        styles['color-light']
       )}
     >
-      <span className={styles["component-block__element"]}>/* content */</span>
+      <span className={styles['component-block__element']}>/* content */</span>
     </div>
   );
 };
 ```
 
-It is important to note that we use the `classnames` package as a way of joining the classes together.
+It is important to note that we use the `classnames` package as a way of joining the classes together, this is mainly used in **Foundations** and **Atoms** as these components will use **HTML elements**. Once you drill down into Components, we will have these building blocks, and we can pass down **Modifiers** as a `string[]`

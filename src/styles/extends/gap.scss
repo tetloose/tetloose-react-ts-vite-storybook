@@ -1,0 +1,10 @@
+@use '@styles/mixins' as *;
+@use '@styles/settings/variables' as *;
+
+%gap {
+	@for $i from 1 through vars(layout, loop) {
+		&.gap-#{$i} {
+      @include sizing('gap', size(#{$i}));
+		}
+	}
+}

@@ -8,6 +8,8 @@ export type GlobalChildren = {
   children?: ReactNode | ReactNode[]
 }
 
+export type Tags = 'main' | 'div' | 'section' | 'footer' | 'header' | 'aside'
+
 export type Color = 'dark' | 'light'
 
 export type GlobalColor = {
@@ -54,10 +56,21 @@ export type GlobalFontWeight = {
   fontWeight?: FontWeight
 }
 
-export type TextAlign = 'left' | 'right' | 'center'
+export type Align = 'left' | 'right' | 'center'
 
-export type GlobalTextAlign = {
-  textAlign?: TextAlign
+export type GlobalAlign = {
+  textAlign?: Align
+}
+
+export type FlexAlign =
+  | 'flex-start'
+  | 'center'
+  | 'flex-end'
+  | 'stretch'
+  | 'baseline'
+
+export type GlobalFlexAlign = {
+  align?: FlexAlign
 }
 
 export type TextTransform = 'capitalize' | 'uppercase' | 'lowercase'
@@ -72,15 +85,20 @@ export type GlobalFontStyle = {
   fontStyle?: FontStyle
 }
 
-export type GlobalSpacers = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+export type Spacers = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+export type GlobalSpacers = {
+  margin?: Spacers
+  padding?: Spacers
+}
 
 type Padding = {
-  default?: GlobalSpacers
-  sml?: GlobalSpacers
-  med?: GlobalSpacers
-  lrg?: GlobalSpacers
-  xlrg?: GlobalSpacers
-  xxlrg?: GlobalSpacers
+  default?: Spacers
+  sml?: Spacers
+  med?: Spacers
+  lrg?: Spacers
+  xlrg?: Spacers
+  xxlrg?: Spacers
 }
 
 export type GlobalPadding = {
@@ -114,6 +132,34 @@ export type GlobalWidth = {
   }
 }
 
+export type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse'
+
+export type GlobalDirection = {
+  direction?: Direction
+}
+
+export type Justify =
+  | 'flex-start'
+  | 'center'
+  | 'flex-end'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly'
+
+export type GlobalJustify = {
+  justify?: Justify
+}
+
+export type Wrap = 'nowrap' | 'wrap' | 'wrap-reverse'
+
+export type GlobalFlexWrap = {
+  wrap?: Wrap
+}
+
+export type GlobalGap = {
+  gap?: Spacers
+}
+
 export type GlobalRatios = '1x1' | '3x2' | '16x9' | '21x9' | 'fullscreen'
 
 export type Height = 'fullscreen' | 'half'
@@ -121,3 +167,5 @@ export type Height = 'fullscreen' | 'half'
 export type GlobalHeight = {
   height?: Height
 }
+
+export type GlobalVerticalAlign = 'top' | 'middle' | 'bottom' | 'baseline'

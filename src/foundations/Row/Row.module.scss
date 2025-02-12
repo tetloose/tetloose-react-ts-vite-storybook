@@ -1,5 +1,13 @@
 @use '@styles/settings' as *;
 
+@mixin gutter($side, $context) {
+  @include sizing('padding-#{$side}', size(calc(vars(layout, gutter) / vars(layout, spacing))));
+
+  #{$context} {
+    @include sizing('margin-#{$side}', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
+  }
+}
+
 .row {
 	$row: &;
 
@@ -8,161 +16,77 @@
 	margin-right: auto;
 	margin-left: auto;
 
-	&.direction-row {
-		flex-direction: row;
-	}
-
-	&.direction-row-reverse {
-		flex-direction: row-reverse;
-	}
-
-	&.direction-column {
-		flex-direction: column;
-	}
-
-	&.direction-column-reverse {
-		flex-direction: column-reverse;
-	}
-
-  &.justify-flex-start {
-    justify-content: flex-start;
-  }
-
-  &.justify-center {
-    justify-content: center;
-  }
-
-  &.justify-flex-end {
-    justify-content: flex-end;
-  }
-
-  &.justify-space-between {
-    justify-content: space-between;
-  }
-
-  &.justify-space-around {
-    justify-content: space-around;
-  }
-
-  &.justify-space-evenly {
-    justify-content: space-evenly;
-  }
-
-  &.align-flex-start {
-    align-items: flex-start;
-  }
-
-	&.align-center {
-		align-items: center;
-	}
-
-	&.align-flex-end {
-		align-items: flex-end;
-	}
-
-	&.align-stretch {
-		align-items: stretch;
-	}
-
-	&.align-baseline {
-		align-items: baseline;
-	}
-
-  &.wrap-nowrap {
-    flex-wrap: nowrap;
-  }
-
-  &.wrap-wrap {
-    flex-wrap: wrap;
-  }
-
-  &.wrap-reverse {
-    flex-wrap: wrap-reverse;
-  }
+  @extend %direction;
+  @extend %align;
+  @extend %wrap;
+  @extend %justify;
+  @extend %height;
 
   &.gutter-left {
-    @include sizing('padding-left', size(calc(vars(layout, gutter) / vars(layout, spacing))));
-
-    #{$row} {
-      @include sizing('margin-left', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
-    }
+    @include gutter(left, $row);
   }
 
   &.gutter-right {
-    @include sizing('padding-right', size(calc(vars(layout, gutter) / vars(layout, spacing))));
-
-    #{$row} {
-      @include sizing('margin-right', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
-    }
+    @include gutter(right, $row);
   }
-
-  @extend %height;
 
 	&__column {
 		width: 100%;
+
+    &.gutter-left {
+      @include gutter(left, $row);
+    }
+
+    &.gutter-right {
+      @include gutter(right, $row);
+    }
 
     &.auto {
       width: auto;
     }
 
-		&.gutter-left {
-      @include sizing('padding-left', size(calc(vars(layout, gutter) / vars(layout, spacing))));
-
-      #{$row} {
-        @include sizing('margin-left', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
-      }
-		}
-
-		&.gutter-right {
-      @include sizing('padding-right', size(calc(vars(layout, gutter) / vars(layout, spacing))));
-
-      #{$row} {
-        @include sizing('margin-right', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
-      }
-		}
-
-    @for $i from 0 through 12 {
+    @for $i from 0 through vars(layout, columns) {
       &.default-width-#{$i} {
-        width: column-width(12, #{$i});
+        width: column-width(vars(layout, columns), #{$i});
       }
     }
 
     @include mq( vars(breakpoint, sml)) {
-      @for $i from 1 through 12 {
+      @for $i from 1 through vars(layout, columns) {
         &.sml-width-#{$i} {
-          width: column-width(12, #{$i});
+          width: column-width(vars(layout, columns), #{$i});
         }
       }
     }
 
     @include mq( vars(breakpoint, med)) {
-      @for $i from 1 through 12 {
+      @for $i from 1 through vars(layout, columns) {
         &.med-width-#{$i} {
-          width: column-width(12, #{$i});
+          width: column-width(vars(layout, columns), #{$i});
         }
       }
     }
 
     @include mq( vars(breakpoint, lrg)) {
-      @for $i from 1 through 12 {
+      @for $i from 1 through vars(layout, columns) {
         &.lrg-width-#{$i} {
-          width: column-width(12, #{$i});
+          width: column-width(vars(layout, columns), #{$i});
         }
       }
     }
 
     @include mq( vars(breakpoint, xlrg)) {
-      @for $i from 1 through 12 {
+      @for $i from 1 through vars(layout, columns) {
         &.xlrg-width-#{$i} {
-          width: column-width(12, #{$i});
+          width: column-width(vars(layout, columns), #{$i});
         }
       }
     }
 
     @include mq( vars(breakpoint, xxlrg)) {
-      @for $i from 1 through 12 {
+      @for $i from 1 through vars(layout, columns) {
         &.xxlrg-width-#{$i} {
-          width: column-width(12, #{$i});
+          width: column-width(vars(layout, columns), #{$i});
         }
       }
     }

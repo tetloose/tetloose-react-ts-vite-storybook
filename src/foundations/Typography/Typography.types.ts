@@ -1,15 +1,15 @@
 import {
+  GlobalAlign,
   GlobalChildren,
   GlobalColor,
   GlobalDisplay,
   GlobalFontStyle,
   GlobalFontWeight,
   GlobalModifiers,
-  GlobalTextAlign,
+  GlobalSpacers,
   GlobalTextTransform,
   GlobalWhiteSpace
 } from '@global'
-import { SpacerOptions } from '@foundations/Spacer/Spacer.types'
 
 export type TypographyTags =
   | 'span'
@@ -46,9 +46,9 @@ type SharedProps = {
 } & GlobalModifiers &
   GlobalColor &
   GlobalWhiteSpace &
-  GlobalTextAlign &
+  GlobalAlign &
   GlobalDisplay &
-  SpacerOptions &
+  GlobalSpacers &
   GlobalTextTransform &
   GlobalFontWeight &
   GlobalFontStyle

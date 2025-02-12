@@ -1,6 +1,7 @@
 @use '@styles/mixins' as *;
+@use '@styles/settings/variables' as *;
 
-@for $i from 1 through 10 {
+@for $i from 1 through vars(layout, loop) {
   %spacer-padding-#{$i} {
     @include sizing('padding-top', size($i));
   }

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { NotFound } from './Not-found.component'
+import NotFound from './Not-found.component'
 
 const meta: Meta<typeof NotFound> = {
   title: 'Layouts/Not Found',

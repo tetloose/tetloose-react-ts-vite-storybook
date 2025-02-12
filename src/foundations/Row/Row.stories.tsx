@@ -32,8 +32,7 @@ const meta: Meta<typeof Row> = {
       url: ''
     },
     layout: 'fullscreen'
-  },
-  tags: ['autodocs']
+  }
 }
 
 export default meta

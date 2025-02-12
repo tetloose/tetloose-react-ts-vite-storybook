@@ -10,8 +10,7 @@ const meta: Meta<typeof EXPORT_NAME> = {
       url: ''
     },
     layout: 'fullscreen'
-  },
-  tags: ['autodocs']
+  }
 }
 
 export default meta

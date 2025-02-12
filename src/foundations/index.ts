@@ -1,3 +1,5 @@
+export { Grid } from './Grid/Grid.component'
+export { GridItem } from './Grid/Grid-item.component'
 export { Row } from './Row/Row.component'
 export { Column } from './Row/Column.component'
 export { Spacer } from './Spacer/Spacer.component'

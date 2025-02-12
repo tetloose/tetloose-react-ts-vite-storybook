@@ -4,22 +4,13 @@ import { Meta } from '@storybook/blocks';
 
 # CRUD
 
-## Fake API Endpoints
-
-Each endpoint needs to be defined in `.env` and `.env.example`. These endpoints need to be updated in the Application and Storybook hosting.
-
-`https://portal.azure.com/`
-
-* spice-index-builder-storybook | Environment variables
-* spice-index-builder-qa | Environment variables
-
 ## JSON Files
 
-These are split up into each endpoint and stored in `public/api` add extra json files for endpoints if needed e.g. `public/api/prototype/paging.json`.
+These are split up into each endpoint and stored in `public/api`.
 
 ## Functions
 
-CRUD functions are store in `src/crud`. All data types for each endpoint are stored `src/crud/data`.
+CRUD functions are store in `src/crud`.
 
 ### Request
 
@@ -31,25 +22,23 @@ This function takes 3 arguments.
 * Method -> api method 'GET', 'PUT', 'PATCH', 'POST', 'DELETE'
 * Body -> Data payload
 
-This function will also be used to send the authorization barear token.
+### API Url
 
-### API
-
-`src/crud/api.crud.ts`
+`src/crud/api-url.crud.ts`
 
 This function is used to build the api url it takes 4 arguments
 
-#### Url
+#### Urls
 
-A typed url `src/crud/crud.types.ts` which is used to assign the CRUD function to a React Query Key -> `src/crud/query-key.crud.ts`.
+`src/crud/Api/api-urls.ts`: `union type`
 
 #### Resource
 
-The endpoints are strickly typed, but each endpoint might have a resource that handles CRUD functions. E.g. `https://api-url/users/${id}` We can pass id as the resource and attach functions to it like PUT, PATCH, POST, DELETE.
+The endpoints are strickle typed, but each endpoint might have a resource that handles CRUD functions. E.g. `https://api-url/users/${id}` We can pass id as the resource and attach functions to it like GET, PUT, PATCH, POST, DELETE.
 
 #### Params
 
-These are params added to the api url, e.g. id=1\&user\_name=James this will return `https://api-url/endpoint?id=1&user_name=James`.
+These are params added to the api url, e.g. `id=1\&user\_name=James` this will return `https://api-url/endpoint?id=1&user_name=James`.
 
 #### Page
 
@@ -76,7 +65,7 @@ Takes an object arguments that relates to the API function except for `key`.
 
 #### Usage
 
-```javascript
+```tsx
 const [shouldFetch, setShouldFetch] = useState(false)
 
 const { data, isLoading } = useRead({
@@ -84,147 +73,11 @@ const { data, isLoading } = useRead({
     resource: 'sample.json',
     params: `index=${1}&foo=bar`,
     key: 'sample-query-key',
-    refetch: 1000 * 5, // will refetch every 5 sec
-    enabled: shouldFetch, // if false, this query will be disabled and  will NOT make a network request
+    refetch: 1000 * 5,
+    enabled: shouldFetch,
 })
 
-// trigger with an event handler
 const onClick = () => setShouldFetch(true);
-```
-
-#### Key
-
-This is used to generate a new React-Query key for cached data. Primarly used when filtering data via the end point. So we can separate that data from the main pool.
-
-### usePagination
-
-`src/crud/use-pagination.crud.ts`
-
-This function works the same way as `useRead` but allows us to paginate the data.
-
-Takes an object argument that relates to the API function except `pages` and `Key`.
-
-```
-{
-    url: ApiUrlProps;
-    resource?: string;
-    params?: string;
-    pages?: string;
-    key?: string;
-    refetch?: number;
-    enabled?: boolean;
-}
-```
-
-#### Pages
-
-This is used to passin the total amount of pages in the pagination. This will tell the function to stop once it reaches the max pages.
-
-#### Key
-
-This is used to generate a new React-Query key for cached data. Primarly used when filtering data via the end point. So we can separate that data from the main pool.
-
-### useMutate
-
-`src/crud/use-mutate.crud.ts`
-
-This function works the same way as `useRead` but allows us send a method to the request function allowing us to perform functions on the api.
-
-Can take an argument `UseMutateArgs` object that relate to the API function except `key` as follows:
-
-```tsx
-    type UseMutateArgs = {
-        url: ApiUrlProps;
-        resource?: string;
-        params?: string;
-        method: MutateMethodProps;
-        key?: string;
-    }
-```
-
-#### Key
-
-Once the mutation occurs, we can then call a re fetch on the current React-Query key, we can pass in a key here if the key isn't directly related to the endpoint e.g. it's manipulated data.
-
-### Examples
-
-```tsx
-import { useEffect } from 'react'
-import { useMutate, usePagination, useRead } from '@crud'
-import { PostsProps } from '@crud/data/test.types'
-
-export const Test = () => {
-    const newPost: PostsProps = {
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-    }
-
-    const {
-        data: content,
-        isLoading: contentLoading
-    } = useRead('content')
-
-    const {
-        data,
-        isLoading,
-        hasNextPage,
-        handleNextPage
-    } = usePagination('test', 'posts', '', 2)
-
-    const mutation = useMutate('test', 'posts', '', 'POST', newPost)
-
-    useEffect(() => {
-        console.warn(contentLoading)
-        console.warn(content)
-    }, [])
-
-    const handleClick = () => handleNextPage()
-
-    const handleMutation = async () => {
-        try {
-            await mutation.mutateAsync()
-            console.log('Mutation was successful')
-        } catch (error) {
-            console.error('Mutation failed:', error)
-        }
-    }
-
-    if (isLoading) return (
-        <div>Loading</div>
-    )
-
-    return (
-        <div>
-            {data?.pages.map((page, pageIndex) => (
-                <div key={pageIndex}>
-                    {page.map(({
-                        id,
-                        userId,
-                        title,
-                        body
-                    }: PostsProps) => (
-                        <div key={id}>
-                            <h1>{userId}</h1>
-                            <h2>{title}</h2>
-                            <p>{body}</p>
-                        </div>
-                    ))}
-                </div>
-            ))}
-
-            {hasNextPage && (
-                <>
-                    <br /><br />
-                    <button onClick={handleClick}>
-                        {isLoading ? 'Loading...' : 'Load More'}
-                    </button>
-                </>
-            )}
-            <button onClick={handleMutation}>Perform Mutation</button>
-        </div>
-    )
-}
 ```
 
 ## useRead
@@ -234,41 +87,9 @@ This is a basic query to pull data from `api/content.json`.
 ```tsx
     const {
         data: content,
-        isLoading: contentLoading
+        isPending: contentPending
     } = useRead('content')
 ```
 
-From this request we have access to the data and isLoading.
+From this request we have access to the data and **contentPending**.
 
-## usePagination
-
-This is using `https://jsonplaceholder.typicode.com` with the resource `posts` which allows us to perform a `GET` request on that method. We are also passing in the total pages as 2.
-
-```tsx
-    const {
-        data,
-        isLoading,
-        hasNextPage,
-        handleNextPage
-    } = usePagination('test', 'posts', '', 2)
-```
-
-From this request we now have access to the data, isLoading, hasNextPage and the function to trigger the loading of the next page of results.
-
-## useMutate
-
-This is using `https://jsonplaceholder.typicode.com` with the resource `posts` which allows us to perform a `POST` request on that method. We are also passing payload body.
-
-```tsx
-    const newPost: PostsProps = {
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-    }
-
-    const mutation = useMutate('test', 'posts', '', 'POST', newPost)
-```
-
-This returns the mutation function, which we can use to send the payload to the api endpoint.
-
-Read more https://jsonplaceholder.typicode.com/guide/
