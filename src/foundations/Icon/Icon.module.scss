@@ -1,0 +1,10 @@
+@use '@styles/settings' as *;
+@include font-face('icons', '/assets/icons/icons', normal, ttf woff svg);
+
+.icon {
+  @extend %f-icons;
+
+  &.face::before {
+    content: "\e900";
+  }
+}

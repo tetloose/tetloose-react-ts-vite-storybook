@@ -5,19 +5,23 @@ clear
 
 read -p "Enter component location:
 
-[0] Atom
-[1] Component
-[2] Layouts
+[0] Foundation
+[1] Atom
+[2] Component
+[3] Layout
 
-[0/1/2]: " COMPONENT_SWITCH
+[0/1/2/3]: " COMPONENT_SWITCH
 
 if [ "$COMPONENT_SWITCH" = "0" ]; then
+  DIR="src/foundations"
+  TITLE="Foundations"
+elif [ "$COMPONENT_SWITCH" = "1" ]; then
   DIR="src/atoms"
   TITLE="Atoms"
-elif [ "$COMPONENT_SWITCH" = "1" ]; then
+elif [ "$COMPONENT_SWITCH" = "2" ]; then
   DIR="src/components"
   TITLE="Components"
-elif [ "$COMPONENT_SWITCH" = "2" ]; then
+elif [ "$COMPONENT_SWITCH" = "3" ]; then
   DIR="src/layouts"
   TITLE="Layouts"
 fi

@@ -58,3 +58,36 @@ This will generate vw calculations on three breakpoints for each size.
 - Above $vw-max => 'Set the value as a Rem unit'
 
 See: `src/styles/mixins/sizing.scss`
+
+## Switching between Fluid and Rem
+
+```
+layout: (
+  browser-context: 16px,
+  spacing: 4px,
+  rem: true <---- (set to false for fluid sizing)
+),
+```
+
+Setting Rem to false, sets the sizing of the application to use VW, True uses Rem. This also updates the global HTML sizing to allow for Rem sizes see:
+
+`src/styles/global/html.scss`
+
+```
+@if vars(layout, rem) {
+  @include mq(vars(breakpoint, med), max-width) {
+    font-size: 70%;
+  }
+
+  @include mq-between(
+    vars(breakpoint, med),
+    vars(breakpoint, lrg)
+  ) {
+    font-size: 80%;
+  }
+
+  @include mq(vars(breakpoint, lrg)) {
+    font-size: 100%;
+  }
+}
+```

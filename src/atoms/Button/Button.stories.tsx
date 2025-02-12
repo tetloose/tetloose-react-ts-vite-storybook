@@ -9,14 +9,14 @@ const meta: Meta<typeof Button> = {
     design: {
       type: 'figma',
       url: ''
-    },
-    layout: 'fullscreen'
+    }
   },
   argTypes: {
     onClick: { action: 'clicked' }
   },
   tags: ['autodocs']
 }
+
 export default meta
 
 type Story = StoryObj<typeof Button>
@@ -24,13 +24,14 @@ type Story = StoryObj<typeof Button>
 export const Default: Story = {
   args: {
     label: 'No Style',
-    onClick: action('button-click')
+    onClick: action('No Style Button Clicked')
   }
 }
 
 export const Children: Story = {
   args: {
     label: 'No Style With Children',
+    onClick: action('No Style With Children Button Clicked'),
     children: (
       <>
         <br />
@@ -45,7 +46,8 @@ export const PrimarySml: Story = {
     variant: 'primary',
     size: 'sml',
     type: 'button',
-    label: 'Primary sml'
+    label: 'Primary sml',
+    onClick: action('Primary Button Clicked')
   }
 }
 
@@ -54,7 +56,8 @@ export const PrimaryMed: Story = {
     variant: 'primary',
     size: 'med',
     type: 'button',
-    label: 'Primary med'
+    label: 'Primary med',
+    onClick: action('Primary Button Clicked')
   }
 }
 
@@ -63,7 +66,8 @@ export const PrimaryLrg: Story = {
     variant: 'primary',
     size: 'lrg',
     type: 'button',
-    label: 'Primary lrg'
+    label: 'Primary lrg',
+    onClick: action('Primary Button Clicked')
   }
 }
 
@@ -72,7 +76,8 @@ export const PrimaryXlrg: Story = {
     variant: 'primary',
     size: 'xlrg',
     type: 'button',
-    label: 'Primary xlrg'
+    label: 'Primary xlrg',
+    onClick: action('Primary Button Clicked')
   }
 }
 
@@ -81,7 +86,8 @@ export const SecondarySml: Story = {
     variant: 'secondary',
     size: 'sml',
     type: 'button',
-    label: 'Secondary sml'
+    label: 'Secondary sml',
+    onClick: action('Secondary Button Clicked')
   }
 }
 
@@ -90,7 +96,8 @@ export const SecondaryMed: Story = {
     variant: 'secondary',
     size: 'med',
     type: 'button',
-    label: 'Secondary med'
+    label: 'Secondary med',
+    onClick: action('Secondary Button Clicked')
   }
 }
 
@@ -99,7 +106,8 @@ export const SecondaryLrg: Story = {
     variant: 'secondary',
     size: 'lrg',
     type: 'button',
-    label: 'Secondary lrg'
+    label: 'Secondary lrg',
+    onClick: action('Secondary Button Clicked')
   }
 }
 
@@ -108,6 +116,7 @@ export const SecondaryXlrg: Story = {
     variant: 'secondary',
     size: 'xlrg',
     type: 'button',
-    label: 'Secondary xlrg'
+    label: 'Secondary xlrg',
+    onClick: action('Secondary Button Clicked')
   }
 }

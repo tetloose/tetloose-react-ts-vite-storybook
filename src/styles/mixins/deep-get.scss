@@ -11,4 +11,5 @@
 }
 
 // Usage
-// $small-font-size: deep-get(vars(button, font-size), button, "font-size", sml);
+// color: deep-get($colors, link, dark, default);
+// font-size: deep-get($vars, headings, font-size, sml);

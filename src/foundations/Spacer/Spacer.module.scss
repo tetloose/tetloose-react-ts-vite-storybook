@@ -1,0 +1,15 @@
+@use '@styles/settings' as *;
+
+.spacer {
+	@for $i from 1 through 10 {
+		&.padding-#{$i} {
+			@extend %spacer-padding-#{$i};
+		}
+
+		&.margin-#{$i} {
+			@extend %spacer-padding-#{$i};
+		}
+	}
+
+  @extend %display;
+}

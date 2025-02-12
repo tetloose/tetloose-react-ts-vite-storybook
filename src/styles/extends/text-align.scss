@@ -1,0 +1,15 @@
+@use '@styles/extends/typography' as *;
+
+%text-align {
+	&.text-align-left {
+		@extend %f-left;
+	}
+
+	&.text-align-right {
+		@extend %f-right;
+	}
+
+	&.text-align-center {
+		@extend %f-center;
+	}
+}

@@ -1,5 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
+import pluginQuery from '@tanstack/eslint-plugin-query'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import prettier from 'eslint-plugin-prettier'
@@ -41,6 +42,7 @@ const mainConfig = {
     'simple-import-sort': simpleImportSort,
     'react-refresh': reactRefresh,
     'react-hooks': reactHooks,
+    ...pluginQuery.configs['flat/recommended'],
     prettier: prettier
   },
   languageOptions: {

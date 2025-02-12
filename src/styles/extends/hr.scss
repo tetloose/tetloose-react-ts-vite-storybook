@@ -1,0 +1,22 @@
+@use '@styles/mixins' as *;
+@use '@styles/settings/colors' as *;
+
+%hr {
+  hr {
+    width: 100%;
+
+    @include sizing(height, size(.25));
+  }
+
+  &.color-dark {
+    hr {
+      background-color: colors(default, dark);
+    }
+  }
+
+  &.color-light {
+    hr {
+      background-color: colors(default, light);
+    }
+  }
+}

@@ -30,7 +30,8 @@ const config: StorybookConfig = {
     options: {}
   },
   docs: {
-    autodocs: true
+    autodocs: true,
+    defaultName: 'Auto Docs'
   },
   typescript: {
     reactDocgen: false

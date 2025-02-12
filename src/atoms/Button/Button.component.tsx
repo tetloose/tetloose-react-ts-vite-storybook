@@ -3,7 +3,7 @@ import { ButtonProps } from './Button.types'
 import cs from 'classnames'
 import styles from './Button.module.scss'
 
-const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       modifiers = [],
@@ -35,6 +35,4 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 )
 
-ButtonBase.displayName = 'Button'
-
-export const Button = ButtonBase
+Button.displayName = 'Button'

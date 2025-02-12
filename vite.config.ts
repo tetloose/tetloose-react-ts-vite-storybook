@@ -41,6 +41,8 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@context/*': resolve(__dirname, 'src/context/*'),
         '@context': resolve(__dirname, 'src/context'),
+        '@foundations/*': resolve(__dirname, 'src/foundations/*'),
+        '@foundations': resolve(__dirname, 'src/foundations'),
         '@atoms/*': resolve(__dirname, 'src/atoms/*'),
         '@atoms': resolve(__dirname, 'src/atoms'),
         '@components/*': resolve(__dirname, 'src/components/*'),
@@ -49,8 +51,6 @@ export default defineConfig(({ mode }) => {
         '@layouts': resolve(__dirname, 'src/layouts'),
         '@hooks/*': resolve(__dirname, 'src/hooks/*'),
         '@hooks': resolve(__dirname, 'src/hooks'),
-        '@loaders/*': resolve(__dirname, 'src/loaders/*'),
-        '@loaders': resolve(__dirname, 'src/loaders'),
         '@crud/*': resolve(__dirname, 'src/crud/*'),
         '@crud': resolve(__dirname, 'src/crud'),
         '@utils/*': resolve(__dirname, 'src/utils/*'),
