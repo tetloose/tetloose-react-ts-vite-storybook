@@ -27,7 +27,7 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 ## Commands
 
 - `npm run setup` - Installs packages, setup husky and runs the app in development mode.
-- `npm run start` - Runs the app in the development mode.
+- `npm run dev` - Runs the app in the development mode.
 - `npm run build` - Builds the app for production to the `build` folder.
 - `npm run test` - Launches the test runner in the interactive watch mode.
 - `npm run test:coverage` - Get test runner coverage stats.
@@ -44,15 +44,18 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 1. `git clone git@github.com:tetloose/tetloose-react-ts-vite-storybook.git`
 2. `cmd shift p recommended` install recommended plugins
 3. `npm run setup`
-4. Web browser will open `http://localhost:6006/`
 
 ## Storybook
 
-1. `npm run storybook` Launches Storybook in development mode.
+`npm run storybook` Launches Storybook in development mode.
+
+## React
+
+`npm run dev` Launches App in development mode.
 
 ## ViTest
 
-1. `npm run test` - Launches the test runner in the interactive watch mode.
+`npm run test` - Launches the test runner in the interactive watch mode.
 
 ## Docs
 
