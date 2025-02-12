@@ -1,0 +1,47 @@
+@use '@styles/settings' as *;
+
+.table {
+  @extend %vertical-align;
+  @extend %table-layout;
+  @extend %table-border;
+}
+
+.table,
+.tr,
+.th,
+.td {
+	@extend %border;
+}
+
+.table,
+.thead,
+.tbody,
+.tfoot,
+.tr {
+	width: 100%;
+}
+
+.thead,
+.tbody,
+.tfoot {
+	position: relative;
+
+	@extend %bg;
+}
+
+.tr {
+	position: relative;
+}
+
+.th,
+.td {
+  @extend %text-align;
+}
+
+.th {
+  @include sizing('padding', size(3));
+}
+
+.td {
+  @include sizing('padding', size(3));
+}

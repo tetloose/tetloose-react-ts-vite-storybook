@@ -11,8 +11,7 @@ const meta: Meta<typeof Card> = {
       url: ''
     },
     layout: 'fullscreen'
-  },
-  tags: ['autodocs']
+  }
 }
 
 export default meta

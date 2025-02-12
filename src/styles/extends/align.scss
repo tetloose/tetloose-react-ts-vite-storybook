@@ -1,0 +1,21 @@
+%align {
+  &.align-flex-start {
+    align-items: flex-start;
+  }
+
+	&.align-center {
+		align-items: center;
+	}
+
+	&.align-flex-end {
+		align-items: flex-end;
+	}
+
+	&.align-stretch {
+		align-items: stretch;
+	}
+
+	&.align-baseline {
+		align-items: baseline;
+	}
+}

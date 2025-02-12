@@ -1,7 +1,7 @@
 @use '@styles/settings' as *;
 
 .spacer {
-	@for $i from 1 through 10 {
+	@for $i from 1 through vars(layout, loop) {
 		&.padding-#{$i} {
 			@extend %spacer-padding-#{$i};
 		}
