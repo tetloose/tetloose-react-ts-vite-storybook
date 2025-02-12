@@ -278,7 +278,9 @@ export default {
     ],
     'font-family-name-quotes': 'always-where-required',
     'function-url-quotes': 'never',
-    'selector-attribute-quotes': 'never'
+    'selector-attribute-quotes': 'never',
+    'no-duplicate-selectors': true,
+    'declaration-block-no-duplicate-properties': true
   },
   ignoreFiles: [
     '.scripts',

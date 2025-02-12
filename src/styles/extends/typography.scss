@@ -30,6 +30,22 @@
   font-style: italic;
 }
 
+%f-oblique {
+  font-style: oblique;
+}
+
+%f-center {
+  text-align: center;
+}
+
+%f-left {
+  text-align: left;
+}
+
+%f-right {
+  text-align: right;
+}
+
 %f-uppercase {
   text-transform: uppercase;
 }
@@ -124,6 +140,18 @@ $icon-sizes: (
   @extend %type-heading;
   @include sizing('font-size', deep-get($vars, headings, font-size, h6));
   @include sizing('line-height', deep-get($vars, headings, line-height, h6));
+}
+
+%type-ul {
+  list-style-type: disc;
+
+  @include sizing('margin-left', size(4));
+}
+
+%type-ol {
+  list-style-type: decimal;
+
+  @include sizing('margin-left', size(3.75));
 }
 
 %type-body {

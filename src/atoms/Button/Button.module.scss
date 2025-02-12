@@ -11,6 +11,8 @@
   text-decoration: none;
   user-select: 'none';
 
+  @include user-select(true);
+
   @include mq-hover {
     cursor: pointer;
   }
@@ -25,10 +27,12 @@
     background-color: color(default, dark);
     color: color(default, light);
 
-    @include sizing('padding', size(8));
+    @include sizing('padding', [size(4), size(8)]);
     @include sizing('outline-width', size(0.5));
 
     @include mq-hover {
+      @include transition('color, background-color, outline');
+
       &:hover,
       &:focus {
         background-color: color(default, light);
@@ -44,10 +48,12 @@
     background-color: color(default, light);
     color: color(default, dark);
 
-    @include sizing('padding', size(8));
+    @include sizing('padding', [size(4), size(8)]);
     @include sizing('outline-width', size(0.5));
 
     @include mq-hover {
+      @include transition('color, background-color, outline');
+
       &:hover,
       &:focus {
         background-color: color(default, dark);

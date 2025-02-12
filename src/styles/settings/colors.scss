@@ -10,9 +10,24 @@
 
 $dark: #000;
 $light: #fff;
+$hotpink: #ff69b4;
+$green: #008000;
+$blue: #00f;
 $colors: (
   default: (
     dark: $dark,
     light: $light
+  ),
+  link: (
+    dark: (
+      default: $hotpink,
+      hover: $green,
+      focus: $blue
+    ),
+    light: (
+      default: $hotpink,
+      hover: $green,
+      focus: $blue
+    )
   )
 );

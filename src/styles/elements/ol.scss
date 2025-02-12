@@ -1,7 +1,0 @@
-ol,
-.typography ol,
-.content ol {
-  list-style-type: decimal;
-
-  @include sizing('margin-left', size(4.5));
-}

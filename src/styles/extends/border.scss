@@ -1,0 +1,22 @@
+@use '@styles/mixins' as *;
+@use '@styles/settings/colors' as *;
+@use '@styles/settings/variables' as *;
+
+@mixin border-direction($direction) {
+	border-#{$direction}-color: color(default, dark);
+
+	@include sizing('border-#{$direction}-width', size(.25));
+}
+
+%border {
+	&[class*=border-] {
+		border-style: solid;
+		border-color: transparent;
+	}
+
+	@each $direction in top, right, bottom, left {
+		&.border-#{$direction} {
+			@include border-direction($direction);
+		}
+	}
+}

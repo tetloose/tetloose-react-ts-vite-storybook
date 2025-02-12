@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
 
@@ -12,9 +11,6 @@ const meta: Meta<typeof EXPORT_NAME> = {
     },
     layout: 'fullscreen'
   },
-  argTypes: {
-    onClick: { action: 'clicked' }
-  },
   tags: ['autodocs']
 }
 
@@ -23,7 +19,5 @@ export default meta
 type Story = StoryObj<typeof EXPORT_NAME>
 
 export const Primary: Story = {
-  args: {
-    onClick: action('button-click')
-  }
+  args: {}
 }

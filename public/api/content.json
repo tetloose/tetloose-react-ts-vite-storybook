@@ -2,5 +2,11 @@
   "homepage": {
     "title": "Home",
     "content": "<p>Happy coding</p>"
+  },
+  "notFound": {
+    "title": "404 Page not found",
+    "subtitle": "Please click the link below to return home",
+    "linkLabel": "Home",
+    "linkUrl": "/"
   }
 }

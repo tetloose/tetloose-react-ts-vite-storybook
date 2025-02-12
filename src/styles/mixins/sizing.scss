@@ -18,7 +18,18 @@
 
 @mixin sizing($css-property, $values) {
   @if vars(layout, rem) {
-    #{$css-property}: rem($values);
+    @if meta.type-of($values) == 'list' {
+      $result: ();
+
+      @each $value in $values {
+        $context: rem($value);
+        $result: list.append($result, $context);
+      }
+
+      #{$css-property}: string.unquote('#{list.join($result, '')}');
+    } @else {
+      #{$css-property}: rem($values);
+    }
   } @else {
     @if meta.type-of($values) == 'list' {
       @include mq($vw-max, max-width) {
@@ -29,7 +40,7 @@
           $result: list.append($result, $context);
         }
 
-        #{$css-property}: string.unquote('#{join($result, '')}');
+        #{$css-property}: string.unquote('#{list.join($result, '')}');
       }
 
       @include mq($vw-max) {
@@ -40,7 +51,7 @@
           $result: list.append($result, $context);
         }
 
-        #{$css-property}: string.unquote('#{join($result, '')}');
+        #{$css-property}: string.unquote('#{list.join($result, '')}');
       }
     } @else {
       @include mq($vw-max, max-width) {

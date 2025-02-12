@@ -1,0 +1,11 @@
+@use '@styles/settings/variables' as *;
+
+%height {
+  &.height-fullscreen {
+    height: vars(vh, fullscreen);
+  }
+
+  &.height-half {
+    height: vars(vh, half);
+  }
+}

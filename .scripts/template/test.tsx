@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { StateProvider } from '@context'
+import { AppProvider } from '@context'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
 
 describe('EXPORT_NAME component', () => {
   it('renders EXPORT_NAME component with a modifier', () => {
     render(
-      <StateProvider>
+      <AppProvider>
         <EXPORT_NAME data-testid='element' modifiers={['test-modifier']} />
-      </StateProvider>
+      </AppProvider>
     )
 
     const element = screen.getByTestId('element')

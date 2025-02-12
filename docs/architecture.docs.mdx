@@ -4,41 +4,41 @@ import { Meta } from "@storybook/blocks";
 
 # Architecture
 
-In the context of coding and component-based architecture, the terms "atom," "partial,", "component" and "layout" are often used to describe different levels of abstraction and reusability within a webpage / web-app.
+In the context of coding and component-based architecture, the terms "Foundation", "atom", "component" and "layout" are often used to describe different levels of abstraction and reusability within a webpage / web-app.
 
-1. Atoms
+## Foundations - (Design Tokens):
 
-**Definition:**
+### What They Are:
+
+Variables, colors, typography settings, spacing values, and other style constants are often referred to as design tokens. They serve as the foundational elements or “DNA” of your design system.
+
+### Purpose:
+
+- **Consistency:** Ensures a uniform look and feel across all UI components.
+- **Maintainability:** Changing a variable (like a primary color) in one place updates the design everywhere it’s used.
+Scalability: Facilitates theming and customization, allowing you to adapt your UI for different brands or modes (e.g., dark mode).
+
+## Atoms:
+
+### What They Are:
 
 The most basic building blocks of your UI. In a React app, atoms can be individual HTML elements (or very simple React components) like buttons, input fields, labels, icons, and typography elements.
 
-**Key Points:**
+### Purpose:
 
-- Reusability: Atoms are designed to be reused across the app.
-- Simplicity: They are not broken down further; they provide the foundational elements.
-- Consistency: Using a well-defined set of atoms ensures a consistent look and feel.
+- **Reusability:** Atoms are designed to be reused across the app.
+- **Simplicity:** They are not broken down further; they provide the foundational elements.
+- **Consistency:** Using a well-defined set of atoms ensures a consistent look and feel.
 
-**Example:**
+## 2. Components - (Molecules & Organisms):
 
-A `<Button>` component that encapsulates styling and basic behavior can be an atom. It might accept props such as size, color, or disabled to adjust its appearance.
+### What They Are:
 
-## Atom:
+High-level, self-contained building block that encapsulates a specific functionality or feature.
 
-Is the smallest and most basic building block in a design system or component library.
-It represents a simple and often reusable UI element, like a button, input field, or icon.
+Components can be composed of Foundations, Atoms, and other components, forming a hierarchy of abstraction.
 
-Atoms are typically not composed of other UI elements.
-
-A button, a text input, or an icon can be considered atoms.
-
-## 2. Components (Molecules & Organisms):
-
-Is a high-level, self-contained building block that encapsulates a specific functionality or feature.
-
-Components can be composed of atoms, partials, and other components, forming a hierarchy of abstraction.
 They are often reusable and modular, making it easy to maintain and scale a codebase.
-
-A form component that includes text inputs (atoms), buttons (atoms), and labels (atoms) could be considered a component.
 
 ## Layout:
 
@@ -48,21 +48,11 @@ It defines the overall structure and organisation of the UI.
 
 A page layout might include a header component, a sidebar component, and a main content component arranged in a specific way to create the overall structure of a webpage / web app.
 
-## Foundations - Design Tokens
 
-What They Are:
 
-Variables, colors, typography settings, spacing values, and other style constants are often referred to as design tokens. They serve as the foundational elements or “DNA” of your design system.
 
-Purpose:
 
-Consistency: Ensures a uniform look and feel across all UI components.
-Maintainability: Changing a variable (like a primary color) in one place updates the design everywhere it’s used.
-Scalability: Facilitates theming and customization, allowing you to adapt your UI for different brands or modes (e.g., dark mode).
 
-- colours
-- typography
-- row col
 
 Implementing Atomic Design in React
 When building your React framework with Atomic Design:

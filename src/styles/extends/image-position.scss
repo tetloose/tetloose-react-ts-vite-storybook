@@ -1,0 +1,39 @@
+@use '@styles/mixins' as *;
+
+%image-position {
+	&.image-position-center {
+    @include object-fit(null, center center);
+	}
+
+	&.image-position-left-top {
+    @include object-fit(null, left top);
+	}
+
+	&.image-position-left-center {
+    @include object-fit(null, left center);
+	}
+
+	&.image-position-left-bottom {
+    @include object-fit(null, left bottom);
+	}
+
+	&.image-position-right-top {
+    @include object-fit(null, right top);
+	}
+
+	&.image-position-right-center {
+    @include object-fit(null, right center);
+	}
+
+	&.image-position-right-bottom {
+    @include object-fit(null, right bottom);
+	}
+
+	&.image-position-center-top {
+    @include object-fit(null, center top);
+	}
+
+	&.image-position-center-bottom {
+    @include object-fit(null, center bottom);
+	}
+}

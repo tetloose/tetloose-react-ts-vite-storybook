@@ -12,6 +12,7 @@ $vars: (
   layout: (
     browser-context: 16px,
     spacing: 4px,
+    gutter: 16px,
     rem: true
   ),
   icons: (
@@ -89,13 +90,14 @@ $vars: (
     fullscreen: 100vw
   ),
   vh: (
-    fullscreen: 100vh
+    fullscreen: 100vh,
+    half: 50vh
   ),
   transition: (
     duration: (
-      slow: 500ms,
-      med: 250ms,
-      fast: 75ms
+      slow: 600ms,
+      med: 400ms,
+      fast: 200ms
     ),
     timing: (
       slow: cubic-bezier(0.25, 0.3, 0.25, 1),
@@ -103,9 +105,9 @@ $vars: (
       fast: cubic-bezier(0, 0, 0.25, 1)
     ),
     delay: (
-      slow: 500ms,
-      med: 250ms,
-      fast: 75ms
+      slow: 600ms,
+      med: 400ms,
+      fast: 200ms
     )
   ),
   radius: (

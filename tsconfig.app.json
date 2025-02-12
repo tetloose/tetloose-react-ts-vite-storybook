@@ -32,6 +32,12 @@
       "@context": [
         "context"
       ],
+      "@foundations/*": [
+        "foundations/*"
+      ],
+      "@foundations": [
+        "foundations"
+      ],
       "@atoms/*": [
         "atoms/*"
       ],
@@ -55,12 +61,6 @@
       ],
       "@hooks": [
         "hooks"
-      ],
-      "@loaders/*": [
-        "loaders/*"
-      ],
-      "@loaders": [
-        "loaders"
       ],
       "@crud/*": [
         "crud/*"
