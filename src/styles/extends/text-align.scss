@@ -3,13 +3,26 @@
 %text-align {
 	&.text-align-left {
 		@extend %f-left;
+
+		img {
+			margin-right: auto;
+		}
 	}
 
 	&.text-align-right {
 		@extend %f-right;
+
+		img {
+			margin-left: auto;
+		}
 	}
 
 	&.text-align-center {
 		@extend %f-center;
+
+		img {
+      margin-right: auto;
+			margin-left: auto;
+		}
 	}
 }

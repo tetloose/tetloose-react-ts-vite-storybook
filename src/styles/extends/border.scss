@@ -3,9 +3,9 @@
 @use '@styles/settings/variables' as *;
 
 @mixin border-direction($direction) {
-	border-#{$direction}-color: color(default, dark);
-
 	@include sizing('border-#{$direction}-width', size(.25));
+
+  border-#{$direction}-color: color(default, dark);
 }
 
 %border {

@@ -1,23 +1,13 @@
 import {
   GlobalChildren,
+  GlobalDirection,
+  GlobalFlexAlign,
+  GlobalFlexWrap,
   GlobalHeight,
+  GlobalJustify,
   GlobalModifiers,
   GlobalWidth
 } from '@global'
-
-type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse'
-
-type Justify =
-  | 'flex-start'
-  | 'center'
-  | 'flex-end'
-  | 'space-between'
-  | 'space-around'
-  | 'space-evenly'
-
-type Align = 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'
-
-type Wrap = 'nowrap' | 'wrap' | 'wrap-reverse'
 
 type Gutter = {
   left?: boolean
@@ -30,12 +20,11 @@ type SharedProps = {
   GlobalModifiers &
   GlobalHeight
 
-export type RowProps = {
-  direction?: Direction
-  justify?: Justify
-  align?: Align
-  wrap?: Wrap
-} & SharedProps
+export type RowProps = SharedProps &
+  GlobalFlexAlign &
+  GlobalJustify &
+  GlobalFlexWrap &
+  GlobalDirection
 
 export type ColumnProps = {
   auto?: boolean

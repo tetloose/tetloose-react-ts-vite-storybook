@@ -12,8 +12,10 @@ $vars: (
   layout: (
     browser-context: 16px,
     spacing: 4px,
+    rem: true,
     gutter: 16px,
-    rem: true
+    columns: 12,
+    loop: 10
   ),
   icons: (
     sml: 20px,

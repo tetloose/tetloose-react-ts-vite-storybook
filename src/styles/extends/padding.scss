@@ -2,7 +2,7 @@
 @use '@styles/settings/variables' as *;
 
 %padding {
-  @for $i from 1 through 10 {
+  @for $i from 1 through vars(layout, loop) {
     @each $direction in top, right, bottom, left {
       &.default-padding-#{$direction}-#{$i} {
         @include sizing('padding-#{$direction}', size($i));
@@ -12,7 +12,7 @@
 
   @each $breakpoint in (sml, med, lrg, xlrg, xxlrg) {
     @include mq(vars(breakpoint, #{$breakpoint})) {
-      @for $i from 1 through 10 {
+      @for $i from 1 through vars(layout, loop) {
         @each $direction in top, right, bottom, left {
           &.#{$breakpoint}-padding-#{$direction}-#{$i} {
             @include sizing('padding-#{$direction}', size($i));

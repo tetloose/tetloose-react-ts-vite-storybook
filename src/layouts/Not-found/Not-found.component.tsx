@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom'
-import { Column, Container, Row, Spacer, Typography } from '@foundations'
+import { Column, Container, Row, Typography } from '@foundations'
 import { useAnimate } from '@hooks'
-import { Button } from '@atoms'
+import { Action } from '@components/Action/Action.component'
+import { Button, Loading } from '@atoms'
 import { useNotFoundContent } from './hooks/use-not-found-content.hooks'
 import { NotFoundProps } from './Not-found.types'
 
-export const NotFound = ({ error }: NotFoundProps) => {
+const NotFound = ({ error }: NotFoundProps) => {
   const animation = useAnimate()
   const navigation = useNavigate()
   const {
@@ -59,7 +60,7 @@ export const NotFound = ({ error }: NotFoundProps) => {
           }}
         >
           {contentFetching || contentPending ? (
-            <Typography tag={'h1'} size={'body-med'} text={'Loading...'} />
+            <Loading position={'center'} />
           ) : (
             <>
               <Typography tag={'h1'} size={'d1'} text={name ? name : title} />
@@ -78,12 +79,13 @@ export const NotFound = ({ error }: NotFoundProps) => {
                   text={stack}
                 />
               )}
-              <Spacer padding={8} />
-              <Button
-                variant={'primary'}
-                label={error ? 'Reload Page' : linkLabel}
-                onClick={handleClick}
-              />
+              <Action padding={8}>
+                <Button
+                  variant={'primary'}
+                  label={error ? 'Reload Page' : linkLabel}
+                  onClick={handleClick}
+                />
+              </Action>
             </>
           )}
         </Container>

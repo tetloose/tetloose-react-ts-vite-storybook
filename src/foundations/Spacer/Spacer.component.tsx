@@ -4,10 +4,7 @@ import cs from 'classnames'
 import styles from './Spacer.module.scss'
 
 export const Spacer = forwardRef<HTMLElement, SpacerProps>(
-  (
-    { modifiers = [], display = 'block', margin, padding, children, ...rest },
-    ref
-  ) => {
+  ({ modifiers = [], display, margin, padding, children, ...rest }, ref) => {
     return (
       <span
         ref={ref}

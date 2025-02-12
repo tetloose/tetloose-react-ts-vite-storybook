@@ -1,0 +1,10 @@
+@use '@styles/settings' as *;
+
+.action {
+	display: flex;
+
+  @extend %justify;
+  @extend %align;
+  @extend %wrap;
+  @extend %gap;
+}

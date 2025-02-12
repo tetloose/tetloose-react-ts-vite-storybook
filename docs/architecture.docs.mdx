@@ -40,47 +40,45 @@ Components can be composed of Foundations, Atoms, and other components, forming 
 
 They are often reusable and modular, making it easy to maintain and scale a codebase.
 
-## Layout:
+## Layouts (Templates & Pages)
 
-A layout is the arrangement and positioning of components within a specific section of a user interface or an entire page.
+### Definition:
 
-It defines the overall structure and organisation of the UI.
+Layouts represent the overall structure and composition of the UI. They provide context for where and how your components are arranged on a page. At this point you should just be piecing together **Components** into a desired **layout**. It's ok to write some functional code here, but keep it to a minimal, as functional code will happen at the **Component** level
 
-A page layout might include a header component, a sidebar component, and a main content component arranged in a specific way to create the overall structure of a webpage / web app.
+### Templates:
 
+Define the page structure by positioning **atoms** and **components** in a layout without real content, although you can pass down content as props here.
 
+Concrete instances of templates filled with actual content. They are used for testing the design with real data and fine-tuning the UI.
 
+### Key Points:
 
+- Structure: Layouts organize the placement and relationship of components to create a coherent and responsive interface.
+- Responsiveness: They handle how components adapt to various screen sizes and devices.
+- Context: Layouts provide the overall context that ties individual components together into a full UI experience.
 
+### Examples:
 
+Layout: A blog page layout that includes a header, sidebar, and main content area, where each area is a placeholder for more complex components.
+Page: A fully rendered blog page with actual articles, images, and navigation items populated within the template structure.
 
-Implementing Atomic Design in React
+## Implementing Atomic Design in React
+
 When building your React framework with Atomic Design:
 
-Organize Your Project Structure:
-Create directories for atoms, molecules, organisms, templates, and pages. This helps in maintaining a clear hierarchy and makes it easier to locate and reuse components.
+### Organize Your Project Structure:
 
-Focus on Reusability:
-Ensure that each atom and component is as generic as possible. Use props to customize behavior and appearance, so they can adapt to different contexts.
+Create directories for **foundations**, **atoms**, **components** and **layouts**. This helps in maintaining a clear hierarchy and makes it easier to locate and reuse components.
 
-Encapsulate Styles and Behavior:
-Use CSS-in-JS, CSS modules, or your preferred styling strategy to keep styles modular and scoped to individual components.
+### Focus on Reusability:
 
-Test at Multiple Levels:
-Write unit tests for atoms and molecules and integration tests for organisms and layouts to ensure that your UI remains consistent and bug-free as it scales.
+Ensure that each **atom** and **component** is as **generic** as possible. Use props to customize behavior and appearance, so they can adapt to different contexts.
 
-Layouts (Templates & Pages)
-Definition:
-Layouts represent the overall structure and composition of the UI. They provide context for where and how your components are arranged on a page.
+### Encapsulate Styles and Behavior:
 
-Templates: Define the page structure by positioning organisms and components in a layout without real content.
-Pages: Concrete instances of templates filled with actual content. They are used for testing the design with real data and fine-tuning the UI.
-Key Points:
+Use **CSS-in-JS**, **CSS modules**, or your preferred styling strategy to keep styles modular and scoped to individual components.
 
-Structure: Layouts organize the placement and relationship of components to create a coherent and responsive interface.
-Responsiveness: They handle how components adapt to various screen sizes and devices.
-Context: Layouts provide the overall context that ties individual components together into a full UI experience.
-Examples:
+### Test at Multiple Levels:
 
-Template: A blog page layout that includes a header, sidebar, and main content area, where each area is a placeholder for more complex components.
-Page: A fully rendered blog page with actual articles, images, and navigation items populated within the template structure.
+Write unit tests for **foundations**, **atoms** and **components** and integration tests for layouts to ensure that your UI remains consistent and bug-free as it scales.
