@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "setup": "npm install && husky install && npm run dev",
+    "setup": "yarn && husky install && yarn dev",
     "dev": "vite",
     "lint": "eslint ./src && stylelint \"./src/**/*.scss\"",
     "lint:fix": "eslint ./src --fix && stylelint \"./src/**/*.scss\" --fix",
@@ -14,7 +14,7 @@
     "preview": "vite preview",
     "gen:component": "bash toolkit generate-component",
     "git:commit": "bash toolkit git-commit",
-    "pre-commit": "npm run lint && npm run test run",
+    "pre-commit": "yarn lint && yarn test run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
