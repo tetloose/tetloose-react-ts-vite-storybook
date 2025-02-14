@@ -20,7 +20,6 @@ const compat = new FlatCompat({
   allConfig: js.configs.all
 })
 
-// First, a config object just for ignores.
 const ignoreConfig = {
   ignores: [
     '**/.husky/**',
@@ -34,7 +33,6 @@ const ignoreConfig = {
   ]
 }
 
-// Then, your main config with plugins, language options, rules, etc.
 const mainConfig = {
   plugins: {
     react,
@@ -57,13 +55,15 @@ const mainConfig = {
   },
   settings: { react: { version: 'detect' } },
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-uses-react': 'off',
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     'no-console': 'warn',
     'no-debugger': 'warn',
+    'react/display-name': 'error',
+    'react/jsx-no-useless-fragment': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react-refresh/only-export-components': [

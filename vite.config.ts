@@ -29,9 +29,6 @@ export default defineConfig(({ mode }) => {
       viteTsconfigPaths(),
       svgr()
     ].filter(Boolean),
-    esbuild: {
-      logLevel: 'error'
-    },
     build: {
       manifest: true,
       sourcemap: mode === 'development',
