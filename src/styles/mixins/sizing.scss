@@ -27,10 +27,12 @@
       }
 
       #{$css-property}: string.unquote('#{list.join($result, '')}');
-    } @else {
+    }
+    @else {
       #{$css-property}: rem($values);
     }
-  } @else {
+  }
+  @else {
     @if meta.type-of($values) == 'list' {
       @include mq($vw-max, max-width) {
         $result: ();
@@ -53,7 +55,8 @@
 
         #{$css-property}: string.unquote('#{list.join($result, '')}');
       }
-    } @else {
+    }
+    @else {
       @include mq($vw-max, max-width) {
         #{$css-property}: calc($values / $vw-context * $vw-adjustment-max);
       }

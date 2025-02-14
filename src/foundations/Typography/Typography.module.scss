@@ -1,22 +1,10 @@
 @use '@styles/settings' as *;
 
 .typography {
-	$typography: &;
+  $typography: &;
 
-	&.d1 {
-		@extend %type-d1;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-	}
-
-	&.d2 {
-		@extend %type-d2;
+  &.d1 {
+    @extend %type-d1;
 
     strong {
       @extend %f-bold;
@@ -25,22 +13,10 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
 
-	&.h1 {
-		@extend %type-h1;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-	}
-
-	&.h2 {
-		@extend %type-h2;
+  &.d2 {
+    @extend %type-d2;
 
     strong {
       @extend %f-bold;
@@ -49,22 +25,10 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
 
-	&.h3 {
-		@extend %type-h3;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-	}
-
-	&.h4 {
-		@extend %type-h4;
+  &.h1 {
+    @extend %type-h1;
 
     strong {
       @extend %f-bold;
@@ -73,22 +37,10 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
 
-	&.h5 {
-		@extend %type-h5;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-	}
-
-	&.h6 {
-		@extend %type-h6;
+  &.h2 {
+    @extend %type-h2;
 
     strong {
       @extend %f-bold;
@@ -97,7 +49,55 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
+
+  &.h3 {
+    @extend %type-h3;
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
+    }
+  }
+
+  &.h4 {
+    @extend %type-h4;
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
+    }
+  }
+
+  &.h5 {
+    @extend %type-h5;
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
+    }
+  }
+
+  &.h6 {
+    @extend %type-h6;
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
+    }
+  }
 
   &.ol {
     @extend %type-ol;
@@ -123,8 +123,8 @@
     }
   }
 
-	&.body-xlrg {
-		@extend %type-body-xlrg;
+  &.body-xlrg {
+    @extend %type-body-xlrg;
 
     strong {
       @extend %f-bold;
@@ -133,22 +133,10 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
 
-	&.body-lrg {
-		@extend %type-body-lrg;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-	}
-
-	&.body-med {
-		@extend %type-body-med;
+  &.body-lrg {
+    @extend %type-body-lrg;
 
     strong {
       @extend %f-bold;
@@ -157,10 +145,10 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
 
-	&.body-sml {
-		@extend %type-body-sml;
+  &.body-med {
+    @extend %type-body-med;
 
     strong {
       @extend %f-bold;
@@ -169,12 +157,24 @@
     em {
       @extend %f-italic;
     }
-	}
+  }
+
+  &.body-sml {
+    @extend %type-body-sml;
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
+    }
+  }
 
   @extend %a;
   @extend %hr;
   @extend %display;
-	@extend %color;
+  @extend %color;
   @extend %text-align;
   @extend %white-space;
   @extend %text-transform;
@@ -221,15 +221,23 @@
       @extend %type-ul;
     }
 
-    p, li {
+    p,
+    li {
       @extend %type-body-med;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       @extend %spacer-padding-5;
     }
 
-    ol,ul {
+    ol,
+    ul {
       @extend %spacer-padding-4;
 
       li {

@@ -5,7 +5,7 @@
   hr {
     width: 100%;
 
-    @include sizing(height, size(.25));
+    @include sizing(height, size(0.25));
   }
 
   &.color-dark {

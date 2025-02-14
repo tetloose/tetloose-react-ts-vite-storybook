@@ -3,7 +3,8 @@
 @function vars($name, $variant: null) {
   @if $variant {
     @return map.get(map.get($vars, $name), $variant);
-  } @else {
+  }
+  @else {
     @return map.get($vars, $name);
   }
 }

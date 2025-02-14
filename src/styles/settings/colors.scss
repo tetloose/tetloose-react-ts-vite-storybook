@@ -3,7 +3,8 @@
 @function color($name, $variant: null) {
   @if $variant {
     @return map.get(map.get($colors, $name), $variant);
-  } @else {
+  }
+  @else {
     @return map.get($colors, $name);
   }
 }

@@ -7,10 +7,10 @@
   border-radius: vars(radius, round);
   animation: kf-loader 1s linear infinite;
 
-  @include sizing('border-right-width', size(.75));
-  @include sizing('border-top-width', size(.75));
-	@include sizing('width', size(12));
-	@include sizing('height', size(12));
+  @include sizing('border-right-width', size(0.75));
+  @include sizing('border-top-width', size(0.75));
+  @include sizing('width', size(12));
+  @include sizing('height', size(12));
 
   &.color-dark {
     border-right-color: color(default, dark);
@@ -20,13 +20,13 @@
     border-right-color: color(default, light);
   }
 
-	&.position-center {
-		position: absolute;
+  &.position-center {
+    position: absolute;
     top: 50%;
     left: 50%;
     z-index: vars(z-index, xlrg);
     transform: translate(-50%, -50%);
-	}
+  }
 }
 
 @keyframes kf-loader {

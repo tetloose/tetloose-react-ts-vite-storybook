@@ -1,11 +1,11 @@
 @use '@styles/mixins' as *;
 
 %image-size {
-	&.image-size-cover {
-		@include object-fit(cover, null);
-	}
+  &.image-size-cover {
+    @include object-fit(cover, null);
+  }
 
-	&.image-size-contain {
-		@include object-fit(contain, null);
-	}
+  &.image-size-contain {
+    @include object-fit(contain, null);
+  }
 }

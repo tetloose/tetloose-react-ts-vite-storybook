@@ -10,7 +10,7 @@
 .tr,
 .th,
 .td {
-	@extend %border;
+  @extend %border;
 }
 
 .table,
@@ -18,19 +18,19 @@
 .tbody,
 .tfoot,
 .tr {
-	width: 100%;
+  width: 100%;
 }
 
 .thead,
 .tbody,
 .tfoot {
-	position: relative;
+  position: relative;
 
-	@extend %bg;
+  @extend %bg;
 }
 
 .tr {
-	position: relative;
+  position: relative;
 }
 
 .th,

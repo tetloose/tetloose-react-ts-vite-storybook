@@ -3,20 +3,20 @@
 @use '@styles/settings/variables' as *;
 
 @mixin border-direction($direction) {
-	@include sizing('border-#{$direction}-width', size(.25));
+  @include sizing('border-#{$direction}-width', size(0.25));
 
   border-#{$direction}-color: color(default, dark);
 }
 
 %border {
-	&[class*=border-] {
-		border-style: solid;
-		border-color: transparent;
-	}
+  &[class*='border-'] {
+    border-style: solid;
+    border-color: transparent;
+  }
 
-	@each $direction in top, right, bottom, left {
-		&.border-#{$direction} {
-			@include border-direction($direction);
-		}
-	}
+  @each $direction in top, right, bottom, left {
+    &.border-#{$direction} {
+      @include border-direction($direction);
+    }
+  }
 }
