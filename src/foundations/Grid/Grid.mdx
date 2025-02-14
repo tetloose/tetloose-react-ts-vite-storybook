@@ -4,7 +4,67 @@ import { Meta } from '@storybook/blocks'
 
 # Usage
 
-CSS Grid component for layouts.
+## Note this is work in progress....
+
+**Todo**: *add breakpoints for sml - xxlrg*:
+
+```tsx
+<Grid
+  tag={'section'}
+  rows={{
+    default: [0.2, 3, 0.1],
+    sml: [0.2, 3, 0.1],
+    med: [0.2, 3, 0.1],
+    lrg: [0.2, 3, 0.1],
+    xlrg: [0.2, 3, 0.1],
+    xxlrg: [0.2, 3, 0.1]
+  }}
+  columns={{
+    default: [0.5, 1.5],
+    sml: [0.5, 1.5],
+    med: [0.5, 1.5],
+    lrg: [0.5, 1.5],
+    xlrg: [0.5, 1.5],
+    xxlrg: [0.5, 1.5]
+  }}
+  border={{
+    sml: {
+      top: true,
+      right: true,
+      bottom: true,
+      right: true
+    },
+    med: {
+      top: true,
+      right: true,
+      bottom: true,
+      right: true
+    },
+    lrg: {
+      top: true,
+      right: true,
+      bottom: true,
+      right: true
+    },
+    xlrg: {
+      top: true,
+      right: true,
+      bottom: true,
+      right: true
+    },
+    xxlrg: {
+      top: true,
+      right: true,
+      bottom: true,
+      right: true
+    },
+  }}
+>
+```
+
+*Possible feature, define layouts in json via cms:*
+
+# CSS Grid component for layouts.
 
 ## Grid
 
