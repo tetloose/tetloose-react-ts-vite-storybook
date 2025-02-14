@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      mode === 'development' &&
+      !process.env.VITEST &&
         checker({
           typescript: { buildMode: true },
           eslint: {
@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
             lintCommand: 'eslint ./src'
           },
           stylelint: {
-            lintCommand: 'stylelint ./src/**/*.scss'
+            lintCommand: 'stylelint "./src/**/*.scss"'
           },
           overlay: {
             initialIsOpen: true,
@@ -29,9 +29,6 @@ export default defineConfig(({ mode }) => {
       viteTsconfigPaths(),
       svgr()
     ].filter(Boolean),
-    esbuild: {
-      logLevel: 'error'
-    },
     build: {
       manifest: true,
       sourcemap: mode === 'development',
@@ -83,10 +80,7 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port: 3000,
-      open: true,
-      hmr: {
-        overlay: false
-      }
+      open: true
     }
   }
 })

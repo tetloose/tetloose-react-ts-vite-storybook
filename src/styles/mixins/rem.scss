@@ -18,7 +18,8 @@
     }
 
     @return $result;
-  } @else {
+  }
+  @else {
     $new-value: calc(calc($value / $baseline) * 1rem);
 
     @return if(

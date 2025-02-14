@@ -1,7 +1,7 @@
 /** @type {import('stylelint').Config} */
 export default {
   extends: ['stylelint-config-standard-scss'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-order', '@stylistic/stylelint-plugin'],
   rules: {
     'selector-pseudo-class-no-unknown': [
       true,
@@ -13,6 +13,28 @@ export default {
       true,
       {
         ignoreShorthands: ['grid-template']
+      }
+    ],
+    '@stylistic/declaration-colon-space-after': 'always-single-line',
+    '@stylistic/max-empty-lines': 1,
+    '@stylistic/string-quotes': 'single',
+    '@stylistic/indentation': 2,
+    '@stylistic/color-hex-case': 'lower',
+    'color-hex-length': 'short',
+    '@stylistic/selector-combinator-space-after': 'always',
+    '@stylistic/selector-attribute-operator-space-before': 'never',
+    '@stylistic/selector-attribute-operator-space-after': 'never',
+    '@stylistic/selector-attribute-brackets-space-inside': 'never',
+    '@stylistic/selector-pseudo-class-parentheses-space-inside': 'never',
+    '@stylistic/declaration-block-trailing-semicolon': 'always',
+    '@stylistic/declaration-colon-space-before': 'never',
+    '@stylistic/max-line-length': 200,
+    'scss/at-if-closing-brace-newline-after': null,
+    'scss/at-if-closing-brace-space-after': null,
+    'max-nesting-depth': [
+      3,
+      {
+        ignore: ['pseudo-classes', 'blockless-at-rules']
       }
     ],
     'order/order': [
@@ -266,21 +288,7 @@ export default {
         unspecified: 'bottom',
         severity: 'warning'
       }
-    ],
-    'color-named': 'never',
-    'declaration-no-important': true,
-    'length-zero-no-unit': true,
-    'max-nesting-depth': [
-      3,
-      {
-        ignore: ['pseudo-classes', 'blockless-at-rules']
-      }
-    ],
-    'font-family-name-quotes': 'always-where-required',
-    'function-url-quotes': 'never',
-    'selector-attribute-quotes': 'never',
-    'no-duplicate-selectors': true,
-    'declaration-block-no-duplicate-properties': true
+    ]
   },
   ignoreFiles: [
     '.scripts',

@@ -118,98 +118,92 @@ export const Size: ColumnStory = {
 
 export const Breakpoints: ColumnStory = {
   render: () => (
-    <>
-      <Row>
-        <Column
-          width={{
-            default: 6,
-            sml: 4,
-            med: 6,
-            lrg: 8,
-            xlrg: 10,
-            xxlrg: 12
-          }}
-        >
-          <Text
-            odd={false}
-            text={'default: 6, sml: 4, med: 6, lrg: 8, xlrg: 10, xxlrg: 12'}
-          />
-        </Column>
-        <Column
-          width={{
-            default: 6,
-            sml: 8,
-            med: 6,
-            lrg: 4,
-            xlrg: 2,
-            xxlrg: 12
-          }}
-        >
-          <Text
-            odd={true}
-            text={'default: 6, sml: 8, med: 6, lrg: 4, xlrg: 2, xxlrg: 12'}
-          />
-        </Column>
-      </Row>
-    </>
+    <Row>
+      <Column
+        width={{
+          default: 6,
+          sml: 4,
+          med: 6,
+          lrg: 8,
+          xlrg: 10,
+          xxlrg: 12
+        }}
+      >
+        <Text
+          odd={false}
+          text={'default: 6, sml: 4, med: 6, lrg: 8, xlrg: 10, xxlrg: 12'}
+        />
+      </Column>
+      <Column
+        width={{
+          default: 6,
+          sml: 8,
+          med: 6,
+          lrg: 4,
+          xlrg: 2,
+          xxlrg: 12
+        }}
+      >
+        <Text
+          odd={true}
+          text={'default: 6, sml: 8, med: 6, lrg: 4, xlrg: 2, xxlrg: 12'}
+        />
+      </Column>
+    </Row>
   )
 }
 
 export const Gutter: ColumnStory = {
   render: () => (
-    <>
-      <Row
+    <Row
+      gutter={{
+        left: true,
+        right: true
+      }}
+    >
+      <Column
         gutter={{
           left: true,
           right: true
         }}
+        width={{ default: 6 }}
       >
-        <Column
-          gutter={{
-            left: true,
-            right: true
-          }}
-          width={{ default: 6 }}
-        >
-          <Text odd={false} text={'Left Column'} />
-        </Column>
-        <Column
-          gutter={{
-            left: true,
-            right: true
-          }}
-          width={{ default: 6 }}
-        >
-          <Text odd={true} text={'Right Column'} />
-        </Column>
-      </Row>
-    </>
+        <Text odd={false} text={'Left Column'} />
+      </Column>
+      <Column
+        gutter={{
+          left: true,
+          right: true
+        }}
+        width={{ default: 6 }}
+      >
+        <Text odd={true} text={'Right Column'} />
+      </Column>
+    </Row>
   )
 }
 
 export const AllOptions: ColumnStory = {
   render: () => (
-    <>
-      <Row
-        direction={'row-reverse'}
-        justify={'center'}
-        align={'center'}
-        wrap={'nowrap'}
+    <Row
+      direction={'row-reverse'}
+      justify={'center'}
+      align={'center'}
+      wrap={'nowrap'}
+      gutter={{
+        left: true,
+        right: true
+      }}
+    >
+      <Column
         gutter={{
           left: true,
           right: true
         }}
+        width={{ default: 8 }}
       >
-        <Column
-          gutter={{
-            left: true,
-            right: true
-          }}
-          width={{ default: 8 }}
-        >
-          <Text odd={false} text={'Center Column'} />
-        </Column>
-      </Row>
-    </>
+        <Text odd={false} text={'Center Column'} />
+      </Column>
+    </Row>
   )
 }

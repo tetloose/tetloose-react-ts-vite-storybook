@@ -29,10 +29,11 @@
     $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
     $src: list.append(
       $src,
-      url(string.quote($file-path + '.' + $extension))
-        format(string.quote($format)),
-      comma
-    );
+      url(string.quote($file-path + '.' + $extension)
+    )
+    format(string.quote($format)),
+    comma
+  );
   }
 
   @font-face {

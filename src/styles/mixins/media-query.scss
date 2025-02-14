@@ -3,7 +3,8 @@
     @media only screen and (max-width: $width - 1) {
       @content;
     }
-  } @else {
+  }
+  @else {
     @media only screen and (min-width: $width) {
       @content;
     }
@@ -21,7 +22,8 @@
     @media only screen and (max-height: $height - 1) {
       @content;
     }
-  } @else {
+  }
+  @else {
     @media only screen and (min-height: $height) {
       @content;
     }
@@ -33,7 +35,8 @@
     @media (pointer: coarse) {
       @content;
     }
-  } @else {
+  }
+  @else {
     @media (hover: hover) and (pointer: fine) {
       @content;
     }

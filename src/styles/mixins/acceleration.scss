@@ -2,7 +2,8 @@
   @if $acceleration {
     backface-visibility: hidden;
     will-change: transform, opacity;
-  } @else {
+  }
+  @else {
     backface-visibility: visible;
     will-change: auto;
   }

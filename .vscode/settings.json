@@ -35,14 +35,14 @@
     ".editorconfig": true,
     ".gitignore": true,
     "eslint.config.js": true,
-    "package-lock.json": true,
     "package.json": true,
     "stylelint.config.js": true,
     "toolkit": true,
     "tsconfig.app.json": true,
     "tsconfig.json": true,
     "tsconfig.node.json": true,
-    "vite.config.ts": true
+    "vite.config.ts": true,
+    "yarn.lock": true
   },
   "search.exclude": {
     "node_modules": true,

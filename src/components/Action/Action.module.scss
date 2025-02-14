@@ -1,7 +1,7 @@
 @use '@styles/settings' as *;
 
 .action {
-	display: flex;
+  display: flex;
 
   @extend %justify;
   @extend %align;

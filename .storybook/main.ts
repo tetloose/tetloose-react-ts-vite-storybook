@@ -49,21 +49,16 @@ const config: StorybookConfig = {
             lintCommand: `eslint ${src}`
           },
           stylelint: {
-            lintCommand: `stylelint ${src}/**/*.scss`
+            lintCommand: `stylelint "${src}/**/*.scss"`
           },
           overlay: {
             initialIsOpen: true,
             position: 'bl'
           },
-          enableBuild: false,
+          enableBuild: true,
           terminal: true
         })
-      ],
-      server: {
-        hmr: {
-          overlay: false
-        }
-      }
+      ]
     })
   }
 }

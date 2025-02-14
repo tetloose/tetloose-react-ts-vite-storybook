@@ -3,7 +3,8 @@
     cursor: default;
     pointer-events: none;
     user-select: none;
-  } @else {
+  }
+  @else {
     cursor: auto;
     pointer-events: all;
     user-select: all;

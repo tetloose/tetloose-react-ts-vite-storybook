@@ -1,45 +1,45 @@
 @use '@styles/settings' as *;
 
 .grid {
-	display: grid;
-	width: 100%;
-	min-height: vars(vh, fullscreen);
-	grid-auto-rows: auto;
-	grid-auto-columns: auto;
-	overflow: hidden;
-	background-color: color(default, light);
+  display: grid;
+  width: 100%;
+  min-height: vars(vh, fullscreen);
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
+  overflow: hidden;
+  background-color: color(default, light);
 
-	@include transition('padding');
+  @include transition('padding');
 
-	&.position-relative {
-		position: relative;
-	}
+  &.position-relative {
+    position: relative;
+  }
 
-	&.overflow-hidden {
-		overflow: hidden;
-	}
+  &.overflow-hidden {
+    overflow: hidden;
+  }
 
-	&.overflow-scroll {
-		overflow-y: auto;
-	}
+  &.overflow-scroll {
+    overflow-y: auto;
+  }
 
-	@extend %border;
+  @extend %border;
 
-	&__item {
+  &__item {
     min-height: 100%;
 
-		&.position-relative {
-			position: relative;
-		}
+    &.position-relative {
+      position: relative;
+    }
 
-		&.overflow-hidden {
-			overflow: hidden;
-		}
+    &.overflow-hidden {
+      overflow: hidden;
+    }
 
-		&.overflow-scroll {
-			overflow-y: auto;
-		}
+    &.overflow-scroll {
+      overflow-y: auto;
+    }
 
-		@extend %border;
-	}
+    @extend %border;
+  }
 }
