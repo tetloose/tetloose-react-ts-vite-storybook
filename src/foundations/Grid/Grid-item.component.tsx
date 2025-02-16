@@ -1,23 +1,24 @@
 import { WheelEvent } from 'react'
 import { useHorizontalScroll } from '@hooks'
-import { borderClassNames } from '@utils'
+import { getBorder } from '@utils'
 import { GridItemProps } from './Grid.types'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
 
 export const GridItem = ({
   variants,
-  modifiers,
+  modifiers = [],
   tag = 'section',
   rows,
   columns,
   border,
+  borderColor = 'dark',
   horizontalScroll,
   onWheelHandler,
   children,
   ...rest
 }: GridItemProps) => {
-  const borders = borderClassNames(border)
+  const borders = getBorder(border, borderColor)
   const handleHorizontalScroll = useHorizontalScroll()
 
   const gridStyles = {
@@ -44,8 +45,8 @@ export const GridItem = ({
       className={cs(
         styles['grid__item'],
         variants && variants.map((variant) => styles[variant]),
-        ...(modifiers || []),
-        borders && borders.map((name) => styles[name])
+        borders && borders.map((name) => styles[name]),
+        ...modifiers
       )}
       style={gridStyles}
       onWheel={handleOnWheel}

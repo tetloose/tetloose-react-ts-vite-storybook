@@ -1,9 +1,21 @@
 import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
+import { useNotification } from '@hooks'
 import { Button } from './Button.component'
+import { ButtonProps } from './Button.types'
+
+const RenderButton = (args: ButtonProps) => {
+  const notify = useNotification()
+
+  const handleClick = () => {
+    notify('Button Clicked', 'success')
+  }
+
+  return <Button {...args} onClick={handleClick} />
+}
 
 const meta: Meta<typeof Button> = {
-  title: 'Atoms/Buttons',
+  title: 'Atoms/Button',
   component: Button,
   parameters: {
     design: {
@@ -40,82 +52,11 @@ export const Children: Story = {
   }
 }
 
-export const PrimarySml: Story = {
-  args: {
-    variant: 'primary',
-    size: 'sml',
-    type: 'button',
-    label: 'Primary sml',
-    onClick: action('Primary Button Clicked')
-  }
-}
-
-export const PrimaryMed: Story = {
-  args: {
-    variant: 'primary',
-    size: 'med',
-    type: 'button',
-    label: 'Primary med',
-    onClick: action('Primary Button Clicked')
-  }
-}
-
-export const PrimaryLrg: Story = {
-  args: {
-    variant: 'primary',
-    size: 'lrg',
-    type: 'button',
-    label: 'Primary lrg',
-    onClick: action('Primary Button Clicked')
-  }
-}
-
-export const PrimaryXlrg: Story = {
-  args: {
-    variant: 'primary',
-    size: 'xlrg',
-    type: 'button',
-    label: 'Primary xlrg',
-    onClick: action('Primary Button Clicked')
-  }
-}
-
-export const SecondarySml: Story = {
-  args: {
-    variant: 'secondary',
-    size: 'sml',
-    type: 'button',
-    label: 'Secondary sml',
-    onClick: action('Secondary Button Clicked')
-  }
-}
-
-export const SecondaryMed: Story = {
-  args: {
-    variant: 'secondary',
-    size: 'med',
-    type: 'button',
-    label: 'Secondary med',
-    onClick: action('Secondary Button Clicked')
-  }
-}
-
-export const SecondaryLrg: Story = {
-  args: {
-    variant: 'secondary',
-    size: 'lrg',
-    type: 'button',
-    label: 'Secondary lrg',
-    onClick: action('Secondary Button Clicked')
-  }
-}
-
-export const SecondaryXlrg: Story = {
-  args: {
-    variant: 'secondary',
-    size: 'xlrg',
-    type: 'button',
-    label: 'Secondary xlrg',
-    onClick: action('Secondary Button Clicked')
-  }
+export const Primary: Story = {
+  render: () =>
+    RenderButton({
+      variant: 'primary',
+      type: 'button',
+      label: 'Primary'
+    })
 }

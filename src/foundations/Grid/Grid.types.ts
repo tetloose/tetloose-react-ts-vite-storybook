@@ -1,5 +1,6 @@
 import { WheelEventHandler } from 'react'
-import { GlobalBorder, GlobalChildren, GlobalModifiers, Tags } from '@global'
+import { GlobalChildren, GlobalModifiers, Tags } from '@global'
+import { Border } from '@utils/get-border/get-border.types'
 
 export type GridVariants =
   | 'overflow-hidden'
@@ -18,7 +19,7 @@ export type GridProps = {
   horizontalScroll?: boolean
   onWheelHandler?: WheelEventHandler<HTMLDivElement>
 } & GlobalModifiers &
-  GlobalBorder &
+  Border &
   GlobalChildren
 
 export type GridItemProps = GridProps

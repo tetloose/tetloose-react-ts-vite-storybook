@@ -7,6 +7,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
   (
     {
       modifiers = [],
+      tag = 'div',
       direction,
       justify,
       align,
@@ -20,8 +21,10 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
   ) => {
     const { left, right } = gutter || {}
 
+    const Element = tag
+
     return (
-      <div
+      <Element
         ref={ref}
         className={cs(
           styles['row'],
@@ -37,7 +40,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
         {...rest}
       >
         {children && children}
-      </div>
+      </Element>
     )
   }
 )

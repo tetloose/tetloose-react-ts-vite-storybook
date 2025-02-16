@@ -6,18 +6,8 @@
 @use 'sass:meta';
 @use 'sass:map';
 
-// calculate size based on layout spacing
-@function size($size) {
-  @return calc(vars(layout, spacing) * $size);
-}
-
-// Usage
-// e.g. padding-top: 42px;
-// 42 / vars(layout, spacing) -> 4px = 42 / 4 = 10.5
-// padding-top: size(10.5)
-
 @mixin sizing($css-property, $values) {
-  @if vars(layout, rem) {
+  @if vars(settings, rem) {
     @if meta.type-of($values) == 'list' {
       $result: ();
 

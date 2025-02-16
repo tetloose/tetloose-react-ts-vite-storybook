@@ -1,25 +1,31 @@
+import { Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
 import { Column } from './Column.component'
 import { Row } from './Row.component'
 
-const Text = ({
-  text,
-  num,
-  odd
-}: {
+type TextProps = {
   text?: string
-  num?: number
-  odd: boolean
-}) => (
+  bg: '#ff6969' | '#7bff69' | '#69b4ff' | '#ffdc69' | '#ff69b4'
+}
+
+const Text = ({ text, bg = '#69b4ff' }: TextProps) => (
   <div
     style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       height: '100px',
-      backgroundColor: odd ? '#7bff69' : '#ff69b4'
+      backgroundColor: bg
     }}
   >
-    <span>
-      {num && num} {text && text}
-    </span>
+    <Typography
+      tag={'span'}
+      display={'block'}
+      color={'dark'}
+      size={'body-med'}
+      textAlign={'center'}
+      text={text}
+    />
   </div>
 )
 
@@ -44,72 +50,72 @@ export const Size: ColumnStory = {
     <>
       <Row>
         <Column>
-          <Text odd={true} text={'Full width'} />
+          <Text bg={'#ffdc69'} text={'Full width'} />
         </Column>
       </Row>
       <Row>
-        <Column auto={true}>
-          <Text odd={false} text={'Auto Width'} />
+        <Column width={{ default: 'auto' }}>
+          <Text bg={'#ff69b4'} text={'Auto Width'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 1 }}>
-          <Text odd={true} num={1} />
+          <Text bg={'#ffdc69'} text={'1'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 2 }}>
-          <Text odd={false} num={2} />
+          <Text bg={'#ff69b4'} text={'2'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 3 }}>
-          <Text odd={true} num={3} />
+          <Text bg={'#ffdc69'} text={'3'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 4 }}>
-          <Text odd={false} num={4} />
+          <Text bg={'#ff69b4'} text={'4'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 5 }}>
-          <Text odd={true} num={5} />
+          <Text bg={'#ffdc69'} text={'5'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 6 }}>
-          <Text odd={false} num={6} />
+          <Text bg={'#ff69b4'} text={'6'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 7 }}>
-          <Text odd={true} num={7} />
+          <Text bg={'#ffdc69'} text={'7'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 8 }}>
-          <Text odd={false} num={8} />
+          <Text bg={'#ff69b4'} text={'8'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 9 }}>
-          <Text odd={true} num={9} />
+          <Text bg={'#ffdc69'} text={'9'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 10 }}>
-          <Text odd={false} num={10} />
+          <Text bg={'#ff69b4'} text={'10'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 11 }}>
-          <Text odd={true} num={11} />
+          <Text bg={'#ffdc69'} text={'11'} />
         </Column>
       </Row>
       <Row>
         <Column width={{ default: 12 }}>
-          <Text odd={false} num={12} />
+          <Text bg={'#ff69b4'} text={'12'} />
         </Column>
       </Row>
     </>
@@ -130,7 +136,7 @@ export const Breakpoints: ColumnStory = {
         }}
       >
         <Text
-          odd={false}
+          bg={'#ff69b4'}
           text={'default: 6, sml: 4, med: 6, lrg: 8, xlrg: 10, xxlrg: 12'}
         />
       </Column>
@@ -145,7 +151,7 @@ export const Breakpoints: ColumnStory = {
         }}
       >
         <Text
-          odd={true}
+          bg={'#ffdc69'}
           text={'default: 6, sml: 8, med: 6, lrg: 4, xlrg: 2, xxlrg: 12'}
         />
       </Column>
@@ -168,7 +174,7 @@ export const Gutter: ColumnStory = {
         }}
         width={{ default: 6 }}
       >
-        <Text odd={false} text={'Left Column'} />
+        <Text bg={'#ff69b4'} text={'Left Column'} />
       </Column>
       <Column
         gutter={{
@@ -177,13 +183,42 @@ export const Gutter: ColumnStory = {
         }}
         width={{ default: 6 }}
       >
-        <Text odd={true} text={'Right Column'} />
+        <Text bg={'#ffdc69'} text={'Right Column'} />
       </Column>
     </Row>
   )
 }
 
-export const AllOptions: ColumnStory = {
+export const Layout: ColumnStory = {
+  render: () => (
+    <Row tag={'main'}>
+      <Column tag={'header'}>
+        <Text bg={'#69b4ff'} text={'Header'} />
+      </Column>
+      <Column
+        tag={'aside'}
+        width={{
+          med: 4
+        }}
+      >
+        <Text bg={'#7bff69'} text={'Sidebar'} />
+      </Column>
+      <Column
+        tag={'section'}
+        width={{
+          med: 8
+        }}
+      >
+        <Text bg={'#ff6969'} text={'Content'} />
+      </Column>
+      <Column tag={'footer'}>
+        <Text bg={'#ff69b4'} text={'Footer'} />
+      </Column>
+    </Row>
+  )
+}
+
+export const OtherOptions: ColumnStory = {
   render: () => (
     <Row
       direction={'row-reverse'}
@@ -200,9 +235,27 @@ export const AllOptions: ColumnStory = {
           left: true,
           right: true
         }}
-        width={{ default: 8 }}
+        width={{ default: 11 }}
       >
-        <Text odd={false} text={'Center Column'} />
+        <Text bg={'#ff69b4'} text={'Center Column Width Default 11'} />
+        <Row>
+          <Column
+            width={{ default: 6 }}
+            gutter={{
+              right: true
+            }}
+          >
+            <Text bg={'#ffdc69'} text={'Row Column inside a Column'} />
+          </Column>
+          <Column
+            width={{ default: 6 }}
+            gutter={{
+              left: true
+            }}
+          >
+            <Text bg={'#ffdc69'} text={'Row inside a Column'} />
+          </Column>
+        </Row>
       </Column>
     </Row>
   )

@@ -6,7 +6,7 @@ import { Meta } from '@storybook/blocks'
 
 This document outlines the SASS variables used throughout the project. These variables define layout, typography, spacing, transitions, and more to ensure a consistent design system.
 
-## Layout
+## Settings
 
 - browser-context: `16px`
   *Description*: Base value used to calculate rem values for font sizing.
@@ -17,14 +17,25 @@ This document outlines the SASS variables used throughout the project. These var
 - rem: `true`
   *Description*: Toggle to switch the application’s sizing method to rem (if true) or vw.
 
+- loop: `10`
+  *Description*: Manage loops. e.g. padding, spacers etc.
+
+- breakpoints `('sml', 'med', 'lrg', 'xlrg', 'xxlrg')`
+  *Description*: Manage breakpoint loops.
+
+- directions `('top', 'right', 'bottom', 'left')`
+  *Description*: Manage directions loops e.g. padding-top, border-top- etc.
+
+## Row
+
 - gutter: `16px`
   *Description*: Row Column gutter size left and right.
 
 - columns: `12`
   *Description*: Define the column amount for Column component.
 
-- loop: `10`
-  *Description*: Manage scss loops for things like padding, spacers etc.
+- max-width: `1440px`
+  *Description*: Define Row max width before aligning centre, set to false for 100%.
 
 ## Icons
 
@@ -171,7 +182,7 @@ Basic Usage
 
 ### Basic Usage
 
-`padding: vars(layout, spacing);`
+`padding: vars(settings, spacing);`
 
 ### Deep-Get Function
 

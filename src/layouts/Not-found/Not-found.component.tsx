@@ -67,7 +67,7 @@ const NotFound = ({ error }: NotFoundProps) => {
               <Typography
                 tag={'p'}
                 size={'body-xlrg'}
-                padding={4}
+                padding={{ default: 4 }}
                 text={message ? message : subtitle}
               />
               {stack && (
@@ -75,11 +75,11 @@ const NotFound = ({ error }: NotFoundProps) => {
                   tag={'p'}
                   size={'body-xlrg'}
                   fontStyle={'italic'}
-                  padding={4}
+                  padding={{ default: 4 }}
                   text={stack}
                 />
               )}
-              <Action padding={8}>
+              <Action padding={{ default: 8 }}>
                 <Button
                   variant={'primary'}
                   label={error ? 'Reload Page' : linkLabel}

@@ -37,14 +37,14 @@ const Wrapper = ({ color }: WrapperProps) => (
     <Typography
       tag={'h2'}
       size={'body-xlrg'}
-      padding={6}
+      padding={{ default: 6 }}
       text={'Molestias nisi adipisci commodi perferendis, amet recusandae.'}
       color={color}
     />
     <Typography
       tag={'p'}
       size={'body-med'}
-      padding={8}
+      padding={{ default: 8 }}
       text={
         'Molestias nisi adipisci commodi perferendis, amet recusandae, mollitia atque illo tempore modi doloremque, doloribus libero quae eos veritatis quis distinctio dolorum assumenda.'
       }
@@ -55,7 +55,6 @@ const Wrapper = ({ color }: WrapperProps) => (
 
 export const Light: Story = {
   args: {
-    modifiers: ['class-name'],
     border: {
       top: true,
       right: true,

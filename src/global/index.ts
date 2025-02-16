@@ -8,7 +8,24 @@ export type GlobalChildren = {
   children?: ReactNode | ReactNode[]
 }
 
-export type Tags = 'main' | 'div' | 'section' | 'footer' | 'header' | 'aside'
+export type ImageSize = 'cover' | 'contain'
+
+export type GlobalImageSize = {
+  imageSize?: ImageSize
+}
+
+export type Tags =
+  | 'main'
+  | 'div'
+  | 'section'
+  | 'article'
+  | 'footer'
+  | 'header'
+  | 'aside'
+
+export type GlobalHtmlTag = {
+  tag?: Tags
+}
 
 export type Color = 'dark' | 'light'
 
@@ -31,7 +48,18 @@ export type GlobalDisplay = {
   display?: Display
 }
 
-export type BreakPoints = 'default' | 'sml' | 'med' | 'lrg' | 'xlrg' | 'xxlrg'
+export type Directions = 'top' | 'right' | 'bottom' | 'left'
+
+export type Breakpoints = 'default' | 'sml' | 'med' | 'lrg' | 'xlrg' | 'xxlrg'
+
+export type GlobalBreakpoints = {
+  default?: Spacers
+  sml?: Spacers
+  med?: Spacers
+  lrg?: Spacers
+  xlrg?: Spacers
+  xxlrg?: Spacers
+}
 
 export type Size = 'sml' | 'med' | 'lrg' | 'xlrg' | 'xxlrg'
 
@@ -86,51 +114,6 @@ export type GlobalFontStyle = {
 }
 
 export type Spacers = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-
-export type GlobalSpacers = {
-  margin?: Spacers
-  padding?: Spacers
-}
-
-type Padding = {
-  default?: Spacers
-  sml?: Spacers
-  med?: Spacers
-  lrg?: Spacers
-  xlrg?: Spacers
-  xxlrg?: Spacers
-}
-
-export type GlobalPadding = {
-  padding?: {
-    top?: Padding
-    right?: Padding
-    bottom?: Padding
-    left?: Padding
-  }
-}
-
-export type GlobalBorder = {
-  border?: {
-    top?: boolean
-    right?: boolean
-    bottom?: boolean
-    left?: boolean
-  }
-}
-
-type Columns = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-
-export type GlobalWidth = {
-  width?: {
-    default?: Columns
-    sml?: Columns
-    med?: Columns
-    lrg?: Columns
-    xlrg?: Columns
-    xxlrg?: Columns
-  }
-}
 
 export type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse'
 

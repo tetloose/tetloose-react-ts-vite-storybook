@@ -28,7 +28,7 @@ const Home = () => {
               right: true
             }}
           >
-            <Spacer padding={6} display={'block'} />
+            <Spacer padding={{ default: 6 }} display={'block'} />
             <Card
               image={image}
               title={title}

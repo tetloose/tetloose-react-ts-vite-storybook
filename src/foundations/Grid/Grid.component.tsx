@@ -1,4 +1,4 @@
-import { borderClassNames } from '@utils'
+import { getBorder } from '@utils'
 import { GridProps } from './Grid.types'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
@@ -9,10 +9,11 @@ export const Grid = ({
   rows,
   columns,
   border,
+  borderColor = 'dark',
   children,
   ...rest
 }: GridProps) => {
-  const borders = borderClassNames(border)
+  const borders = getBorder(border, borderColor)
 
   const gridStyles = {
     gridTemplateRows: rows

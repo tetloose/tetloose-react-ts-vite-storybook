@@ -1,12 +1,7 @@
 @use '@styles/mixins' as *;
 @use '@styles/settings/colors' as *;
 @use '@styles/settings/variables' as *;
-
-@mixin border-direction($direction) {
-  @include sizing('border-#{$direction}-width', size(0.25));
-
-  border-#{$direction}-color: color(default, dark);
-}
+@use 'sass:map';
 
 %border {
   &[class*='border-'] {
@@ -14,9 +9,15 @@
     border-color: transparent;
   }
 
-  @each $direction in top, right, bottom, left {
+  @each $direction in vars(settings, directions) {
     &.border-#{$direction} {
-      @include border-direction($direction);
+      @include sizing('border-#{$direction}-width', size(.25));
+    }
+
+    @each $color, $value in map.get($colors, default) {
+      &.border-#{$direction}-#{$color} {
+        border-#{$direction}-color: color(default, #{$color});
+      }
     }
   }
 }

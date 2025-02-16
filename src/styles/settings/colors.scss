@@ -19,6 +19,16 @@ $colors: (
     dark: $dark,
     light: $light
   ),
+  selection: (
+    dark: (
+      bg: $light,
+      color: $dark
+    ),
+    light: (
+      bg: $dark,
+      color: $light
+    )
+  ),
   link: (
     dark: (
       default: $hotpink,

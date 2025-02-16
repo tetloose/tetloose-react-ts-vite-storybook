@@ -1,10 +1,8 @@
 @use '@styles/settings' as *;
 
-@mixin gutter($side, $context) {
-  @include sizing('padding-#{$side}', size(calc(vars(layout, gutter) / vars(layout, spacing))));
-
-  #{$context} {
-    @include sizing('margin-#{$side}', size(-#{calc(vars(layout, gutter) / vars(layout, spacing))}));
+@mixin gutter($side) {
+  &.gutter-#{$side} {
+    @include sizing('padding-#{$side}', size(calc(vars(row, gutter) / vars(settings, spacing))));
   }
 }
 
@@ -12,81 +10,100 @@
   $row: &;
 
   display: flex;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 
+  @if vars(row, max-width) {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include sizing('max-width', size(calc(vars(row, max-width) / vars(settings, spacing))));
+
+    #{$row} {
+      max-width: 100%;
+    }
+  } @else {
+    width: 100%;
+  }
+
+  @include gutter('left');
+  @include gutter('right');
   @extend %direction;
   @extend %align;
   @extend %wrap;
   @extend %justify;
   @extend %height;
 
-  &.gutter-left {
-    @include gutter(left, $row);
-  }
-
-  &.gutter-right {
-    @include gutter(right, $row);
-  }
-
   &__column {
     width: 100%;
 
-    &.gutter-left {
-      @include gutter(left, $row);
-    }
+    @include gutter('left');
+    @include gutter('right');
 
-    &.gutter-right {
-      @include gutter(right, $row);
-    }
-
-    &.auto {
+    &.default-width-auto {
       width: auto;
     }
 
-    @for $i from 0 through vars(layout, columns) {
+    @for $i from 1 through vars(row, columns) {
       &.default-width-#{$i} {
-        width: column-width(vars(layout, columns), #{$i});
+        width: column-width(vars(row, columns), #{$i});
       }
     }
 
-    @include mq( vars(breakpoint, sml)) {
-      @for $i from 1 through vars(layout, columns) {
+    @include mq(vars(breakpoint, sml)) {
+      &.sml-width-auto {
+        width: auto;
+      }
+
+      @for $i from 1 through vars(row, columns) {
         &.sml-width-#{$i} {
-          width: column-width(vars(layout, columns), #{$i});
+          width: column-width(vars(row, columns), #{$i});
         }
       }
     }
 
-    @include mq( vars(breakpoint, med)) {
-      @for $i from 1 through vars(layout, columns) {
+    @include mq(vars(breakpoint, med)) {
+      &.med-width-auto {
+        width: auto;
+      }
+
+      @for $i from 1 through vars(row, columns) {
         &.med-width-#{$i} {
-          width: column-width(vars(layout, columns), #{$i});
+          width: column-width(vars(row, columns), #{$i});
         }
       }
     }
 
-    @include mq( vars(breakpoint, lrg)) {
-      @for $i from 1 through vars(layout, columns) {
+    @include mq(vars(breakpoint, lrg)) {
+      &.lrg-width-auto {
+        width: auto;
+      }
+
+      @for $i from 1 through vars(row, columns) {
         &.lrg-width-#{$i} {
-          width: column-width(vars(layout, columns), #{$i});
+          width: column-width(vars(row, columns), #{$i});
         }
       }
     }
 
-    @include mq( vars(breakpoint, xlrg)) {
-      @for $i from 1 through vars(layout, columns) {
+    @include mq(vars(breakpoint, xlrg)) {
+      &.xlrg-width-auto {
+        width: auto;
+      }
+
+      @for $i from 1 through vars(row, columns) {
         &.xlrg-width-#{$i} {
-          width: column-width(vars(layout, columns), #{$i});
+          width: column-width(vars(row, columns), #{$i});
         }
       }
     }
 
-    @include mq( vars(breakpoint, xxlrg)) {
-      @for $i from 1 through vars(layout, columns) {
+    @include mq(vars(breakpoint, xxlrg)) {
+      &.xxlrg-width-auto {
+        width: auto;
+      }
+
+      @for $i from 1 through vars(row, columns) {
         &.xxlrg-width-#{$i} {
-          width: column-width(vars(layout, columns), #{$i});
+          width: column-width(vars(row, columns), #{$i});
         }
       }
     }

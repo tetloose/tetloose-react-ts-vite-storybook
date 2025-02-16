@@ -1,0 +1,31 @@
+@use '@styles/mixins/size' as *;
+@use '@styles/mixins/sizing' as *;
+
+@mixin border(
+  $style: solid,
+  $width: .25,
+  $color: color(default, dark),
+  $direction: null
+) {
+  @if $style {
+    border-style: $style;
+  }
+
+  @if $direction {
+    border-color: transparent;
+
+    @each $dir in $direction {
+      border-#{$dir}-color: $color;
+
+      @include sizing('border-#{$dir}-width', size($width));
+    }
+  } @else {
+    border-color: $color;
+
+    @include sizing('border-width', size($width));
+  }
+}
+
+// Usage
+// @include border('solid', 1px / vars(settings, spacing), hotpink);
+// @include border('solid', 1px / vars(settings, spacing), hotpink, ('top', 'left'));

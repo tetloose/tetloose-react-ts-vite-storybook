@@ -1,13 +1,29 @@
 @use '@styles/settings' as *;
 
 .spacer {
-  @for $i from 1 through vars(layout, loop) {
-    &.padding-#{$i} {
+  @for $i from 1 through vars(settings, loop) {
+    &.default-padding-#{$i} {
       @extend %spacer-padding-#{$i};
     }
 
-    &.margin-#{$i} {
-      @extend %spacer-padding-#{$i};
+    &.default-margin-#{$i} {
+      @extend %spacer-margin-#{$i};
+    }
+  }
+
+  @each $breakpoint in vars(settings, breakpoints) {
+    @debug $breakpoint;
+
+    @for $i from 1 through vars(settings, loop) {
+      @debug $i;
+
+      &.#{$breakpoint}-padding-#{$i} {
+        @extend %#{$breakpoint}-spacer-padding-#{$i};
+      }
+
+      &.#{$breakpoint}-margin-#{$i} {
+        @extend %#{$breakpoint}-spacer-margin-#{$i};
+      }
     }
   }
 

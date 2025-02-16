@@ -1,12 +1,15 @@
 import { forwardRef } from 'react'
-import { borderClassNames } from '@utils'
+import { getBorder } from '@utils'
 import { TrProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
 
 export const Tr = forwardRef<HTMLTableRowElement, TrProps>(
-  ({ modifiers = [], border, hide, children, ...rest }, ref) => {
-    const borders = borderClassNames(border)
+  (
+    { modifiers = [], border, borderColor = 'dark', hide, children, ...rest },
+    ref
+  ) => {
+    const borders = getBorder(border, borderColor)
 
     if (hide) return null
 

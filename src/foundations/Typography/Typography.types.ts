@@ -6,10 +6,10 @@ import {
   GlobalFontStyle,
   GlobalFontWeight,
   GlobalModifiers,
-  GlobalSpacers,
   GlobalTextTransform,
   GlobalWhiteSpace
 } from '@global'
+import { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 
 export type TypographyTags =
   | 'span'
@@ -48,7 +48,7 @@ type SharedProps = {
   GlobalWhiteSpace &
   GlobalAlign &
   GlobalDisplay &
-  GlobalSpacers &
+  Spacers &
   GlobalTextTransform &
   GlobalFontWeight &
   GlobalFontStyle

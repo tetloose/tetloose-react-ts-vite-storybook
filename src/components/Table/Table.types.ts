@@ -1,11 +1,11 @@
 import {
   GlobalAlign,
   GlobalBg,
-  GlobalBorder,
   GlobalChildren,
   GlobalModifiers,
   GlobalVerticalAlign
 } from '@global'
+import { Border } from '@utils/get-border/get-border.types'
 
 type Layout = 'auto' | 'fixed'
 
@@ -22,8 +22,8 @@ export type TableProps = {
   borderCollapse?: BorderCollapse
   verticalAlign?: GlobalVerticalAlign
 } & WrapperProps &
-  GlobalBorder
+  Border
 
-export type TrProps = WrapperProps & GlobalBorder
+export type TrProps = WrapperProps & Border
 
-export type TdProps = WrapperProps & GlobalBorder & GlobalAlign
+export type TdProps = WrapperProps & Border & GlobalAlign

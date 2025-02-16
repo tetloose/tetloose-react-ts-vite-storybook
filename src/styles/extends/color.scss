@@ -1,11 +1,10 @@
+@use 'sass:map';
 @use '@styles/settings/colors' as *;
 
 %color {
-  &.color-dark {
-    color: color(default, dark);
-  }
-
-  &.color-light {
-    color: color(default, light);
+  @each $color, $value in map.get($colors, default) {
+    &.color-#{$color} {
+      color: color(default, $color);
+    }
   }
 }

@@ -4,7 +4,7 @@
 @use 'sass:list';
 
 @function rem($value) {
-  $baseline: vars(layout, browser-context);
+  $baseline: vars(settings, browser-context);
 
   @if $value == 0 {
     @return 0;

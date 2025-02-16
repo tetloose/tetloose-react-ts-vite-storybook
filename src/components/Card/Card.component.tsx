@@ -10,6 +10,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     return (
       <Container
         ref={ref}
+        tag={'article'}
         modifiers={[...modifiers]}
         bg={'dark'}
         border={{
@@ -35,7 +36,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
               <Typography
                 tag={'h2'}
                 size={'h2'}
-                padding={6}
+                padding={{ default: 6 }}
                 color={'light'}
                 fontWeight={'bold'}
                 text={title}
@@ -43,7 +44,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
             )}
             {body && (
               <Typography
-                padding={4}
+                padding={{ default: 4 }}
                 tag={'p'}
                 size={'body-med'}
                 color={'light'}

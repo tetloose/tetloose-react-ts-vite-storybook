@@ -62,8 +62,8 @@ See: `src/styles/mixins/sizing.scss`
 ## Switching between Fluid and Rem
 
 ```
-layout: (
-  browser-context: 16px,
+settings: (
+  settings: 16px,
   spacing: 4px,
   rem: true <---- (set to false for fluid sizing)
 ),
@@ -74,7 +74,7 @@ Setting Rem to false, sets the sizing of the application to use VW, True uses Re
 `src/styles/global/html.scss`
 
 ```
-@if vars(layout, rem) {
+@if vars(settings, rem) {
   @include mq(vars(breakpoint, med), max-width) {
     font-size: 70%;
   }

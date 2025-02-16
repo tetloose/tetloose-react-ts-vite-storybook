@@ -1,6 +1,6 @@
-import { BreakPoints } from '@global'
+import { Breakpoints, Directions } from '@global'
 
-export const breakpoints: BreakPoints[] = [
+export const breakpoints: Breakpoints[] = [
   'default',
   'sml',
   'med',
@@ -8,6 +8,8 @@ export const breakpoints: BreakPoints[] = [
   'xlrg',
   'xxlrg'
 ]
+
+export const directions: Directions[] = ['top', 'right', 'bottom', 'left']
 
 export const transitionDuration = {
   slow: 600,

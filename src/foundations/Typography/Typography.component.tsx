@@ -10,8 +10,8 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
     {
       modifiers = [],
       tag = 'span',
-      padding = 0,
-      margin = 0,
+      padding,
+      margin,
       size,
       color = 'dark',
       fontWeight,

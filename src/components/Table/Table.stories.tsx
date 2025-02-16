@@ -49,16 +49,28 @@ export const Primary: Story = {
                 <Typography tag={'span'} size={'body-med'} text={'Th'} />
               </Th>
               <Th
+                bg={'dark'}
+                borderColor={'light'}
                 border={{
                   right: true,
                   left: true
                 }}
                 textAlign={'center'}
               >
-                <Typography tag={'span'} size={'body-med'} text={'Th'} />
+                <Typography
+                  color={'light'}
+                  tag={'span'}
+                  size={'body-med'}
+                  text={'Th'}
+                />
               </Th>
               <Th textAlign={'right'}>
-                <Typography tag={'span'} size={'body-med'} text={'Th'} />
+                <Typography
+                  color={'light'}
+                  tag={'span'}
+                  size={'body-med'}
+                  text={'Th'}
+                />
               </Th>
             </Tr>
           </Thead>
