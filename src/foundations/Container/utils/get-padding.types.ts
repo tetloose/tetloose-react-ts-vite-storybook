@@ -1,10 +1,10 @@
-import { GlobalBreakpoints } from '@global'
+import { GlobalSpacers } from '@global'
 
 export type Padding = {
   padding?: {
-    top?: GlobalBreakpoints
-    right?: GlobalBreakpoints
-    bottom?: GlobalBreakpoints
-    left?: GlobalBreakpoints
+    top?: GlobalSpacers
+    right?: GlobalSpacers
+    bottom?: GlobalSpacers
+    left?: GlobalSpacers
   }
 }
