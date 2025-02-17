@@ -245,7 +245,7 @@ export const OtherOptions: ColumnStory = {
               right: true
             }}
           >
-            <Text bg={'#ffdc69'} text={'Row Column inside a Column'} />
+            <Text bg={'#ffdc69'} text={'Row inside a Column'} />
           </Column>
           <Column
             width={{ default: 6 }}
