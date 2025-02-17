@@ -5,15 +5,7 @@ import styles from './Button.module.scss'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      modifiers = [],
-      variant,
-      size,
-      label,
-      type = 'button',
-      children,
-      ...rest
-    },
+    { modifiers = [], variant, label, type = 'button', children, ...rest },
     ref
   ) => {
     return (
@@ -22,7 +14,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cs(
           styles['button'],
           variant && styles[`is-${variant}`],
-          size && styles[`is-${size}`],
           ...modifiers
         )}
         type={type}

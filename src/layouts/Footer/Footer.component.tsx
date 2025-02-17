@@ -1,28 +1,28 @@
-import { Column, GridItem, Row } from '@foundations'
+import { Column, GridItem, Row, Typography } from '@foundations'
 
 const Footer = () => {
   return (
     <GridItem
       tag={'footer'}
-      rows={[3]}
-      columns={[1]}
-      border={{
-        top: true
-      }}
+      bg={'dark'}
+      rows={{ default: [3] }}
+      columns={{ default: [1] }}
     >
       <Row
-        gutter={{
-          left: true,
-          right: true
-        }}
+        height={'parent-fullscreen'}
+        gutter={{ left: true, right: true }}
+        align={'center'}
       >
-        <Column
-          gutter={{
-            left: true,
-            right: true
-          }}
-        >
-          Footer
+        <Column gutter={{ left: true, right: true }}>
+          <Typography
+            tag={'span'}
+            display={'block'}
+            textAlign={'center'}
+            size={'body-xxlrg'}
+            text={'Footer'}
+            color={'light'}
+            fontWeight={'bold'}
+          />
         </Column>
       </Row>
     </GridItem>

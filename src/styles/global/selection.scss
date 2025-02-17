@@ -1,6 +1,2 @@
 @use '@styles/settings' as *;
-
-::selection {
-  background-color: color(default, dark);
-  color: color(default, light);
-}
+@include selection(color(default, dark), color(default, light));

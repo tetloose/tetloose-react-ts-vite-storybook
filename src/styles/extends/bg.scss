@@ -1,16 +1,17 @@
+@use '@styles/mixins' as *;
 @use '@styles/settings/colors' as *;
+@use '@styles/settings/variables' as *;
+@use 'sass:map';
 
 %bg {
-  &.bg-dark {
-    background-color: color(default, dark);
+  @each $color, $value in map.get($colors, default) {
+    &.bg-#{$color} {
+      background-color: color(default, #{$color});
 
-    ::selection {
-      background-color: color(default, light);
-      color: color(default, dark);
+      @include selection(
+        deep-get($colors, selection, $color, bg),
+        deep-get($colors, selection, $color, color)
+      );
     }
-  }
-
-  &.bg-light {
-    background-color: color(default, light);
   }
 }

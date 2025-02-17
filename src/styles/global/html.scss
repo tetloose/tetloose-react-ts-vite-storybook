@@ -10,7 +10,7 @@ html {
   @include font-smoothing;
   @include scrollbar;
 
-  @if vars(layout, rem) {
+  @if vars(settings, rem) {
     @include mq(vars(breakpoint, med), max-width) {
       font-size: 70%;
     }

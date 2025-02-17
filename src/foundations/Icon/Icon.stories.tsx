@@ -18,14 +18,38 @@ export default meta
 type Story = StoryObj<typeof Icon>
 
 const renderIcons = () => {
-  const icons: IconNames[] = ['face']
+  const icons: IconNames[] = ['happy', 'angry']
 
   return (
-    <Row>
-      <Column>
+    <Row
+      gutter={{
+        left: true,
+        right: true
+      }}
+    >
+      <Column
+        gutter={{
+          left: true,
+          right: true
+        }}
+      >
         {icons.map((icon) => (
-          <Typography key={icon} display={'block'} tag={'span'} text={icon}>
-            <Icon name={icon} />
+          <Typography
+            key={icon}
+            display={'block'}
+            textTransform={'capitalize'}
+            fontWeight={'bold'}
+            size={'body-med'}
+            tag={'span'}
+            padding={{ default: 6 }}
+            text={icon}
+          >
+            <br />
+            <Icon name={icon} size={'sml'} />
+            <Icon name={icon} size={'med'} />
+            <Icon name={icon} size={'lrg'} />
+            <Icon name={icon} size={'xlrg'} />
+            <Icon name={icon} size={'xxlrg'} />
           </Typography>
         ))}
       </Column>

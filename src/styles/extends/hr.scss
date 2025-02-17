@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '@styles/mixins' as *;
 @use '@styles/settings/colors' as *;
 
@@ -8,15 +9,11 @@
     @include sizing(height, size(0.25));
   }
 
-  &.color-dark {
-    hr {
-      background-color: colors(default, dark);
-    }
-  }
-
-  &.color-light {
-    hr {
-      background-color: colors(default, light);
+  @each $color, $value in map.get($colors, default) {
+    &.color-#{$color} {
+      hr {
+        background-color: colors(default, $color);
+      }
     }
   }
 }

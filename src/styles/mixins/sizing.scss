@@ -6,18 +6,14 @@
 @use 'sass:meta';
 @use 'sass:map';
 
-// calculate size based on layout spacing
-@function size($size) {
-  @return calc(vars(layout, spacing) * $size);
-}
-
-// Usage
-// e.g. padding-top: 42px;
-// 42 / vars(layout, spacing) -> 4px = 42 / 4 = 10.5
-// padding-top: size(10.5)
+$vw-min: vars(breakpoint, med);
+$vw-max: vars(breakpoint, xxlrg);
+$vw-context: calc($vw-max * 0.01);
+$vw-adjustment-min: 3vw;
+$vw-adjustment-max: 1vw;
 
 @mixin sizing($css-property, $values) {
-  @if vars(layout, rem) {
+  @if vars(settings, rem) {
     @if meta.type-of($values) == 'list' {
       $result: ();
 
@@ -34,7 +30,18 @@
   }
   @else {
     @if meta.type-of($values) == 'list' {
-      @include mq($vw-max, max-width) {
+      @include mq($vw-min, max-width) {
+        $result: ();
+
+        @each $value in $values {
+          $context: calc($value / $vw-context * $vw-adjustment-min);
+          $result: list.append($result, $context);
+        }
+
+        #{$css-property}: string.unquote('#{list.join($result, '')}');
+      }
+
+      @include mq-between($vw-min, $vw-max) {
         $result: ();
 
         @each $value in $values {
@@ -57,7 +64,11 @@
       }
     }
     @else {
-      @include mq($vw-max, max-width) {
+      @include mq($vw-min, max-width) {
+        #{$css-property}: calc($values / $vw-context * $vw-adjustment-min);
+      }
+
+      @include mq-between($vw-min, $vw-max) {
         #{$css-property}: calc($values / $vw-context * $vw-adjustment-max);
       }
 

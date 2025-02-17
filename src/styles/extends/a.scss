@@ -1,5 +1,7 @@
 @use '@styles/mixins' as *;
 @use '@styles/settings/colors' as *;
+@use '@styles/settings/variables' as *;
+@use 'sass:map';
 
 %a {
   a {
@@ -11,37 +13,21 @@
     }
   }
 
-  &.color-dark {
-    a {
-      color: deep-get($colors, link, dark, default);
+  @each $color, $value in map.get($colors, link) {
+    &.link-color-#{$color} {
+      a {
+        color: deep-get($colors, link, $color, default);
 
-      @include mq-hover {
-        @include transition('color');
+        @include mq-hover {
+          @include transition('color');
 
-        &:focus {
-          color: deep-get($colors, link, dark, focus);
-        }
+          &:focus {
+            color: deep-get($colors, link, $color, focus);
+          }
 
-        &:hover {
-          color: deep-get($colors, link, dark, hover);
-        }
-      }
-    }
-  }
-
-  &.color-light {
-    a {
-      color: deep-get($colors, link, light, default);
-
-      @include mq-hover {
-        @include transition('color');
-
-        &:focus {
-          color: deep-get($colors, link, light, focus);
-        }
-
-        &:hover {
-          color: deep-get($colors, link, light, hover);
+          &:hover {
+            color: deep-get($colors, link, $color, hover);
+          }
         }
       }
     }

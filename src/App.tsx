@@ -13,8 +13,8 @@ const App = () => {
     <Suspense fallback={<Loading position={'center'} />}>
       <Grid
         modifiers={['animate', animation]}
-        rows={[0.2, 6, 0.2]}
-        columns={[1]}
+        rows={{ default: ['60px', 'auto', '40px'] }}
+        columns={{ default: [1] }}
       >
         <Header />
         <Routes>

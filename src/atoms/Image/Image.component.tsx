@@ -7,7 +7,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 export const Image = ({
   modifiers = [],
   position = 'center',
-  size = 'cover',
+  imageSize = 'cover',
   ratio = '1x1',
   alt,
   width,
@@ -30,7 +30,7 @@ export const Image = ({
       className={cs(
         styles['image'],
         styles[`image-position-${position}`],
-        styles[`image-size-${size}`],
+        styles[`image-size-${imageSize}`],
         styles[`ratio-${ratio}`],
         ...modifiers
       )}

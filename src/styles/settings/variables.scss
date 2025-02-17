@@ -10,19 +10,41 @@
 }
 
 $vars: (
-  layout: (
+  settings: (
     browser-context: 16px,
     spacing: 4px,
-    rem: true,
+    rem: false,
+    loop: 10,
+    breakpoints: (
+      'sml',
+      'med',
+      'lrg',
+      'xlrg',
+      'xxlrg'
+    ),
+    directions: (
+      'top',
+      'right',
+      'bottom',
+      'left'
+    )
+  ),
+  rem: (
+    sml: 70%,
+    med: 80%,
+    lrg: 100%
+  ),
+  row: (
     gutter: 16px,
     columns: 12,
-    loop: 10
+    max-width: false
   ),
   icons: (
     sml: 20px,
     med: 22px,
     lrg: 24px,
-    xlrg: 26px
+    xlrg: 26px,
+    xxlrg: 28px
   ),
   headings: (
     font-size: (
@@ -51,27 +73,15 @@ $vars: (
       sml: 14px,
       med: 18px,
       lrg: 20px,
-      xlrg: 24px
+      xlrg: 24px,
+      xxlrg: 28px
     ),
     line-height: (
       sml: 18px,
       med: 22px,
       lrg: 24px,
-      xlrg: 28px
-    )
-  ),
-  button: (
-    font-size: (
-      sml: 12px,
-      med: 14px,
-      lrg: 16px,
-      xlrg: 18px
-    ),
-    line-height: (
-      sml: 12px,
-      med: 14px,
-      lrg: 16px,
-      xlrg: 18px
+      xlrg: 28px,
+      xxlrg: 32px
     )
   ),
   input: (
@@ -93,8 +103,7 @@ $vars: (
     fullscreen: 100vw
   ),
   vh: (
-    fullscreen: 100vh,
-    half: 50vh
+    fullscreen: 100vh
   ),
   transition: (
     duration: (
@@ -118,6 +127,7 @@ $vars: (
     med: 6px,
     lrg: 8px,
     xlrg: 10px,
+    xxlrg: 10px,
     round: 50%
   ),
   z-index: (
@@ -126,11 +136,7 @@ $vars: (
     sml: 1,
     med: 2,
     lrg: 3,
-    xlrg: 4
+    xlrg: 4,
+    xxlrg: 5
   )
 );
-$vw-min: vars(breakpoint, med);
-$vw-max: vars(breakpoint, xxlrg);
-$vw-context: calc($vw-max * 0.01);
-$vw-adjustment-min: 3vw;
-$vw-adjustment-max: 1vw;

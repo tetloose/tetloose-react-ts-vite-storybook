@@ -1,31 +1,42 @@
 import { forwardRef } from 'react'
-import { borderClassNames, paddingClassNames } from '@utils'
+import { getBorder } from '@utils'
+import { getPadding } from './utils/get-padding.utils'
 import { ContainerProps } from './Container.types'
 import cs from 'classnames'
 import styles from './Container.module.scss'
 
 export const Container = forwardRef<HTMLDivElement, ContainerProps>(
   (
-    { modifiers = [], bg, border, padding, children, ...rest }: ContainerProps,
+    {
+      modifiers = [],
+      tag = 'div',
+      bg,
+      border,
+      borderColor = 'dark',
+      padding,
+      children,
+      ...rest
+    },
     ref
   ) => {
-    const borders = borderClassNames(border)
-    const paddings = paddingClassNames(padding)
+    const Element = tag
+    const borders = getBorder(border, borderColor)
+    const paddings = getPadding(padding)
 
     return (
-      <div
+      <Element
         ref={ref}
         className={cs(
           styles['container'],
           bg && styles[`bg-${bg}`],
           borders && borders.map((name) => styles[name]),
-          paddings && paddings.map((name) => styles[name]),
+          padding && paddings.map((name) => styles[name]),
           ...modifiers
         )}
         {...rest}
       >
         {children}
-      </div>
+      </Element>
     )
   }
 )

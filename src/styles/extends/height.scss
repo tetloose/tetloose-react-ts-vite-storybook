@@ -1,11 +1,11 @@
 @use '@styles/settings/variables' as *;
 
 %height {
-  &.height-fullscreen {
+  &.height-parent-fullscreen {
     min-height: 100%;
   }
 
-  &.height-half {
-    min-height: 50%;
+  &.height-viewport-fullscreen {
+    min-height: vars(vh, fullscreen);
   }
 }

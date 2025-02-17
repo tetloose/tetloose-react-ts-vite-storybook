@@ -2,9 +2,9 @@
 @use '@styles/settings/variables' as *;
 
 %gap {
-  @for $i from 1 through vars(layout, loop) {
+  @for $i from 1 through vars(settings, loop) {
     &.gap-#{$i} {
-      @include sizing('gap', size(#{$i}));
+      @include sizing('gap', size($i));
     }
   }
 }

@@ -7,8 +7,8 @@ export const Action = forwardRef<HTMLElement, ActionProps>(
   (
     {
       modifiers = [],
-      margin = 0,
-      padding = 0,
+      margin,
+      padding,
       align = 'center',
       gap = 0,
       wrap = 'wrap',

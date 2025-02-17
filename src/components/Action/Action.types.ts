@@ -4,9 +4,9 @@ import {
   GlobalFlexWrap,
   GlobalGap,
   GlobalJustify,
-  GlobalModifiers,
-  GlobalSpacers
+  GlobalModifiers
 } from '@global'
+import { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 
 export type ActionProps = GlobalChildren &
   GlobalModifiers &
@@ -14,4 +14,4 @@ export type ActionProps = GlobalChildren &
   GlobalFlexAlign &
   GlobalGap &
   GlobalFlexWrap &
-  GlobalSpacers
+  Spacers

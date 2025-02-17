@@ -23,7 +23,7 @@ export const Cover16x9: Story = {
     placeholder: Placeholder,
     ratio: '16x9',
     position: 'center-bottom',
-    size: 'cover'
+    imageSize: 'cover'
   }
 }
 
@@ -36,6 +36,6 @@ export const Contain16x9: Story = {
     placeholder: Placeholder,
     ratio: '16x9',
     position: 'center-bottom',
-    size: 'contain'
+    imageSize: 'contain'
   }
 }

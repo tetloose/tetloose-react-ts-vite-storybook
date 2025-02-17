@@ -1,3 +1,4 @@
+import { Column, Container, Row, Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
 import { Grid } from './Grid.component'
 import { GridItem } from './Grid-item.component'
@@ -16,39 +17,111 @@ type Story = StoryObj<typeof Grid>
 
 const renderPrimary = () => {
   return (
-    <Grid rows={[0.2, 3, 0.1]} columns={[0.5, 1.5]}>
+    <Grid
+      tag={'main'}
+      rows={{ default: ['60px', 'auto', '40px'] }}
+      columns={{ default: [0.5, 1.5] }}
+    >
       <GridItem
-        rows={[1]}
-        columns={[1, 3]}
-        border={{
-          bottom: true,
-          left: true
-        }}
+        tag={'header'}
+        bg={'dark'}
+        rows={{ default: [1] }}
+        columns={{ default: [1, 3] }}
       >
-        Header
+        <Row
+          height={'parent-fullscreen'}
+          gutter={{ left: true, right: true }}
+          align={'center'}
+        >
+          <Column gutter={{ left: true, right: true }}>
+            <Typography
+              tag={'span'}
+              display={'block'}
+              textAlign={'center'}
+              size={'body-xxlrg'}
+              text={'Header'}
+              color={'light'}
+              fontWeight={'bold'}
+            />
+          </Column>
+        </Row>
+      </GridItem>
+      <GridItem rows={{ default: [2] }} columns={{ default: [1, 2] }}>
+        <Container
+          padding={{
+            top: {
+              default: 6
+            },
+            right: {
+              default: 6
+            },
+            bottom: {
+              default: 6
+            },
+            left: {
+              default: 6
+            }
+          }}
+        >
+          <Typography
+            tag={'h2'}
+            size={'body-lrg'}
+            text={'Sidebar'}
+            fontWeight={'bold'}
+          />
+        </Container>
       </GridItem>
       <GridItem
-        rows={[2]}
-        columns={[1, 2]}
-        border={{
-          left: true,
-          right: true
-        }}
+        tag={'section'}
+        rows={{ default: [2] }}
+        columns={{ default: [2, 3] }}
       >
-        Sidebar
-      </GridItem>
-      <GridItem rows={[2]} columns={[2, 3]}>
-        Content
+        <Container
+          padding={{
+            top: {
+              default: 6
+            },
+            right: {
+              default: 6
+            },
+            bottom: {
+              default: 6
+            },
+            left: {
+              default: 6
+            }
+          }}
+        >
+          <Typography
+            richText={
+              '<h1>Lorem ipsum dolor sit amet</h1>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<h2>Consectetur adipisicing elit</h2>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<h3>Sed do eiusmod tempor incididunt</h3>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<h4>Ut labore et dolore magna aliqua</h4>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<h5>Ut enim ad minim veniam</h5>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<h6>Quis nostrud exercitation ullamco</h6>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<ul>\n  <li>Lorem ipsum <strong>consectetur</strong> adipisicing elit. sit amet</li>\n  <li>Consectetur <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> elit</li>\n  <li>Sed do <u>Underscored text</u> tempor</li>\n</ul>\n<p>\n  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. \n  <u>Underscored text</u> may be used for emphasis, along with <em>italicized text</em>.\n  Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> for more info.\n</p>\n<ol>\n  <li>Lorem ipsum <strong>consectetur</strong> adipisicing elit. sit amet</li>\n  <li>Consectetur <a href="https://example.com" target="_blank" rel="noopener noreferrer">our website</a> elit</li>\n  <li>Sed do <u>Underscored text</u> tempor</li>\n</ol>'
+            }
+          />
+        </Container>
       </GridItem>
       <GridItem
-        rows={[3]}
-        columns={[1, 3]}
-        border={{
-          top: true,
-          left: true
-        }}
+        bg={'dark'}
+        tag={'footer'}
+        rows={{ default: [3] }}
+        columns={{ default: [1, 3] }}
       >
-        Footer
+        <Row
+          height={'parent-fullscreen'}
+          gutter={{ left: true, right: true }}
+          align={'center'}
+        >
+          <Column gutter={{ left: true, right: true }}>
+            <Typography
+              tag={'span'}
+              display={'block'}
+              textAlign={'center'}
+              size={'body-xxlrg'}
+              text={'Footer'}
+              color={'light'}
+              fontWeight={'bold'}
+            />
+          </Column>
+        </Row>
       </GridItem>
     </Grid>
   )

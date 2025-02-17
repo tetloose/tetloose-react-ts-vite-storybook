@@ -4,10 +4,11 @@ import {
   GlobalFlexAlign,
   GlobalFlexWrap,
   GlobalHeight,
+  GlobalHtmlTag,
   GlobalJustify,
-  GlobalModifiers,
-  GlobalWidth
+  GlobalModifiers
 } from '@global'
+import { ColumnWidth } from './utils/column-width.types'
 
 type Gutter = {
   left?: boolean
@@ -18,7 +19,8 @@ type SharedProps = {
   gutter?: Gutter
 } & GlobalChildren &
   GlobalModifiers &
-  GlobalHeight
+  GlobalHeight &
+  GlobalHtmlTag
 
 export type RowProps = SharedProps &
   GlobalFlexAlign &
@@ -26,7 +28,4 @@ export type RowProps = SharedProps &
   GlobalFlexWrap &
   GlobalDirection
 
-export type ColumnProps = {
-  auto?: boolean
-} & SharedProps &
-  GlobalWidth
+export type ColumnProps = SharedProps & ColumnWidth

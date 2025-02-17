@@ -1,4 +1,6 @@
-import { borderClassNames } from '@utils'
+import { useMemo } from 'react'
+import { createPortal } from 'react-dom'
+import { getClassName, getStyles } from './utils'
 import { GridProps } from './Grid.types'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
@@ -6,34 +8,41 @@ import styles from './Grid.module.scss'
 export const Grid = ({
   modifiers = [],
   tag = 'main',
+  bg = 'light',
   rows,
   columns,
-  border,
   children,
   ...rest
 }: GridProps) => {
-  const borders = borderClassNames(border)
-
-  const gridStyles = {
-    gridTemplateRows: rows
-      .map((row) => (row === 'auto' ? 'auto' : `${row}fr`))
-      .join(' '),
-    gridTemplateColumns: columns.map((column) => `${column}fr`).join(' ')
-  }
-
   const Element = tag
+  const className = getClassName(styles['grid'])
+
+  const inlineStyles = useMemo(
+    () =>
+      getStyles({
+        className,
+        rows,
+        columns,
+        template: true
+      }),
+    [rows, columns, className]
+  )
 
   return (
-    <Element
-      className={cs(
-        styles['grid'],
-        borders && borders.map((name) => styles[name]),
-        ...modifiers
-      )}
-      style={gridStyles}
-      {...rest}
-    >
-      {children}
-    </Element>
+    <>
+      {createPortal(<style>{inlineStyles}</style>, document.body)}
+
+      <Element
+        className={cs(
+          styles['grid'],
+          styles[`bg-${bg}`],
+          className,
+          ...modifiers
+        )}
+        {...rest}
+      >
+        {children}
+      </Element>
+    </>
   )
 }

@@ -10,9 +10,10 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
     {
       modifiers = [],
       tag = 'span',
-      padding = 0,
-      margin = 0,
+      padding,
+      margin,
       size,
+      linkColor = 'dark',
       color = 'dark',
       fontWeight,
       display,
@@ -39,6 +40,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
                   : '',
                 !richText && size ? styles[size] : '',
                 whiteSpace ? styles[`white-space-${whiteSpace}`] : '',
+                styles[`link-color-${linkColor}`],
                 styles[`color-${color}`],
                 fontWeight ? styles[`font-weight-${fontWeight}`] : '',
                 display ? styles[`display-${display}`] : '',
@@ -63,6 +65,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
         modifiers={modifiers}
         padding={padding}
         margin={margin}
+        linkColor={linkColor}
         color={color}
         fontWeight={fontWeight}
         display={display}

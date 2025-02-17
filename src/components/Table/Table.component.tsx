@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { borderClassNames } from '@utils'
+import { getBorder } from '@utils'
 import { TableProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
@@ -8,20 +8,21 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
   (
     {
       modifiers = [],
-      bg = 'light',
       layout = 'fixed',
       borderCollapse = 'collapse',
-      border,
       verticalAlign = 'middle',
+      bg = 'light',
+      border,
+      borderColor = 'dark',
       hide,
       children,
       ...rest
     },
     ref
   ) => {
-    const borders = borderClassNames(border)
-
     if (hide) return null
+
+    const borders = getBorder(border, borderColor)
 
     return (
       <table

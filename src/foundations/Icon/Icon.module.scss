@@ -3,8 +3,19 @@
 
 .icon {
   @extend %f-icons;
+  @include transition('all');
 
-  &.face::before {
+  &.happy::before {
     content: '\e900';
+  }
+
+  &.angry::before {
+    content: '\e901';
+  }
+
+  @each $breakpoint in vars(settings, breakpoints) {
+    &.is-#{$breakpoint} {
+      @extend  %type-icon-#{$breakpoint};
+    }
   }
 }

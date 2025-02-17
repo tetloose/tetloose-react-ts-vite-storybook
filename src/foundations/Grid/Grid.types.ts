@@ -1,29 +1,13 @@
 import { WheelEventHandler } from 'react'
-import { GlobalBorder, GlobalChildren, GlobalModifiers, Tags } from '@global'
-
-export type GridVariants =
-  | 'overflow-hidden'
-  | 'overflow-scroll'
-  | 'position-relative'
-
-export type Row = (number | 'auto')[]
-
-export type Column = number[]
+import { GlobalBg, GlobalChildren, GlobalModifiers, Tags } from '@global'
+import { ColumnProps, RowProps } from './utils/get-styles.types'
 
 export type GridProps = {
-  variants?: GridVariants[]
   tag?: Tags
-  rows: Row
-  columns: Column
+  rows: RowProps
+  columns: ColumnProps
   horizontalScroll?: boolean
   onWheelHandler?: WheelEventHandler<HTMLDivElement>
 } & GlobalModifiers &
-  GlobalBorder &
+  GlobalBg &
   GlobalChildren
-
-export type GridItemProps = GridProps
-
-export type GridStyles = {
-  gridRow: string
-  gridColumn: string
-}

@@ -1,37 +1,36 @@
-import { WheelEvent } from 'react'
+import { useMemo, WheelEvent } from 'react'
+import { createPortal } from 'react-dom'
 import { useHorizontalScroll } from '@hooks'
-import { borderClassNames } from '@utils'
-import { GridItemProps } from './Grid.types'
+import { getClassName, getStyles } from './utils'
+import { GridProps } from './Grid.types'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
 
 export const GridItem = ({
-  variants,
-  modifiers,
+  modifiers = [],
   tag = 'section',
   rows,
   columns,
-  border,
+  bg = 'light',
   horizontalScroll,
   onWheelHandler,
   children,
   ...rest
-}: GridItemProps) => {
-  const borders = borderClassNames(border)
-  const handleHorizontalScroll = useHorizontalScroll()
-
-  const gridStyles = {
-    gridRow: rows
-      .map((row, rowIndex) => (rowIndex > 0 ? `/ ${row}` : `${row}`))
-      .join(' '),
-    gridColumn: columns
-      .map((column, columnIndex) =>
-        columnIndex > 0 ? `/ ${column}` : `${column}`
-      )
-      .join(' ')
-  }
-
+}: GridProps) => {
   const Element = tag
+  const handleHorizontalScroll = useHorizontalScroll()
+  const className = getClassName(styles['grid__item'])
+
+  const inlineStyles = useMemo(
+    () =>
+      getStyles({
+        className,
+        rows,
+        columns,
+        template: false
+      }),
+    [rows, columns, className]
+  )
 
   const handleOnWheel = (event: WheelEvent<HTMLDivElement>) => {
     if (horizontalScroll) handleHorizontalScroll(event)
@@ -40,18 +39,20 @@ export const GridItem = ({
   }
 
   return (
-    <Element
-      className={cs(
-        styles['grid__item'],
-        variants && variants.map((variant) => styles[variant]),
-        ...(modifiers || []),
-        borders && borders.map((name) => styles[name])
-      )}
-      style={gridStyles}
-      onWheel={handleOnWheel}
-      {...rest}
-    >
-      {children}
-    </Element>
+    <>
+      {createPortal(<style>{inlineStyles}</style>, document.body)}
+      <Element
+        className={cs(
+          styles['grid__item'],
+          styles[`bg-${bg}`],
+          className,
+          ...modifiers
+        )}
+        onWheel={handleOnWheel}
+        {...rest}
+      >
+        {children}
+      </Element>
+    </>
   )
 }

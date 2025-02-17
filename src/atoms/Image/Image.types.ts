@@ -1,4 +1,4 @@
-import { GlobalModifiers, GlobalRatios } from '@global'
+import { GlobalImageSize, GlobalModifiers, GlobalRatios } from '@global'
 
 type Position =
   | 'center'
@@ -11,11 +11,8 @@ type Position =
   | 'center-top'
   | 'center-bottom'
 
-type ImageSize = 'cover' | 'contain'
-
 export type ImageProps = {
   ratio?: GlobalRatios
-  size?: ImageSize
   position?: Position
   src?: string
   desktop?: string
@@ -26,4 +23,5 @@ export type ImageProps = {
   height?: number
   alt?: string
   blur?: boolean
-} & GlobalModifiers
+} & GlobalImageSize &
+  GlobalModifiers
