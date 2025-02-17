@@ -32,7 +32,33 @@ export default defineConfig(({ mode }) => {
     build: {
       manifest: true,
       sourcemap: mode === 'development',
-      outDir: resolve(__dirname, 'build')
+      outDir: resolve(__dirname, 'build'),
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            const chunks: { [key: string]: string } = {
+              [resolve(__dirname, 'src/foundations')]: 'foundations',
+              [resolve(__dirname, 'src/atoms')]: 'atoms',
+              [resolve(__dirname, 'src/components')]: 'components',
+              [resolve(__dirname, 'src/layouts')]: 'layouts',
+              [resolve(__dirname, 'src/hooks')]: 'hooks',
+              [resolve(__dirname, 'src/crud')]: 'crud',
+              [resolve(__dirname, 'src/utils')]: 'utils',
+              [resolve(__dirname, 'src/global')]: 'global',
+              [resolve(__dirname, 'src/styles')]: 'styles',
+              [resolve(__dirname, 'src/images')]: 'images',
+              [resolve(__dirname, 'src/constants')]: 'constants',
+              [resolve(__dirname, 'src/routes')]: 'routes'
+            }
+
+            for (const [aliasPath, chunkName] of Object.entries(chunks)) {
+              if (id.includes(aliasPath)) {
+                return chunkName
+              }
+            }
+          }
+        }
+      }
     },
     resolve: {
       alias: {
