@@ -78,7 +78,6 @@
 
 %type-heading {
   @extend %f-heading;
-  @extend %f-regular;
 }
 
 %type-d1 {
@@ -138,7 +137,6 @@
     @include sizing('font-size', deep-get($vars, body, font-size, #{$breakpoint}));
     @include sizing('line-height', deep-get($vars, body, line-height, #{$breakpoint}));
     @extend %f-body;
-    @extend %f-regular;
   }
 }
 
@@ -156,14 +154,12 @@
 
 %type-input {
   @extend %f-body;
-  @extend %f-regular;
   @include sizing('font-size', vars(input, font-size));
   @include sizing('line-height', vars(input, line-height));
 }
 
 %type-label {
   @extend %f-body;
-  @extend %f-regular;
   @include sizing('font-size', vars(label, font-size));
   @include sizing('line-height', vars(label, line-height));
 }

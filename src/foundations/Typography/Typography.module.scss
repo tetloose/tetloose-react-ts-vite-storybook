@@ -191,16 +191,9 @@
   @extend %white-space;
   @extend %text-transform;
   @extend %font-style;
+  @extend %font-weight;
 
   &.is-rich-text {
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-
     h6 {
       @extend %type-h6;
     }
@@ -255,6 +248,14 @@
       li {
         @extend %spacer-padding-1;
       }
+    }
+
+    strong {
+      @extend %f-bold;
+    }
+
+    em {
+      @extend %f-italic;
     }
 
     > *:first-child {

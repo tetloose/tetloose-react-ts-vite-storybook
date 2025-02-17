@@ -5,6 +5,7 @@ import {
   GlobalDisplay,
   GlobalFontStyle,
   GlobalFontWeight,
+  GlobalLinkColor,
   GlobalModifiers,
   GlobalTextTransform,
   GlobalWhiteSpace
@@ -36,6 +37,7 @@ type Size =
   | 'h4'
   | 'h5'
   | 'h6'
+  | 'body-xxlrg'
   | 'body-xlrg'
   | 'body-lrg'
   | 'body-med'
@@ -51,7 +53,8 @@ type SharedProps = {
   Spacers &
   GlobalTextTransform &
   GlobalFontWeight &
-  GlobalFontStyle
+  GlobalFontStyle &
+  GlobalLinkColor
 
 export type TypographyProps = {
   tag?: TypographyTags

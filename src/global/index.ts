@@ -29,8 +29,14 @@ export type GlobalHtmlTag = {
 
 export type Color = 'dark' | 'light'
 
+export type LinkColor = 'dark' | 'light'
+
 export type GlobalColor = {
   color?: Color
+}
+
+export type GlobalLinkColor = {
+  linkColor?: LinkColor
 }
 
 export type GlobalBg = {
@@ -145,10 +151,8 @@ export type GlobalGap = {
 
 export type GlobalRatios = '1x1' | '3x2' | '16x9' | '21x9' | 'fullscreen'
 
-export type Height = 'fullscreen' | 'half'
+export type Height = 'parent-fullscreen' | 'viewport-fullscreen'
 
 export type GlobalHeight = {
   height?: Height
 }
-
-export type GlobalVerticalAlign = 'top' | 'middle' | 'bottom' | 'baseline'

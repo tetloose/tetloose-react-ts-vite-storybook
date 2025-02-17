@@ -13,7 +13,7 @@ $vars: (
   settings: (
     browser-context: 16px,
     spacing: 4px,
-    rem: true,
+    rem: false,
     loop: 10,
     breakpoints: (
       'sml',
@@ -28,6 +28,11 @@ $vars: (
       'bottom',
       'left'
     )
+  ),
+  rem: (
+    sml: 70%,
+    med: 80%,
+    lrg: 100%
   ),
   row: (
     gutter: 16px,
@@ -98,8 +103,7 @@ $vars: (
     fullscreen: 100vw
   ),
   vh: (
-    fullscreen: 100vh,
-    half: 50vh
+    fullscreen: 100vh
   ),
   transition: (
     duration: (
@@ -136,8 +140,3 @@ $vars: (
     xxlrg: 5
   )
 );
-$vw-min: vars(breakpoint, med);
-$vw-max: vars(breakpoint, xxlrg);
-$vw-context: calc($vw-max * 0.01);
-$vw-adjustment-min: 3vw;
-$vw-adjustment-max: 1vw;

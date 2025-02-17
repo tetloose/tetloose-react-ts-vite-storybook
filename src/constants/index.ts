@@ -9,6 +9,14 @@ export const breakpoints: Breakpoints[] = [
   'xxlrg'
 ]
 
+export const mediaQueries = {
+  sml: '420px',
+  med: '768px',
+  lrg: '1080px',
+  xlrg: '1440px',
+  xxlrg: '1920px'
+}
+
 export const directions: Directions[] = ['top', 'right', 'bottom', 'left']
 
 export const transitionDuration = {

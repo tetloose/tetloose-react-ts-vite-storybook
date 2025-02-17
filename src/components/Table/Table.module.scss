@@ -7,41 +7,66 @@
 }
 
 .table,
-.tr,
-.th,
-.td {
+.ti {
   @extend %border;
-}
-
-.table,
-.thead,
-.tbody,
-.tfoot,
-.tr {
-  width: 100%;
-}
-
-.thead,
-.tbody,
-.tfoot {
-  position: relative;
-
   @extend %bg;
 }
 
+.table,
+.tbody,
+.tfoot,
 .tr {
-  position: relative;
+  @include mq(vars(breakpoint, med)) {
+    width: 100%;
+  }
+
+  @include mq(vars(breakpoint, med), max-width) {
+    display: block;
+  }
+}
+
+.thead {
+  @include mq(vars(breakpoint, med)) {
+    width: 100%;
+  }
+
+  @include mq(vars(breakpoint, med), max-width) {
+    display: none;
+  }
+}
+
+.table-title {
+  @include mq(vars(breakpoint, med)) {
+    display: none;
+  }
+
+  @include mq(vars(breakpoint, med), max-width) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .th,
 .td {
   @extend %text-align;
-}
 
-.th {
-  @include sizing('padding', size(3));
-}
+  @include mq(vars(breakpoint, med), max-width) {
+    display: block;
+    width: 100%;
 
-.td {
-  @include sizing('padding', size(3));
+    @include sizing('padding', [size(3), size(0)]);
+
+    &.text-align-center,
+    &.text-align-right {
+      text-align: left;
+    }
+
+    &[class*='border'] {
+      border-width: 0;
+    }
+  }
+
+  @include mq(vars(breakpoint, med)) {
+    @include sizing('padding', size(3));
+  }
 }

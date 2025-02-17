@@ -1,4 +1,4 @@
-import { Column, GridItem, Row, Spacer } from '@foundations'
+import { Column, GridItem, Row } from '@foundations'
 import { Card } from '@components'
 import { useHomeContent } from './hooks/use-home-content.hooks'
 
@@ -8,27 +8,30 @@ const Home = () => {
   if (!content) return
 
   return (
-    <GridItem tag={'section'} rows={[2]} columns={[1]}>
+    <GridItem
+      tag={'section'}
+      rows={{ default: [2] }}
+      columns={{ default: [1] }}
+    >
       <Row
-        height={'fullscreen'}
         align={'center'}
         gutter={{
           left: true,
           right: true
         }}
+        height={'parent-fullscreen'}
       >
         {content.map(({ image, title, body }, contentIndex) => (
           <Column
             key={contentIndex}
             width={{
-              lrg: 4
+              med: 4
             }}
             gutter={{
               left: true,
               right: true
             }}
           >
-            <Spacer padding={{ default: 6 }} display={'block'} />
             <Card
               image={image}
               title={title}

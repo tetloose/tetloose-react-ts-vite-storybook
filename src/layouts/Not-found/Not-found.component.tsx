@@ -27,30 +27,33 @@ const NotFound = ({ error }: NotFoundProps) => {
 
   return (
     <Row
+      tag={error ? 'main' : 'section'}
       modifiers={['animate', animation]}
       align={error ? 'flex-end' : 'center'}
       justify={'center'}
       gutter={{
-        left: true,
-        right: true
+        left: !error,
+        right: !error
       }}
-      height={'fullscreen'}
+      height={error ? 'viewport-fullscreen' : 'parent-fullscreen'}
     >
       <Column
+        tag={'section'}
         width={{
-          med: 8
+          med: error ? 12 : 8
         }}
         gutter={{
-          left: true,
-          right: true
+          left: !error,
+          right: !error
         }}
       >
         <Container
+          tag={'article'}
           border={{
             top: true,
-            right: true,
-            bottom: true,
-            left: true
+            right: !error,
+            bottom: !error,
+            left: !error
           }}
           padding={{
             top: { default: 6 },

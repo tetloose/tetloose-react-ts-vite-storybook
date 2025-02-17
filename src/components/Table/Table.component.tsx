@@ -8,21 +8,21 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
   (
     {
       modifiers = [],
-      bg = 'light',
       layout = 'fixed',
       borderCollapse = 'collapse',
+      verticalAlign = 'middle',
+      bg = 'light',
       border,
       borderColor = 'dark',
-      verticalAlign = 'middle',
       hide,
       children,
       ...rest
     },
     ref
   ) => {
-    const borders = getBorder(border, borderColor)
-
     if (hide) return null
+
+    const borders = getBorder(border, borderColor)
 
     return (
       <table

@@ -1,11 +1,10 @@
-import {
-  GlobalAlign,
-  GlobalBg,
-  GlobalChildren,
-  GlobalModifiers,
-  GlobalVerticalAlign
-} from '@global'
+import { GlobalAlign, GlobalBg, GlobalChildren, GlobalModifiers } from '@global'
+import { TypographyProps } from '@foundations/Typography/Typography.types'
 import { Border } from '@utils/get-border/get-border.types'
+
+type TableTags = 'thead' | 'tbody' | 'tfoot' | 'tr' | 'th' | 'td'
+
+type VerticalAlign = 'top' | 'middle' | 'bottom' | 'baseline'
 
 type Layout = 'auto' | 'fixed'
 
@@ -15,15 +14,21 @@ type Hide = {
   hide?: boolean
 }
 
-export type WrapperProps = GlobalModifiers & GlobalChildren & GlobalBg & Hide
+type SharedProps = GlobalModifiers & GlobalChildren & GlobalBg & Hide & Border
 
 export type TableProps = {
   layout?: Layout
   borderCollapse?: BorderCollapse
-  verticalAlign?: GlobalVerticalAlign
-} & WrapperProps &
-  Border
+  verticalAlign?: VerticalAlign
+} & SharedProps
 
-export type TrProps = WrapperProps & Border
+export type TiProps = {
+  tag?: TableTags
+  sectionTitle?: string
+} & SharedProps &
+  GlobalAlign
 
-export type TdProps = WrapperProps & Border & GlobalAlign
+export type TableTitleProps = Omit<
+  TypographyProps,
+  'tag' | 'display' | 'richText'
+>

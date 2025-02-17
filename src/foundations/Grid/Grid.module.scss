@@ -4,42 +4,12 @@
   display: grid;
   width: 100%;
   min-height: vars(vh, fullscreen);
-  grid-auto-rows: auto;
-  grid-auto-columns: auto;
-  overflow: hidden;
-  background-color: color(default, light);
 
-  @include transition('padding');
-
-  &.position-relative {
-    position: relative;
-  }
-
-  &.overflow-hidden {
-    overflow: hidden;
-  }
-
-  &.overflow-scroll {
-    overflow-y: auto;
-  }
-
-  @extend %border;
+  @extend %bg;
 
   &__item {
     min-height: 100%;
 
-    &.position-relative {
-      position: relative;
-    }
-
-    &.overflow-hidden {
-      overflow: hidden;
-    }
-
-    &.overflow-scroll {
-      overflow-y: auto;
-    }
-
-    @extend %border;
+    @extend %bg;
   }
 }

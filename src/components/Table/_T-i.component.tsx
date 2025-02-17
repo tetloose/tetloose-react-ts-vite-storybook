@@ -1,40 +1,45 @@
-import { forwardRef } from 'react'
+import { createElement, forwardRef } from 'react'
 import { getBorder } from '@utils'
-import { TdProps } from './Table.types'
+import { TiProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
 
-export const Th = forwardRef<HTMLTableCellElement, TdProps>(
+export const Ti = forwardRef<HTMLElement, TiProps>(
   (
     {
       modifiers = [],
+      tag = 'td',
       bg = 'light',
       border,
       borderColor = 'dark',
       textAlign = 'left',
+      hide,
       children,
       ...rest
     },
     ref
   ) => {
+    if (hide) return null
+
     const borders = getBorder(border, borderColor)
 
-    return (
-      <th
-        ref={ref}
-        className={cs(
-          styles['th'],
+    return createElement(
+      tag,
+      {
+        className: cs(
+          styles['ti'],
+          styles[tag],
           styles[`bg-${bg}`],
           styles[`text-align-${textAlign}`],
           borders && borders.map((name) => styles[name]),
           ...modifiers
-        )}
-        {...rest}
-      >
-        {children && children}
-      </th>
+        ),
+        ref,
+        ...rest
+      },
+      children && children
     )
   }
 )
 
-Th.displayName = 'Th'
+Ti.displayName = 'Ti'

@@ -32,6 +32,11 @@ export const DarkCenter: Story = {
 export const Light: Story = {
   args: {
     color: 'light'
+  },
+  parameters: {
+    backgrounds: {
+      default: 'Dark'
+    }
   }
 }
 
@@ -39,5 +44,10 @@ export const LightCenter: Story = {
   args: {
     color: 'light',
     position: 'center'
+  },
+  parameters: {
+    backgrounds: {
+      default: 'Dark'
+    }
   }
 }

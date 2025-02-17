@@ -1,4 +1,6 @@
+import { Grid } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Footer, Header } from '@routes/routes.paths'
 import Home from './Home.component'
 
 const meta: Meta<typeof Home> = {
@@ -17,4 +19,14 @@ export default meta
 
 type Story = StoryObj<typeof Home>
 
-export const Primary: Story = {}
+const RenderStory = () => (
+  <Grid rows={{ default: ['60px', 'auto', '40px'] }} columns={{ default: [1] }}>
+    <Header />
+    <Home />
+    <Footer />
+  </Grid>
+)
+
+export const Primary: Story = {
+  render: RenderStory
+}

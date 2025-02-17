@@ -12,11 +12,7 @@
   }
 
   @each $breakpoint in vars(settings, breakpoints) {
-    @debug $breakpoint;
-
     @for $i from 1 through vars(settings, loop) {
-      @debug $i;
-
       &.#{$breakpoint}-padding-#{$i} {
         @extend %#{$breakpoint}-spacer-padding-#{$i};
       }

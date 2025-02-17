@@ -6,11 +6,15 @@ import { Meta } from '@storybook/blocks'
 
 This documentation explains the color settings and utilities used in the project. It covers how to retrieve colors from the Sass map and how to apply color properties using a CSS extend.
 
-## Colors Settings (src/styles/settings/colors.scss)
+## Colors Settings
 
 The `colors.scss` file defines a Sass function and a color map to centralize your color definitions.
 
+See: `src/styles/settings/colors.scss`
+
 ### Color Function
+
+See: `src/styles/settings/colors.scss`
 
 ```scss
 @function color($name, $variant: null) {
@@ -21,6 +25,10 @@ The `colors.scss` file defines a Sass function and a color map to centralize you
   }
 }
 ```
+
+## Usage
+
+`background-color: color(default, dark);`
 
 ### Color Object
 
@@ -41,16 +49,10 @@ See: `src/styles/extends/color.scss`, to extend a color via a class:
 
 ```scss
 %color {
-  &.color-dark {
-    color: color(default, dark);
-  }
-
-  &.color-light {
-    color: color(default, light);
+  @each $color, $value in map.get($colors, default) {
+    &.color-#{$color} {
+      color: color(default, $color);
+    }
   }
 }
 ```
-
-### Basic Usage
-
-`background-color: color(default, dark);`
