@@ -4,7 +4,7 @@
 %gap {
   @for $i from 1 through vars(settings, loop) {
     &.gap-#{$i} {
-      @include sizing('gap', size(#{$i}));
+      @include sizing('gap', size($i));
     }
   }
 }
