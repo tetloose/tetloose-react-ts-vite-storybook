@@ -7,6 +7,7 @@ export type Content = {
     title: string
     subtitle: string
     linkLabel: string
+    reloadLabel: string
     linkUrl: string
   }
 }

@@ -62,7 +62,6 @@ const config: StorybookConfig = {
       build: {
         manifest: true,
         sourcemap: config.mode === 'development',
-        outDir: resolve(__dirname, 'build'),
         rollupOptions: {
           output: {
             manualChunks(id) {

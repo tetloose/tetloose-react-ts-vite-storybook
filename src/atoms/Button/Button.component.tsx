@@ -1,28 +1,57 @@
-import { forwardRef } from 'react'
+import { forwardRef, Ref } from 'react'
+import { NavLink } from 'react-router-dom'
 import { ButtonProps } from './Button.types'
 import cs from 'classnames'
 import styles from './Button.module.scss'
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLElement, ButtonProps>(
   (
-    { modifiers = [], variant, label, type = 'button', children, ...rest },
+    {
+      modifiers = [],
+      variant,
+      url,
+      rel,
+      target,
+      label,
+      type = 'button',
+      children,
+      ...rest
+    },
     ref
   ) => {
-    return (
-      <button
-        ref={ref}
-        className={cs(
-          styles['button'],
-          variant && styles[`is-${variant}`],
-          ...modifiers
-        )}
-        type={type}
-        {...rest}
-      >
-        {label && label}
-        {children && children}
-      </button>
-    )
+    const classNames = [
+      styles['button'],
+      variant && styles[`is-${variant}`],
+      ...modifiers
+    ]
+
+    if (url) {
+      return (
+        <NavLink
+          ref={ref as Ref<HTMLAnchorElement>}
+          to={url}
+          rel={rel ? rel : 'noreferrer'}
+          target={target ? target : '_self'}
+          className={cs(...classNames)}
+          {...rest}
+        >
+          {label && label}
+          {children && children}
+        </NavLink>
+      )
+    } else {
+      return (
+        <button
+          ref={ref as Ref<HTMLButtonElement>}
+          className={cs(...classNames)}
+          type={type}
+          {...rest}
+        >
+          {label && label}
+          {children && children}
+        </button>
+      )
+    }
   }
 )
 

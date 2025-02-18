@@ -9,16 +9,11 @@ import {
   GlobalModifiers
 } from '@global'
 import { ColumnWidth } from './utils/column-width.types'
+import { Padding } from '@utils/get-padding/get-padding.types'
 
-type Gutter = {
-  left?: boolean
-  right?: boolean
-}
-
-type SharedProps = {
-  gutter?: Gutter
-} & GlobalChildren &
+type SharedProps = GlobalChildren &
   GlobalModifiers &
+  Padding &
   GlobalHeight &
   GlobalHtmlTag
 

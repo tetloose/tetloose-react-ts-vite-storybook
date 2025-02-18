@@ -162,24 +162,24 @@ export const Breakpoints: ColumnStory = {
 export const Gutter: ColumnStory = {
   render: () => (
     <Row
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6, lrg: 10 },
+          right: { default: 6, lrg: 10 }
         }}
         width={{ default: 6 }}
       >
         <Text bg={'#ff69b4'} text={'Left Column'} />
       </Column>
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6, lrg: 10 },
+          right: { default: 6, lrg: 10 }
         }}
         width={{ default: 6 }}
       >
@@ -225,15 +225,15 @@ export const OtherOptions: ColumnStory = {
       justify={'center'}
       align={'center'}
       wrap={'nowrap'}
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{ default: 11 }}
       >
@@ -241,16 +241,16 @@ export const OtherOptions: ColumnStory = {
         <Row>
           <Column
             width={{ default: 6 }}
-            gutter={{
-              right: true
+            padding={{
+              right: { default: 6 }
             }}
           >
             <Text bg={'#ffdc69'} text={'Row inside a Column'} />
           </Column>
           <Column
             width={{ default: 6 }}
-            gutter={{
-              left: true
+            padding={{
+              left: { default: 6 }
             }}
           >
             <Text bg={'#ffdc69'} text={'Row inside a Column'} />

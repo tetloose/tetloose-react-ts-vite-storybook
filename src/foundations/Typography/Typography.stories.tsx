@@ -21,30 +21,18 @@ type Story = StoryObj<typeof Typography>
 export const Default: Story = {
   render: () => (
     <Row
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{ default: 6 }}
       >
-        <Typography
-          tag={'h1'}
-          size={'d1'}
-          text={'Display 1'}
-          padding={{ default: 5 }}
-        />
-        <Typography
-          tag={'h1'}
-          size={'d2'}
-          text={'Display 2'}
-          padding={{ default: 5 }}
-        />
         <Typography
           tag={'h1'}
           size={'h1'}
@@ -159,9 +147,9 @@ export const Default: Story = {
         </Typography>
       </Column>
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{ default: 6 }}
       >

@@ -75,30 +75,6 @@
     }
   }
 
-  &.d2 {
-    @extend %type-d2;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-  }
-
-  &.d1 {
-    @extend %type-d1;
-
-    strong {
-      @extend %f-bold;
-    }
-
-    em {
-      @extend %f-italic;
-    }
-  }
-
   &.ol {
     @extend %type-ol;
 

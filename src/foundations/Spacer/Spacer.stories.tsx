@@ -47,15 +47,15 @@ export const Padding: Story = {
     <Row
       align={'center'}
       justify={'center'}
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{
           med: 8
@@ -101,15 +101,15 @@ export const Margin: Story = {
     <Row
       align={'center'}
       justify={'center'}
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{
           med: 8
@@ -155,15 +155,15 @@ export const Breakpoints: Story = {
     <Row
       align={'center'}
       justify={'center'}
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{
           med: 8
@@ -187,9 +187,9 @@ export const Breakpoints: Story = {
         </Spacer>
       </Column>
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
         width={{
           med: 8

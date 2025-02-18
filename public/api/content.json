@@ -20,6 +20,7 @@
     "title": "404 Page not found",
     "subtitle": "Please click the link below to return home",
     "linkLabel": "Home",
+    "reloadLabel": "Reload Page",
     "linkUrl": "/"
   }
 }

@@ -9,8 +9,12 @@ export const TableTitle = forwardRef<HTMLElement, TableTitleProps>(
     const { modifiers = [] } = props
 
     return (
-      <Ti modifiers={[styles['table-title'], ...modifiers]} tag={'td'}>
-        <Typography ref={ref} tag={'span'} {...props} modifiers={[]} />
+      <Ti
+        ref={ref}
+        modifiers={[styles['table-title'], ...modifiers]}
+        tag={'td'}
+      >
+        <Typography tag={'span'} {...props} modifiers={[]} />
       </Ti>
     )
   }

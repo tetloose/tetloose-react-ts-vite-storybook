@@ -12,6 +12,7 @@ export const useNotFoundContent = () => {
     title = '',
     subtitle = '',
     linkLabel = '',
+    reloadLabel = '',
     linkUrl = ''
   } = content || {}
 
@@ -24,6 +25,7 @@ export const useNotFoundContent = () => {
     title,
     subtitle,
     linkLabel,
+    reloadLabel,
     linkUrl
   }
 }

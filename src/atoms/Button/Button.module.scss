@@ -1,3 +1,5 @@
+@use 'sass:color';
+@use 'sass:map';
 @use '@styles/settings' as *;
 
 $button: (
@@ -7,16 +9,51 @@ $button: (
     border: color(default, dark),
     color: color(default, dark),
     bg: color(default, light),
-    hover: (
-      border: color(default, light),
+    disabled: (
+      border: transparent,
       color: color(default, light),
       bg: color(default, dark),
+      outline: transparent
+    ),
+    hover: (
+      border: transparent,
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    active: (
+      border: transparent,
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
     ),
     focus: (
+      border: transparent,
+      color: color(default, light),
+      bg: color(default, dark),
       outline: color(default, dark)
     )
   )
 );
+
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+
+  @include sizing('outline-width', size(.25));
+  @include sizing('padding', [size(4), size(8)]);
+  @extend %f-heading;
+  @extend %f-bold;
+  @extend %f-uppercase;
+
+  @include mq-hover {
+    @include transition('all');
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
 
 .button {
   background-color: transparent;
@@ -27,44 +64,45 @@ $button: (
   outline-style: solid;
   outline-color: transparent;
   text-decoration: none;
-  user-select: 'none';
 
   @include user-select(true);
+  @include sizing('border-width', size(.25));
 
   @include mq-hover {
     cursor: pointer;
   }
 
-  &:global([disabled]) {
+  &:disabled {
     @include disable(true);
   }
 
-  &.is-primary {
-    display: inline-flex;
-    align-items: center;
-    background-color: deep-get($button, primary, bg);
-    color: deep-get($button, primary, color);
+  @each $variant in (primary) {
+    &.is-#{$variant} {
+      background-color: deep-get($button, $variant, bg);
+      border-color: deep-get($button, $variant, border);
+      color: deep-get($button, $variant, color);
+      outline-color: deep-get($button, $variant, outline);
 
-    @include border(solid, .25, deep-get($button, primary, border));
-    @include sizing('font-size', deep-get($button, primary, font-size));
-    @include sizing('line-height', deep-get($button, primary, line-height));
-    @include sizing('padding', [size(4), size(8)]);
-    @include sizing('outline-width', size(.25));
-    @extend %f-heading;
-    @extend %f-bold;
-    @extend %f-uppercase;
+      @include button;
 
-    @include mq-hover {
-      @include transition('color, background-color, outline, border');
-
-      &:focus {
-        outline-color: deep-get($button, primary, focus, outline);
+      &:disabled {
+        background-color: deep-get($button, $variant, disabled, bg);
+        border-color: deep-get($button, $variant, disabled, border);
+        color: deep-get($button, $variant, disabled, color);
+        outline-color: deep-get($button, $variant, disabled, outline);
       }
 
-      &:hover {
-        background-color: deep-get($button, primary, hover, bg);
-        border-color: deep-get($button, primary, hover, border);
-        color: deep-get($button, primary, hover, color);
+      @include mq-hover {
+        @each $state in (hover, active, focus) {
+          @if map.has-key(map.get($button, $variant), $state) {
+            &:#{$state} {
+              background-color: deep-get($button, $variant, $state, bg);
+              border-color: deep-get($button, $variant, $state, border);
+              color: deep-get($button, $variant, $state, color);
+              outline-color: deep-get($button, $variant, $state, outline);
+            }
+          }
+        }
       }
     }
   }

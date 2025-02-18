@@ -1,22 +1,21 @@
 import { forwardRef } from 'react'
+import { getPadding } from '@utils'
 import { columnWidth } from './utils/column-width.utils'
 import { ColumnProps } from './Row.types'
 import cs from 'classnames'
 import styles from './Row.module.scss'
 
 export const Column = forwardRef<HTMLDivElement, ColumnProps>(
-  ({ modifiers = [], tag = 'div', gutter, width, children, ...rest }, ref) => {
-    const { left, right } = gutter || {}
-
+  ({ modifiers = [], tag = 'div', padding, width, children, ...rest }, ref) => {
     const Element = tag
+    const paddings = getPadding(padding)
 
     return (
       <Element
         ref={ref}
         className={cs(
           styles['row__column'],
-          left && styles['gutter-left'],
-          right && styles['gutter-right'],
+          paddings && paddings.map((name) => styles[name]),
           width && columnWidth(width).map((item) => styles[item]),
           ...modifiers
         )}
