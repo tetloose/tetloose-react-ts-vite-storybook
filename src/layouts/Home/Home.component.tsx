@@ -15,9 +15,16 @@ const Home = () => {
     >
       <Row
         align={'center'}
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { med: 6 },
+          right: { med: 6 },
+          bottom: {
+            default: 6,
+            med: 0,
+            lrg: 0,
+            xlrg: 0,
+            xxlrg: 0
+          }
         }}
         height={'parent-fullscreen'}
       >
@@ -27,9 +34,16 @@ const Home = () => {
             width={{
               med: 4
             }}
-            gutter={{
-              left: true,
-              right: true
+            padding={{
+              top: {
+                default: 6,
+                med: 0,
+                lrg: 0,
+                xlrg: 0,
+                xxlrg: 0
+              },
+              left: { default: 6 },
+              right: { default: 6 }
             }}
           >
             <Card

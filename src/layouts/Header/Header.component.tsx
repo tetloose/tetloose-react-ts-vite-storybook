@@ -10,10 +10,18 @@ const Header = () => {
     >
       <Row
         height={'parent-fullscreen'}
-        gutter={{ left: true, right: true }}
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
+        }}
         align={'center'}
       >
-        <Column gutter={{ left: true, right: true }}>
+        <Column
+          padding={{
+            left: { default: 6 },
+            right: { default: 6 }
+          }}
+        >
           <Typography
             tag={'span'}
             display={'block'}

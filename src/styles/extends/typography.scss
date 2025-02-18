@@ -80,18 +80,6 @@
   @extend %f-heading;
 }
 
-%type-d1 {
-  @extend %type-heading;
-  @include sizing('font-size', deep-get($vars, headings, font-size, d1));
-  @include sizing('font-size', deep-get($vars, headings, line-height, d1));
-}
-
-%type-d2 {
-  @extend %type-heading;
-  @include sizing('font-size', deep-get($vars, headings, font-size, d2));
-  @include sizing('line-height', deep-get($vars, headings, line-height, d2));
-}
-
 %type-h1 {
   @extend %type-heading;
   @include sizing('font-size', deep-get($vars, headings, font-size, h1));

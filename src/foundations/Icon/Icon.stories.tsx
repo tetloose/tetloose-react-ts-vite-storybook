@@ -22,15 +22,15 @@ const renderIcons = () => {
 
   return (
     <Row
-      gutter={{
-        left: true,
-        right: true
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
     >
       <Column
-        gutter={{
-          left: true,
-          right: true
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
       >
         {icons.map((icon) => (

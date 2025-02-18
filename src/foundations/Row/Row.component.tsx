@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { getPadding } from '@utils'
 import { RowProps } from './Row.types'
 import cs from 'classnames'
 import styles from './Row.module.scss'
@@ -12,16 +13,15 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
       justify,
       align,
       wrap = 'wrap',
-      gutter,
+      padding,
       height,
       children,
       ...rest
     },
     ref
   ) => {
-    const { left, right } = gutter || {}
-
     const Element = tag
+    const paddings = getPadding(padding)
 
     return (
       <Element
@@ -32,8 +32,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
           justify && styles[`justify-${justify}`],
           align && styles[`align-${align}`],
           styles[`wrap-${wrap}`],
-          left && styles['gutter-left'],
-          right && styles['gutter-right'],
+          paddings && paddings.map((name) => styles[name]),
           height && styles[`height-${height}`],
           ...modifiers
         )}

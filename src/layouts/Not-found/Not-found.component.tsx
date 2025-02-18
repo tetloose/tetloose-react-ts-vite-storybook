@@ -15,6 +15,7 @@ const NotFound = ({ error }: NotFoundProps) => {
     title,
     subtitle,
     linkLabel,
+    reloadLabel,
     linkUrl
   } = useNotFoundContent()
   const { message = '', name = '', stack = '' } = error || {}
@@ -31,9 +32,9 @@ const NotFound = ({ error }: NotFoundProps) => {
       modifiers={['animate', animation]}
       align={error ? 'flex-end' : 'center'}
       justify={'center'}
-      gutter={{
-        left: !error,
-        right: !error
+      padding={{
+        left: { default: 6 },
+        right: { default: 6 }
       }}
       height={error ? 'viewport-fullscreen' : 'parent-fullscreen'}
     >
@@ -42,9 +43,9 @@ const NotFound = ({ error }: NotFoundProps) => {
         width={{
           med: error ? 12 : 8
         }}
-        gutter={{
-          left: !error,
-          right: !error
+        padding={{
+          left: { default: 6 },
+          right: { default: 6 }
         }}
       >
         <Container
@@ -66,7 +67,7 @@ const NotFound = ({ error }: NotFoundProps) => {
             <Loading position={'center'} />
           ) : (
             <>
-              <Typography tag={'h1'} size={'d1'} text={name ? name : title} />
+              <Typography tag={'h1'} size={'h1'} text={name ? name : title} />
               <Typography
                 tag={'p'}
                 size={'body-xlrg'}
@@ -85,7 +86,7 @@ const NotFound = ({ error }: NotFoundProps) => {
               <Action padding={{ default: 8 }}>
                 <Button
                   variant={'primary'}
-                  label={error ? 'Reload Page' : linkLabel}
+                  label={error ? reloadLabel : linkLabel}
                   onClick={handleClick}
                 />
               </Action>

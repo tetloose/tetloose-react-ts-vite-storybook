@@ -35,7 +35,6 @@ $vars: (
     lrg: 100%
   ),
   row: (
-    gutter: 16px,
     columns: 12,
     max-width: false
   ),
@@ -53,9 +52,7 @@ $vars: (
       h4: 25px,
       h3: 30px,
       h2: 35px,
-      h1: 40px,
-      d2: 50px,
-      d1: 60px
+      h1: 40px
     ),
     line-height: (
       h6: 16px,
@@ -63,9 +60,7 @@ $vars: (
       h4: 25px,
       h3: 30px,
       h2: 35px,
-      h1: 40px,
-      d2: 50px,
-      d1: 60px
+      h1: 40px
     )
   ),
   body: (

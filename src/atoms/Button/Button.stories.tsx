@@ -60,3 +60,22 @@ export const Primary: Story = {
       label: 'Primary'
     })
 }
+
+export const PrimaryLink: Story = {
+  render: () =>
+    RenderButton({
+      variant: 'primary',
+      label: 'Primary Link',
+      url: 'https://google.com',
+      target: '_blank'
+    })
+}
+
+export const PrimaryDisabled: Story = {
+  render: () =>
+    RenderButton({
+      variant: 'primary',
+      label: 'Primary Disabled',
+      disabled: true
+    })
+}
