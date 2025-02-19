@@ -119,7 +119,7 @@ const RenderForm = () => {
       <Spacer display={'block'} padding={{ default: 2 }} />
       <Input
         type={'password'}
-        placeholder={'Username'}
+        placeholder={'Password'}
         id={'password'}
         error={!!passwordError}
         {...register('password', { required: true })}
