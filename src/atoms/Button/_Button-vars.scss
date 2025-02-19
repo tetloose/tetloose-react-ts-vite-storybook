@@ -12,40 +12,11 @@ $button: (
     width: 0.25
   ),
   dark: (
-    border: color(default, dark),
-    color: color(default, dark),
-    bg: color(default, light),
-    disabled: (
-      border: transparent,
-      color: color(default, dark),
-      bg: color(default, light),
-      outline: transparent
-    ),
-    hover: (
-      border: color(default, light),
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: transparent
-    ),
-    active: (
-      border: color(default, light),
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: transparent
-    ),
-    focus: (
-      border: color(default, light),
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: color(default, dark)
-    )
-  ),
-  light: (
     border: color(default, light),
     color: color(default, light),
     bg: color(default, dark),
     disabled: (
-      border: transparent,
+      border: color(default, light),
       color: color(default, light),
       bg: color(default, dark),
       outline: transparent
@@ -67,6 +38,35 @@ $button: (
       color: color(default, dark),
       bg: color(default, light),
       outline: color(default, light)
+    )
+  ),
+  light: (
+    border: color(default, dark),
+    color: color(default, dark),
+    bg: color(default, light),
+    disabled: (
+      border: color(default, dark),
+      color: color(default, dark),
+      bg: color(default, light),
+      outline: transparent
+    ),
+    hover: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    active: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    focus: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: color(default, dark)
     )
   )
 );

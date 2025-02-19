@@ -139,15 +139,3 @@
 
   @include sizing('margin-left', size(3.75));
 }
-
-%type-input {
-  @extend %f-body;
-  @include sizing('font-size', vars(input, font-size));
-  @include sizing('line-height', vars(input, line-height));
-}
-
-%type-label {
-  @extend %f-body;
-  @include sizing('font-size', vars(label, font-size));
-  @include sizing('line-height', vars(label, line-height));
-}

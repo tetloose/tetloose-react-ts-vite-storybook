@@ -1,0 +1,26 @@
+@use 'sass:color';
+@use '@styles/settings' as *;
+
+$inputs: (
+  font-size: 16px,
+  line-height: 16px
+);
+
+%type-input {
+  @extend %f-body;
+  @include sizing('font-size', deep-get($inputs, font-size));
+  @include sizing('line-height', deep-get($inputs, line-height));
+}
+
+@mixin input-error {
+  &.has-error {
+    border-color: color(red, default);
+    color: color(red, default);
+  }
+}
+
+@mixin label-error {
+  &.has-error {
+    color: color(red, default);
+  }
+}

@@ -1,0 +1,72 @@
+@use '@styles/settings' as *;
+@use './Form-vars' as *;
+
+.form {
+  &__label {
+    display: block;
+    width: 100%;
+
+    @include input-error;
+
+    @include mq-hover {
+      cursor: pointer;
+
+      @include input-error;
+    }
+  }
+
+  &__input {
+    $input: &;
+
+    display: block;
+    width: 100%;
+    background-color: color(default, light);
+    border-style: solid;
+    border-color: color(grey, default);
+    color: color(default, dark);
+    appearance: none;
+
+    @include user-select(true);
+    @include sizing('border-width', size(.25));
+    @include sizing('padding', size(4));
+    @include input-error;
+    @extend %type-input;
+
+    &.is-textarea {
+      overflow: auto;
+      resize: vertical;
+
+      @include sizing('min-height', size(50));
+    }
+
+    &::placeholder {
+      color: color(default, dark);
+
+      @extend %type-input;
+      @include transition('color');
+    }
+
+    &[disabled] {
+      opacity: .3;
+
+      @include disable(true);
+    }
+
+    @include mq-hover {
+      @include input-error;
+      @include transition('color, background-color, border-color');
+
+      &:focus,
+      &:hover {
+        border-color: color(default, dark);
+        color: color(default, dark);
+      }
+    }
+
+    &:disabled {
+      opacity: .5;
+
+      @include disable(true);
+    }
+  }
+}
