@@ -1,11 +1,11 @@
 import { forwardRef } from 'react'
-import { Container, Typography } from '@foundations'
-import { Image, Loading } from '@atoms'
+import { Container, Spacer, Typography } from '@foundations'
+import { Button, Image, Loading } from '@atoms'
 import { CardProps } from './Card.types'
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ modifiers = [], image, title, body, loading, ...rest }, ref) => {
-    if (!image || !title || !body) return
+  ({ modifiers = [], image, title, body, link, loading, ...rest }, ref) => {
+    const { variant, label = '', url = '', rel, target } = link || {}
 
     return (
       <Container
@@ -31,7 +31,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
           <Loading position={'center'} />
         ) : (
           <>
-            {image && <Image ratio={'3x2'} src={image} />}
+            {image && <Image {...image} />}
             {title && (
               <Typography
                 tag={'h2'}
@@ -50,6 +50,17 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
                 color={'light'}
                 text={body}
               />
+            )}
+            {link && (
+              <Spacer display={'block'} padding={{ default: 6 }}>
+                <Button
+                  variant={variant}
+                  url={url}
+                  target={target && target}
+                  rel={rel && rel}
+                  label={label}
+                />
+              </Spacer>
             )}
           </>
         )}

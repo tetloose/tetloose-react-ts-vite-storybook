@@ -1,15 +1,13 @@
 import { GlobalModifiers } from '@global'
-
-export type Card = {
-  image: string
-  title: string
-  body: string
-}
+import { ContentLink } from '@atoms/Button/Button.types'
+import { ImageContent } from '@atoms/Image/Image.types'
 
 export type CardProps = {
-  image: string
+  image: ImageContent
   title: string
   body: string
+  link?: ContentLink
   loading: boolean
-} & GlobalModifiers &
-  Card
+} & GlobalModifiers
+
+export type CardContent = Pick<CardProps, 'image' | 'title' | 'body' | 'link'>

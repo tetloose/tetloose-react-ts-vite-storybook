@@ -11,7 +11,7 @@ describe('Card component', () => {
         <Card
           data-testid='element'
           modifiers={['test-modifier']}
-          image={Desktop}
+          image={{ src: Desktop }}
           title={'Title'}
           body={'body'}
           loading={false}

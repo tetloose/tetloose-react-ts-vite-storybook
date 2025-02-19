@@ -25,3 +25,5 @@ export type ImageProps = {
   blur?: boolean
 } & GlobalImageSize &
   GlobalModifiers
+
+export type ImageContent = Omit<ImageProps, 'modifiers'>

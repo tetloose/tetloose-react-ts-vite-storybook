@@ -1,0 +1,95 @@
+@use 'sass:color';
+@use '@styles/settings' as *;
+
+$button: (
+  font-size: 18px,
+  line-height: 22px,
+  letter-spacing: 1.4px,
+  outline: (
+    width: 0.25
+  ),
+  border: (
+    width: 0.25
+  ),
+  dark: (
+    border: color(default, dark),
+    color: color(default, dark),
+    bg: color(default, light),
+    disabled: (
+      border: transparent,
+      color: color(default, dark),
+      bg: color(default, light),
+      outline: transparent
+    ),
+    hover: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    active: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    focus: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: color(default, dark)
+    )
+  ),
+  light: (
+    border: color(default, light),
+    color: color(default, light),
+    bg: color(default, dark),
+    disabled: (
+      border: transparent,
+      color: color(default, light),
+      bg: color(default, dark),
+      outline: transparent
+    ),
+    hover: (
+      border: color(default, dark),
+      color: color(default, dark),
+      bg: color(default, light),
+      outline: transparent
+    ),
+    active: (
+      border: color(default, dark),
+      color: color(default, dark),
+      bg: color(default, light),
+      outline: transparent
+    ),
+    focus: (
+      border: color(default, dark),
+      color: color(default, dark),
+      bg: color(default, light),
+      outline: color(default, light)
+    )
+  )
+);
+
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+
+  @include sizing('padding', [size(4), size(8)]);
+  @include sizing('border-width', size(deep-get($button, border, width)));
+  @include sizing('outline-width', size(deep-get($button, outline, width)));
+  @include sizing('font-size', deep-get($button, font-size));
+  @include sizing('line-height', deep-get($button, line-height));
+  @include sizing('letter-spacing', deep-get($button, letter-spacing));
+  @extend %f-heading;
+  @extend %f-bold;
+  @extend %f-uppercase;
+
+  @include mq-hover {
+    @include transition('all');
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}

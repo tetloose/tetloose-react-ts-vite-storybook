@@ -1,15 +1,12 @@
 import { QueryObserverResult } from '@tanstack/react-query'
-import { Card } from '@components/Card/Card.types'
+import { CardContent } from '@components/Card/Card.types'
+import { LogoContent } from '@components/Logo/Logo.types'
+import { NotFoundContent } from '@layouts/Not-found/Not-found.types'
 
 export type Content = {
-  homepage: Card[]
-  notFound: {
-    title: string
-    subtitle: string
-    linkLabel: string
-    reloadLabel: string
-    linkUrl: string
-  }
+  homepage: CardContent[]
+  logo: LogoContent
+  notFound: NotFoundContent
 }
 
 export type ContentProps<T, K extends keyof T> = K extends keyof T

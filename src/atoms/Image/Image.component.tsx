@@ -6,9 +6,9 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 
 export const Image = ({
   modifiers = [],
-  position = 'center',
-  imageSize = 'cover',
-  ratio = '1x1',
+  position,
+  imageSize,
+  ratio,
   alt,
   width,
   height,
@@ -29,9 +29,9 @@ export const Image = ({
     <LazyLoadImage
       className={cs(
         styles['image'],
-        styles[`image-position-${position}`],
-        styles[`image-size-${imageSize}`],
-        styles[`ratio-${ratio}`],
+        position && styles[`image-position-${position}`],
+        imageSize && styles[`image-size-${imageSize}`],
+        ratio && styles[`ratio-${ratio}`],
         ...modifiers
       )}
       src={mobile ? mobile : src ? src : ''}

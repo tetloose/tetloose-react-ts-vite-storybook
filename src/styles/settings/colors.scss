@@ -11,9 +11,8 @@
 
 $dark: #000;
 $light: #fff;
-$hotpink: #ff69b4;
-$green: #008000;
-$blue: #00f;
+$red: #f00;
+$grey: #797876;
 $colors: (
   default: (
     dark: $dark,
@@ -29,16 +28,24 @@ $colors: (
       color: $light
     )
   ),
+  red: (
+    default: $red
+  ),
+  grey: (
+    default: $grey
+  ),
   link: (
     dark: (
-      default: $hotpink,
-      hover: $green,
-      focus: $blue
+      color: $dark,
+      active: $red,
+      hover: $red,
+      focus: $red
     ),
     light: (
-      default: $hotpink,
-      hover: $green,
-      focus: $blue
+      color: $light,
+      active: $red,
+      hover: $red,
+      focus: $red
     )
   )
 );

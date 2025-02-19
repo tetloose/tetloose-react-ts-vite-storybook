@@ -1,59 +1,8 @@
 @use 'sass:color';
 @use 'sass:map';
 @use '@styles/settings' as *;
-
-$button: (
-  primary: (
-    font-size: 18px,
-    line-height: 22px,
-    border: color(default, dark),
-    color: color(default, dark),
-    bg: color(default, light),
-    disabled: (
-      border: transparent,
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: transparent
-    ),
-    hover: (
-      border: transparent,
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: transparent
-    ),
-    active: (
-      border: transparent,
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: transparent
-    ),
-    focus: (
-      border: transparent,
-      color: color(default, light),
-      bg: color(default, dark),
-      outline: color(default, dark)
-    )
-  )
-);
-
-@mixin button {
-  display: inline-flex;
-  align-items: center;
-
-  @include sizing('outline-width', size(.25));
-  @include sizing('padding', [size(4), size(8)]);
-  @extend %f-heading;
-  @extend %f-bold;
-  @extend %f-uppercase;
-
-  @include mq-hover {
-    @include transition('all');
-
-    &:active {
-      transform: translateY(1px);
-    }
-  }
-}
+@use './Button-vars' as *;
+@use './Link-vars' as *;
 
 .button {
   background-color: transparent;
@@ -66,17 +15,18 @@ $button: (
   text-decoration: none;
 
   @include user-select(true);
-  @include sizing('border-width', size(.25));
 
   @include mq-hover {
     cursor: pointer;
   }
 
   &:disabled {
+    opacity: .4;
+
     @include disable(true);
   }
 
-  @each $variant in (primary) {
+  @each $variant in (dark, light) {
     &.is-#{$variant} {
       background-color: deep-get($button, $variant, bg);
       border-color: deep-get($button, $variant, border);
@@ -100,6 +50,28 @@ $button: (
               border-color: deep-get($button, $variant, $state, border);
               color: deep-get($button, $variant, $state, color);
               outline-color: deep-get($button, $variant, $state, outline);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $variant in (dark, light) {
+    &.is-link-#{$variant} {
+      color: deep-get($link, $variant, color);
+
+      @include link;
+
+      @include mq-hover {
+        @each $state in (active, hover, focus) {
+          @if map.has-key(map.get($link, $variant), $state) {
+            &:#{$state} {
+              color: deep-get($link, $variant, $state, color);
+
+              @if $state == 'active' {
+                transform: translateY(1px);
+              }
             }
           }
         }

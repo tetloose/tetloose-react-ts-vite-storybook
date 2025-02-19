@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react'
 import { NavLinkProps } from 'react-router-dom'
 import { GlobalChildren, GlobalModifiers, GlobalSize } from '@global'
 
-type ButtonVariant = 'primary' | 'secondary'
+type ButtonVariant = 'dark' | 'light' | 'link-dark' | 'link-light'
 
 type ButtonType = 'button' | 'submit' | 'reset'
 
@@ -16,3 +16,10 @@ export type ButtonProps = {
   GlobalModifiers &
   GlobalSize &
   GlobalChildren
+
+export type ContentButton = Pick<ButtonProps, 'variant' | 'label'>
+
+export type ContentLink = Pick<
+  ButtonProps,
+  'variant' | 'label' | 'target' | 'rel' | 'url'
+>

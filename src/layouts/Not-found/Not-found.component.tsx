@@ -14,9 +14,13 @@ const NotFound = ({ error }: NotFoundProps) => {
     contentPending,
     title,
     subtitle,
+    linkVariant,
     linkLabel,
-    reloadLabel,
-    linkUrl
+    linkTarget,
+    linkRel,
+    linkUrl,
+    buttonVariant,
+    buttonLabel
   } = useNotFoundContent()
   const { message = '', name = '', stack = '' } = error || {}
 
@@ -70,25 +74,36 @@ const NotFound = ({ error }: NotFoundProps) => {
               <Typography tag={'h1'} size={'h1'} text={name ? name : title} />
               <Typography
                 tag={'p'}
-                size={'body-xlrg'}
+                size={'body-med'}
                 padding={{ default: 4 }}
                 text={message ? message : subtitle}
               />
               {stack && (
                 <Typography
                   tag={'p'}
-                  size={'body-xlrg'}
+                  size={'body-med'}
                   fontStyle={'italic'}
                   padding={{ default: 4 }}
                   text={stack}
                 />
               )}
               <Action padding={{ default: 8 }}>
-                <Button
-                  variant={'primary'}
-                  label={error ? reloadLabel : linkLabel}
-                  onClick={handleClick}
-                />
+                {error ? (
+                  <Button
+                    variant={buttonVariant}
+                    label={buttonLabel}
+                    onClick={handleClick}
+                  />
+                ) : (
+                  <Button
+                    variant={linkVariant}
+                    url={linkUrl}
+                    rel={linkRel}
+                    target={linkTarget}
+                    label={linkLabel}
+                    onClick={handleClick}
+                  />
+                )}
               </Action>
             </>
           )}

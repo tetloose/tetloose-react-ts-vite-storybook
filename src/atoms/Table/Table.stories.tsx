@@ -5,7 +5,7 @@ import { TableTitle } from './_Table-title.component'
 import { Table } from './Table.component'
 
 const meta: Meta<typeof Table> = {
-  title: 'Components/Table',
+  title: 'Atoms/Table',
   component: Table,
   parameters: {
     design: {

@@ -1,6 +1,7 @@
 import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 import { useNotification } from '@hooks'
+import { Action } from '@components'
 import { Button } from './Button.component'
 import { ButtonProps } from './Button.types'
 
@@ -52,30 +53,45 @@ export const Children: Story = {
   }
 }
 
-export const Primary: Story = {
-  render: () =>
-    RenderButton({
-      variant: 'primary',
-      type: 'button',
-      label: 'Primary'
-    })
-}
-
-export const PrimaryLink: Story = {
-  render: () =>
-    RenderButton({
-      variant: 'primary',
-      label: 'Primary Link',
-      url: 'https://google.com',
-      target: '_blank'
-    })
-}
-
-export const PrimaryDisabled: Story = {
-  render: () =>
-    RenderButton({
-      variant: 'primary',
-      label: 'Primary Disabled',
-      disabled: true
-    })
+export const Buttons: Story = {
+  render: () => (
+    <>
+      <Action gap={4} align={'center'}>
+        <RenderButton variant={'dark'} label={'Dark'} />
+        <RenderButton
+          variant={'dark'}
+          label={'Dark Disabled'}
+          disabled={true}
+        />
+        <RenderButton
+          variant={'dark'}
+          url={'https://google.com'}
+          label={'Dark Link'}
+        />
+        <RenderButton variant={'light'} label={'Light'} />
+        <RenderButton
+          variant={'light'}
+          url={'https://google.com'}
+          label={'Light Link'}
+        />
+        <RenderButton
+          variant={'light'}
+          label={'Light Disabled'}
+          disabled={true}
+        />
+      </Action>
+      <Action gap={4} align={'center'} padding={{ default: 6 }}>
+        <RenderButton
+          variant={'link-dark'}
+          url={'https://google.com'}
+          label={'Dark Link'}
+        />
+        <RenderButton
+          variant={'link-light'}
+          url={'https://google.com'}
+          label={'Light Link'}
+        />
+      </Action>
+    </>
+  )
 }

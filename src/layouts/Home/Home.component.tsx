@@ -16,40 +16,29 @@ const Home = () => {
       <Row
         align={'center'}
         padding={{
-          left: { med: 6 },
-          right: { med: 6 },
-          bottom: {
-            default: 6,
-            med: 0,
-            lrg: 0,
-            xlrg: 0,
-            xxlrg: 0
-          }
+          bottom: { default: 10 },
+          left: { default: 5 },
+          right: { default: 5 }
         }}
         height={'parent-fullscreen'}
       >
-        {content.map(({ image, title, body }, contentIndex) => (
+        {content.map(({ image, title, body, link }, contentIndex) => (
           <Column
             key={contentIndex}
             width={{
               med: 4
             }}
             padding={{
-              top: {
-                default: 6,
-                med: 0,
-                lrg: 0,
-                xlrg: 0,
-                xxlrg: 0
-              },
-              left: { default: 6 },
-              right: { default: 6 }
+              top: { default: 10 },
+              left: { default: 5 },
+              right: { default: 5 }
             }}
           >
             <Card
               image={image}
               title={title}
               body={body}
+              link={link}
               loading={contentFetching}
             />
           </Column>

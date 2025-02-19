@@ -21,8 +21,8 @@ type Story = StoryObj<typeof Action>
 const renderPrimary = () => {
   return (
     <Action gap={6} padding={{ default: 10 }} justify={'center'}>
-      <Button variant={'primary'} label={'Button 1'} />
-      <Button variant={'primary'} label={'Button 2'} />
+      <Button variant={'dark'} label={'Button 1'} />
+      <Button variant={'dark'} label={'Button 2'} />
     </Action>
   )
 }

@@ -1,0 +1,48 @@
+@use 'sass:color';
+@use '@styles/settings' as *;
+
+$link: (
+  font-size: 14px,
+  line-height: 24px,
+  letter-spacing: 1.4px,
+  dark: (
+    color: deep-get($colors, link, dark, color),
+    active: (
+      color: deep-get($colors, link, dark, active)
+    ),
+    hover: (
+      color: deep-get($colors, link, dark, hover)
+    ),
+    focus: (
+      color: deep-get($colors, link, dark, focus)
+    )
+  ),
+  light: (
+    color: deep-get($colors, link, light, color),
+    active: (
+      color: deep-get($colors, link, light, active)
+    ),
+    hover: (
+      color: deep-get($colors, link, light, hover)
+    ),
+    focus: (
+      color: deep-get($colors, link, light, focus)
+    )
+  )
+);
+
+@mixin link {
+  display: inline-flex;
+  text-decoration: underline;
+
+  @extend %f-body;
+  @extend %f-bold;
+  @extend %f-uppercase;
+  @include sizing('font-size', deep-get($link, font-size));
+  @include sizing('line-height', deep-get($link, line-height));
+  @include sizing('letter-spacing', deep-get($link, letter-spacing));
+
+  @include mq-hover {
+    @include transition('color');
+  }
+}
