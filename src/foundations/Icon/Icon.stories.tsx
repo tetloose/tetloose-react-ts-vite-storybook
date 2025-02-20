@@ -1,5 +1,5 @@
-import { Column, Row, Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Column, Row, Typography } from '@foundations'
 import { Icon } from './Icon.component'
 import { IconNames } from './Icon.types'
 

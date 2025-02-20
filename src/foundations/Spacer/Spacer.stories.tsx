@@ -1,5 +1,5 @@
-import { Column, Row, Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Column, Row, Typography } from '@foundations'
 import { Spacer } from './Spacer.component'
 
 const Text = ({ odd, text }: { odd?: boolean; text: string }) => (

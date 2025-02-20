@@ -1,5 +1,5 @@
-import { Column, GridItem, Row } from '@foundations'
 import { Card } from '@components'
+import { Column, GridItem, Row } from '@foundations'
 import { useHomeContent } from './hooks/use-home-content.hooks'
 
 const Home = () => {

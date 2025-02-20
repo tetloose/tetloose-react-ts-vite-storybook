@@ -1,5 +1,5 @@
-import { Column, Row } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Column, Row } from '@foundations'
 import { Typography } from './Typography.component'
 
 const meta: Meta<typeof Typography> = {

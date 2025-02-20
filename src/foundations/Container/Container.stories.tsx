@@ -1,5 +1,5 @@
-import { Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Typography } from '@foundations'
 import { Container } from './Container.component'
 import { Color } from '@global'
 

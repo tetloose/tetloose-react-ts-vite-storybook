@@ -1,6 +1,6 @@
-import { Grid } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
 import { Footer, Header } from '@routes/routes.paths'
+import { Grid } from '@foundations'
 import NotFound from './Not-found.component'
 
 const meta: Meta<typeof NotFound> = {

@@ -1,5 +1,5 @@
-import { Container, Typography } from '@foundations'
 import { Meta, StoryObj } from '@storybook/react'
+import { Container, Typography } from '@foundations'
 import { Ti } from './_T-i.component'
 import { TableTitle } from './_Table-title.component'
 import { Table } from './Table.component'

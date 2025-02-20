@@ -70,6 +70,78 @@ const mainConfig = {
       'warn',
       { allowConstantExport: true }
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: '@context/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@foundations/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@atoms/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@components/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@layouts/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@hooks/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@crud/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@utils/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@global/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@styles/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@images/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@constants/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          },
+          {
+            name: '@routes/index',
+            message:
+              'Direct import of index file is restricted. Please import specific modules.'
+          }
+        ]
+      }
+    ],
     'simple-import-sort/imports': [
       'error',
       {
@@ -82,10 +154,10 @@ const mainConfig = {
             '^@hooks',
             '^@routes',
             '^@constants',
-            '^@loaders',
             '^@crud',
             '^@utils',
             '^@components',
+            '^@foundations',
             '^@atoms',
             '^@layouts',
             '^\\.\\.(?!/?$)',

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import { Column, Container, Row, Typography } from '@foundations'
 import { useAnimate } from '@hooks'
 import { Action } from '@components/Action/Action.component'
+import { Column, Container, Row, Typography } from '@foundations'
 import { Button, Loading } from '@atoms'
 import { useNotFoundContent } from './hooks/use-not-found-content.hooks'
 import { NotFoundProps } from './Not-found.types'
