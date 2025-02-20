@@ -1,4 +1,4 @@
-import { EXPORT_NAMEProps } from './COMPONENT_NAME.types'
+import type { EXPORT_NAMEProps } from './COMPONENT_NAME.types'
 import cs from 'classnames'
 import styles from './COMPONENT_NAME.module.scss'
 

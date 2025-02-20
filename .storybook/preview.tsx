@@ -1,6 +1,6 @@
 import React from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import { Preview } from '@storybook/react'
+import type { Preview } from '@storybook/react'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { withRouter } from 'storybook-addon-remix-react-router'
 import { Notification } from '../src/components/Notification/Notification.component'
