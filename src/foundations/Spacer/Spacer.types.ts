@@ -1,5 +1,5 @@
-import { GlobalChildren, GlobalDisplay, GlobalModifiers } from '@global'
-import { Spacers } from './utils/get-spacing.types'
+import type { Spacers } from './utils/get-spacing.types'
+import type { GlobalChildren, GlobalDisplay, GlobalModifiers } from '@global'
 
 export type SpacerProps = GlobalChildren &
   GlobalModifiers &

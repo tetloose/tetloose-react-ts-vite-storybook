@@ -1,4 +1,4 @@
-import { Color } from '@global'
+import type { Color } from '@global'
 
 export type Border = {
   border?: {

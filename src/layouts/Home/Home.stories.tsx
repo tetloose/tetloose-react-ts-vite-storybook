@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Footer, Header } from '@routes/routes.paths'
 import { Grid } from '@foundations'
 import Home from './Home.component'

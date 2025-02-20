@@ -1,4 +1,4 @@
-import { KeyboardEvent, MouseEvent } from 'react'
+import type { KeyboardEvent, MouseEvent } from 'react'
 
 export const usePropagation = () => {
   const handleMousePropagation = (event: MouseEvent) => {

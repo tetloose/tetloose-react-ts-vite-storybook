@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Action } from '@components'
 import { Button } from '@atoms'
-import { FormProps } from './Form.types'
+import type { FormProps } from './Form.types'
 import cs from 'classnames'
 import styles from './Form.module.scss'
 

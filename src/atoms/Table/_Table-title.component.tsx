@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Typography } from '@foundations'
 import { Ti } from './_T-i.component'
-import { TableTitleProps } from './Table.types'
+import type { TableTitleProps } from './Table.types'
 import styles from './Table.module.scss'
 
 export const TableTitle = forwardRef<HTMLElement, TableTitleProps>(

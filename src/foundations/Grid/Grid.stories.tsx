@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Column, Container, Row, Typography } from '@foundations'
 import { Grid } from './Grid.component'
 import { GridItem } from './Grid-item.component'

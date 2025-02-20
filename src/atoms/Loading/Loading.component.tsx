@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { LoadingProps } from './Loading.types'
+import type { LoadingProps } from './Loading.types'
 import cs from 'classnames'
 import styles from './Loading.module.scss'
 

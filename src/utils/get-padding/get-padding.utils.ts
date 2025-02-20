@@ -1,5 +1,5 @@
 import { breakpoints, directions } from '@constants'
-import { Padding } from './get-padding.types'
+import type { Padding } from './get-padding.types'
 
 export const getPadding = (padding: Padding['padding']): string[] =>
   padding && directions && breakpoints

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Column, Row } from '@foundations'
 import { Typography } from './Typography.component'
 

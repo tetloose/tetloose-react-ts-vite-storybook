@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { Spacer } from '@foundations'
-import { ActionProps } from './Action.types'
+import type { ActionProps } from './Action.types'
 import styles from './Action.module.scss'
 
 export const Action = forwardRef<HTMLElement, ActionProps>(

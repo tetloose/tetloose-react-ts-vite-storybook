@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRead } from '@crud'
-import { Content, ContentProps, ContentReturn } from './use-content.types'
+import type { Content, ContentProps, ContentReturn } from './use-content.types'
 
 export const useContent = <K extends keyof Content>(
   filter: K

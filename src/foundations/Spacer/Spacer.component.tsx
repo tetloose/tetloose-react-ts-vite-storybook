@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { getSpacing } from './utils/get-spacing.utils'
-import { SpacerProps } from './Spacer.types'
+import type { SpacerProps } from './Spacer.types'
 import cs from 'classnames'
 import styles from './Spacer.module.scss'
 

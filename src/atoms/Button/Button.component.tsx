@@ -1,6 +1,7 @@
-import { forwardRef, Ref } from 'react'
+import type { Ref } from 'react'
+import { forwardRef } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ButtonProps } from './Button.types'
+import type { ButtonProps } from './Button.types'
 import cs from 'classnames'
 import styles from './Button.module.scss'
 

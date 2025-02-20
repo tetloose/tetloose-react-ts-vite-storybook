@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { Typography } from '@foundations'
-import { LabelProps } from './Form.types'
+import type { LabelProps } from './Form.types'
 import styles from './Form.module.scss'
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>(

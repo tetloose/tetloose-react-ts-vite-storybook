@@ -1,5 +1,5 @@
 import { createContext as create, useContext, useState } from 'react'
-import { ContextProviderProps, ContextType } from './Create-context.types'
+import type { ContextProviderProps, ContextType } from './Create-context.types'
 
 export function createContext<T, S extends string, U extends string>(
   initialState: T,

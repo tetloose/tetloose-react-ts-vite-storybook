@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { getBorder, getPadding } from '@utils'
-import { ContainerProps } from './Container.types'
+import type { ContainerProps } from './Container.types'
 import cs from 'classnames'
 import styles from './Container.module.scss'
 

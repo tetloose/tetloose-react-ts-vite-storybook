@@ -1,4 +1,4 @@
-import { GlobalColor, GlobalModifiers } from '@global'
+import type { GlobalColor, GlobalModifiers } from '@global'
 
 type Position = 'center'
 

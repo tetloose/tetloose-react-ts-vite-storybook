@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { InputProps } from './Form.types'
+import type { InputProps } from './Form.types'
 import cs from 'classnames'
 import styles from './Form.module.scss'
 

@@ -1,4 +1,4 @@
-import { GlobalModifiers } from '@global'
+import type { GlobalModifiers } from '@global'
 
 export type LogoProps = GlobalModifiers
 

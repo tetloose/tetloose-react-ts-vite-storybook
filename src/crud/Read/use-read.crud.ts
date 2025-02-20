@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useNotification } from '@hooks'
 import { apiUrl, request } from '@crud'
-import { UseReadProps } from './use-read.types'
+import type { UseReadProps } from './use-read.types'
 
 export const useRead = ({
   url,

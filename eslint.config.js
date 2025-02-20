@@ -70,6 +70,7 @@ const mainConfig = {
       'warn',
       { allowConstantExport: true }
     ],
+    '@typescript-eslint/consistent-type-imports': 'error',
     'no-restricted-imports': [
       'error',
       {

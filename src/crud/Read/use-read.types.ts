@@ -1,4 +1,4 @@
-import { ApiUrlProps } from '@crud/Api/api-url.types'
+import type { ApiUrlProps } from '@crud/Api/api-url.types'
 
 export type UseReadProps = {
   queryKey: string

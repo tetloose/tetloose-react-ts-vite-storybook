@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { createPortal } from 'react-dom'
+import type { GridProps } from './Grid.types'
 import { getClassName, getStyles } from './utils'
-import { GridProps } from './Grid.types'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
 

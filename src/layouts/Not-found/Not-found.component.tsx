@@ -4,7 +4,7 @@ import { Action } from '@components/Action/Action.component'
 import { Column, Container, Row, Typography } from '@foundations'
 import { Button, Loading } from '@atoms'
 import { useNotFoundContent } from './hooks/use-not-found-content.hooks'
-import { NotFoundProps } from './Not-found.types'
+import type { NotFoundProps } from './Not-found.types'
 
 const NotFound = ({ error }: NotFoundProps) => {
   const animation = useAnimate()

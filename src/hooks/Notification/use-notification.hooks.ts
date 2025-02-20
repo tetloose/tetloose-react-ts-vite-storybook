@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast'
-import { NotificationType } from './use-notification.types'
+import type { NotificationType } from './use-notification.types'
 
 export const useNotification = () => {
   const notify = (notification: unknown, type: NotificationType) => {

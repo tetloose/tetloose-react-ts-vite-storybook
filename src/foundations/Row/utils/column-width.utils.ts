@@ -1,5 +1,5 @@
 import { breakpoints } from '@constants'
-import { Width } from './column-width.types'
+import type { Width } from './column-width.types'
 
 export const columnWidth = (width: Width): string[] =>
   width && breakpoints

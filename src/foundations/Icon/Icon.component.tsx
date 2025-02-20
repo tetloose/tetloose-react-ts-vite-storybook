@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { IconProps } from './Icon.types'
+import type { IconProps } from './Icon.types'
 import cs from 'classnames'
 import styles from './Icon.module.scss'
 

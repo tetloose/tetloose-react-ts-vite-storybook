@@ -1,6 +1,11 @@
-import { GlobalAlign, GlobalBg, GlobalChildren, GlobalModifiers } from '@global'
-import { TypographyProps } from '@foundations/Typography/Typography.types'
-import { Border } from '@utils/get-border/get-border.types'
+import type { Border } from '@utils/get-border/get-border.types'
+import type { TypographyProps } from '@foundations/Typography/Typography.types'
+import type {
+  GlobalAlign,
+  GlobalBg,
+  GlobalChildren,
+  GlobalModifiers
+} from '@global'
 
 type TableTags = 'thead' | 'tbody' | 'tfoot' | 'tr' | 'th' | 'td'
 

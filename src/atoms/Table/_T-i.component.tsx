@@ -1,6 +1,6 @@
 import { createElement, forwardRef } from 'react'
 import { getBorder } from '@utils'
-import { TiProps } from './Table.types'
+import type { TiProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
 

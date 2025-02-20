@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { getPadding } from '@utils'
 import { columnWidth } from './utils/column-width.utils'
-import { ColumnProps } from './Row.types'
+import type { ColumnProps } from './Row.types'
 import cs from 'classnames'
 import styles from './Row.module.scss'
 

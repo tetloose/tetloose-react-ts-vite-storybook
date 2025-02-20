@@ -1,4 +1,4 @@
-import { GlobalSpacers } from '@global'
+import type { GlobalSpacers } from '@global'
 
 export type Spacers = {
   margin?: GlobalSpacers

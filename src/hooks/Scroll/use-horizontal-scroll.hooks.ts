@@ -1,4 +1,5 @@
-import { useCallback, WheelEvent } from 'react'
+import type { WheelEvent } from 'react'
+import { useCallback } from 'react'
 
 export const useHorizontalScroll = () => {
   const handleHorizontalScroll = useCallback(

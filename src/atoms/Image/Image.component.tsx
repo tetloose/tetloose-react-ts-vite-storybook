@@ -1,5 +1,5 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import { ImageProps } from './Image.types'
+import type { ImageProps } from './Image.types'
 import cs from 'classnames'
 import styles from './Image.module.scss'
 import 'react-lazy-load-image-component/src/effects/blur.css'

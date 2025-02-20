@@ -1,13 +1,13 @@
-import {
+import type {
   FormHTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
   TextareaHTMLAttributes
 } from 'react'
-import { GlobalChildren, GlobalModifiers } from '@global'
-import { ButtonProps } from '@atoms/Button/Button.types'
-import { ActionProps } from '@components/Action/Action.types'
-import { TypographyProps } from '@foundations/Typography/Typography.types'
+import type { ActionProps } from '@components/Action/Action.types'
+import type { TypographyProps } from '@foundations/Typography/Typography.types'
+import type { ButtonProps } from '@atoms/Button/Button.types'
+import type { GlobalChildren, GlobalModifiers } from '@global'
 
 type Button = Pick<ButtonProps, 'variant' | 'label' | 'disabled'>
 

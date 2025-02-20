@@ -1,4 +1,5 @@
-import {
+import type { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
+import type {
   GlobalAlign,
   GlobalChildren,
   GlobalColor,
@@ -10,7 +11,6 @@ import {
   GlobalTextTransform,
   GlobalWhiteSpace
 } from '@global'
-import { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 
 export type TypographyTags =
   | 'span'

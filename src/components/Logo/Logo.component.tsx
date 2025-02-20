@@ -1,6 +1,6 @@
 import { Button, Image, Loading } from '@atoms'
 import { useLogoContent } from './hooks/use-logo-content.hooks'
-import { LogoProps } from './Logo.types'
+import type { LogoProps } from './Logo.types'
 import logo from '@images/logos/logo.png'
 import styles from './Logo.module.scss'
 

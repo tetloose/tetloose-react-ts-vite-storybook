@@ -1,5 +1,5 @@
-import { Color } from '@global'
-import { Border } from './get-border.types'
+import type { Border } from './get-border.types'
+import type { Color } from '@global'
 
 export const getBorder = (border: Border['border'], color: Color): string[] =>
   border

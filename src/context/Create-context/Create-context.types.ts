@@ -1,4 +1,4 @@
-import { GlobalChildren } from '@global'
+import type { GlobalChildren } from '@global'
 
 export type ContextProviderProps = GlobalChildren
 

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Image } from './Image.component'
 import Desktop from '@images/test/desktop.jpg'
 import Mobile from '@images/test/mobile.jpg'

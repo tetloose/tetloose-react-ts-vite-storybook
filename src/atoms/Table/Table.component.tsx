@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { getBorder } from '@utils'
-import { TableProps } from './Table.types'
+import type { TableProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
 

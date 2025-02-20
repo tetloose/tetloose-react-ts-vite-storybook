@@ -1,7 +1,7 @@
-import { QueryObserverResult } from '@tanstack/react-query'
-import { CardContent } from '@components/Card/Card.types'
-import { LogoContent } from '@components/Logo/Logo.types'
-import { NotFoundContent } from '@layouts/Not-found/Not-found.types'
+import type { QueryObserverResult } from '@tanstack/react-query'
+import type { CardContent } from '@components/Card/Card.types'
+import type { LogoContent } from '@components/Logo/Logo.types'
+import type { NotFoundContent } from '@layouts/Not-found/Not-found.types'
 
 export type Content = {
   homepage: CardContent[]

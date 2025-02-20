@@ -1,4 +1,6 @@
-import {
+import type { Padding } from '@utils/get-padding/get-padding.types'
+import type { ColumnWidth } from './utils/column-width.types'
+import type {
   GlobalChildren,
   GlobalDirection,
   GlobalFlexAlign,
@@ -8,8 +10,6 @@ import {
   GlobalJustify,
   GlobalModifiers
 } from '@global'
-import { ColumnWidth } from './utils/column-width.types'
-import { Padding } from '@utils/get-padding/get-padding.types'
 
 type SharedProps = GlobalChildren &
   GlobalModifiers &

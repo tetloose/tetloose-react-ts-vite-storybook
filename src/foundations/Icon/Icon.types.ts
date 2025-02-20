@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react'
-import { GlobalColor, GlobalModifiers, GlobalSize } from '@global'
+import type { HTMLAttributes } from 'react'
+import type { GlobalColor, GlobalModifiers, GlobalSize } from '@global'
 
 export type IconNames = 'happy' | 'angry'
 

@@ -1,7 +1,7 @@
 import { createElement, forwardRef } from 'react'
 import { Spacer } from '@foundations'
 import { RichText } from './_Rich-text.component'
-import { TypographyProps } from './Typography.types'
+import type { TypographyProps } from './Typography.types'
 import cs from 'classnames'
 import styles from './Typography.module.scss'
 

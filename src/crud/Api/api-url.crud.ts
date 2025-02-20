@@ -1,5 +1,5 @@
+import type { ApiUrlProps, ApiUrlReturn } from './api-url.types'
 import { apiUrls } from './api-urls'
-import { ApiUrlProps, ApiUrlReturn } from './api-url.types'
 
 export const apiUrl = ({
   url,

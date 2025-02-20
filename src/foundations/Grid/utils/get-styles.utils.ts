@@ -1,6 +1,6 @@
 import { mediaQueries } from '@constants'
 import { calcGrid } from './calc-grid.utils'
-import {
+import type {
   Column,
   ColumnProps,
   GetStyles,

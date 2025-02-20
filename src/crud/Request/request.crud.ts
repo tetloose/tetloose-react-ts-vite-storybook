@@ -1,4 +1,4 @@
-import { RequestProps } from './request.types'
+import type { RequestProps } from './request.types'
 
 export const request = async ({ url, method, body }: RequestProps) => {
   const fetchOptions: RequestInit = {

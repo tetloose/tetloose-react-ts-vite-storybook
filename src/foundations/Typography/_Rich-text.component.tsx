@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { Spacer } from '@foundations'
-import { RichTextProps } from './Typography.types'
+import type { RichTextProps } from './Typography.types'
 import styles from './Typography.module.scss'
 
 export const RichText = forwardRef<HTMLElement, RichTextProps>(

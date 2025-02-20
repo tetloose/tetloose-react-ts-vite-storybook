@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { TextareaProps } from './Form.types'
+import type { TextareaProps } from './Form.types'
 import cs from 'classnames'
 import styles from './Form.module.scss'
 

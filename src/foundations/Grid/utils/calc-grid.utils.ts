@@ -1,4 +1,4 @@
-import { CalcGrid } from './calc-grid.types'
+import type { CalcGrid } from './calc-grid.types'
 
 export const calcGrid = ({ rows, columns, template }: CalcGrid): string =>
   rows

@@ -1,4 +1,4 @@
-import { Column, Row } from './get-styles.types'
+import type { Column, Row } from './get-styles.types'
 
 export type CalcGrid = {
   rows?: Row
