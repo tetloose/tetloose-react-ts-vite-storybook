@@ -1,3 +1,4 @@
+import { useAnimate } from '@hooks/Animate/use-animate.hooks'
 import { Card } from '@components/Card/Card.component'
 import { GridItem } from '@foundations/Grid/Grid-item.component'
 import { Column } from '@foundations/Row/Column.component'
@@ -5,12 +6,14 @@ import { Row } from '@foundations/Row/Row.component'
 import { useHomeContent } from './hooks/use-home-content.hooks'
 
 const Home = () => {
+  const animation = useAnimate()
   const { content, contentFetching } = useHomeContent()
 
   if (!content) return
 
   return (
     <GridItem
+      modifiers={['animate', animation]}
       tag={'section'}
       rows={{ default: [2] }}
       columns={{ default: [1] }}

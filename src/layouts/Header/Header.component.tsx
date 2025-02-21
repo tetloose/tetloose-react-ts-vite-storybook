@@ -1,11 +1,15 @@
+import { useAnimate } from '@hooks/Animate/use-animate.hooks'
 import { GridItem } from '@foundations/Grid/Grid-item.component'
 import { Column } from '@foundations/Row/Column.component'
 import { Row } from '@foundations/Row/Row.component'
 import { Typography } from '@foundations/Typography/Typography.component'
 
 const Header = () => {
+  const animation = useAnimate()
+
   return (
     <GridItem
+      modifiers={['animate', animation]}
       tag={'header'}
       bg={'dark'}
       rows={{ default: [1] }}

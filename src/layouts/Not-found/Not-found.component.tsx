@@ -36,8 +36,8 @@ const NotFound = ({ error }: NotFoundProps) => {
 
   return (
     <Row
-      tag={error ? 'main' : 'section'}
       modifiers={['animate', animation]}
+      tag={error ? 'main' : 'section'}
       align={error ? 'flex-end' : 'center'}
       justify={'center'}
       padding={{
