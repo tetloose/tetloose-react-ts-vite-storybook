@@ -7,7 +7,7 @@ import type {
 import type { ActionProps } from '@components/Action/Action.types'
 import type { TypographyProps } from '@foundations/Typography/Typography.types'
 import type { ButtonProps } from '@atoms/Button/Button.types'
-import type { GlobalChildren, GlobalModifiers } from '@global'
+import type { GlobalChildren, GlobalModifiers } from '@global/global.types'
 
 type Button = Pick<ButtonProps, 'variant' | 'label' | 'disabled'>
 

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { useNotification } from '@hooks'
-import { apiUrl, request } from '@crud'
+import { useNotification } from '@hooks/Notification/use-notification.hooks'
+import { apiUrl } from '@crud/Api/api-url.crud'
+import { request } from '@crud/Request/request.crud'
 import type { UseReadProps } from './use-read.types'
 
 export const useRead = ({

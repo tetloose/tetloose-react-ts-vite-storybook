@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { AppProvider } from '@context'
+import { AppProvider } from '@context/App/App.context'
 import { Card } from './Card.component'
 import Desktop from '@images/test/desktop.jpg'
 

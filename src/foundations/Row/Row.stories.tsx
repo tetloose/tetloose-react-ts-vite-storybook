@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Typography } from '@foundations'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Column } from './Column.component'
 import { Row } from './Row.component'
 

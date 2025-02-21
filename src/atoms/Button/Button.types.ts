@@ -1,6 +1,10 @@
 import type { ButtonHTMLAttributes } from 'react'
 import type { NavLinkProps } from 'react-router-dom'
-import type { GlobalChildren, GlobalModifiers, GlobalSize } from '@global'
+import type {
+  GlobalChildren,
+  GlobalModifiers,
+  GlobalSize
+} from '@global/global.types'
 
 type ButtonVariant = 'dark' | 'light' | 'link-dark' | 'link-light'
 

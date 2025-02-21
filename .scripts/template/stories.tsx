@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
 
 const meta: Meta<typeof EXPORT_NAME> = {

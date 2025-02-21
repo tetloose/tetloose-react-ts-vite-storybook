@@ -1,4 +1,4 @@
-import type { Breakpoints, Directions } from '@global'
+import type { Breakpoints, Directions } from '@global/global.types'
 
 export const breakpoints: Breakpoints[] = [
   'default',

@@ -6,7 +6,7 @@ import type {
   GlobalGap,
   GlobalJustify,
   GlobalModifiers
-} from '@global'
+} from '@global/global.types'
 
 export type ActionProps = GlobalChildren &
   GlobalModifiers &

@@ -1,8 +1,11 @@
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { AppProvider } from '@context'
-import { queryClient, QueryClientProvider } from '@hooks'
+import { AppProvider } from '@context/App/App.context'
+import {
+  queryClient,
+  QueryClientProvider
+} from '@hooks/Query/query-client.hooks'
 import { Logo } from './Logo.component'
 
 describe('Logo component', () => {

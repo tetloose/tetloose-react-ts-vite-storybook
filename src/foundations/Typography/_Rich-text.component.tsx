@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Spacer } from '@foundations'
+import { Spacer } from '@foundations/Spacer/Spacer.component'
 import type { RichTextProps } from './Typography.types'
 import styles from './Typography.module.scss'
 

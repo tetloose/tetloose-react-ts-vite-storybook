@@ -5,12 +5,13 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const src = resolve(__dirname, '../src')
+const docs = resolve(__dirname, '../docs')
 
 const config: StorybookConfig = {
   stories: [
-    '../docs/**/*.mdx',
-    '../src/**/*.mdx',
-    '../src/**/*.stories.@(ts|tsx)'
+    `${docs}/**/*.mdx`,
+    `${src}/**/*.mdx`,
+    `${src}/**/*.stories.@(ts|tsx)`
   ],
   addons: [
     '@storybook/addon-a11y',
@@ -62,30 +63,13 @@ const config: StorybookConfig = {
       build: {
         manifest: true,
         sourcemap: config.mode === 'development',
+        chunkSizeWarningLimit: 1000,
         rollupOptions: {
-          output: {
-            manualChunks(id) {
-              const chunks: { [key: string]: string } = {
-                [resolve(__dirname, '../src/foundations')]: 'foundations',
-                [resolve(__dirname, '../src/atoms')]: 'atoms',
-                [resolve(__dirname, '../src/components')]: 'components',
-                [resolve(__dirname, '../src/layouts')]: 'layouts',
-                [resolve(__dirname, '../src/hooks')]: 'hooks',
-                [resolve(__dirname, '../src/crud')]: 'crud',
-                [resolve(__dirname, '../src/utils')]: 'utils',
-                [resolve(__dirname, '../src/global')]: 'global',
-                [resolve(__dirname, '../src/styles')]: 'styles',
-                [resolve(__dirname, '../src/images')]: 'images',
-                [resolve(__dirname, '../src/constants')]: 'constants',
-                [resolve(__dirname, '../src/routes')]: 'routes'
-              }
-
-              for (const [aliasPath, chunkName] of Object.entries(chunks)) {
-                if (id.includes(aliasPath)) {
-                  return chunkName
-                }
-              }
+          onwarn(warning, warn) {
+            if (warning.code === 'EVAL') {
+              return
             }
+            warn(warning)
           }
         }
       }

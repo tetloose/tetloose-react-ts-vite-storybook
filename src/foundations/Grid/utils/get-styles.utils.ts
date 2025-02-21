@@ -1,4 +1,3 @@
-import { mediaQueries } from '@constants'
 import { calcGrid } from './calc-grid.utils'
 import type {
   Column,
@@ -7,6 +6,7 @@ import type {
   Row,
   RowProps
 } from './get-styles.types'
+import { mediaQueries } from '@global/global.constants'
 
 export const getStyles = ({
   className,

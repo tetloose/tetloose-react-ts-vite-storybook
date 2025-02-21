@@ -1,5 +1,5 @@
 import { createElement, forwardRef } from 'react'
-import { getBorder } from '@utils'
+import { getBorder } from '@utils/get-border/get-border.utils'
 import type { TiProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
@@ -9,10 +9,10 @@ export const Ti = forwardRef<HTMLElement, TiProps>(
     {
       modifiers = [],
       tag = 'td',
-      bg = 'light',
+      bg,
       border,
-      borderColor = 'dark',
-      textAlign = 'left',
+      borderColor,
+      textAlign,
       hide,
       children,
       ...rest
@@ -21,7 +21,7 @@ export const Ti = forwardRef<HTMLElement, TiProps>(
   ) => {
     if (hide) return null
 
-    const borders = getBorder(border, borderColor)
+    const borders = borderColor && getBorder(border, borderColor)
 
     return createElement(
       tag,
@@ -29,8 +29,8 @@ export const Ti = forwardRef<HTMLElement, TiProps>(
         className: cs(
           styles['ti'],
           styles[tag],
-          styles[`bg-${bg}`],
-          styles[`text-align-${textAlign}`],
+          bg && styles[`bg-${bg}`],
+          textAlign && styles[`text-align-${textAlign}`],
           borders && borders.map((name) => styles[name]),
           ...modifiers
         ),

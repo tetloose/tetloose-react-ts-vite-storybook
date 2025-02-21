@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 import type { Meta, StoryObj } from '@storybook/react'
-import { useNotification } from '@hooks'
-import { Action } from '@components'
+import { useNotification } from '@hooks/Notification/use-notification.hooks'
+import { Action } from '@components/Action/Action.component'
 import { Button } from './Button.component'
 import type { ButtonProps } from './Button.types'
 

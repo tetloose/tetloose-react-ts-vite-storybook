@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Column, Container, Row, Typography } from '@foundations'
+import { Container } from '@foundations/Container/Container.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Grid } from './Grid.component'
 import { GridItem } from './Grid-item.component'
 

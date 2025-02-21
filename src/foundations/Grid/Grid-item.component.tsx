@@ -1,9 +1,10 @@
 import type { WheelEvent } from 'react'
 import { useMemo } from 'react'
 import { createPortal } from 'react-dom'
-import { useHorizontalScroll } from '@hooks'
+import { useHorizontalScroll } from '@hooks/Scroll/use-horizontal-scroll.hooks'
+import { getClassName } from './utils/get-class-name.utils'
+import { getStyles } from './utils/get-styles.utils'
 import type { GridProps } from './Grid.types'
-import { getClassName, getStyles } from './utils'
 import cs from 'classnames'
 import styles from './Grid.module.scss'
 
@@ -12,7 +13,7 @@ export const GridItem = ({
   tag = 'section',
   rows,
   columns,
-  bg = 'light',
+  bg,
   horizontalScroll,
   onWheelHandler,
   children,
@@ -45,7 +46,7 @@ export const GridItem = ({
       <Element
         className={cs(
           styles['grid__item'],
-          styles[`bg-${bg}`],
+          bg && styles[`bg-${bg}`],
           className,
           ...modifiers
         )}

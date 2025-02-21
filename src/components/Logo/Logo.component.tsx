@@ -1,4 +1,6 @@
-import { Button, Image, Loading } from '@atoms'
+import { Button } from '@atoms/Button/Button.component'
+import { Image } from '@atoms/Image/Image.component'
+import { Loading } from '@atoms/Loading/Loading.component'
 import { useLogoContent } from './hooks/use-logo-content.hooks'
 import type { LogoProps } from './Logo.types'
 import logo from '@images/logos/logo.png'

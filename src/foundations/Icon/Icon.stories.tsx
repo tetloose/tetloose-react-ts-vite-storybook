@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Column, Row, Typography } from '@foundations'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Icon } from './Icon.component'
 import type { IconNames } from './Icon.types'
 

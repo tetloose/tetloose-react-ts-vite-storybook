@@ -83,14 +83,14 @@
       "@styles": [
         "styles"
       ],
+      "@styles/*": [
+        "styles/*"
+      ],
       "@images": [
         "images"
       ],
-      "@constants": [
-        "constants"
-      ],
-      "@constants/*": [
-        "constants/*"
+      "@images/*": [
+        "images/*"
       ],
       "@routes": [
         "routes"

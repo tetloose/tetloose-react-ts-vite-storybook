@@ -4,7 +4,7 @@ import type { Preview } from '@storybook/react'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { withRouter } from 'storybook-addon-remix-react-router'
 import { Notification } from '../src/components/Notification/Notification.component'
-import { AppProvider } from '../src/context'
+import { AppProvider } from '../src/context/App/App.context'
 import {
   clearQueryCache,
   queryClient,

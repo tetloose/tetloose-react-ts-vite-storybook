@@ -1,6 +1,11 @@
 import type { WheelEventHandler } from 'react'
 import type { ColumnProps, RowProps } from './utils/get-styles.types'
-import type { GlobalBg, GlobalChildren, GlobalModifiers, Tags } from '@global'
+import type {
+  GlobalBg,
+  GlobalChildren,
+  GlobalModifiers,
+  Tags
+} from '@global/global.types'
 
 export type GridProps = {
   tag?: Tags

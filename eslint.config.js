@@ -131,11 +131,6 @@ const mainConfig = {
               'Direct import of index file is restricted. Please import specific modules.'
           },
           {
-            name: '@constants/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
             name: '@routes/index',
             message:
               'Direct import of index file is restricted. Please import specific modules.'
@@ -154,7 +149,6 @@ const mainConfig = {
             '^@context',
             '^@hooks',
             '^@routes',
-            '^@constants',
             '^@crud',
             '^@utils',
             '^@components',

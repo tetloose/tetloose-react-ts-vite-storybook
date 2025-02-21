@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Typography } from '@foundations'
+import { Typography } from '@foundations/Typography/Typography.component'
 import type { LabelProps } from './Form.types'
 import styles from './Form.module.scss'
 

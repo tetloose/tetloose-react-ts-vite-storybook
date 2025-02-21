@@ -1,4 +1,4 @@
-import type { GlobalSpacers } from '@global'
+import type { GlobalSpacers } from '@global/global.types'
 
 export type Padding = {
   padding?: {

@@ -1,4 +1,4 @@
-import { useContent } from '@hooks'
+import { useContent } from '@hooks/Content/use-content.hooks'
 
 export const useLogoContent = () => {
   const {

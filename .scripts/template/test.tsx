@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { AppProvider } from '@context'
+import { AppProvider } from '@context/App/App.context'
 import { EXPORT_NAME } from './COMPONENT_NAME.component'
 
 describe('EXPORT_NAME component', () => {

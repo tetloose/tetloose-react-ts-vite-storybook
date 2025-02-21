@@ -1,7 +1,10 @@
+import { lazy } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Footer, Header } from '@routes/routes.paths'
-import { Grid } from '@foundations'
-import Home from './Home.component'
+import { Grid } from '@foundations/Grid/Grid.component'
+
+const Home = lazy(() => import('@layouts/Home/Home.component'))
+const Header = lazy(() => import('@layouts/Header/Header.component'))
+const Footer = lazy(() => import('@layouts/Footer/Footer.component'))
 
 const meta: Meta<typeof Home> = {
   title: 'Layouts/Home',

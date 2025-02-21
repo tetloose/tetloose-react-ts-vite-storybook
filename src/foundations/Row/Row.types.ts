@@ -9,7 +9,7 @@ import type {
   GlobalHtmlTag,
   GlobalJustify,
   GlobalModifiers
-} from '@global'
+} from '@global/global.types'
 
 type SharedProps = GlobalChildren &
   GlobalModifiers &

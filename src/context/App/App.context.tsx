@@ -1,4 +1,4 @@
-import { createContext } from '@context'
+import { createContext } from '@context/Create-context/Create-context.context'
 import { initialApp } from './App.initial'
 import type { AppProps } from './App.types'
 

@@ -1,6 +1,10 @@
 import { forwardRef } from 'react'
-import { Container, Spacer, Typography } from '@foundations'
-import { Button, Image, Loading } from '@atoms'
+import { Container } from '@foundations/Container/Container.component'
+import { Spacer } from '@foundations/Spacer/Spacer.component'
+import { Typography } from '@foundations/Typography/Typography.component'
+import { Button } from '@atoms/Button/Button.component'
+import { Image } from '@atoms/Image/Image.component'
+import { Loading } from '@atoms/Loading/Loading.component'
 import type { CardProps } from './Card.types'
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(

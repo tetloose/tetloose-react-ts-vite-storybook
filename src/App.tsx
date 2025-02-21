@@ -1,10 +1,12 @@
-import { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { useAnimate } from '@hooks'
-import { routes } from '@routes'
-import { Footer, Header } from '@routes/routes.paths'
-import { Grid } from '@foundations'
-import { Loading } from '@atoms'
+import { useAnimate } from '@hooks/Animate/use-animate.hooks'
+import { navigation } from '@routes/navigation.routes'
+import { Grid } from '@foundations/Grid/Grid.component'
+import { Loading } from '@atoms/Loading/Loading.component'
+
+const Header = lazy(() => import('@layouts/Header/Header.component'))
+const Footer = lazy(() => import('@layouts/Footer/Footer.component'))
 
 const App = () => {
   const animation = useAnimate()
@@ -18,8 +20,8 @@ const App = () => {
       >
         <Header />
         <Routes>
-          {routes.map(({ path, element }, routeIndex) => (
-            <Route key={routeIndex} path={path} element={element} />
+          {navigation.map(({ path, element }, navigationIndex) => (
+            <Route key={navigationIndex} path={path} element={element} />
           ))}
         </Routes>
         <Footer />

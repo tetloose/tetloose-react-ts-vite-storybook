@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '@atoms'
+import { Button } from '@atoms/Button/Button.component'
 import { Action } from './Action.component'
 
 const meta: Meta<typeof Action> = {

@@ -15,15 +15,19 @@ read -p "Enter component location:
 if [ "$COMPONENT_SWITCH" = "0" ]; then
   DIR="src/foundations"
   TITLE="Foundations"
+  IMPORT_NAME="foundations"
 elif [ "$COMPONENT_SWITCH" = "1" ]; then
   DIR="src/atoms"
   TITLE="Atoms"
+  IMPORT_NAME="atoms"
 elif [ "$COMPONENT_SWITCH" = "2" ]; then
   DIR="src/components"
   TITLE="Components"
+  IMPORT_NAME="components"
 elif [ "$COMPONENT_SWITCH" = "3" ]; then
   DIR="src/layouts"
   TITLE="Layouts"
+  IMPORT_NAME="layouts"
 fi
 
 if [ "$COMPONENT_SWITCH" ]; then
@@ -70,6 +74,7 @@ if [ "$COMPONENT_SWITCH" ]; then
   # Stories.mdx
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.mdx" -exec sed -i '' -e "s|EXPORT_NAME|$EXPORT_NAME|g" {} +
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.mdx" -exec sed -i '' -e "s|TITLE_NAME|$TITLE_NAME|g" {} +
+  find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.mdx" -exec sed -i '' -e "s|IMPORT_NAME|$IMPORT_NAME|g" {} +
   # Stories.tsx
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.stories.tsx" -exec sed -i '' -e "s|EXPORT_NAME|$EXPORT_NAME|g" {} +
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.stories.tsx" -exec sed -i '' -e "s|COMPONENT_NAME|$COMPONENT_NAME|g" {} +

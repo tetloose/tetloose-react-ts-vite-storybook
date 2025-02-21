@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Typography } from '@foundations'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Container } from './Container.component'
-import type { Color } from '@global'
+import type { Color } from '@global/global.types'
 
 const meta: Meta<typeof Container> = {
   title: 'Foundations/Container',

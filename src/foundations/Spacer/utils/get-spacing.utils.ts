@@ -1,5 +1,5 @@
-import { breakpoints } from '@constants'
 import type { GetSpacing } from './get-spacing.types'
+import { breakpoints } from '@global/global.constants'
 
 const getSpacingValue = <T>(value: T): string[] =>
   breakpoints

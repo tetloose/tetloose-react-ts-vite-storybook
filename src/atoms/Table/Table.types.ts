@@ -5,7 +5,7 @@ import type {
   GlobalBg,
   GlobalChildren,
   GlobalModifiers
-} from '@global'
+} from '@global/global.types'
 
 type TableTags = 'thead' | 'tbody' | 'tfoot' | 'tr' | 'th' | 'td'
 

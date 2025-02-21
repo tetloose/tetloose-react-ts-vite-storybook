@@ -10,7 +10,7 @@ import type {
   GlobalModifiers,
   GlobalTextTransform,
   GlobalWhiteSpace
-} from '@global'
+} from '@global/global.types'
 
 export type TypographyTags =
   | 'span'

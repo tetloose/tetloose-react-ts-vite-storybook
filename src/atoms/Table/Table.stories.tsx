@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Container, Typography } from '@foundations'
+import { Container } from '@foundations/Container/Container.component'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Ti } from './_T-i.component'
 import { TableTitle } from './_Table-title.component'
 import { Table } from './Table.component'
@@ -35,7 +36,11 @@ export const Primary: Story = {
           left: { default: 10 }
         }}
       >
-        <Table>
+        <Table
+          layout={'fixed'}
+          borderCollapse={'collapse'}
+          verticalAlign={'middle'}
+        >
           <Ti tag={'thead'}>
             <Ti tag={'tr'}>
               <Ti

@@ -5,7 +5,7 @@ import type {
   GlobalChildren,
   GlobalHtmlTag,
   GlobalModifiers
-} from '@global'
+} from '@global/global.types'
 
 export type ContainerProps = GlobalModifiers &
   GlobalHtmlTag &

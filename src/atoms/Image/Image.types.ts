@@ -1,4 +1,8 @@
-import type { GlobalImageSize, GlobalModifiers, GlobalRatios } from '@global'
+import type {
+  GlobalImageSize,
+  GlobalModifiers,
+  GlobalRatios
+} from '@global/global.types'
 
 type Position =
   | 'center'

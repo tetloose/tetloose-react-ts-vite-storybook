@@ -1,5 +1,7 @@
-import { Card } from '@components'
-import { Column, GridItem, Row } from '@foundations'
+import { Card } from '@components/Card/Card.component'
+import { GridItem } from '@foundations/Grid/Grid-item.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
 import { useHomeContent } from './hooks/use-home-content.hooks'
 
 const Home = () => {

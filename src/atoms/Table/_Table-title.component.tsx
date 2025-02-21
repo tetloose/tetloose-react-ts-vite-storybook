@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Typography } from '@foundations'
+import { Typography } from '@foundations/Typography/Typography.component'
 import { Ti } from './_T-i.component'
 import type { TableTitleProps } from './Table.types'
 import styles from './Table.module.scss'

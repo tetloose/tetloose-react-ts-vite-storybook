@@ -1,4 +1,7 @@
-import { Column, GridItem, Row, Typography } from '@foundations'
+import { GridItem } from '@foundations/Grid/Grid-item.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
+import { Typography } from '@foundations/Typography/Typography.component'
 
 const Header = () => {
   return (

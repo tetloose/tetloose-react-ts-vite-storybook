@@ -1,5 +1,7 @@
+import { lazy } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import Header from './Header.component'
+
+const Header = lazy(() => import('@layouts/Header/Header.component'))
 
 const meta: Meta<typeof Header> = {
   title: 'Layouts/Header',

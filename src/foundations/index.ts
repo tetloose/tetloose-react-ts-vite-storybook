@@ -1,6 +1,0 @@
-export { Grid, GridItem } from './Grid'
-export { Row, Column } from './Row'
-export { Spacer } from './Spacer/Spacer.component'
-export { Typography } from './Typography/Typography.component'
-export { Container } from './Container/Container.component'
-export { Icon } from './Icon/Icon.component'

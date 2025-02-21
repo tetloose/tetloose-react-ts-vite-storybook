@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { getPadding } from '@utils'
+import { getPadding } from '@utils/get-padding/get-padding.utils'
 import { columnWidth } from './utils/column-width.utils'
 import type { ColumnProps } from './Row.types'
 import cs from 'classnames'
@@ -8,7 +8,7 @@ import styles from './Row.module.scss'
 export const Column = forwardRef<HTMLDivElement, ColumnProps>(
   ({ modifiers = [], tag = 'div', padding, width, children, ...rest }, ref) => {
     const Element = tag
-    const paddings = getPadding(padding)
+    const paddings = padding && getPadding(padding)
 
     return (
       <Element

@@ -1,4 +1,4 @@
-import { useAppContext } from '@context'
+import { useAppContext } from '@context/App/App.context'
 
 export const useApp = () => {
   const { app, updateApp } = useAppContext()

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Column, Row } from '@foundations'
-import { Typography } from './Typography.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
+import { Typography } from '@foundations/Typography/Typography.component'
 
 const meta: Meta<typeof Typography> = {
   title: 'Foundations/Typography',

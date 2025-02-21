@@ -1,5 +1,7 @@
+import { lazy } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import Footer from './Footer.component'
+
+const Footer = lazy(() => import('@layouts/Footer/Footer.component'))
 
 const meta: Meta<typeof Footer> = {
   title: 'Layouts/Footer',
