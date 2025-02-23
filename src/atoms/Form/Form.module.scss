@@ -6,31 +6,61 @@
     display: block;
     width: 100%;
 
-    @include input-error;
+    @each $variant in (dark, light) {
+      &.is-#{$variant} {
+        @include label-error(#{$variant});
+
+        @include mq-hover {
+          @include label-error(#{$variant});
+        }
+      }
+
+    }
 
     @include mq-hover {
       cursor: pointer;
-
-      @include input-error;
     }
   }
 
   &__input {
-    $input: &;
-
     display: block;
     width: 100%;
-    background-color: color(default, light);
     border-style: solid;
-    border-color: color(grey, default);
-    color: color(default, dark);
     appearance: none;
 
-    @include user-select(true);
-    @include sizing('border-width', size(.25));
-    @include sizing('padding', size(4));
-    @include input-error;
     @extend %type-input;
+    @include user-select(true);
+    @include sizing('border-width', size(deep-get($inputs, border, width)));
+    @include sizing('padding', size(4));
+
+    @each $variant in (dark, light) {
+      &.is-#{$variant} {
+        background-color: deep-get($inputs, $variant, bg);
+        border-color: deep-get($inputs, $variant, border);
+        color: deep-get($inputs, $variant, color);
+
+        &::placeholder {
+          color: deep-get($inputs, $variant, color);
+        }
+
+        @include input-error(#{$variant});
+
+        @include mq-hover {
+          @include input-error(#{$variant});
+
+          &:hover,
+          &:focus {
+            background-color: deep-get($inputs, $variant, hover, bg);
+            border-color: deep-get($inputs, $variant, hover, border);
+            color: deep-get($inputs, $variant, hover, color);
+
+            &::placeholder {
+              color: deep-get($inputs, $variant, hover, color);
+            }
+          }
+        }
+      }
+    }
 
     &.is-textarea {
       overflow: auto;
@@ -40,27 +70,14 @@
     }
 
     &::placeholder {
-      color: color(default, dark);
-
       @extend %type-input;
       @include transition('color');
     }
 
-    &[disabled] {
-      opacity: .3;
-
-      @include disable(true);
-    }
-
     @include mq-hover {
-      @include input-error;
-      @include transition('color, background-color, border-color');
+      cursor: pointer;
 
-      &:focus,
-      &:hover {
-        border-color: color(default, dark);
-        color: color(default, dark);
-      }
+      @include transition('color, background-color, border-color');
     }
 
     &:disabled {
@@ -68,5 +85,54 @@
 
       @include disable(true);
     }
+  }
+
+  &__select {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @include mq-hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      transform: translateY(-35%);
+
+      @include disable(true);
+      @include sizing('right', size(6));
+      @include sizing('border-top-width', size(deep-get($inputs, select-arrow, border-top-width)));
+      @include sizing('border-right-width', size(deep-get($inputs, select-arrow, border-right-width)));
+      @include sizing('border-left-width', size(deep-get($inputs, select-arrow, border-left-width)));
+
+      @each $variant in (dark, light) {
+        &.is-#{$variant} {
+          border-top-color: deep-get($inputs, $variant, hover, select-arrow);
+        }
+      }
+    }
+  }
+
+  &__radio {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    @include sizing('gap', size(2));
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    @include sizing('gap', size(2));
   }
 }

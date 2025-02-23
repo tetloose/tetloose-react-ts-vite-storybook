@@ -55,43 +55,46 @@ export const Children: Story = {
 
 export const Buttons: Story = {
   render: () => (
-    <>
-      <Action gap={4} align={'center'}>
-        <RenderButton variant={'dark'} label={'Dark'} />
-        <RenderButton
-          variant={'dark'}
-          label={'Dark Disabled'}
-          disabled={true}
-        />
-        <RenderButton
-          variant={'dark'}
-          url={'https://google.com'}
-          label={'Dark Link'}
-        />
-        <RenderButton variant={'light'} label={'Light'} />
-        <RenderButton
-          variant={'light'}
-          url={'https://google.com'}
-          label={'Light Link'}
-        />
-        <RenderButton
-          variant={'light'}
-          label={'Light Disabled'}
-          disabled={true}
-        />
-      </Action>
-      <Action gap={4} align={'center'} padding={{ default: 6 }}>
-        <RenderButton
-          variant={'link-dark'}
-          url={'https://google.com'}
-          label={'Dark Link'}
-        />
-        <RenderButton
-          variant={'link-light'}
-          url={'https://google.com'}
-          label={'Light Link'}
-        />
-      </Action>
-    </>
+    <Action gap={4} align={'center'}>
+      <RenderButton variant={'dark'} label={'Dark'} />
+      <RenderButton variant={'dark'} label={'Dark Disabled'} disabled={true} />
+      <RenderButton
+        variant={'dark'}
+        url={'https://google.com'}
+        label={'Dark Link'}
+      />
+      <RenderButton variant={'light'} label={'Light'} />
+      <RenderButton
+        variant={'light'}
+        url={'https://google.com'}
+        label={'Light Link'}
+      />
+      <RenderButton
+        variant={'light'}
+        label={'Light Disabled'}
+        disabled={true}
+      />
+    </Action>
   )
+}
+
+export const LinkDark: Story = {
+  args: {
+    variant: 'link-dark',
+    label: 'Link Dark',
+    url: 'http://www.googe.com'
+  }
+}
+
+export const LinkLight: Story = {
+  parameters: {
+    backgrounds: {
+      default: 'Dark'
+    }
+  },
+  args: {
+    variant: 'link-light',
+    label: 'Link Dark',
+    url: 'http://www.googe.com'
+  }
 }

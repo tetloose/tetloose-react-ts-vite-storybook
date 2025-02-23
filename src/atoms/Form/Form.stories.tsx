@@ -2,12 +2,16 @@ import type { SubmitHandler } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
 import type { Meta, StoryObj } from '@storybook/react'
 import { useNotification } from '@hooks/Notification/use-notification.hooks'
-import { Spacer } from '@foundations/Spacer/Spacer.component'
 import { Typography } from '@foundations/Typography/Typography.component'
+import { Checkbox } from './_Checkbox.component'
 import { Input } from './_Input.component'
 import { Label } from './_Label.component'
+import { Radio } from './_Radio.component'
+import { Select } from './_Select.component'
 import { Textarea } from './_Textarea.component'
 import { Form } from './Form.component'
+import type { Options } from './Form.types'
+import type { Color } from '@global/global.types'
 
 const meta: Meta<typeof Form> = {
   title: 'Atoms/Form',
@@ -24,17 +28,23 @@ export default meta
 
 type Story = StoryObj<typeof Form>
 
-const RenderForm = () => {
+const RenderForm = ({ color }: { color: Color }) => {
   type Inputs = {
     username: string
     password: string
     message: string
+    colors: string
+    accept: string
+    gender: string
   }
 
   const defaultValues: Inputs = {
     username: '',
     password: '',
-    message: ''
+    message: '',
+    colors: '',
+    accept: '',
+    gender: ''
   }
 
   const notify = useNotification()
@@ -50,13 +60,19 @@ const RenderForm = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (!data) return
 
-    const { username, password, message } = data
+    const { gender, username, password, message, colors, accept } = data
+
+    if (gender) notify(`gender: ${gender}`, 'success')
 
     if (username) notify(`username: ${username}`, 'success')
 
     if (password) notify(`password: ${password}`, 'success')
 
     if (password) notify(`message: ${message}`, 'success')
+
+    if (colors) notify(`colors: ${colors}`, 'success')
+
+    if (accept) notify(`accept: ${accept && 'accepted'}`, 'success')
 
     reset()
   }
@@ -67,7 +83,33 @@ const RenderForm = () => {
     reset()
   }
 
-  const { username: usernameError, password: passwordError } = errors
+  const {
+    gender: genderError,
+    username: usernameError,
+    password: passwordError,
+    colors: colorsError,
+    message: messageError,
+    accept: acceptError
+  } = errors
+
+  const selectOptions: Options[] = [
+    {
+      text: 'Select an option',
+      value: ''
+    },
+    {
+      text: 'Male',
+      value: 'male'
+    },
+    {
+      text: 'Female',
+      value: 'female'
+    },
+    {
+      text: 'Other',
+      value: 'other'
+    }
+  ]
 
   return (
     <Form
@@ -93,6 +135,26 @@ const RenderForm = () => {
       }}
     >
       <Label
+        color={color}
+        htmlFor={'gender'}
+        label={{
+          text: `Gender ${genderError ? '(required)' : ''}`,
+          size: 'body-med',
+          fontWeight: 'medium'
+        }}
+        error={!!genderError}
+      />
+      <Select
+        padding={{ default: 2 }}
+        color={color}
+        id={'gender'}
+        options={selectOptions}
+        error={!!genderError}
+        {...register('gender', { required: true })}
+      />
+      <Label
+        padding={{ default: 6 }}
+        color={color}
         htmlFor={'username'}
         label={{
           text: `Username ${usernameError ? '(required)' : ''}`,
@@ -101,15 +163,17 @@ const RenderForm = () => {
         }}
         error={!!usernameError}
       />
-      <Spacer display={'block'} padding={{ default: 2 }} />
       <Input
+        padding={{ default: 2 }}
+        color={color}
         placeholder={'Username'}
         id={'username'}
         error={!!usernameError}
         {...register('username', { required: true })}
       />
-      <Spacer display={'block'} padding={{ default: 6 }} />
       <Label
+        padding={{ default: 6 }}
+        color={color}
         htmlFor={'password'}
         label={{
           text: `Password ${passwordError ? '(required)' : ''}`,
@@ -118,51 +182,138 @@ const RenderForm = () => {
         }}
         error={!!passwordError}
       />
-      <Spacer display={'block'} padding={{ default: 2 }} />
       <Input
+        padding={{ default: 2 }}
+        color={color}
         type={'password'}
         placeholder={'Password'}
         id={'password'}
         error={!!passwordError}
         {...register('password', { required: true })}
       />
-      <Spacer display={'block'} padding={{ default: 6 }} />
       <Label
+        padding={{ default: 6 }}
+        color={color}
+        htmlFor={'yellow'}
+        label={{
+          text: 'Select Color',
+          size: 'body-med',
+          fontWeight: 'medium'
+        }}
+        error={!!colorsError}
+      />
+      <Radio
+        padding={{ default: 2 }}
+        color={color}
+        htmlFor={'yellow'}
+        id={'yellow'}
+        value={'yellow'}
+        label={{
+          text: 'Yellow',
+          size: 'body-med'
+        }}
+        error={!!colorsError}
+        {...register('colors', { required: true })}
+      />
+      <Radio
+        padding={{ default: 2 }}
+        color={color}
+        htmlFor={'blue'}
+        id={'blue'}
+        value={'blue'}
+        label={{
+          text: 'Blue',
+          size: 'body-med'
+        }}
+        error={!!colorsError}
+        {...register('colors', { required: true })}
+      />
+      <Radio
+        padding={{ default: 2 }}
+        color={color}
+        htmlFor={'green'}
+        id={'green'}
+        value={'green'}
+        label={{
+          text: 'Green',
+          size: 'body-med'
+        }}
+        error={!!colorsError}
+        {...register('colors', { required: true })}
+      />
+      <Label
+        padding={{ default: 6 }}
+        color={color}
         htmlFor={'message'}
         label={{
           text: 'Message',
           size: 'body-med',
           fontWeight: 'medium'
         }}
+        error={!!messageError}
       />
-      <Spacer display={'block'} padding={{ default: 2 }} />
       <Textarea
+        padding={{ default: 2 }}
+        color={color}
         placeholder={'Enter your message'}
         id={'message'}
-        {...register('message')}
+        error={!!messageError}
+        {...register('message', { required: true })}
+      />
+      <Label
+        padding={{ default: 6 }}
+        color={color}
+        htmlFor={'accept'}
+        label={{
+          text: 'Accept',
+          size: 'body-med',
+          fontWeight: 'medium'
+        }}
+      />
+      <Checkbox
+        padding={{ default: 2 }}
+        color={color}
+        htmlFor={'accept'}
+        id={'accept'}
+        value={'true'}
+        label={{
+          text: 'Accept',
+          size: 'body-med'
+        }}
+        error={!!acceptError}
+        {...register('accept', { required: true })}
       />
       <Typography
         tag={'p'}
+        color={color}
         size={'body-sml'}
         padding={{ default: 10 }}
-        text={`Watch Username: ${watch('username') ? watch('username') : ''}`}
-      />
-      <Typography
-        tag={'p'}
-        size={'body-sml'}
-        padding={{ default: 6 }}
-        text={`Watch Password: ${watch('password') ? watch('password') : ''}`}
-      />
-      <Typography
-        tag={'p'}
-        size={'body-sml'}
-        padding={{ default: 6 }}
-        text={`Watch Message: ${watch('message') ? watch('message') : ''}`}
+        richText={`<p>Watch Gender: ${watch('gender') ? watch('gender') : ''}<br />
+          Watch Username: ${watch('username') ? watch('username') : ''}<br />
+          Watch Password: ${watch('password') ? watch('password') : ''}<br />
+          Watch Colors: ${watch('colors') ? watch('colors') : ''}<br />
+          Watch Message: ${watch('message') ? watch('message') : ''}<br />
+          Watch Accept: ${watch('accept') ? watch('accept') : ''}</p>`}
       />
     </Form>
   )
 }
 
-export const Primary: Story = {
-  render: () => RenderForm()
+export const Dark: Story = {
+  render: () =>
+    RenderForm({
+      color: 'dark'
+    })
+}
+
+export const Light: Story = {
+  parameters: {
+    backgrounds: {
+      default: 'Dark'
+    }
+  },
+  render: () =>
+    RenderForm({
+      color: 'light'
+    })
 }
