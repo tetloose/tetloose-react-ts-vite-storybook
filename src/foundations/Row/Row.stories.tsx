@@ -45,65 +45,6 @@ export default meta
 
 type ColumnStory = StoryObj<typeof Row>
 
-export const Primary: ColumnStory = {
-  render: () => (
-    <Row
-      display={{
-        lrg: 'flex'
-      }}
-      justify={{
-        default: 'center',
-        lrg: 'space-between'
-      }}
-    >
-      <Column
-        padding={{
-          top: {
-            default: 6,
-            lrg: 0
-          },
-          left: {
-            lrg: 6
-          },
-          right: {
-            lrg: 6
-          }
-        }}
-        width={{
-          lrg: 6
-        }}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-        voluptate molestias eos similique voluptas quo? Quam animi, fugit
-        aperiam deleniti sit enim atque aliquam quas veritatis, rem alias sunt
-        eaque.
-      </Column>
-      <Column
-        padding={{
-          top: {
-            default: 6,
-            lrg: 0
-          },
-          left: {
-            lrg: 6
-          },
-          right: {
-            lrg: 6
-          }
-        }}
-        width={{
-          lrg: 6
-        }}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-        voluptate molestias eos similique voluptas quo? Quam animi, fugit
-        aperiam deleniti sit enim atque aliquam quas veritatis, rem alias sunt
-        eaque.
-      </Column>
-    </Row>
-  )
-}
-
 export const Size: ColumnStory = {
   render: () => (
     <>

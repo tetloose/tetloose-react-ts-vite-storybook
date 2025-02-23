@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useAnimate } from '@hooks/Animate/use-animate.hooks'
-import { Action } from '@components/Action/Action.component'
+import { Action } from '@foundations/Action/Action.component'
 import { Container } from '@foundations/Container/Container.component'
 import { Column } from '@foundations/Row/Column.component'
 import { Row } from '@foundations/Row/Row.component'

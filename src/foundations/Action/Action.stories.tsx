@@ -3,7 +3,7 @@ import { Button } from '@atoms/Button/Button.component'
 import { Action } from './Action.component'
 
 const meta: Meta<typeof Action> = {
-  title: 'Components/Action',
+  title: 'Foundations/Action',
   component: Action,
   parameters: {
     layout: 'fullscreen',
