@@ -46,30 +46,30 @@ $inputs: (
   @include sizing('letter-spacing', deep-get($inputs, letter-spacing));
 }
 
-@mixin input-error($color: dark) {
-  &.has-error {
-    @if $color == 'dark' {
-      border-color: color(red, default);
-      color: color(red, default);
-    }
-
-    @if $color == 'light' {
-      border-color: color(red, default);
-      color: color(red, default);
-    }
-
-  }
-}
-
-@mixin label-error($color: dark) {
+@mixin form-error($color: dark, $border: false) {
   &.has-error {
     @if $color == 'dark' {
       color: color(red, default);
+
+      &::placeholder {
+        color: color(red, default);
+      }
+
+      @if border {
+        border-color: color(red, default);
+      }
     }
 
     @if $color == 'light' {
       color: color(red, default);
-    }
 
+      &::placeholder {
+        color: color(red, default);
+      }
+
+      @if border {
+        border-color: color(red, default);
+      }
+    }
   }
 }

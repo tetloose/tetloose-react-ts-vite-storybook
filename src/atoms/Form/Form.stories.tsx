@@ -126,7 +126,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         submitButton: {
           variant: 'light',
           label: 'Submit',
-          disabled: !isValid
+          disabled: isValid
         },
         resetButton: {
           variant: 'light',
@@ -138,7 +138,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'gender'}
         label={{
-          text: `Gender ${genderError ? '(required)' : ''}`,
+          text: `Gender${genderError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
@@ -157,7 +157,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'username'}
         label={{
-          text: `Username ${usernameError ? '(required)' : ''}`,
+          text: `Username${usernameError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
@@ -176,7 +176,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'password'}
         label={{
-          text: `Password ${passwordError ? '(required)' : ''}`,
+          text: `Password${passwordError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
@@ -196,7 +196,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'yellow'}
         label={{
-          text: 'Select Color',
+          text: `Select Color${colorsError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
@@ -246,7 +246,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'message'}
         label={{
-          text: 'Message',
+          text: `Message${messageError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
@@ -265,10 +265,11 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         htmlFor={'accept'}
         label={{
-          text: 'Accept',
+          text: `Accept ${acceptError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
+        error={!!acceptError}
       />
       <Checkbox
         padding={{ default: 2 }}

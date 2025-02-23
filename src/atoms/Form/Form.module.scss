@@ -8,10 +8,10 @@
 
     @each $variant in (dark, light) {
       &.is-#{$variant} {
-        @include label-error(#{$variant});
+        @include form-error(#{$variant});
 
         @include mq-hover {
-          @include label-error(#{$variant});
+          @include form-error(#{$variant});
         }
       }
 
@@ -43,10 +43,10 @@
           color: deep-get($inputs, $variant, color);
         }
 
-        @include input-error(#{$variant});
+        @include form-error(#{$variant}, true);
 
         @include mq-hover {
-          @include input-error(#{$variant});
+          @include form-error(#{$variant}, true);
 
           &:hover,
           &:focus {
