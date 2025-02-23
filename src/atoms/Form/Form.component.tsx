@@ -10,7 +10,7 @@ export const Form = forwardRef<HTMLFormElement, FormProps>(
     const { actionOptions, submitButton, resetButton } = actions || {}
 
     return (
-      <form ref={ref} className={cs(styles['form'], modifiers)} {...rest}>
+      <form ref={ref} className={cs(styles['form'], ...modifiers)} {...rest}>
         {children && children}
         {actions && (
           <Action {...actionOptions}>

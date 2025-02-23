@@ -3,24 +3,73 @@
 
 $inputs: (
   font-size: 16px,
-  line-height: 16px
+  line-height: 16px,
+  letter-spacing: 1.4px,
+  border: (
+    width: 0.25
+  ),
+  select-arrow: (
+    border-top-width: 3,
+    border-right-width: 2.5,
+    border-left-width: 2.5
+  ),
+  dark: (
+    border: color(grey, default),
+    color: color(default, dark),
+    bg: color(default, light),
+    select-arrow: color(default, dark),
+    hover: (
+      border: color(default, dark),
+      color: color(default, dark),
+      bg: color(default, light),
+      select-arrow: color(default, dark)
+    )
+  ),
+  light: (
+    border: color(grey, default),
+    color: color(default, light),
+    bg: color(default, dark),
+    select-arrow: color(default, light),
+    hover: (
+      border: color(default, light),
+      color: color(default, light),
+      bg: color(default, dark),
+      select-arrow: color(default, light)
+    )
+  )
 );
 
 %type-input {
   @extend %f-body;
   @include sizing('font-size', deep-get($inputs, font-size));
   @include sizing('line-height', deep-get($inputs, line-height));
+  @include sizing('letter-spacing', deep-get($inputs, letter-spacing));
 }
 
-@mixin input-error {
+@mixin input-error($color: dark) {
   &.has-error {
-    border-color: color(red, default);
-    color: color(red, default);
+    @if $color == 'dark' {
+      border-color: color(red, default);
+      color: color(red, default);
+    }
+
+    @if $color == 'light' {
+      border-color: color(red, default);
+      color: color(red, default);
+    }
+
   }
 }
 
-@mixin label-error {
+@mixin label-error($color: dark) {
   &.has-error {
-    color: color(red, default);
+    @if $color == 'dark' {
+      color: color(red, default);
+    }
+
+    @if $color == 'light' {
+      color: color(red, default);
+    }
+
   }
 }

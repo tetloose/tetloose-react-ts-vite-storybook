@@ -2,12 +2,19 @@ import type {
   FormHTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
+  OptionHTMLAttributes,
+  SelectHTMLAttributes,
   TextareaHTMLAttributes
 } from 'react'
 import type { ActionProps } from '@components/Action/Action.types'
+import type { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 import type { TypographyProps } from '@foundations/Typography/Typography.types'
 import type { ButtonProps } from '@atoms/Button/Button.types'
-import type { GlobalChildren, GlobalModifiers } from '@global/global.types'
+import type {
+  GlobalChildren,
+  GlobalColor,
+  GlobalModifiers
+} from '@global/global.types'
 
 type Button = Pick<ButtonProps, 'variant' | 'label' | 'disabled'>
 
@@ -21,11 +28,11 @@ type Actions = {
   }
 }
 
-type inputType = {
+type InputType = {
   type?: 'number' | 'password' | 'tel' | 'text' | 'url'
 }
 
-type inputError = {
+type Error = {
   error?: boolean
 }
 
@@ -35,17 +42,42 @@ export type FormProps = FormHTMLAttributes<HTMLFormElement> &
   Actions
 
 export type LabelProps = {
-  label?: Omit<TypographyProps, 'modifiers' | 'tag'>
+  label?: Omit<
+    TypographyProps,
+    'modifiers' | 'tag' | 'padding' | 'margin' | 'color'
+  >
 } & LabelHTMLAttributes<HTMLLabelElement> &
-  inputError &
+  Spacers &
+  Error &
   GlobalChildren &
-  GlobalModifiers
+  GlobalModifiers &
+  GlobalColor
 
 export type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> &
-  inputType &
-  inputError &
-  GlobalModifiers
+  InputType &
+  Spacers &
+  Error &
+  GlobalModifiers &
+  GlobalColor
 
 export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
-  inputError &
-  GlobalModifiers
+  Spacers &
+  Error &
+  GlobalModifiers &
+  GlobalColor
+
+export type RadioCheckboxProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'type'
+> &
+  LabelProps
+
+export type Options = {
+  text: string
+} & OptionHTMLAttributes<HTMLOptionElement>
+
+export type SelectProps = {
+  options: Options[]
+} & SelectHTMLAttributes<HTMLSelectElement> &
+  LabelProps &
+  GlobalColor
