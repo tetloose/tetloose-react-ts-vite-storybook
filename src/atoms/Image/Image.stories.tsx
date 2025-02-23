@@ -21,9 +21,9 @@ export const Cover16x9: Story = {
     tablet: Tablet,
     mobile: Mobile,
     placeholder: Placeholder,
-    ratio: '16x9',
-    position: 'center-bottom',
-    imageSize: 'cover'
+    ratio: { default: '16x9' },
+    position: { default: 'center-bottom' },
+    size: { default: 'cover' }
   }
 }
 
@@ -34,8 +34,8 @@ export const Contain16x9: Story = {
     tablet: Tablet,
     mobile: Mobile,
     placeholder: Placeholder,
-    ratio: '16x9',
-    position: 'center-bottom',
-    imageSize: 'contain'
+    ratio: { default: '16x9' },
+    position: { default: 'center-bottom' },
+    size: { default: 'contain' }
   }
 }

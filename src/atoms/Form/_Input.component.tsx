@@ -18,7 +18,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     return (
-      <Spacer display={'block'} padding={padding} margin={margin}>
+      <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
         <input
           ref={ref}
           type={type}

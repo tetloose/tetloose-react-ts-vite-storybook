@@ -1,39 +1,80 @@
 @use '@styles/mixins' as *;
+@use '@styles/settings/variables' as *;
 
 %image-position {
-  &.image-position-center {
+  &.default-image-position-center {
     @include object-fit(null, center center);
   }
 
-  &.image-position-left-top {
+  &.default-image-position-left-top {
     @include object-fit(null, left top);
   }
 
-  &.image-position-left-center {
+  &.default-image-position-left-center {
     @include object-fit(null, left center);
   }
 
-  &.image-position-left-bottom {
+  &.default-image-position-left-bottom {
     @include object-fit(null, left bottom);
   }
 
-  &.image-position-right-top {
+  &.default-image-position-right-top {
     @include object-fit(null, right top);
   }
 
-  &.image-position-right-center {
+  &.default-image-position-right-center {
     @include object-fit(null, right center);
   }
 
-  &.image-position-right-bottom {
+  &.default-image-position-right-bottom {
     @include object-fit(null, right bottom);
   }
 
-  &.image-position-center-top {
+  &.default-image-position-center-top {
     @include object-fit(null, center top);
   }
 
-  &.image-position-center-bottom {
+  &.default-image-position-center-bottom {
     @include object-fit(null, center bottom);
+  }
+
+  @each $breakpoint in vars(settings, breakpoints) {
+    @include mq(vars(breakpoint, #{$breakpoint})) {
+      &.#{$breakpoint}-image-position-center {
+        @include object-fit(null, center center);
+      }
+
+      &.#{$breakpoint}-image-position-left-top {
+        @include object-fit(null, left top);
+      }
+
+      &.#{$breakpoint}-image-position-left-center {
+        @include object-fit(null, left center);
+      }
+
+      &.#{$breakpoint}-image-position-left-bottom {
+        @include object-fit(null, left bottom);
+      }
+
+      &.#{$breakpoint}-image-position-right-top {
+        @include object-fit(null, right top);
+      }
+
+      &.#{$breakpoint}-image-position-right-center {
+        @include object-fit(null, right center);
+      }
+
+      &.#{$breakpoint}-image-position-right-bottom {
+        @include object-fit(null, right bottom);
+      }
+
+      &.#{$breakpoint}-image-position-center-top {
+        @include object-fit(null, center top);
+      }
+
+      &.#{$breakpoint}-image-position-center-bottom {
+        @include object-fit(null, center bottom);
+      }
+    }
   }
 }

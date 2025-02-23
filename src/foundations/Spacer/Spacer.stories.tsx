@@ -16,10 +16,10 @@ const Text = ({ odd, text }: { odd?: boolean; text: string }) => (
   >
     <Typography
       tag={'span'}
-      display={'block'}
+      display={{ default: 'block' }}
       color={'dark'}
       size={'body-med'}
-      textAlign={'center'}
+      textAlign={{ default: 'center' }}
       text={text}
     />
   </div>
@@ -47,8 +47,10 @@ type Story = StoryObj<typeof Spacer>
 export const Padding: Story = {
   render: () => (
     <Row
-      align={'center'}
-      justify={'center'}
+      align={{
+        default: 'center'
+      }}
+      justify={{ default: 'center' }}
       padding={{
         left: { default: 6 },
         right: { default: 6 }
@@ -63,34 +65,34 @@ export const Padding: Story = {
           med: 8
         }}
       >
-        <Spacer display={'block'} padding={{ default: 1 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 1 }}>
           <Text odd={true} text={'Padding 1'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 2 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 2 }}>
           <Text text={'Padding 2'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 3 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 3 }}>
           <Text odd={true} text={'Padding 3'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 4 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 4 }}>
           <Text text={'Padding 4'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 5 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 5 }}>
           <Text odd={true} text={'Padding 5'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 6 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 6 }}>
           <Text text={'Padding 6'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 7 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 7 }}>
           <Text odd={true} text={'Padding 7'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 8 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 8 }}>
           <Text text={'Padding 8'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 9 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 9 }}>
           <Text odd={true} text={'Padding 9'} />
         </Spacer>
-        <Spacer display={'block'} padding={{ default: 10 }}>
+        <Spacer display={{ default: 'block' }} padding={{ default: 10 }}>
           <Text text={'Padding 10'} />
         </Spacer>
       </Column>
@@ -101,8 +103,10 @@ export const Padding: Story = {
 export const Margin: Story = {
   render: () => (
     <Row
-      align={'center'}
-      justify={'center'}
+      align={{
+        default: 'center'
+      }}
+      justify={{ default: 'center' }}
       padding={{
         left: { default: 6 },
         right: { default: 6 }
@@ -117,34 +121,34 @@ export const Margin: Story = {
           med: 8
         }}
       >
-        <Spacer display={'block'} margin={{ default: 1 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 1 }}>
           <Text odd={true} text={'Margin 1'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 2 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 2 }}>
           <Text text={'Margin 2'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 3 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 3 }}>
           <Text odd={true} text={'Margin 3'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 4 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 4 }}>
           <Text text={'Margin 4'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 5 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 5 }}>
           <Text odd={true} text={'Margin 5'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 6 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 6 }}>
           <Text text={'Margin 6'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 7 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 7 }}>
           <Text odd={true} text={'Margin 7'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 8 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 8 }}>
           <Text text={'Margin 8'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 9 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 9 }}>
           <Text odd={true} text={'Margin 9'} />
         </Spacer>
-        <Spacer display={'block'} margin={{ default: 10 }}>
+        <Spacer display={{ default: 'block' }} margin={{ default: 10 }}>
           <Text text={'Margin 10'} />
         </Spacer>
       </Column>
@@ -155,8 +159,10 @@ export const Margin: Story = {
 export const Breakpoints: Story = {
   render: () => (
     <Row
-      align={'center'}
-      justify={'center'}
+      align={{
+        default: 'center'
+      }}
+      justify={{ default: 'center' }}
       padding={{
         left: { default: 6 },
         right: { default: 6 }
@@ -172,7 +178,7 @@ export const Breakpoints: Story = {
         }}
       >
         <Spacer
-          display={'block'}
+          display={{ default: 'block' }}
           padding={{
             default: 7,
             sml: 2,
@@ -198,7 +204,7 @@ export const Breakpoints: Story = {
         }}
       >
         <Spacer
-          display={'block'}
+          display={{ default: 'block' }}
           margin={{
             default: 7,
             sml: 2,

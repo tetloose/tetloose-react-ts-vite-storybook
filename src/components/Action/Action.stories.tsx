@@ -20,7 +20,11 @@ type Story = StoryObj<typeof Action>
 
 const renderPrimary = () => {
   return (
-    <Action gap={6} padding={{ default: 10 }} justify={'center'}>
+    <Action
+      gap={{ default: 6 }}
+      padding={{ default: 10 }}
+      justify={{ default: 'center' }}
+    >
       <Button variant={'dark'} label={'Button 1'} />
       <Button variant={'dark'} label={'Button 2'} />
     </Action>

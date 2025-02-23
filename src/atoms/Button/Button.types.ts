@@ -2,8 +2,8 @@ import type { ButtonHTMLAttributes } from 'react'
 import type { NavLinkProps } from 'react-router-dom'
 import type {
   GlobalChildren,
-  GlobalModifiers,
-  GlobalSize
+  GlobalFontSize,
+  GlobalModifiers
 } from '@global/global.types'
 
 type ButtonVariant = 'dark' | 'light' | 'link-dark' | 'link-light'
@@ -18,7 +18,7 @@ export type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLElement> &
   Partial<NavLinkProps> &
   GlobalModifiers &
-  GlobalSize &
+  GlobalFontSize &
   GlobalChildren
 
 export type ContentButton = Pick<ButtonProps, 'variant' | 'label'>

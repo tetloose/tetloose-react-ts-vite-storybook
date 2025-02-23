@@ -10,7 +10,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     ref
   ) => {
     return (
-      <Spacer display={'block'} padding={padding} margin={margin}>
+      <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
         <textarea
           ref={ref}
           className={cs(

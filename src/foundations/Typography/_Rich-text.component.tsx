@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { getBreakpoints } from '@utils/get-breakpoints/get-breakpoints.utils'
 import { Spacer } from '@foundations/Spacer/Spacer.component'
 import type { RichTextProps } from './Typography.types'
 import styles from './Typography.module.scss'
@@ -11,41 +12,36 @@ export const RichText = forwardRef<HTMLElement, RichTextProps>(
       margin,
       linkColor,
       color,
-      fontWeight,
-      display = 'block',
-      fontStyle,
-      textTransform,
-      whiteSpace,
+      display = { default: 'block' },
       textAlign,
       richText,
       ...rest
     },
     ref
-  ) => (
-    <Spacer
-      ref={ref}
-      modifiers={[
-        styles['typography'],
-        styles['is-rich-text'],
-        whiteSpace ? styles[`white-space-${whiteSpace}`] : '',
-        styles[`link-color-${linkColor}`],
-        color ? styles[`color-${color}`] : '',
-        fontWeight ? styles[`font-weight-${fontWeight}`] : '',
-        styles[`display-${display}`],
-        fontStyle ? styles[`font-style-${fontStyle}`] : '',
-        textAlign ? styles[`text-align-${textAlign}`] : '',
-        textTransform ? styles[`text-transform-${textTransform}`] : '',
-        ...modifiers
-      ]}
-      display={display}
-      padding={padding}
-      margin={margin}
-      {...(richText && {
-        dangerouslySetInnerHTML: { __html: richText }
-      })}
-      {...rest}
-    />
-  )
+  ) => {
+    const textAligns = getBreakpoints('text-align', textAlign)
+
+    return (
+      <Spacer
+        ref={ref}
+        modifiers={[
+          styles['typography'],
+          styles['is-rich-text'],
+          styles[`link-color-${linkColor}`],
+          color ? styles[`color-${color}`] : '',
+          ...(textAligns.map((textAlign) => styles[textAlign]) || []),
+          ...modifiers
+        ]}
+        display={display}
+        padding={padding}
+        margin={margin}
+        {...(richText && {
+          dangerouslySetInnerHTML: { __html: richText }
+        })}
+        {...rest}
+      />
+    )
+  }
 )
 
 RichText.displayName = 'RichText'

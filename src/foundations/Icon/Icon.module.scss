@@ -1,4 +1,6 @@
 @use '@styles/settings' as *;
+@use './Icon-vars' as *;
+@use './Icon-extends' as *;
 @include font-face('icons', '/assets/icons/icons', normal, ttf woff svg);
 
 .icon {
@@ -15,7 +17,7 @@
 
   @each $breakpoint in vars(settings, breakpoints) {
     &.is-#{$breakpoint} {
-      @extend  %type-icon-#{$breakpoint};
+      @extend %type-icon-#{$breakpoint};
     }
   }
 }

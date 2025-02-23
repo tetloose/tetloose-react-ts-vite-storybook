@@ -20,7 +20,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     if (!options) return
 
     return (
-      <Spacer display={'block'} padding={padding} margin={margin}>
+      <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
         <span className={cs(styles['form__select'], styles[`is-${color}`])}>
           <select
             ref={ref}

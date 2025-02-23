@@ -62,7 +62,7 @@ export const Primary: Story = {
                   bottom: true,
                   left: true
                 }}
-                textAlign={'center'}
+                textAlign={{ default: 'center' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={title2} />
               </Ti>
@@ -74,7 +74,7 @@ export const Primary: Story = {
                   bottom: true,
                   left: true
                 }}
-                textAlign={'right'}
+                textAlign={{ default: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={title3} />
               </Ti>
@@ -105,7 +105,7 @@ export const Primary: Story = {
                 text={title2}
                 padding={{ default: 5 }}
               />
-              <Ti tag={'td'} bg={'dark'} textAlign={'center'}>
+              <Ti tag={'td'} bg={'dark'} textAlign={{ default: 'center' }}>
                 <Typography
                   tag={'span'}
                   size={'body-med'}
@@ -127,7 +127,7 @@ export const Primary: Story = {
                   bottom: true,
                   left: true
                 }}
-                textAlign={'right'}
+                textAlign={{ default: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
               </Ti>
@@ -166,7 +166,7 @@ export const Primary: Story = {
                   bottom: true,
                   left: true
                 }}
-                textAlign={'center'}
+                textAlign={{ default: 'center' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
               </Ti>
@@ -184,7 +184,7 @@ export const Primary: Story = {
                   bottom: true,
                   left: true
                 }}
-                textAlign={'right'}
+                textAlign={{ default: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
               </Ti>

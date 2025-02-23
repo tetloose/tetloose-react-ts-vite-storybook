@@ -15,6 +15,7 @@ const App = () => {
     <Suspense fallback={<Loading position={'center'} />}>
       <Grid
         modifiers={['animate', animation]}
+        height={{ default: 'viewport-fullscreen' }}
         rows={{ default: ['60px', 'auto', '40px'] }}
         columns={{ default: [1] }}
       >

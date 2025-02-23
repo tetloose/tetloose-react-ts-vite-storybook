@@ -56,7 +56,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
               />
             )}
             {link && (
-              <Spacer display={'block'} padding={{ default: 6 }}>
+              <Spacer display={{ default: 'block' }} padding={{ default: 6 }}>
                 <Button
                   variant={variant}
                   url={url}

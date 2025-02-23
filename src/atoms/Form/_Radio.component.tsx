@@ -19,7 +19,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioCheckboxProps>(
     ref
   ) => {
     return (
-      <Spacer display={'block'} padding={padding} margin={margin}>
+      <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
         <Label
           modifiers={[
             styles['form__radio'],

@@ -29,9 +29,9 @@ export const Primary: Story = {
       mobile: Mobile,
       placeholder: Placeholder,
       alt: 'Image Alt Text',
-      imageSize: 'cover',
-      position: 'center',
-      ratio: '1x1'
+      size: { default: 'cover' },
+      position: { default: 'center' },
+      ratio: { default: '1x1' }
     },
     title: 'Lorem ipsum dolor sit amet consectetur',
     body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laudantium! Facilis iste sit, assumenda quod aliquam, ab harum molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?',

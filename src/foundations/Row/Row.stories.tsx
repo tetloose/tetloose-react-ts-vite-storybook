@@ -20,10 +20,10 @@ const Text = ({ text, bg = '#69b4ff' }: TextProps) => (
   >
     <Typography
       tag={'span'}
-      display={'block'}
+      display={{ default: 'block' }}
       color={'dark'}
       size={'body-med'}
-      textAlign={'center'}
+      textAlign={{ default: 'center' }}
       text={text}
     />
   </div>
@@ -44,6 +44,65 @@ const meta: Meta<typeof Row> = {
 export default meta
 
 type ColumnStory = StoryObj<typeof Row>
+
+export const Primary: ColumnStory = {
+  render: () => (
+    <Row
+      display={{
+        lrg: 'flex'
+      }}
+      justify={{
+        default: 'center',
+        lrg: 'space-between'
+      }}
+    >
+      <Column
+        padding={{
+          top: {
+            default: 6,
+            lrg: 0
+          },
+          left: {
+            lrg: 6
+          },
+          right: {
+            lrg: 6
+          }
+        }}
+        width={{
+          lrg: 6
+        }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        voluptate molestias eos similique voluptas quo? Quam animi, fugit
+        aperiam deleniti sit enim atque aliquam quas veritatis, rem alias sunt
+        eaque.
+      </Column>
+      <Column
+        padding={{
+          top: {
+            default: 6,
+            lrg: 0
+          },
+          left: {
+            lrg: 6
+          },
+          right: {
+            lrg: 6
+          }
+        }}
+        width={{
+          lrg: 6
+        }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        voluptate molestias eos similique voluptas quo? Quam animi, fugit
+        aperiam deleniti sit enim atque aliquam quas veritatis, rem alias sunt
+        eaque.
+      </Column>
+    </Row>
+  )
+}
 
 export const Size: ColumnStory = {
   render: () => (
@@ -213,49 +272,6 @@ export const Layout: ColumnStory = {
       </Column>
       <Column tag={'footer'}>
         <Text bg={'#ff69b4'} text={'Footer'} />
-      </Column>
-    </Row>
-  )
-}
-
-export const OtherOptions: ColumnStory = {
-  render: () => (
-    <Row
-      direction={'row-reverse'}
-      justify={'center'}
-      align={'center'}
-      wrap={'nowrap'}
-      padding={{
-        left: { default: 6 },
-        right: { default: 6 }
-      }}
-    >
-      <Column
-        padding={{
-          left: { default: 6 },
-          right: { default: 6 }
-        }}
-        width={{ default: 11 }}
-      >
-        <Text bg={'#ff69b4'} text={'Center Column Width Default 11'} />
-        <Row>
-          <Column
-            width={{ default: 6 }}
-            padding={{
-              right: { default: 6 }
-            }}
-          >
-            <Text bg={'#ffdc69'} text={'Row inside a Column'} />
-          </Column>
-          <Column
-            width={{ default: 6 }}
-            padding={{
-              left: { default: 6 }
-            }}
-          >
-            <Text bg={'#ffdc69'} text={'Row inside a Column'} />
-          </Column>
-        </Row>
       </Column>
     </Row>
   )

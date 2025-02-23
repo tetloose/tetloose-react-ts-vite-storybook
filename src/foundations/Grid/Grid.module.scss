@@ -3,8 +3,8 @@
 .grid {
   display: grid;
   width: 100%;
-  min-height: vars(vh, fullscreen);
 
+  @extend %height;
   @extend %bg;
 
   &__item {

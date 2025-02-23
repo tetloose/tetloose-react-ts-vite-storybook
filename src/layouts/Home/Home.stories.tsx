@@ -23,7 +23,11 @@ export default meta
 type Story = StoryObj<typeof Home>
 
 const RenderStory = () => (
-  <Grid rows={{ default: ['60px', 'auto', '40px'] }} columns={{ default: [1] }}>
+  <Grid
+    height={{ default: 'viewport-fullscreen' }}
+    rows={{ default: ['60px', 'auto', '40px'] }}
+    columns={{ default: [1] }}
+  >
     <Header />
     <Home />
     <Footer />

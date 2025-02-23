@@ -7,7 +7,7 @@ import type {
   TextareaHTMLAttributes
 } from 'react'
 import type { ActionProps } from '@components/Action/Action.types'
-import type { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
+import type { Spacers } from '@foundations/Spacer/Spacer.types'
 import type { TypographyProps } from '@foundations/Typography/Typography.types'
 import type { ButtonProps } from '@atoms/Button/Button.types'
 import type {

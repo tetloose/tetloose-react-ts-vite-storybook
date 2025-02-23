@@ -1,10 +1,10 @@
-import type { GlobalSpacers } from '@global/global.types'
+import type { BreakpointSpacers } from '@utils/get-breakpoints/get-breakpoints.types'
 
 export type Padding = {
   padding?: {
-    top?: GlobalSpacers
-    right?: GlobalSpacers
-    bottom?: GlobalSpacers
-    left?: GlobalSpacers
+    top?: BreakpointSpacers
+    right?: BreakpointSpacers
+    bottom?: BreakpointSpacers
+    left?: BreakpointSpacers
   }
 }

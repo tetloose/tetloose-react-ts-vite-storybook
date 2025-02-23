@@ -38,7 +38,7 @@ const renderIcons = () => {
         {icons.map((icon) => (
           <Typography
             key={icon}
-            display={'block'}
+            display={{ default: 'block' }}
             textTransform={'capitalize'}
             fontWeight={'bold'}
             size={'body-med'}

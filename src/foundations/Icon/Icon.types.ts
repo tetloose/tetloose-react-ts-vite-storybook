@@ -1,8 +1,8 @@
 import type { HTMLAttributes } from 'react'
 import type {
   GlobalColor,
-  GlobalModifiers,
-  GlobalSize
+  GlobalFontSize,
+  GlobalModifiers
 } from '@global/global.types'
 
 export type IconNames = 'happy' | 'angry'
@@ -12,4 +12,4 @@ export type IconProps = {
 } & HTMLAttributes<HTMLSpanElement> &
   GlobalModifiers &
   GlobalColor &
-  GlobalSize
+  GlobalFontSize

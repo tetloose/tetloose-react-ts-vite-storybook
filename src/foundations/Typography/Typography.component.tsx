@@ -1,4 +1,5 @@
 import { createElement, forwardRef } from 'react'
+import { getBreakpoints } from '@utils/get-breakpoints/get-breakpoints.utils'
 import { Spacer } from '@foundations/Spacer/Spacer.component'
 import { RichText } from './_Rich-text.component'
 import type { TypographyProps } from './Typography.types'
@@ -28,6 +29,10 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
     },
     ref
   ) => {
+    const displays = getBreakpoints('display', display)
+    const whiteSpaces = getBreakpoints('white-space', whiteSpace)
+    const textAligns = getBreakpoints('text-align', textAlign)
+
     const element =
       !richText && tag
         ? createElement(
@@ -39,23 +44,40 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
                   ? styles[tag]
                   : '',
                 !richText && size ? styles[size] : '',
-                whiteSpace ? styles[`white-space-${whiteSpace}`] : '',
+                displays &&
+                  displays.length > 0 &&
+                  displays.map((display) => styles[display]),
+                whiteSpaces &&
+                  whiteSpaces.length > 0 &&
+                  whiteSpaces.map((whiteSpace) => styles[whiteSpace]),
+                textAligns &&
+                  textAligns.length > 0 &&
+                  textAligns.map((textAlign) => styles[textAlign]),
+                fontWeight ? styles[`font-weight-${fontWeight}`] : '',
+                fontStyle ? styles[`font-style-${fontStyle}`] : '',
+                textTransform ? styles[`text-transform-${textTransform}`] : '',
                 styles[`link-color-${linkColor}`],
                 styles[`color-${color}`],
-                fontWeight ? styles[`font-weight-${fontWeight}`] : '',
-                display ? styles[`display-${display}`] : '',
-                fontStyle ? styles[`font-style-${fontStyle}`] : '',
-                textAlign ? styles[`text-align-${textAlign}`] : '',
-                textTransform ? styles[`text-transform-${textTransform}`] : '',
                 ...modifiers
               ),
               ref,
               ...rest
             },
-            <Spacer display={'inline-block'} padding={padding} margin={margin}>
-              {text && text}
-              {children && children}
-            </Spacer>
+            tag === 'ol' || tag === 'ul' ? (
+              <>
+                {text && text}
+                {children && children}
+              </>
+            ) : (
+              <Spacer
+                display={{ default: 'inline-block' }}
+                padding={padding}
+                margin={margin}
+              >
+                {text && text}
+                {children && children}
+              </Spacer>
+            )
           )
         : undefined
 
@@ -67,15 +89,15 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
         margin={margin}
         linkColor={linkColor}
         color={color}
-        fontWeight={fontWeight}
         display={display}
-        fontStyle={fontStyle}
-        textTransform={textTransform}
-        whiteSpace={whiteSpace}
         textAlign={textAlign}
         richText={richText}
         {...rest}
       />
+    ) : tag === 'ol' || tag === 'ul' ? (
+      <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
+        {element}
+      </Spacer>
     ) : (
       element
     )

@@ -1,17 +1,18 @@
-import type { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 import type {
-  GlobalChildren,
-  GlobalFlexAlign,
-  GlobalFlexWrap,
-  GlobalGap,
-  GlobalJustify,
-  GlobalModifiers
-} from '@global/global.types'
+  BreakpointDisplay,
+  BreakpointFlexAlign,
+  BreakpointFlexWrap,
+  BreakpointGap,
+  BreakpointJustify
+} from '@utils/get-breakpoints/get-breakpoints.types'
+import type { Spacers } from '@foundations/Spacer/Spacer.types'
+import type { GlobalChildren, GlobalModifiers } from '@global/global.types'
 
 export type ActionProps = GlobalChildren &
   GlobalModifiers &
-  GlobalJustify &
-  GlobalFlexAlign &
-  GlobalGap &
-  GlobalFlexWrap &
+  BreakpointDisplay &
+  BreakpointJustify &
+  BreakpointFlexAlign &
+  BreakpointGap &
+  BreakpointFlexWrap &
   Spacers

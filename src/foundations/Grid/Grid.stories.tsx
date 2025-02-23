@@ -32,12 +32,14 @@ const renderPrimary = () => {
         columns={{ default: [1, 3] }}
       >
         <Row
-          height={'parent-fullscreen'}
+          height={{ default: 'parent-fullscreen' }}
           padding={{
             left: { default: 6 },
             right: { default: 6 }
           }}
-          align={'center'}
+          align={{
+            default: 'center'
+          }}
         >
           <Column
             padding={{
@@ -47,8 +49,8 @@ const renderPrimary = () => {
           >
             <Typography
               tag={'span'}
-              display={'block'}
-              textAlign={'center'}
+              display={{ default: 'block' }}
+              textAlign={{ default: 'center' }}
               size={'body-xxlrg'}
               text={'Header'}
               color={'light'}
@@ -117,12 +119,14 @@ const renderPrimary = () => {
         columns={{ default: [1, 3] }}
       >
         <Row
-          height={'parent-fullscreen'}
+          height={{ default: 'parent-fullscreen' }}
           padding={{
             left: { default: 6 },
             right: { default: 6 }
           }}
-          align={'center'}
+          align={{
+            default: 'center'
+          }}
         >
           <Column
             padding={{
@@ -132,8 +136,8 @@ const renderPrimary = () => {
           >
             <Typography
               tag={'span'}
-              display={'block'}
-              textAlign={'center'}
+              display={{ default: 'block' }}
+              textAlign={{ default: 'center' }}
               size={'body-xxlrg'}
               text={'Footer'}
               color={'light'}

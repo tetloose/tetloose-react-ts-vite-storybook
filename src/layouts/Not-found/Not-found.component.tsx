@@ -38,13 +38,15 @@ const NotFound = ({ error }: NotFoundProps) => {
     <Row
       modifiers={['animate', animation]}
       tag={error ? 'main' : 'section'}
-      align={error ? 'flex-end' : 'center'}
-      justify={'center'}
+      align={{
+        default: error ? 'flex-end' : 'center'
+      }}
+      justify={{ default: 'center' }}
       padding={{
         left: { default: 6 },
         right: { default: 6 }
       }}
-      height={error ? 'viewport-fullscreen' : 'parent-fullscreen'}
+      height={{ default: error ? 'viewport-fullscreen' : 'parent-fullscreen' }}
     >
       <Column
         tag={'section'}

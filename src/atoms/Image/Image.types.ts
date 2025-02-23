@@ -1,23 +1,11 @@
 import type {
-  GlobalImageSize,
-  GlobalModifiers,
-  GlobalRatios
-} from '@global/global.types'
-
-type Position =
-  | 'center'
-  | 'left-top'
-  | 'left-center'
-  | 'left-bottom'
-  | 'right-top'
-  | 'right-center'
-  | 'right-bottom'
-  | 'center-top'
-  | 'center-bottom'
+  BreakpointImagePosition,
+  BreakpointImageSize,
+  BreakpointRatios
+} from '@utils/get-breakpoints/get-breakpoints.types'
+import type { GlobalModifiers } from '@global/global.types'
 
 export type ImageProps = {
-  ratio?: GlobalRatios
-  position?: Position
   src?: string
   desktop?: string
   tablet?: string
@@ -27,7 +15,9 @@ export type ImageProps = {
   height?: number
   alt?: string
   blur?: boolean
-} & GlobalImageSize &
+} & BreakpointImageSize &
+  BreakpointRatios &
+  BreakpointImagePosition &
   GlobalModifiers
 
 export type ImageContent = Omit<ImageProps, 'modifiers'>

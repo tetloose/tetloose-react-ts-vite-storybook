@@ -1,4 +1,6 @@
 @use '@styles/settings' as *;
+@use './Typography-vars' as *;
+@use './Typography-extends' as *;
 
 .typography {
   $typography: &;
@@ -159,9 +161,9 @@
     }
   }
 
+  @extend %display;
   @extend %a;
   @extend %hr;
-  @extend %display;
   @extend %color;
   @extend %text-align;
   @extend %white-space;

@@ -19,13 +19,15 @@ const Home = () => {
       columns={{ default: [1] }}
     >
       <Row
-        align={'center'}
+        align={{
+          med: 'center'
+        }}
         padding={{
           bottom: { default: 10 },
           left: { default: 5 },
           right: { default: 5 }
         }}
-        height={'parent-fullscreen'}
+        height={{ med: 'parent-fullscreen' }}
       >
         {content.map(({ image, title, body, link }, contentIndex) => (
           <Column

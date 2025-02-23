@@ -1,4 +1,5 @@
 import type { WheelEventHandler } from 'react'
+import type { BreakpointHeight } from '@utils/get-breakpoints/get-breakpoints.types'
 import type { ColumnProps, RowProps } from './utils/get-styles.types'
 import type {
   GlobalBg,
@@ -15,4 +16,5 @@ export type GridProps = {
   onWheelHandler?: WheelEventHandler<HTMLDivElement>
 } & GlobalModifiers &
   GlobalBg &
+  BreakpointHeight &
   GlobalChildren

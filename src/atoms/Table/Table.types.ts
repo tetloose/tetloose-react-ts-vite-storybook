@@ -1,7 +1,7 @@
 import type { Border } from '@utils/get-border/get-border.types'
+import type { BreakpointTextAlign } from '@utils/get-breakpoints/get-breakpoints.types'
 import type { TypographyProps } from '@foundations/Typography/Typography.types'
 import type {
-  GlobalAlign,
   GlobalBg,
   GlobalChildren,
   GlobalModifiers
@@ -31,7 +31,7 @@ export type TiProps = {
   tag?: TableTags
   sectionTitle?: string
 } & SharedProps &
-  GlobalAlign
+  BreakpointTextAlign
 
 export type TableTitleProps = Omit<
   TypographyProps,

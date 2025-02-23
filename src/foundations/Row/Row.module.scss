@@ -3,7 +3,7 @@
 .row {
   $row: &;
 
-  display: flex;
+  // display: flex;
 
   @if vars(row, max-width) {
     margin-right: auto;
@@ -18,8 +18,9 @@
     width: 100%;
   }
 
-  @extend %direction;
+  @extend %display;
   @extend %align;
+  @extend %direction;
   @extend %wrap;
   @extend %justify;
   @extend %height;

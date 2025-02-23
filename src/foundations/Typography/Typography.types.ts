@@ -1,16 +1,22 @@
-import type { Spacers } from '@foundations/Spacer/utils/get-spacing.types'
 import type {
-  GlobalAlign,
+  BreakpointDisplay,
+  BreakpointTextAlign,
+  BreakpointWhiteSpace
+} from '@utils/get-breakpoints/get-breakpoints.types'
+import type { Spacers } from '@foundations/Spacer/Spacer.types'
+import type {
+  Color,
   GlobalChildren,
   GlobalColor,
-  GlobalDisplay,
-  GlobalFontStyle,
-  GlobalFontWeight,
-  GlobalLinkColor,
-  GlobalModifiers,
-  GlobalTextTransform,
-  GlobalWhiteSpace
+  GlobalModifiers
 } from '@global/global.types'
+
+export type FontStyles = {
+  linkColor?: Color
+  fontWeight?: 'light' | 'regular' | 'medium' | 'bold'
+  textTransform?: 'capitalize' | 'uppercase' | 'lowercase'
+  fontStyle?: 'italic' | 'oblique'
+}
 
 export type TypographyTags =
   | 'span'
@@ -45,14 +51,11 @@ type SharedProps = {
   richText?: string
 } & GlobalModifiers &
   GlobalColor &
-  GlobalWhiteSpace &
-  GlobalAlign &
-  GlobalDisplay &
+  BreakpointWhiteSpace &
+  BreakpointTextAlign &
+  BreakpointDisplay &
   Spacers &
-  GlobalTextTransform &
-  GlobalFontWeight &
-  GlobalFontStyle &
-  GlobalLinkColor
+  FontStyles
 
 export type TypographyProps = {
   tag?: TypographyTags
@@ -61,4 +64,7 @@ export type TypographyProps = {
 } & GlobalChildren &
   SharedProps
 
-export type RichTextProps = SharedProps
+export type RichTextProps = Omit<
+  SharedProps,
+  'fontWeight' | 'fontStyle' | 'textTransform' | 'whiteSpace'
+>

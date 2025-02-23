@@ -19,7 +19,7 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
     },
     ref
   ) => (
-    <Spacer display={'block'} padding={padding} margin={margin}>
+    <Spacer display={{ default: 'block' }} padding={padding} margin={margin}>
       <label ref={ref} className={cs(...modifiers)} {...rest}>
         {label && (
           <Typography

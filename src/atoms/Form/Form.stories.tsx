@@ -117,8 +117,10 @@ const RenderForm = ({ color }: { color: Color }) => {
       onReset={handleReset}
       actions={{
         actionOptions: {
-          gap: 6,
-          justify: 'flex-end',
+          gap: {
+            default: 6
+          },
+          justify: { default: 'flex-end' },
           padding: {
             default: 6
           }

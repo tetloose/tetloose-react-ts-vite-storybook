@@ -55,7 +55,12 @@ export const Children: Story = {
 
 export const Buttons: Story = {
   render: () => (
-    <Action gap={4} align={'center'}>
+    <Action
+      gap={{ default: 4 }}
+      align={{
+        default: 'center'
+      }}
+    >
       <RenderButton variant={'dark'} label={'Dark'} />
       <RenderButton variant={'dark'} label={'Dark Disabled'} disabled={true} />
       <RenderButton

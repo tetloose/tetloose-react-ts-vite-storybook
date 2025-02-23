@@ -23,7 +23,11 @@ export default meta
 type Story = StoryObj<typeof NotFound>
 
 const RenderStory = () => (
-  <Grid rows={{ default: ['60px', 'auto', '40px'] }} columns={{ default: [1] }}>
+  <Grid
+    height={{ default: 'viewport-fullscreen' }}
+    rows={{ default: ['60px', 'auto', '40px'] }}
+    columns={{ default: [1] }}
+  >
     <Header />
     <NotFound />
     <Footer />
@@ -31,7 +35,11 @@ const RenderStory = () => (
 )
 
 const RenderStoryError = () => (
-  <Grid rows={{ default: ['60px', 'auto', '40px'] }} columns={{ default: [1] }}>
+  <Grid
+    height={{ default: 'viewport-fullscreen' }}
+    rows={{ default: ['60px', 'auto', '40px'] }}
+    columns={{ default: [1] }}
+  >
     <Header />
     <NotFound
       error={{

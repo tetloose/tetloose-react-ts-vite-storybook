@@ -16,12 +16,14 @@ const Header = () => {
       columns={{ default: [1] }}
     >
       <Row
-        height={'parent-fullscreen'}
+        height={{ default: 'parent-fullscreen' }}
         padding={{
           left: { default: 6 },
           right: { default: 6 }
         }}
-        align={'center'}
+        align={{
+          default: 'center'
+        }}
       >
         <Column
           padding={{
@@ -31,8 +33,8 @@ const Header = () => {
         >
           <Typography
             tag={'span'}
-            display={'block'}
-            textAlign={'center'}
+            display={{ default: 'block' }}
+            textAlign={{ med: 'center' }}
             size={'body-xxlrg'}
             text={'Header'}
             color={'light'}
