@@ -128,7 +128,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         submitButton: {
           variant: 'light',
           label: 'Submit',
-          disabled: isValid
+          disabled: !isValid
         },
         resetButton: {
           variant: 'light',
