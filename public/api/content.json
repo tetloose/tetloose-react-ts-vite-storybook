@@ -80,7 +80,7 @@
     "title": "404 Page not found",
     "subtitle": "Please click the link below to return home",
     "link": {
-      "variant": "link-dark",
+      "variant": "light",
       "label": "Home",
       "target": "_self",
       "rel": "",

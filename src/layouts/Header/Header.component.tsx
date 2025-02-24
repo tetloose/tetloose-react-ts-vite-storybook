@@ -18,7 +18,9 @@ const Header = () => {
       <Row
         height={{ default: 'parent-fullscreen' }}
         padding={{
+          top: { default: 6 },
           left: { default: 6 },
+          bottom: { default: 6 },
           right: { default: 6 }
         }}
         align={{

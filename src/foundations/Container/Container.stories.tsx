@@ -57,8 +57,7 @@ export const Light: Story = {
   args: {
     border: {
       top: {
-        default: true,
-        med: false
+        default: true
       },
       right: {
         default: true

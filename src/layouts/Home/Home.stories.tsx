@@ -25,7 +25,11 @@ type Story = StoryObj<typeof Home>
 const RenderStory = () => (
   <Grid
     height={{ default: 'viewport-fullscreen' }}
-    rows={{ default: ['60px', 'auto', '40px'] }}
+    rows={{
+      default: ['13vw', 'auto', '13vw'],
+      med: ['4.3vw', 'auto', '4.3vw'],
+      xxlrg: ['84px', 'auto', '84px']
+    }}
     columns={{ default: [1] }}
   >
     <Header />

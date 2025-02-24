@@ -34,28 +34,16 @@ const RenderStory = () => (
   </Grid>
 )
 
-const RenderStoryError = () => (
-  <Grid
-    height={{ default: 'viewport-fullscreen' }}
-    rows={{ default: ['60px', 'auto', '40px'] }}
-    columns={{ default: [1] }}
-  >
-    <Header />
-    <NotFound
-      error={{
-        message: 'This is an error',
-        name: 'Error Name',
-        stack: 'Stack Name'
-      }}
-    />
-    <Footer />
-  </Grid>
-)
-
 export const Primary: Story = {
   render: RenderStory
 }
 
 export const Error: Story = {
-  render: RenderStoryError
+  args: {
+    error: {
+      message: 'This is an error',
+      name: 'Error Name',
+      stack: 'Stack Name'
+    }
+  }
 }

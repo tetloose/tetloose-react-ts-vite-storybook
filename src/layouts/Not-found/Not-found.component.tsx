@@ -78,10 +78,16 @@ const NotFound = ({ error }: NotFoundProps) => {
             <Loading center={true} />
           ) : (
             <>
-              <Typography tag={'h1'} size={'h1'} text={name ? name : title} />
+              <Typography
+                textAlign={{ default: !error ? 'center' : 'left' }}
+                tag={'h1'}
+                size={'h1'}
+                text={name ? name : title}
+              />
               <Typography
                 tag={'p'}
                 size={'body-med'}
+                textAlign={{ default: !error ? 'center' : 'left' }}
                 padding={{ default: 4 }}
                 text={message ? message : subtitle}
               />
@@ -94,7 +100,11 @@ const NotFound = ({ error }: NotFoundProps) => {
                   text={stack}
                 />
               )}
-              <Action padding={{ default: 8 }}>
+              <Action
+                align={{ default: !error ? 'center' : 'flex-start' }}
+                justify={{ default: !error ? 'center' : 'flex-start' }}
+                padding={{ default: 8 }}
+              >
                 {error ? (
                   <Button
                     variant={buttonVariant}
