@@ -38,38 +38,3 @@ $inputs: (
     )
   )
 );
-
-%type-input {
-  @extend %f-body;
-  @include sizing('font-size', deep-get($inputs, font-size));
-  @include sizing('line-height', deep-get($inputs, line-height));
-  @include sizing('letter-spacing', deep-get($inputs, letter-spacing));
-}
-
-@mixin form-error($color: dark, $border: false) {
-  &.has-error {
-    @if $color == 'dark' {
-      color: color(red, default);
-
-      &::placeholder {
-        color: color(red, default);
-      }
-
-      @if border {
-        border-color: color(red, default);
-      }
-    }
-
-    @if $color == 'light' {
-      color: color(red, default);
-
-      &::placeholder {
-        color: color(red, default);
-      }
-
-      @if border {
-        border-color: color(red, default);
-      }
-    }
-  }
-}

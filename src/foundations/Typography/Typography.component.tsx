@@ -44,15 +44,9 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
                   ? styles[tag]
                   : '',
                 !richText && size ? styles[size] : '',
-                displays &&
-                  displays.length > 0 &&
-                  displays.map((display) => styles[display]),
-                whiteSpaces &&
-                  whiteSpaces.length > 0 &&
-                  whiteSpaces.map((whiteSpace) => styles[whiteSpace]),
-                textAligns &&
-                  textAligns.length > 0 &&
-                  textAligns.map((textAlign) => styles[textAlign]),
+                ...(displays.map((display) => styles[display]) || []),
+                ...(whiteSpaces.map((whiteSpace) => styles[whiteSpace]) || []),
+                ...(textAligns.map((textAlign) => styles[textAlign]) || []),
                 fontWeight ? styles[`font-weight-${fontWeight}`] : '',
                 fontStyle ? styles[`font-style-${fontStyle}`] : '',
                 textTransform ? styles[`text-transform-${textTransform}`] : '',

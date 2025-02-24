@@ -3,8 +3,6 @@
 .row {
   $row: &;
 
-  // display: flex;
-
   @if vars(row, max-width) {
     margin-right: auto;
     margin-left: auto;

@@ -21,7 +21,7 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
   ) => {
     const Element = tag
     const borders = borderColor && getBorder(border, borderColor)
-    const paddings = padding && getPadding(padding)
+    const paddings = getPadding(padding)
 
     return (
       <Element
@@ -29,8 +29,8 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
         className={cs(
           styles['container'],
           bg && styles[`bg-${bg}`],
-          borders && borders.map((name) => styles[name]),
-          paddings && paddings.map((name) => styles[name]),
+          ...(paddings.map((padding) => styles[padding]) || []),
+          ...((borders && borders.map((border) => styles[border])) || []),
           ...modifiers
         )}
         {...rest}

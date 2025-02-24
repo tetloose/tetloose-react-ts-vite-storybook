@@ -4,14 +4,14 @@ import cs from 'classnames'
 import styles from './Loading.module.scss'
 
 export const Loading = forwardRef<HTMLElement, LoadingProps>(
-  ({ modifiers = [], color = 'dark', position, ...rest }, ref) => {
+  ({ modifiers = [], color = 'dark', center, ...rest }, ref) => {
     return (
       <span
         ref={ref}
         className={cs(
           styles['loading'],
           styles[`color-${color}`],
-          position && styles[`position-${position}`],
+          center && styles['is-center'],
           ...modifiers
         )}
         {...rest}

@@ -2,6 +2,6 @@
 
 .container {
   @extend %padding;
-  @extend %border;
   @extend %bg;
+  @extend %border;
 }

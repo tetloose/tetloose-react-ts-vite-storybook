@@ -1,5 +1,6 @@
 import { createElement, forwardRef } from 'react'
 import { getBorder } from '@utils/get-border/get-border.utils'
+import { getBreakpoints } from '@utils/get-breakpoints/get-breakpoints.utils'
 import type { TiProps } from './Table.types'
 import cs from 'classnames'
 import styles from './Table.module.scss'
@@ -21,6 +22,7 @@ export const Ti = forwardRef<HTMLElement, TiProps>(
   ) => {
     if (hide) return null
 
+    const textAligns = getBreakpoints('text-align', textAlign)
     const borders = borderColor && getBorder(border, borderColor)
 
     return createElement(
@@ -30,8 +32,8 @@ export const Ti = forwardRef<HTMLElement, TiProps>(
           styles['ti'],
           styles[tag],
           bg && styles[`bg-${bg}`],
-          textAlign && styles[`text-align-${textAlign}`],
-          borders && borders.map((name) => styles[name]),
+          ...(textAligns.map((textAlign) => styles[textAlign]) || []),
+          ...((borders && borders.map((border) => styles[border])) || []),
           ...modifiers
         ),
         ref,

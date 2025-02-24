@@ -46,35 +46,38 @@ export const Primary: Story = {
               <Ti
                 tag={'th'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
+                borderColor={'dark'}
               >
                 <Typography tag={'span'} size={'body-med'} text={title1} />
               </Ti>
               <Ti
                 tag={'th'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
-                textAlign={{ default: 'center' }}
+                borderColor={'dark'}
+                textAlign={{ med: 'center' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={title2} />
               </Ti>
               <Ti
                 tag={'th'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
-                textAlign={{ default: 'right' }}
+                borderColor={'dark'}
+                textAlign={{ med: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={title3} />
               </Ti>
@@ -83,7 +86,7 @@ export const Primary: Story = {
           <Ti tag={'tbody'}>
             <Ti tag={'tr'}>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title1}
                 padding={{ default: 5 }}
@@ -91,21 +94,22 @@ export const Primary: Story = {
               <Ti
                 tag={'td'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
+                borderColor={'dark'}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
               </Ti>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title2}
                 padding={{ default: 5 }}
               />
-              <Ti tag={'td'} bg={'dark'} textAlign={{ default: 'center' }}>
+              <Ti tag={'td'} bg={'dark'} textAlign={{ med: 'center' }}>
                 <Typography
                   tag={'span'}
                   size={'body-med'}
@@ -114,7 +118,7 @@ export const Primary: Story = {
                 />
               </Ti>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title3}
                 padding={{ default: 5 }}
@@ -122,12 +126,13 @@ export const Primary: Story = {
               <Ti
                 tag={'td'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
-                textAlign={{ default: 'right' }}
+                borderColor={'dark'}
+                textAlign={{ med: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
               </Ti>
@@ -136,7 +141,7 @@ export const Primary: Story = {
           <Ti tag={'tfoot'}>
             <Ti tag={'tr'}>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title1}
                 padding={{ default: 5 }}
@@ -144,16 +149,17 @@ export const Primary: Story = {
               <Ti
                 tag={'td'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
+                borderColor={'dark'}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
               </Ti>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title2}
                 padding={{ default: 5 }}
@@ -161,17 +167,18 @@ export const Primary: Story = {
               <Ti
                 tag={'td'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
-                textAlign={{ default: 'center' }}
+                borderColor={'dark'}
+                textAlign={{ med: 'center' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
               </Ti>
               <TableTitle
-                size={'h3'}
+                size={'body-lrg'}
                 fontWeight={'bold'}
                 text={title3}
                 padding={{ default: 5 }}
@@ -179,12 +186,13 @@ export const Primary: Story = {
               <Ti
                 tag={'td'}
                 border={{
-                  top: true,
-                  right: true,
-                  bottom: true,
-                  left: true
+                  top: { default: true },
+                  right: { med: true },
+                  bottom: { med: true },
+                  left: { med: true }
                 }}
-                textAlign={{ default: 'right' }}
+                borderColor={'dark'}
+                textAlign={{ med: 'right' }}
               >
                 <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
               </Ti>

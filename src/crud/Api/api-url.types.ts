@@ -8,3 +8,7 @@ export type ApiUrlProps = {
 }
 
 export type ApiUrlReturn = string | void
+
+export type ApiQueryKey = {
+  [key in ApiUrls]: string
+}

@@ -29,11 +29,11 @@ The font-face mixin takes several augments:
 
 ## Font settings
 
-Font family's, weights, style, utilities and sizes are extended from here: `src/styles/settings/typography.scss`
+Font family's, weights, style, utilities are extended from here: `src/styles/settings/typography.scss`
 
 ## Font Sizes
 
-Font sizes are stored within a deep map object called vars here: `src/styles/settings/variables.scss`
+Font sizes are stored within a deep map object `$type` here: `src/foundations/Typography/_Typography-vars.scss`, and extended from `src/foundations/Typography/_Typography-extends.scss`
 
 ```
 headings: (
@@ -72,4 +72,4 @@ body: (
 ),
 ```
 
-Usage: `vars(type, med)`.
+Usage: `deep-map($type, headings, font-size, h1)`

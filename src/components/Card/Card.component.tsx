@@ -18,11 +18,12 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         modifiers={[...modifiers]}
         bg={'dark'}
         border={{
-          top: true,
-          right: true,
-          bottom: true,
-          left: true
+          top: { default: true },
+          right: { default: true },
+          bottom: { default: true },
+          left: { default: true }
         }}
+        borderColor={'light'}
         padding={{
           top: { default: 10 },
           right: { default: 10 },
@@ -32,7 +33,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         {...rest}
       >
         {loading ? (
-          <Loading position={'center'} />
+          <Loading center={true} />
         ) : (
           <>
             {image && <Image {...image} />}

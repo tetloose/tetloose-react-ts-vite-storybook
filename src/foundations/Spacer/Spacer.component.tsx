@@ -15,15 +15,9 @@ export const Spacer = forwardRef<HTMLElement, SpacerProps>(
         ref={ref}
         className={cs(
           styles['spacer'],
-          displays &&
-            displays.length > 0 &&
-            displays.map((display) => styles[display]),
-          paddings &&
-            paddings.length > 0 &&
-            paddings.map((padding) => styles[padding]),
-          margins &&
-            margins.length > 0 &&
-            margins.map((margin) => styles[margin]),
+          ...(displays.map((display) => styles[display]) || []),
+          ...((paddings && paddings.map((padding) => styles[padding])) || []),
+          ...((margins && margins.map((margin) => styles[margin])) || []),
           ...modifiers
         )}
         {...rest}

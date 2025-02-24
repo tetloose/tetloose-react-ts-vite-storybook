@@ -1,8 +1,9 @@
 @use '@styles/settings' as *;
 
 .action {
-  @extend %justify;
   @extend %align;
+  @extend %justify;
+  @extend %direction;
   @extend %wrap;
   @extend %gap;
 }

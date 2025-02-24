@@ -12,7 +12,7 @@ export const Logo = ({ modifiers = [], ...rest }: LogoProps) => {
   return (
     <Button url={'/'} modifiers={[styles['logo'], ...modifiers]} {...rest}>
       {contentFetching || contentPending ? (
-        <Loading position={'center'} />
+        <Loading center={true} />
       ) : (
         <Image alt={alt} src={logo} />
       )}

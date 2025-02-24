@@ -29,26 +29,20 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
     const justifys = getBreakpoints('justify', justify)
     const wraps = getBreakpoints('wrap', wrap)
     const heights = getBreakpoints('height', height)
-    const paddings = padding && getPadding(padding)
+    const paddings = getPadding(padding)
 
     return (
       <Element
         ref={ref}
         className={cs(
           styles['row'],
-          displays.map((display) => styles[display]),
-          aligns && aligns.length > 0 && aligns.map((align) => styles[align]),
-          directions &&
-            directions.length > 0 &&
-            directions.map((direction) => styles[direction]),
-          justifys &&
-            justifys.length > 0 &&
-            justifys.map((justify) => styles[justify]),
-          wraps.map((wrap) => styles[wrap]),
-          heights &&
-            heights.length > 0 &&
-            heights.map((height) => styles[height]),
-          paddings && paddings.map((name) => styles[name]),
+          ...(displays.map((display) => styles[display]) || []),
+          ...(aligns.map((align) => styles[align]) || []),
+          ...(directions.map((direction) => styles[direction]) || []),
+          ...(wraps.map((wrap) => styles[wrap]) || []),
+          ...(justifys.map((justify) => styles[justify]) || []),
+          ...(heights.map((height) => styles[height]) || []),
+          ...(paddings.map((padding) => styles[padding]) || []),
           ...modifiers
         )}
         {...rest}

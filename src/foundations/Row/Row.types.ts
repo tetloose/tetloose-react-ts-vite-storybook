@@ -4,10 +4,10 @@ import type {
   BreakpointFlexAlign,
   BreakpointFlexWrap,
   BreakpointHeight,
-  BreakpointJustify
+  BreakpointJustify,
+  BreakpointWidth
 } from '@utils/get-breakpoints/get-breakpoints.types'
 import type { Padding } from '@utils/get-padding/get-padding.types'
-import type { ColumnWidth } from './utils/column-width.types'
 import type {
   GlobalChildren,
   GlobalHtmlTag,
@@ -27,4 +27,4 @@ export type RowProps = SharedProps &
   BreakpointFlexWrap &
   BreakpointDirection
 
-export type ColumnProps = SharedProps & ColumnWidth
+export type ColumnProps = SharedProps & BreakpointWidth

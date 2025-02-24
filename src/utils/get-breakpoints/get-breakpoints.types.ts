@@ -3,6 +3,14 @@ export type Size = 'sml' | 'med' | 'lrg' | 'xlrg' | 'xxlrg'
 
 export type Breakpoints = 'default' | Size
 
+export type Width = 'auto' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+
+export type BreakpointWidth = {
+  width?: {
+    [key in Breakpoints]?: Width
+  }
+}
+
 export type BreakpointSpacers = {
   [key in Breakpoints]?: SpacerValues
 }

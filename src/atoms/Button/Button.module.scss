@@ -17,6 +17,26 @@
 
   @include user-select(true);
 
+  &.default-width-auto {
+    width: auto;
+  }
+
+  &.default-width-full {
+    width: 100%;
+  }
+
+  @each $breakpoint in vars(settings, breakpoints) {
+    @include mq(vars(breakpoint, #{$breakpoint})) {
+      &.#{$breakpoint}-width-auto {
+        width: auto;
+      }
+
+      &.#{$breakpoint}-width-full {
+        width: 100%;
+      }
+    }
+  }
+
   @include mq-hover {
     cursor: pointer;
   }

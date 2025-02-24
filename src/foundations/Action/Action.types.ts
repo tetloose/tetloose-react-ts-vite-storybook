@@ -1,4 +1,5 @@
 import type {
+  BreakpointDirection,
   BreakpointDisplay,
   BreakpointFlexAlign,
   BreakpointFlexWrap,
@@ -15,4 +16,5 @@ export type ActionProps = GlobalChildren &
   BreakpointFlexAlign &
   BreakpointGap &
   BreakpointFlexWrap &
+  BreakpointDirection &
   Spacers

@@ -12,7 +12,7 @@ const App = () => {
   const animation = useAnimate()
 
   return (
-    <Suspense fallback={<Loading position={'center'} />}>
+    <Suspense fallback={<Loading center={true} />}>
       <Grid
         modifiers={['animate', animation]}
         height={{ default: 'viewport-fullscreen' }}

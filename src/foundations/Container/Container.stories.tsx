@@ -56,11 +56,21 @@ const Wrapper = ({ color }: WrapperProps) => (
 export const Light: Story = {
   args: {
     border: {
-      top: true,
-      right: true,
-      bottom: true,
-      left: true
+      top: {
+        default: true,
+        med: false
+      },
+      right: {
+        default: true
+      },
+      bottom: {
+        default: true
+      },
+      left: {
+        default: true
+      }
     },
+    borderColor: 'dark',
     padding: {
       top: {
         default: 6,
@@ -104,11 +114,20 @@ export const Dark: Story = {
   args: {
     modifiers: ['class-name'],
     border: {
-      top: true,
-      right: true,
-      bottom: true,
-      left: true
+      top: {
+        default: true
+      },
+      right: {
+        default: true
+      },
+      bottom: {
+        default: true
+      },
+      left: {
+        default: true
+      }
     },
+    borderColor: 'light',
     padding: {
       top: {
         default: 6,

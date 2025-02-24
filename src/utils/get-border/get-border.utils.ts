@@ -1,9 +1,22 @@
 import type { Border } from './get-border.types'
+import { breakpoints, directions } from '@global/global.constants'
 import type { Color } from '@global/global.types'
 
 export const getBorder = (border: Border['border'], color: Color): string[] =>
-  border
-    ? Object.entries(border).flatMap(([key, value]) =>
-        value ? [`border-${key}`, `border-${key}-${color}`] : []
+  border && directions && breakpoints
+    ? directions.flatMap((direction) =>
+        border[direction]
+          ? breakpoints.flatMap((breakpoint) =>
+              border[direction] && border[direction][breakpoint]
+                ? [
+                    `${breakpoint}-border-${direction}`,
+                    `border-${direction}-${color}`
+                  ]
+                : border[direction] &&
+                    border[direction][breakpoint] !== undefined
+                  ? [`${breakpoint}-border-${direction}-none`]
+                  : []
+            )
+          : []
       )
     : []

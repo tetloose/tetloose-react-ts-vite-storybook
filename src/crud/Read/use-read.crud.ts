@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useNotification } from '@hooks/Notification/use-notification.hooks'
 import { apiUrl } from '@crud/Api/api-url.crud'
+import { apiQueryKey } from '@crud/Api/api-urls'
 import { request } from '@crud/Request/request.crud'
 import type { UseReadProps } from './use-read.types'
 
@@ -16,7 +17,7 @@ export const useRead = ({
   const notify = useNotification()
 
   const { data, isPending, isFetching, isSuccess, error, refetch } = useQuery({
-    queryKey: [queryKey],
+    queryKey: [queryKey || apiQueryKey[url]],
     queryFn: async () => {
       return await request({
         url: apiUrl({

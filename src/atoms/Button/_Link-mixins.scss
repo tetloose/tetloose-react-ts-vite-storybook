@@ -5,12 +5,14 @@
   display: inline-flex;
   text-decoration: underline;
 
-  @extend %f-body;
-  @extend %f-bold;
-  @extend %f-uppercase;
   @include sizing('font-size', deep-get($link, font-size));
   @include sizing('line-height', deep-get($link, line-height));
   @include sizing('letter-spacing', deep-get($link, letter-spacing));
+  @extend %justify;
+  @extend %align;
+  @extend %f-body;
+  @extend %f-bold;
+  @extend %f-uppercase;
 
   @include mq-hover {
     @include transition('color');

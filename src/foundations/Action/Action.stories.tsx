@@ -22,11 +22,25 @@ const renderPrimary = () => {
   return (
     <Action
       gap={{ default: 6 }}
-      padding={{ default: 10 }}
-      justify={{ default: 'center' }}
+      direction={{ default: 'column', med: 'row' }}
+      padding={{ default: 6 }}
+      align={{ med: 'center' }}
+      justify={{ med: 'center' }}
     >
-      <Button variant={'dark'} label={'Button 1'} />
-      <Button variant={'dark'} label={'Button 2'} />
+      <Button
+        variant={'dark'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
+        label={'Button 1'}
+      />
+      <Button
+        variant={'dark'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
+        label={'Button 2'}
+      />
     </Action>
   )
 }

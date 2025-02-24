@@ -61,11 +61,12 @@ const NotFound = ({ error }: NotFoundProps) => {
         <Container
           tag={'article'}
           border={{
-            top: true,
-            right: !error,
-            bottom: !error,
-            left: !error
+            top: { default: true },
+            right: { default: !error },
+            bottom: { default: !error },
+            left: { default: !error }
           }}
+          borderColor={'dark'}
           padding={{
             top: { default: 6 },
             right: { default: 6 },
@@ -74,7 +75,7 @@ const NotFound = ({ error }: NotFoundProps) => {
           }}
         >
           {contentFetching || contentPending ? (
-            <Loading position={'center'} />
+            <Loading center={true} />
           ) : (
             <>
               <Typography tag={'h1'} size={'h1'} text={name ? name : title} />

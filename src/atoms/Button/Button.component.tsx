@@ -1,6 +1,7 @@
 import type { Ref } from 'react'
 import { forwardRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import { getBreakpoints } from '@utils/get-breakpoints/get-breakpoints.utils'
 import type { ButtonProps } from './Button.types'
 import cs from 'classnames'
 import styles from './Button.module.scss'
@@ -10,6 +11,9 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
     {
       modifiers = [],
       variant,
+      align,
+      justify,
+      width,
       url,
       rel,
       target,
@@ -20,9 +24,17 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
     },
     ref
   ) => {
+    const aligns = getBreakpoints('align', align)
+    const justifys = getBreakpoints('justify', justify)
+    const widths = getBreakpoints('width', width)
+
     const classNames = [
       styles['button'],
       variant && styles[`is-${variant}`],
+      ...(aligns.map((align) => styles[align]) || []),
+      ...(aligns.map((align) => styles[align]) || []),
+      ...(justifys.map((justify) => styles[justify]) || []),
+      ...(widths.map((width) => styles[width]) || []),
       ...modifiers
     ]
 

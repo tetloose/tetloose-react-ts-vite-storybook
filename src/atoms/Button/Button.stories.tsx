@@ -56,26 +56,55 @@ export const Children: Story = {
 export const Buttons: Story = {
   render: () => (
     <Action
-      gap={{ default: 4 }}
-      align={{
-        default: 'center'
-      }}
+      gap={{ default: 6 }}
+      direction={{ default: 'column', med: 'row' }}
+      padding={{ default: 6 }}
+      align={{ med: 'center' }}
+      justify={{ med: 'center' }}
     >
-      <RenderButton variant={'dark'} label={'Dark'} />
-      <RenderButton variant={'dark'} label={'Dark Disabled'} disabled={true} />
       <RenderButton
         variant={'dark'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
+        label={'Dark'}
+      />
+      <RenderButton
+        variant={'dark'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
+        label={'Dark Disabled'}
+        disabled={true}
+      />
+      <RenderButton
+        variant={'dark'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
         url={'https://google.com'}
         label={'Dark Link'}
       />
-      <RenderButton variant={'light'} label={'Light'} />
       <RenderButton
         variant={'light'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
+        label={'Light'}
+      />
+      <RenderButton
+        variant={'light'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
         url={'https://google.com'}
         label={'Light Link'}
       />
       <RenderButton
         variant={'light'}
+        justify={{ default: 'center' }}
+        align={{ default: 'center' }}
+        width={{ default: 'full', med: 'auto' }}
         label={'Light Disabled'}
         disabled={true}
       />
