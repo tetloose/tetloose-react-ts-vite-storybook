@@ -30,9 +30,7 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {}
   },
-  docs: {
-    autodocs: true
-  },
+  docs: {},
   typescript: {
     reactDocgen: false
   },
