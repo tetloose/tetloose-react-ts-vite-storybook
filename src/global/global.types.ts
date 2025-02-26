@@ -13,7 +13,7 @@ export type GlobalFontSize = {
   size?: Size
 }
 
-export type Color = 'dark' | 'light'
+export type Color = 'dark' | 'light' | 'grey'
 
 export type GlobalColor = {
   color?: Color

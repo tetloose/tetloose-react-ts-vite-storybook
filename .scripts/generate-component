@@ -86,6 +86,8 @@ if [ "$COMPONENT_SWITCH" ]; then
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.test.tsx" -exec sed -i '' -e "s|COMPONENT_NAME|$COMPONENT_NAME|g" {} +
   # Types.ts
   find "$DIR/$COMPONENT_NAME/" -type f -name "$COMPONENT_NAME.types.ts" -exec sed -i '' -e "s|EXPORT_NAME|$EXPORT_NAME|g" {} +
+
+  yarn lint:fix
 else
   echo "Please check your input, and try again"
 fi

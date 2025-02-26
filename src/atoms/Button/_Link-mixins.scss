@@ -16,5 +16,9 @@
 
   @include mq-hover {
     @include transition('color');
+
+    &:active {
+      transform: translateY(1px);
+    }
   }
 }

@@ -9,7 +9,7 @@
     width: 100%;
 
     @each $variant in (dark, light) {
-      &.is-#{$variant} {
+      &.is-#{'' + $variant} {
         @include form-error(#{$variant});
 
         @include mq-hover {
@@ -36,7 +36,7 @@
     @include sizing('padding', size(4));
 
     @each $variant in (dark, light) {
-      &.is-#{$variant} {
+      &.is-#{'' + $variant} {
         background-color: deep-get($inputs, $variant, bg);
         border-color: deep-get($inputs, $variant, border);
         color: deep-get($inputs, $variant, color);
@@ -50,14 +50,15 @@
         @include mq-hover {
           @include form-error(#{$variant}, true);
 
-          &:hover,
-          &:focus {
-            background-color: deep-get($inputs, $variant, hover, bg);
-            border-color: deep-get($inputs, $variant, hover, border);
-            color: deep-get($inputs, $variant, hover, color);
-
-            &::placeholder {
+          @each $state in (hover, focus) {
+            &:#{'' + $state} {
+              background-color: deep-get($inputs, $variant, hover, bg);
+              border-color: deep-get($inputs, $variant, hover, border);
               color: deep-get($inputs, $variant, hover, color);
+
+              &::placeholder {
+                color: deep-get($inputs, $variant, hover, color);
+              }
             }
           }
         }

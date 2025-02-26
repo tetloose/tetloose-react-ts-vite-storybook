@@ -19,7 +19,7 @@
     }
 
     @each $color, $value in map.get($colors, default) {
-      &.border-#{$direction}-#{$color} {
+      &.border-#{$direction}-#{'' + $color} {
         border-#{$direction}-color: color(default, #{$color});
       }
     }

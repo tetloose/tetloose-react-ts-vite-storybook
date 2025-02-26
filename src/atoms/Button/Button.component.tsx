@@ -32,7 +32,6 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
       styles['button'],
       variant && styles[`is-${variant}`],
       ...(aligns.map((align) => styles[align]) || []),
-      ...(aligns.map((align) => styles[align]) || []),
       ...(justifys.map((justify) => styles[justify]) || []),
       ...(widths.map((width) => styles[width]) || []),
       ...modifiers
