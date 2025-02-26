@@ -15,14 +15,14 @@
     }
 
     @if $color == 'light' {
-      color: color(red, default);
+      color: color(pink, default);
 
       &::placeholder {
-        color: color(red, default);
+        color: color(pink, default);
       }
 
       @if border {
-        border-color: color(red, default);
+        border-color: color(pink, default);
       }
     }
   }

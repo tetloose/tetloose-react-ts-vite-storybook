@@ -6,7 +6,7 @@
 
 %bg {
   @each $color, $value in map.get($colors, default) {
-    &.bg-#{$color} {
+    &.bg-#{'' + $color} {
       background-color: color(default, #{$color});
 
       @include selection(

@@ -10,7 +10,7 @@
   }
 
   @each $color, $value in map.get($colors, default) {
-    &.color-#{$color} {
+    &.color-#{'' + $color} {
       hr {
         background-color: colors(default, $color);
       }

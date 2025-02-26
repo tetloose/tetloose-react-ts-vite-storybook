@@ -14,7 +14,7 @@
   @include sizing('height', size(12));
 
   @each $color, $value in map.get($colors, default) {
-    &.color-#{$color} {
+    &.color-#{'' + $color} {
       border-right-color: color(default, #{$color});
     }
   }

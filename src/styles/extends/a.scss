@@ -5,7 +5,7 @@
 
 %a {
   a {
-    text-decoration: none;
+    text-decoration: underline;
     text-decoration-skip-ink: auto;
 
     @include mq-hover {
@@ -20,21 +20,22 @@
   }
 
   @each $color, $value in map.get($colors, link) {
-    &.link-color-#{$color} {
+    &.link-color-#{'' + $color} {
       a {
         color: deep-get($colors, link, $color, color);
 
         @include mq-hover {
-          &:active {
-            color: deep-get($colors, link, $color, active);
-          }
-
           &:focus {
             color: deep-get($colors, link, $color, focus);
           }
 
           &:hover {
             color: deep-get($colors, link, $color, hover);
+            text-decoration: none;
+          }
+
+          &:active {
+            color: deep-get($colors, link, $color, active);
           }
         }
       }
