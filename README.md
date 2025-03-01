@@ -1,5 +1,11 @@
 # Tetloose React TS Vite Storybook (WIP)
 
+## Issues
+
+Vite plugin checker, failing due to watch
+
+https://github.com/fi3ework/vite-plugin-checker/issues/461
+
 ## Recommended VSCode Extensions
 
 `cmd shift p` then type recommended.
