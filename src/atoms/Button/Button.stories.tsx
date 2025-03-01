@@ -1,7 +1,8 @@
 import { action } from '@storybook/addon-actions'
 import type { Meta, StoryObj } from '@storybook/react'
 import { useNotification } from '@hooks/Notification/use-notification.hooks'
-import { Action } from '@foundations/Action/Action.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
 import { Button } from './Button.component'
 import type { ButtonProps } from './Button.types'
 
@@ -52,83 +53,64 @@ export const Children: Story = {
     )
   }
 }
-
 export const Buttons: Story = {
   render: () => (
-    <Action
-      gap={{ default: 6 }}
-      direction={{ default: 'column', med: 'row' }}
-      padding={{ default: 6 }}
-      align={{ med: 'center' }}
-      justify={{ med: 'center' }}
-    >
-      <RenderButton
-        variant={'dark'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        label={'Dark'}
-      />
-      <RenderButton
-        variant={'dark'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        label={'Dark Disabled'}
-        disabled={true}
-      />
-      <RenderButton
-        variant={'dark'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        url={'https://google.com'}
-        label={'Dark Link'}
-      />
-      <RenderButton
-        variant={'light'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        label={'Light'}
-      />
-      <RenderButton
-        variant={'light'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        url={'https://google.com'}
-        label={'Light Link'}
-      />
-      <RenderButton
-        variant={'light'}
-        justify={{ default: 'center' }}
-        align={{ default: 'center' }}
-        width={{ default: 'full', med: 'auto' }}
-        label={'Light Disabled'}
-        disabled={true}
-      />
-    </Action>
+    <Row>
+      <Column
+        display={{ default: 'flex' }}
+        gap={{ default: 6 }}
+        direction={{ default: 'column', med: 'row' }}
+        padding={{ top: { default: 6 } }}
+        align={{ med: 'center' }}
+        justify={{ med: 'center' }}
+      >
+        <RenderButton
+          variant={'primary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          label={'Primary'}
+        />
+        <RenderButton
+          variant={'primary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          label={'Primary Disabled'}
+          disabled={true}
+        />
+        <RenderButton
+          variant={'primary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          to={'https://google.com'}
+          label={'Primary Link'}
+        />
+        <RenderButton
+          variant={'secondary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          label={'Secondary'}
+        />
+        <RenderButton
+          variant={'secondary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          to={'https://google.com'}
+          label={'Secondary Link'}
+        />
+        <RenderButton
+          variant={'secondary'}
+          justify={{ default: 'center' }}
+          align={{ default: 'center' }}
+          width={{ default: 'full', med: 'auto' }}
+          label={'Secondary Disabled'}
+          disabled={true}
+        />
+      </Column>
+    </Row>
   )
-}
-
-export const LinkDark: Story = {
-  args: {
-    variant: 'link-dark',
-    label: 'Link Dark',
-    url: 'http://www.googe.com'
-  }
-}
-
-export const LinkLight: Story = {
-  parameters: {
-    backgrounds: {
-      default: 'Dark'
-    }
-  },
-  args: {
-    variant: 'link-light',
-    label: 'Link Dark',
-    url: 'http://www.googe.com'
-  }
 }

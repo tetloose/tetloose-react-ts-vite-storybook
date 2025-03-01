@@ -26,6 +26,7 @@ export type GlobalBg = {
 export type Tags =
   | 'main'
   | 'div'
+  | 'span'
   | 'section'
   | 'article'
   | 'footer'

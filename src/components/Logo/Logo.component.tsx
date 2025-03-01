@@ -1,21 +1,20 @@
-import { Button } from '@atoms/Button/Button.component'
 import { Image } from '@atoms/Image/Image.component'
+import { Link } from '@atoms/Link/Link.component'
 import { Loading } from '@atoms/Loading/Loading.component'
 import { useLogoContent } from './hooks/use-logo-content.hooks'
 import type { LogoProps } from './Logo.types'
-import logo from '@images/logos/logo.png'
 import styles from './Logo.module.scss'
 
-export const Logo = ({ modifiers = [], ...rest }: LogoProps) => {
-  const { contentFetching, contentPending, alt } = useLogoContent()
+export const Logo = ({ modifiers = [] }: LogoProps) => {
+  const { contentFetching, contentPending, to, ...rest } = useLogoContent()
 
   return (
-    <Button url={'/'} modifiers={[styles['logo'], ...modifiers]} {...rest}>
+    <Link modifiers={[styles['logo'], ...modifiers]} to={to}>
       {contentFetching || contentPending ? (
         <Loading center={true} />
       ) : (
-        <Image alt={alt} src={logo} />
+        <Image {...rest} />
       )}
-    </Button>
+    </Link>
   )
 }

@@ -1,7 +1,5 @@
-import { useNavigate } from 'react-router-dom'
 import { useAnimate } from '@hooks/Animate/use-animate.hooks'
-import { Action } from '@foundations/Action/Action.component'
-import { Container } from '@foundations/Container/Container.component'
+import { GridItem } from '@foundations/Grid/Grid-item.component'
 import { Column } from '@foundations/Row/Column.component'
 import { Row } from '@foundations/Row/Row.component'
 import { Typography } from '@foundations/Typography/Typography.component'
@@ -12,59 +10,48 @@ import type { NotFoundProps } from './Not-found.types'
 
 const NotFound = ({ error }: NotFoundProps) => {
   const animation = useAnimate()
-  const navigation = useNavigate()
   const {
     contentFetching,
     contentPending,
     title,
     subtitle,
-    linkVariant,
-    linkLabel,
-    linkTarget,
-    linkRel,
-    linkUrl,
-    buttonVariant,
-    buttonLabel
+    homeLink,
+    errorButton
   } = useNotFoundContent()
   const { message = '', name = '', stack = '' } = error || {}
 
   const handleClick = () => {
     if (error) window.location.reload()
-
-    if (linkUrl) navigation(linkUrl)
   }
 
   return (
-    <Row
+    <GridItem
       modifiers={['animate', animation]}
-      tag={error ? 'main' : 'section'}
-      align={{
-        default: error ? 'flex-end' : 'center'
-      }}
-      justify={{ default: 'center' }}
-      padding={{
-        left: { default: 6 },
-        right: { default: 6 }
-      }}
-      height={{ default: error ? 'viewport-fullscreen' : 'parent-fullscreen' }}
+      rows={{ default: [2] }}
+      columns={{ default: [1] }}
     >
-      <Column
-        tag={'section'}
-        width={{
-          med: error ? 12 : 8
+      <Row
+        align={{
+          default: 'center'
         }}
+        justify={{ default: 'center' }}
         padding={{
           left: { default: 6 },
           right: { default: 6 }
         }}
+        height={{
+          default: error ? 'viewport-fullscreen' : 'parent-fullscreen'
+        }}
       >
-        <Container
-          tag={'article'}
+        <Column
+          width={{
+            med: error ? 8 : 6
+          }}
           border={{
             top: { default: true },
-            right: { default: !error },
-            bottom: { default: !error },
-            left: { default: !error }
+            right: { default: true },
+            bottom: { default: true },
+            left: { default: true }
           }}
           borderColor={'dark'}
           padding={{
@@ -100,33 +87,25 @@ const NotFound = ({ error }: NotFoundProps) => {
                   text={stack}
                 />
               )}
-              <Action
-                align={{ default: !error ? 'center' : 'flex-start' }}
-                justify={{ default: !error ? 'center' : 'flex-start' }}
-                padding={{ default: 8 }}
-              >
-                {error ? (
-                  <Button
-                    variant={buttonVariant}
-                    label={buttonLabel}
-                    onClick={handleClick}
-                  />
-                ) : (
-                  <Button
-                    variant={linkVariant}
-                    url={linkUrl}
-                    rel={linkRel}
-                    target={linkTarget}
-                    label={linkLabel}
-                    onClick={handleClick}
-                  />
-                )}
-              </Action>
+              <Row>
+                <Column
+                  display={{ default: 'flex' }}
+                  align={{ default: !error ? 'center' : 'flex-start' }}
+                  justify={{ default: !error ? 'center' : 'flex-start' }}
+                  padding={{ top: { default: 8 } }}
+                >
+                  {error ? (
+                    <Button {...errorButton} onClick={handleClick} />
+                  ) : (
+                    <Button {...homeLink} />
+                  )}
+                </Column>
+              </Row>
             </>
           )}
-        </Container>
-      </Column>
-    </Row>
+        </Column>
+      </Row>
+    </GridItem>
   )
 }
 

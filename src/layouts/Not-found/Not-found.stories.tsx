@@ -25,7 +25,7 @@ type Story = StoryObj<typeof NotFound>
 const RenderStory = () => (
   <Grid
     height={{ default: 'viewport-fullscreen' }}
-    rows={{ default: ['60px', 'auto', '40px'] }}
+    rows={{ default: ['auto', 1, 'auto'] }}
     columns={{ default: [1] }}
   >
     <Header />

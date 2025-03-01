@@ -1,5 +1,5 @@
 import { MemoryRouter } from 'react-router-dom'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { AppProvider } from '@context/App/App.context'
 import {
@@ -10,19 +10,18 @@ import { Logo } from './Logo.component'
 
 describe('Logo component', () => {
   it('renders Logo component with a modifier', () => {
-    render(
+    const { container } = render(
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
           <AppProvider>
-            <Logo data-testid='element' modifiers={['test-modifier']} />
+            <Logo modifiers={['test-modifier']} />
           </AppProvider>
         </MemoryRouter>
       </QueryClientProvider>
     )
 
-    const element = screen.getByTestId('element')
-    const { classList } = element
+    const element = container.querySelector('.test-modifier')
 
-    expect(classList.contains('test-modifier')).toBe(true)
+    expect(element?.classList.contains('test-modifier')).toBe(true)
   })
 })

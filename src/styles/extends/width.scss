@@ -2,6 +2,8 @@
 @use '@styles/settings/variables' as *;
 
 %width {
+  width: 100%;
+
   &.default-width-auto {
     width: auto;
   }

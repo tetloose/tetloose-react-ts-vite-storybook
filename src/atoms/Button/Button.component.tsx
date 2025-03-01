@@ -14,7 +14,7 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
       align,
       justify,
       width,
-      url,
+      to,
       rel,
       target,
       label,
@@ -37,11 +37,11 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
       ...modifiers
     ]
 
-    if (url) {
+    if (to) {
       return (
         <NavLink
           ref={ref as Ref<HTMLAnchorElement>}
-          to={url}
+          to={to}
           rel={rel ? rel : 'noreferrer'}
           target={target ? target : '_self'}
           className={cs(...classNames)}

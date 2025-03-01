@@ -11,7 +11,7 @@ $button: (
   border: (
     width: 0.25
   ),
-  dark: (
+  primary: (
     border: color(default, light),
     color: color(default, light),
     bg: color(default, dark),
@@ -40,7 +40,7 @@ $button: (
       outline: color(default, light)
     )
   ),
-  light: (
+  secondary: (
     border: color(default, dark),
     color: color(default, dark),
     bg: color(default, light),

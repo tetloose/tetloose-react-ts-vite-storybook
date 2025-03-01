@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { getBorder } from '@utils/get-border/get-border.utils'
 import { getBreakpoints } from '@utils/get-breakpoints/get-breakpoints.utils'
 import { getPadding } from '@utils/get-padding/get-padding.utils'
 import type { RowProps } from './Row.types'
@@ -10,6 +11,9 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
     {
       modifiers = [],
       tag = 'div',
+      bg,
+      border,
+      borderColor,
       display = { default: 'flex' },
       align,
       direction,
@@ -23,6 +27,7 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
     ref
   ) => {
     const Element = tag
+    const borders = borderColor && getBorder(border, borderColor)
     const displays = getBreakpoints('display', display)
     const aligns = getBreakpoints('align', align)
     const directions = getBreakpoints('direction', direction)
@@ -36,6 +41,8 @@ export const Row = forwardRef<HTMLDivElement, RowProps>(
         ref={ref}
         className={cs(
           styles['row'],
+          bg && styles[`bg-${bg}`],
+          ...((borders && borders.map((border) => styles[border])) || []),
           ...(displays.map((display) => styles[display]) || []),
           ...(aligns.map((align) => styles[align]) || []),
           ...(directions.map((direction) => styles[direction]) || []),

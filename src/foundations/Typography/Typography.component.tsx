@@ -14,7 +14,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
       padding,
       margin,
       size,
-      linkColor = 'dark',
+      linkVariant = 'dark',
       color = 'dark',
       fontWeight,
       display,
@@ -50,7 +50,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
                 fontWeight ? styles[`font-weight-${fontWeight}`] : '',
                 fontStyle ? styles[`font-style-${fontStyle}`] : '',
                 textTransform ? styles[`text-transform-${textTransform}`] : '',
-                styles[`link-color-${linkColor}`],
+                styles[`link-color-${linkVariant}`],
                 styles[`color-${color}`],
                 ...modifiers
               ),
@@ -81,7 +81,7 @@ export const Typography = forwardRef<HTMLElement, TypographyProps>(
         modifiers={modifiers}
         padding={padding}
         margin={margin}
-        linkColor={linkColor}
+        linkVariant={linkVariant}
         color={color}
         display={display}
         textAlign={textAlign}

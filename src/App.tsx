@@ -16,7 +16,7 @@ const App = () => {
       <Grid
         modifiers={['animate', animation]}
         height={{ default: 'viewport-fullscreen' }}
-        rows={{ default: ['60px', 'auto', '40px'] }}
+        rows={{ default: ['auto', 1, 'auto'] }}
         columns={{ default: [1] }}
       >
         <Header />

@@ -1,7 +1,0 @@
-@use '@styles/settings' as *;
-
-.container {
-  @extend %padding;
-  @extend %bg;
-  @extend %border;
-}

@@ -1,8 +1,8 @@
 import { useAnimate } from '@hooks/Animate/use-animate.hooks'
+import { Logo } from '@components/Logo/Logo.component'
 import { GridItem } from '@foundations/Grid/Grid-item.component'
 import { Column } from '@foundations/Row/Column.component'
 import { Row } from '@foundations/Row/Row.component'
-import { Typography } from '@foundations/Typography/Typography.component'
 
 const Header = () => {
   const animation = useAnimate()
@@ -23,25 +23,19 @@ const Header = () => {
           bottom: { default: 6 },
           right: { default: 6 }
         }}
+        justify={{ default: 'center' }}
         align={{
           default: 'center'
         }}
       >
         <Column
+          width={{ default: 'auto' }}
           padding={{
             left: { default: 6 },
             right: { default: 6 }
           }}
         >
-          <Typography
-            tag={'span'}
-            display={{ default: 'block' }}
-            textAlign={{ med: 'center' }}
-            size={'body-xxlrg'}
-            text={'Header'}
-            color={'light'}
-            fontWeight={'bold'}
-          />
+          <Logo />
         </Column>
       </Row>
     </GridItem>

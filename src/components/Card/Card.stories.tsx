@@ -36,10 +36,14 @@ export const Primary: Story = {
     title: 'Lorem ipsum dolor sit amet consectetur',
     body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, laudantium! Facilis iste sit, assumenda quod aliquam, ab harum molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?',
     link: {
-      variant: 'link-light',
-      label: 'Read more',
-      url: '/',
-      target: '_self'
+      variant: 'light',
+      title: 'Read more',
+      to: '/',
+      target: '_self',
+      typography: {
+        size: 'body-med',
+        textTransform: 'uppercase'
+      }
     },
     loading: false
   }

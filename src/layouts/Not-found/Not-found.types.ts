@@ -1,4 +1,4 @@
-import type { ContentButton, ContentLink } from '@atoms/Button/Button.types'
+import type { ContentButton } from '@atoms/Button/Button.types'
 
 export type NotFoundProps = {
   error?: {
@@ -11,6 +11,6 @@ export type NotFoundProps = {
 export type NotFoundContent = {
   title: string
   subtitle: string
-  link: ContentLink
-  button: ContentButton
+  homeLink: ContentButton
+  errorButton: ContentButton
 }

@@ -2,8 +2,6 @@
 @use '@styles/settings' as *;
 @use './Button-vars' as *;
 @use './Button-mixins' as *;
-@use './Link-vars' as *;
-@use './Link-mixins' as *;
 
 .button {
   background-color: transparent;
@@ -47,7 +45,7 @@
     @include disable(true);
   }
 
-  @each $variant in (dark, light) {
+  @each $variant in (primary, secondary) {
     &.is-#{'' + $variant} {
       background-color: deep-get($button, $variant, bg);
       border-color: deep-get($button, $variant, border);
@@ -71,24 +69,6 @@
               border-color: deep-get($button, $variant, $state, border);
               color: deep-get($button, $variant, $state, color);
               outline-color: deep-get($button, $variant, $state, outline);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @each $variant in (dark, light) {
-    &.is-link-#{'' + $variant} {
-      color: deep-get($link, $variant, color);
-
-      @include link;
-
-      @include mq-hover {
-        @each $state in (active, hover, focus) {
-          @if map.has-key(map.get($link, $variant), $state) {
-            &:#{'' + $state} {
-              color: deep-get($link, $variant, $state, color);
             }
           }
         }

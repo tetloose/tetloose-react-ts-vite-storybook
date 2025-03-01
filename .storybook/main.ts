@@ -60,15 +60,7 @@ const config: StorybookConfig = {
       build: {
         manifest: true,
         sourcemap: config.mode === 'development',
-        chunkSizeWarningLimit: 1000,
-        rollupOptions: {
-          onwarn(warning, warn) {
-            if (warning.code === 'EVAL') {
-              return
-            }
-            warn(warning)
-          }
-        }
+        chunkSizeWarningLimit: 1000
       }
     })
   }
