@@ -6,7 +6,7 @@ import type {
   SelectHTMLAttributes,
   TextareaHTMLAttributes
 } from 'react'
-import type { ActionProps } from '@foundations/Action/Action.types'
+import type { ColumnProps } from '@foundations/Row/Row.types'
 import type { Spacers } from '@foundations/Spacer/Spacer.types'
 import type { TypographyProps } from '@foundations/Typography/Typography.types'
 import type { ButtonProps } from '@atoms/Button/Button.types'
@@ -18,11 +18,11 @@ import type {
 
 type Button = Pick<ButtonProps, 'variant' | 'label' | 'disabled'>
 
-type Action = Omit<ActionProps, 'children' | 'modifiers'>
+type Column = Omit<ColumnProps, 'children' | 'tag'>
 
-type Actions = {
-  actions?: {
-    actionOptions?: Action
+type Inputs = {
+  inputs?: {
+    columnOptions?: Column
     submitButton?: Button
     resetButton?: Button
   }
@@ -39,7 +39,7 @@ type Error = {
 export type FormProps = FormHTMLAttributes<HTMLFormElement> &
   GlobalChildren &
   GlobalModifiers &
-  Actions
+  Inputs
 
 export type LabelProps = {
   label?: Omit<

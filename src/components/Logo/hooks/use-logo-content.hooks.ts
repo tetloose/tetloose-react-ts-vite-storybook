@@ -8,7 +8,7 @@ export const useLogoContent = () => {
     contentSuccess,
     contentError
   } = useContent('logo')
-  const { alt = '' } = content || {}
+  const { to = '', ...rest } = content || {}
 
   return {
     content,
@@ -16,6 +16,7 @@ export const useLogoContent = () => {
     contentFetching,
     contentSuccess,
     contentError,
-    alt
+    to,
+    ...rest
   }
 }

@@ -1,18 +1,21 @@
 import { forwardRef } from 'react'
-import { Container } from '@foundations/Container/Container.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
 import { Spacer } from '@foundations/Spacer/Spacer.component'
 import { Typography } from '@foundations/Typography/Typography.component'
 import { Button } from '@atoms/Button/Button.component'
 import { Image } from '@atoms/Image/Image.component'
+import { Link } from '@atoms/Link/Link.component'
 import { Loading } from '@atoms/Loading/Loading.component'
 import type { CardProps } from './Card.types'
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ modifiers = [], image, title, body, link, loading, ...rest }, ref) => {
-    const { variant, label = '', url = '', rel, target } = link || {}
-
+  (
+    { modifiers = [], image, title, body, button, link, loading, ...rest },
+    ref
+  ) => {
     return (
-      <Container
+      <Row
         ref={ref}
         tag={'article'}
         modifiers={[...modifiers]}
@@ -32,44 +35,48 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         }}
         {...rest}
       >
-        {loading ? (
-          <Loading center={true} />
-        ) : (
-          <>
-            {image && <Image {...image} />}
-            {title && (
-              <Typography
-                tag={'h2'}
-                size={'h2'}
-                padding={{ default: 6 }}
-                color={'light'}
-                fontWeight={'bold'}
-                text={title}
-              />
-            )}
-            {body && (
-              <Typography
-                padding={{ default: 4 }}
-                tag={'p'}
-                size={'body-med'}
-                color={'light'}
-                text={body}
-              />
-            )}
-            {link && (
-              <Spacer display={{ default: 'block' }} padding={{ default: 6 }}>
-                <Button
-                  variant={variant}
-                  url={url}
-                  target={target && target}
-                  rel={rel && rel}
-                  label={label}
+        <Column>
+          {loading ? (
+            <Loading center={true} />
+          ) : (
+            <>
+              {image && <Image {...image} />}
+              {title && (
+                <Typography
+                  tag={'h2'}
+                  size={'h2'}
+                  padding={{ default: 6 }}
+                  color={'light'}
+                  fontWeight={'bold'}
+                  text={title}
                 />
-              </Spacer>
-            )}
-          </>
-        )}
-      </Container>
+              )}
+              {body && (
+                <Typography
+                  padding={{ default: 4 }}
+                  tag={'p'}
+                  size={'body-med'}
+                  color={'light'}
+                  text={body}
+                />
+              )}
+              {(button || link) && (
+                <Spacer
+                  display={{
+                    default: 'block'
+                  }}
+                  padding={{
+                    default: 6
+                  }}
+                >
+                  {button && <Button {...button} />}
+                  {link && <Link {...link} />}
+                </Spacer>
+              )}
+            </>
+          )}
+        </Column>
+      </Row>
     )
   }
 )

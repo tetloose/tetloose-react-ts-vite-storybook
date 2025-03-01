@@ -12,7 +12,7 @@ import type {
 } from '@global/global.types'
 
 export type FontStyles = {
-  linkColor?: Color
+  linkVariant?: Color
   fontWeight?: 'light' | 'regular' | 'medium' | 'bold'
   textTransform?: 'capitalize' | 'uppercase' | 'lowercase'
   fontStyle?: 'italic' | 'oblique'

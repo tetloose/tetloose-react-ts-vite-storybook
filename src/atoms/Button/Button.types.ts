@@ -5,13 +5,9 @@ import type {
   BreakpointJustify,
   Breakpoints
 } from '@utils/get-breakpoints/get-breakpoints.types'
-import type {
-  GlobalChildren,
-  GlobalFontSize,
-  GlobalModifiers
-} from '@global/global.types'
+import type { GlobalChildren, GlobalModifiers } from '@global/global.types'
 
-type ButtonVariant = 'dark' | 'light' | 'link-dark' | 'link-light'
+type ButtonVariant = 'primary' | 'secondary'
 
 type ButtonType = 'button' | 'submit' | 'reset'
 
@@ -27,19 +23,13 @@ export type ButtonProps = {
   variant?: ButtonVariant
   type?: ButtonType
   label?: string
-  url?: string
+  to?: string
 } & ButtonHTMLAttributes<HTMLElement> &
-  Partial<NavLinkProps> &
+  Omit<NavLinkProps, 'title' | 'to'> &
   BreakpointFlexAlign &
   BreakpointJustify &
   GlobalModifiers &
-  GlobalFontSize &
   ButtonWidth &
   GlobalChildren
 
-export type ContentButton = Pick<ButtonProps, 'variant' | 'label'>
-
-export type ContentLink = Pick<
-  ButtonProps,
-  'variant' | 'label' | 'target' | 'rel' | 'url'
->
+export type ContentButton = ButtonProps

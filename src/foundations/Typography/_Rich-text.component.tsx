@@ -10,7 +10,7 @@ export const RichText = forwardRef<HTMLElement, RichTextProps>(
       modifiers = [],
       padding,
       margin,
-      linkColor,
+      linkVariant,
       color,
       display = { default: 'block' },
       textAlign,
@@ -27,7 +27,7 @@ export const RichText = forwardRef<HTMLElement, RichTextProps>(
         modifiers={[
           styles['typography'],
           styles['is-rich-text'],
-          styles[`link-color-${linkColor}`],
+          styles[`link-color-${linkVariant}`],
           color ? styles[`color-${color}`] : '',
           ...(textAligns.map((textAlign) => styles[textAlign]) || []),
           ...modifiers

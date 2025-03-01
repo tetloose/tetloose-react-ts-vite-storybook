@@ -115,23 +115,28 @@ const RenderForm = ({ color }: { color: Color }) => {
     <Form
       onSubmit={handleSubmit(onSubmit)}
       onReset={handleReset}
-      actions={{
-        actionOptions: {
+      inputs={{
+        columnOptions: {
+          display: {
+            default: 'flex'
+          },
           gap: {
             default: 6
           },
           justify: { default: 'flex-end' },
           padding: {
-            default: 6
+            top: {
+              default: 6
+            }
           }
         },
         submitButton: {
-          variant: 'light',
+          variant: 'primary',
           label: 'Submit',
           disabled: !isValid
         },
         resetButton: {
-          variant: 'light',
+          variant: 'secondary',
           label: 'reset'
         }
       }}

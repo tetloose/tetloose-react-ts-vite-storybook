@@ -116,11 +116,11 @@
       @include sizing('border-top-width', size(deep-get($inputs, select-arrow, border-top-width)));
       @include sizing('border-right-width', size(deep-get($inputs, select-arrow, border-right-width)));
       @include sizing('border-left-width', size(deep-get($inputs, select-arrow, border-left-width)));
+    }
 
-      @each $variant in (dark, light) {
-        &.is-#{$variant} {
-          border-top-color: deep-get($inputs, $variant, hover, select-arrow);
-        }
+    @each $variant in (dark, light) {
+      &.is-#{'' + $variant}:before {
+        border-top-color: deep-get($inputs, $variant, select-arrow);
       }
     }
   }

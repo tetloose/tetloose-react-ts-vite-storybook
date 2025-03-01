@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Container } from '@foundations/Container/Container.component'
+import { Column } from '@foundations/Row/Column.component'
+import { Row } from '@foundations/Row/Row.component'
 import { Typography } from '@foundations/Typography/Typography.component'
 import { Ti } from './_T-i.component'
 import { TableTitle } from './_Table-title.component'
@@ -28,178 +29,180 @@ export const Primary: Story = {
     const title3 = 'Table Title 3'
 
     return (
-      <Container
-        padding={{
-          top: { default: 10 },
-          right: { default: 10 },
-          bottom: { default: 10 },
-          left: { default: 10 }
-        }}
-      >
-        <Table
-          layout={'fixed'}
-          borderCollapse={'collapse'}
-          verticalAlign={'middle'}
+      <Row>
+        <Column
+          padding={{
+            top: { default: 10 },
+            right: { default: 10 },
+            bottom: { default: 10 },
+            left: { default: 10 }
+          }}
         >
-          <Ti tag={'thead'}>
-            <Ti tag={'tr'}>
-              <Ti
-                tag={'th'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-              >
-                <Typography tag={'span'} size={'body-med'} text={title1} />
-              </Ti>
-              <Ti
-                tag={'th'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-                textAlign={{ med: 'center' }}
-              >
-                <Typography tag={'span'} size={'body-med'} text={title2} />
-              </Ti>
-              <Ti
-                tag={'th'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-                textAlign={{ med: 'right' }}
-              >
-                <Typography tag={'span'} size={'body-med'} text={title3} />
+          <Table
+            layout={'fixed'}
+            borderCollapse={'collapse'}
+            verticalAlign={'middle'}
+          >
+            <Ti tag={'thead'}>
+              <Ti tag={'tr'}>
+                <Ti
+                  tag={'th'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={title1} />
+                </Ti>
+                <Ti
+                  tag={'th'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                  textAlign={{ med: 'center' }}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={title2} />
+                </Ti>
+                <Ti
+                  tag={'th'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                  textAlign={{ med: 'right' }}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={title3} />
+                </Ti>
               </Ti>
             </Ti>
-          </Ti>
-          <Ti tag={'tbody'}>
-            <Ti tag={'tr'}>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title1}
-                padding={{ default: 5 }}
-              />
-              <Ti
-                tag={'td'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-              >
-                <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
-              </Ti>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title2}
-                padding={{ default: 5 }}
-              />
-              <Ti tag={'td'} bg={'dark'} textAlign={{ med: 'center' }}>
-                <Typography
-                  tag={'span'}
-                  size={'body-med'}
-                  text={'Tbody'}
-                  color={'light'}
+            <Ti tag={'tbody'}>
+              <Ti tag={'tr'}>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title1}
+                  padding={{ default: 5 }}
                 />
-              </Ti>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title3}
-                padding={{ default: 5 }}
-              />
-              <Ti
-                tag={'td'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-                textAlign={{ med: 'right' }}
-              >
-                <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
-              </Ti>
-            </Ti>
-          </Ti>
-          <Ti tag={'tfoot'}>
-            <Ti tag={'tr'}>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title1}
-                padding={{ default: 5 }}
-              />
-              <Ti
-                tag={'td'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-              >
-                <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
-              </Ti>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title2}
-                padding={{ default: 5 }}
-              />
-              <Ti
-                tag={'td'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-                textAlign={{ med: 'center' }}
-              >
-                <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
-              </Ti>
-              <TableTitle
-                size={'body-lrg'}
-                fontWeight={'bold'}
-                text={title3}
-                padding={{ default: 5 }}
-              />
-              <Ti
-                tag={'td'}
-                border={{
-                  top: { default: true },
-                  right: { med: true },
-                  bottom: { med: true },
-                  left: { med: true }
-                }}
-                borderColor={'dark'}
-                textAlign={{ med: 'right' }}
-              >
-                <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
+                <Ti
+                  tag={'td'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
+                </Ti>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title2}
+                  padding={{ default: 5 }}
+                />
+                <Ti tag={'td'} bg={'dark'} textAlign={{ med: 'center' }}>
+                  <Typography
+                    tag={'span'}
+                    size={'body-med'}
+                    text={'Tbody'}
+                    color={'light'}
+                  />
+                </Ti>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title3}
+                  padding={{ default: 5 }}
+                />
+                <Ti
+                  tag={'td'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                  textAlign={{ med: 'right' }}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={'Tbody'} />
+                </Ti>
               </Ti>
             </Ti>
-          </Ti>
-        </Table>
-      </Container>
+            <Ti tag={'tfoot'}>
+              <Ti tag={'tr'}>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title1}
+                  padding={{ default: 5 }}
+                />
+                <Ti
+                  tag={'td'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
+                </Ti>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title2}
+                  padding={{ default: 5 }}
+                />
+                <Ti
+                  tag={'td'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                  textAlign={{ med: 'center' }}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
+                </Ti>
+                <TableTitle
+                  size={'body-lrg'}
+                  fontWeight={'bold'}
+                  text={title3}
+                  padding={{ default: 5 }}
+                />
+                <Ti
+                  tag={'td'}
+                  border={{
+                    top: { default: true },
+                    right: { med: true },
+                    bottom: { med: true },
+                    left: { med: true }
+                  }}
+                  borderColor={'dark'}
+                  textAlign={{ med: 'right' }}
+                >
+                  <Typography tag={'span'} size={'body-med'} text={'Tfoot'} />
+                </Ti>
+              </Ti>
+            </Ti>
+          </Table>
+        </Column>
+      </Row>
     )
   }
 }

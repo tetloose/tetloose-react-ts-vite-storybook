@@ -8,15 +8,7 @@ export const useNotFoundContent = () => {
     contentSuccess,
     contentError
   } = useContent('notFound')
-  const { title = '', subtitle = '', link, button } = content || {}
-  const {
-    variant: linkVariant,
-    label: linkLabel = '',
-    target: linkTarget,
-    rel: linkRel,
-    url: linkUrl = ''
-  } = link || {}
-  const { variant: buttonVariant, label: buttonLabel = '' } = button || {}
+  const { title = '', subtitle = '', homeLink, errorButton } = content || {}
 
   return {
     content,
@@ -26,12 +18,7 @@ export const useNotFoundContent = () => {
     contentError,
     title,
     subtitle,
-    linkVariant,
-    linkLabel,
-    linkTarget,
-    linkRel,
-    linkUrl,
-    buttonVariant,
-    buttonLabel
+    homeLink,
+    errorButton
   }
 }

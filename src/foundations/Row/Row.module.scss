@@ -16,6 +16,8 @@
     width: 100%;
   }
 
+  @extend %bg;
+  @extend %border;
   @extend %display;
   @extend %align;
   @extend %direction;
@@ -25,9 +27,16 @@
   @extend %padding;
 
   &__column {
-    width: 100%;
-
+    @extend %bg;
+    @extend %border;
+    @extend %display;
     @extend %width;
+    @extend %align;
+    @extend %direction;
+    @extend %wrap;
+    @extend %justify;
+    @extend %height;
+    @extend %gap;
     @extend %padding;
   }
 }

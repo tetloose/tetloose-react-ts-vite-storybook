@@ -46,22 +46,22 @@ $colors: (
   ),
   link: (
     dark: (
-      color: $red,
+      color: $dark,
       active: $red,
       hover: #{color.adjust($red, $alpha: -0.4)},
       focus: #{color.adjust($red, $alpha: -0.4)}
     ),
     light: (
-      color: $pink,
+      color: $light,
       active: $pink,
       hover: #{color.adjust($pink, $alpha: -0.4)},
       focus: #{color.adjust($pink, $alpha: -0.4)}
     ),
     grey: (
       color: $grey,
-      active: $grey,
-      hover: #{color.adjust($grey, $alpha: -0.4)},
-      focus: #{color.adjust($grey, $alpha: -0.4)}
+      active: $pink,
+      hover: #{color.adjust($pink, $alpha: -0.4)},
+      focus: #{color.adjust($pink, $alpha: -0.4)}
     )
   )
 );

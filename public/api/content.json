@@ -17,11 +17,14 @@
       "title": "Lorem ipsum dolor sit amet consectetur",
       "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?",
       "link": {
-        "variant": "link-light",
-        "label": "Read More",
+        "variant": "light",
+        "title": "Read More",
         "target": "_self",
-        "rel": "",
-        "url": "/"
+        "to": "/",
+        "typography": {
+          "size": "body-med",
+          "textTransform": "uppercase"
+        }
       }
     },
     {
@@ -41,11 +44,14 @@
       "title": "Lorem ipsum dolor sit amet consectetur",
       "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?",
       "link": {
-        "variant": "link-light",
-        "label": "Read More",
+        "variant": "light",
+        "title": "Read More",
         "target": "_self",
-        "rel": "",
-        "url": "/"
+        "to": "/",
+        "typography": {
+          "size": "body-med",
+          "textTransform": "uppercase"
+        }
       }
     },
     {
@@ -65,29 +71,33 @@
       "title": "Lorem ipsum dolor sit amet consectetur",
       "body": "Molestiae sequi repellat delectus at placeat, ducimus laborum labore voluptatum blanditiis optio?",
       "link": {
-        "variant": "link-light",
-        "label": "Read More",
+        "variant": "light",
+        "title": "Read More",
         "target": "_self",
-        "rel": "",
-        "url": "/"
+        "to": "/",
+        "typography": {
+          "size": "body-med",
+          "textTransform": "uppercase"
+        }
       }
     }
   ],
   "logo": {
-    "alt": "Tetloose"
+    "to": "/",
+    "src": "/assets/images/logo.svg",
+    "alt": "Tetloose React Vite TS Storybook"
   },
   "notFound": {
     "title": "404 Page not found",
     "subtitle": "Please click the link below to return home",
-    "link": {
-      "variant": "light",
+    "homeLink": {
+      "variant": "primary",
       "label": "Home",
       "target": "_self",
-      "rel": "",
-      "url": "/"
+      "to": "/"
     },
-    "button": {
-      "variant": "dark",
+    "errorButton": {
+      "variant": "primary",
       "label": "Reload Page"
     }
   }

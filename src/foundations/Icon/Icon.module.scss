@@ -16,7 +16,7 @@
   }
 
   @each $breakpoint in vars(settings, breakpoints) {
-    &.is-#{$breakpoint} {
+    &.is-#{'' + $breakpoint} {
       @extend %type-icon-#{$breakpoint};
     }
   }
