@@ -4,6 +4,8 @@
 
 Vite plugin checker, failing due to watch
 
+Restart storybook or react after deleting files or pulling:
+
 https://github.com/fi3ework/vite-plugin-checker/issues/461
 
 ## Recommended VSCode Extensions
