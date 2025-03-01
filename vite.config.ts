@@ -1,9 +1,13 @@
 import react from '@vitejs/plugin-react-swc'
-import { resolve } from 'path'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 import viteTsconfigPaths from 'vite-tsconfig-paths'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export default defineConfig(({ mode }) => {
   return {
@@ -68,6 +72,7 @@ export default defineConfig(({ mode }) => {
       setupFiles: ['.vitest/vitest.setup.ts'],
       include: ['./src/**/*.test.{ts,tsx}'],
       exclude: [
+        '.git',
         '.husky',
         '.scripts',
         '.vscode',
