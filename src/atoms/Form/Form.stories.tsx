@@ -35,7 +35,7 @@ const RenderForm = ({ color }: { color: Color }) => {
     message: string
     colors: string
     accept: string
-    gender: string
+    favouriteColor: string
   }
 
   const defaultValues: Inputs = {
@@ -44,7 +44,7 @@ const RenderForm = ({ color }: { color: Color }) => {
     message: '',
     colors: '',
     accept: '',
-    gender: ''
+    favouriteColor: ''
   }
 
   const notify = useNotification()
@@ -60,9 +60,9 @@ const RenderForm = ({ color }: { color: Color }) => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (!data) return
 
-    const { gender, username, password, message, colors, accept } = data
+    const { favouriteColor, username, password, message, colors, accept } = data
 
-    if (gender) notify(`gender: ${gender}`, 'success')
+    if (favouriteColor) notify(`favouriteColor: ${favouriteColor}`, 'success')
 
     if (username) notify(`username: ${username}`, 'success')
 
@@ -84,7 +84,7 @@ const RenderForm = ({ color }: { color: Color }) => {
   }
 
   const {
-    gender: genderError,
+    favouriteColor: favouriteColorError,
     username: usernameError,
     password: passwordError,
     colors: colorsError,
@@ -94,20 +94,20 @@ const RenderForm = ({ color }: { color: Color }) => {
 
   const selectOptions: Options[] = [
     {
-      text: 'Select an option',
+      text: 'What is your favourite color',
       value: ''
     },
     {
-      text: 'Male',
-      value: 'male'
+      text: 'Blue',
+      value: 'blue'
     },
     {
-      text: 'Female',
-      value: 'female'
+      text: 'Green',
+      value: 'green'
     },
     {
-      text: 'Other',
-      value: 'other'
+      text: 'Hotpink',
+      value: 'hotpink'
     }
   ]
 
@@ -143,21 +143,21 @@ const RenderForm = ({ color }: { color: Color }) => {
     >
       <Label
         color={color}
-        htmlFor={'gender'}
+        htmlFor={'favouriteColor'}
         label={{
-          text: `Gender${genderError ? ': (required)' : ''}`,
+          text: `Favourite Color${favouriteColorError ? ': (required)' : ''}`,
           size: 'body-med',
           fontWeight: 'medium'
         }}
-        error={!!genderError}
+        error={!!favouriteColorError}
       />
       <Select
         padding={{ default: 2 }}
         color={color}
-        id={'gender'}
+        id={'favouriteColor'}
         options={selectOptions}
-        error={!!genderError}
-        {...register('gender', { required: true })}
+        error={!!favouriteColorError}
+        {...register('favouriteColor', { required: true })}
       />
       <Label
         padding={{ default: 6 }}
@@ -296,7 +296,7 @@ const RenderForm = ({ color }: { color: Color }) => {
         color={color}
         size={'body-sml'}
         padding={{ default: 10 }}
-        richText={`<p>Watch Gender: ${watch('gender') ? watch('gender') : ''}<br />
+        richText={`<p>Watch Favourite Color: ${watch('favouriteColor') ? watch('favouriteColor') : ''}<br />
           Watch Username: ${watch('username') ? watch('username') : ''}<br />
           Watch Password: ${watch('password') ? watch('password') : ''}<br />
           Watch Colors: ${watch('colors') ? watch('colors') : ''}<br />

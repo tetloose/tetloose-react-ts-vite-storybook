@@ -20,4 +20,6 @@
       @extend %type-icon-#{$breakpoint};
     }
   }
+
+  @extend %color;
 }
