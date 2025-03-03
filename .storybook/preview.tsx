@@ -49,7 +49,8 @@ const preview: Preview = {
             'Variables',
             'Colors',
             'Typography',
-            'Fluid Sizing'
+            'Fluid Sizing',
+            'Notification'
           ],
           'Foundations',
           'Atoms',
@@ -71,8 +72,7 @@ const preview: Preview = {
         }
       ]
     }
-  },
-  tags: ['autodocs']
+  }
 }
 
 export default preview

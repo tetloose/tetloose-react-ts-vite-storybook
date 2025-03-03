@@ -1,4 +1,4 @@
-# Tetloose React TS Vite Storybook (WIP)
+# Tetloose React TS Vite Storybook
 
 ## Recommended VSCode Extensions
 

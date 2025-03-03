@@ -33,9 +33,6 @@ const meta: Meta<typeof Spacer> = {
       type: 'figma',
       url: ''
     },
-    docs: {
-      disable: true
-    },
     layout: 'fullscreen'
   }
 }
