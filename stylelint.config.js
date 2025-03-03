@@ -19,6 +19,8 @@ export default {
     '@stylistic/max-empty-lines': 1,
     '@stylistic/string-quotes': 'single',
     '@stylistic/indentation': 2,
+    '@stylistic/block-opening-brace-space-before': 'always',
+    'color-named': ['never', { ignore: ['inside-function'] }],
     '@stylistic/color-hex-case': 'lower',
     'color-hex-length': 'short',
     '@stylistic/selector-combinator-space-after': 'always',

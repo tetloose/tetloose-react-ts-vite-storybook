@@ -1,13 +1,5 @@
 # Tetloose React TS Vite Storybook (WIP)
 
-## Issues
-
-Vite plugin checker, failing due to watch
-
-Restart storybook or react after deleting files or pulling:
-
-https://github.com/fi3ework/vite-plugin-checker/issues/461
-
 ## Recommended VSCode Extensions
 
 `cmd shift p` then type recommended.
@@ -68,3 +60,12 @@ See [Workspaces](https://marketplace.visualstudio.com/items?itemName=Fooxly.work
 ## Docs
 
 Once the project is in Storybook mode, can view the docs here: `http://localhost:6006/`.
+
+## Issues
+
+For linting to work, there is an issue with vite-plugin-checker + meow latest versions, due to watch failing to track deleted fields after next tick. Latest stable working versions.
+
+`"meow": "9.0.0"`
+`"vite-plugin-checker": "0.8.0"`
+
+https://github.com/fi3ework/vite-plugin-checker/issues/461
