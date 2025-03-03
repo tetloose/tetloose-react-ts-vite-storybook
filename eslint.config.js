@@ -55,6 +55,10 @@ const mainConfig = {
   },
   settings: { react: { version: 'detect' } },
   rules: {
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' }
+    ],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],

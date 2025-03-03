@@ -39,11 +39,6 @@ const config: StorybookConfig = {
     const checkerPlugin = checker.default
 
     return mergeConfig(config, {
-      server: {
-        watch: {
-          ignored: ['**/.git/**']
-        }
-      },
       plugins: [
         checkerPlugin({
           typescript: { buildMode: true },
