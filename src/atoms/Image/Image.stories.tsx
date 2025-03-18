@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Image } from './Image.component'
 import Desktop from '@images/test/desktop.jpg'
 import Mobile from '@images/test/mobile.jpg'
-import Placeholder from '@images/test/Placeholder.jpg'
+import Placeholder from '@images/test/placeholder.jpg'
 import Tablet from '@images/test/tablet.jpg'
 
 const meta: Meta<typeof Image> = {
