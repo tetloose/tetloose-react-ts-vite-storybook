@@ -1,32 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { ErrorBoundary } from 'react-error-boundary'
-import { BrowserRouter } from 'react-router-dom'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { AppProvider } from '@context/App/App.context'
-import {
-  queryClient,
-  QueryClientProvider
-} from '@hooks/Query/query-client.hooks'
-import { Notification } from '@components/Notification/Notification.component'
-import { HandleBoundary } from '@layouts/Not-found/utils/Handle-boundary.util'
-import App from './App'
 import '@styles/app.scss'
+import { StrictMode } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
+import { Toaster } from 'react-hot-toast'
+import { BrowserRouter } from 'react-router-dom'
+import ReactDOM from 'react-dom/client'
+import { AppProvider } from '@context/app/app.context'
+import { Boundary } from '@utils/boundary/boundary.util'
+import App from './app'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const root = ReactDOM.createRoot(document.querySelector('#root') as HTMLElement)
 
 root.render(
-  <QueryClientProvider client={queryClient}>
-    <ErrorBoundary FallbackComponent={HandleBoundary}>
-      <Notification />
-      <BrowserRouter>
-        <React.StrictMode>
-          <AppProvider>
-            <App />
-          </AppProvider>
-        </React.StrictMode>
-      </BrowserRouter>
-    </ErrorBoundary>
-    <ReactQueryDevtools position={'bottom'} initialIsOpen={false} />
-  </QueryClientProvider>
+  <ErrorBoundary FallbackComponent={Boundary}>
+    <Toaster />
+    <BrowserRouter>
+      <StrictMode>
+        <AppProvider>
+          <App />
+        </AppProvider>
+      </StrictMode>
+    </BrowserRouter>
+  </ErrorBoundary>
 )

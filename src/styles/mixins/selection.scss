@@ -1,8 +1,8 @@
-@use '@styles/settings/colors' as *;
+@use '@styles/settings/tokens' as *;
 
 @mixin selection(
-  $bg: color(default, dark),
-  $color: color(default, light)
+  $bg: tokens(colors, dark),
+  $color: tokens(colors, light)
 ) {
   ::selection {
     background-color: $bg;

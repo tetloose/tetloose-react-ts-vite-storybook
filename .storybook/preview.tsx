@@ -1,59 +1,37 @@
-import React from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import type { Preview } from '@storybook/react'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { withRouter } from 'storybook-addon-remix-react-router'
-import { Notification } from '../src/components/Notification/Notification.component'
-import { AppProvider } from '../src/context/App/App.context'
-import {
-  clearQueryCache,
-  queryClient,
-  QueryClientProvider
-} from '../src/hooks/Query/query-client.hooks'
-import { HandleBoundary } from '../src/layouts/Not-found/utils/Handle-boundary.util'
-import '../src/styles/app.scss'
+import { Toaster } from 'react-hot-toast'
+import type { Preview } from '@storybook/react-vite'
+import { AppProvider } from '@context/app/app.context'
+import { Boundary } from '@utils/boundary/boundary.util'
+import '@styles/app.scss'
 
 const preview: Preview = {
+  tags: ['autodocs'],
   decorators: [
-    (Story) => {
-      clearQueryCache()
-
-      return (
-        <QueryClientProvider client={queryClient}>
-          <ErrorBoundary FallbackComponent={HandleBoundary}>
-            <Notification />
-            <AppProvider>
-              <Story />
-            </AppProvider>
-          </ErrorBoundary>
-          <ReactQueryDevtools position={'bottom'} initialIsOpen={false} />
-        </QueryClientProvider>
-      )
-    },
-    withRouter
+    (Story) => (
+      <ErrorBoundary FallbackComponent={Boundary}>
+        <Toaster />
+        <AppProvider>
+          <Story />
+        </AppProvider>
+      </ErrorBoundary>
+    )
   ],
   parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i
+      }
+    },
+    a11y: {
+      test: 'error'
+    },
     options: {
       storySort: {
         order: [
-          'Documentation',
-          [
-            'Introduction',
-            'CRUD',
-            'Best Practices',
-            'Architecture',
-            'Workflow',
-            'Component Generation',
-            'Git Commit',
-            'Styles',
-            'Variables',
-            'Colors',
-            'Typography',
-            'Fluid Sizing',
-            'Notification'
-          ],
-          'Foundations',
           'Atoms',
+          'Molecules',
           'Components',
           'Layouts'
         ]
@@ -62,14 +40,8 @@ const preview: Preview = {
     backgrounds: {
       default: 'Light',
       values: [
-        {
-          name: 'Light',
-          value: '#fff'
-        },
-        {
-          name: 'Dark',
-          value: '#000'
-        }
+        { name: 'Light', value: '#fff' },
+        { name: 'Dark', value: '#000' }
       ]
     }
   }

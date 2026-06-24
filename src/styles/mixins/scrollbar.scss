@@ -1,9 +1,9 @@
-@use '@styles/settings/colors' as *;
+@use '@styles/settings/tokens' as *;
 
 @mixin scrollbar(
   $size: 1.25rem,
-  $foreground-color: color(default, dark),
-  $background-color: color(default, light)
+  $foreground-color: tokens(colors, dark),
+  $background-color: tokens(colors, light)
 ) {
   scrollbar-color: $foreground-color $background-color;
   scrollbar-width: thin;

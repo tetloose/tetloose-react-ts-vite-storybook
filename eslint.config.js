@@ -1,13 +1,17 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
-import pluginQuery from '@tanstack/eslint-plugin-query'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
 import prettier from 'eslint-plugin-prettier'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import sonarjs from 'eslint-plugin-sonarjs'
+import storybook from 'eslint-plugin-storybook'
+import unicorn from 'eslint-plugin-unicorn'
+import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -40,8 +44,11 @@ const mainConfig = {
     'simple-import-sort': simpleImportSort,
     'react-refresh': reactRefresh,
     'react-hooks': reactHooks,
-    ...pluginQuery.configs['flat/recommended'],
-    prettier: prettier
+    'unused-imports': unusedImports,
+    sonarjs,
+    'jsx-a11y': jsxA11y,
+    unicorn,
+    prettier
   },
   languageOptions: {
     globals: { ...globals.browser },
@@ -60,117 +67,98 @@ const mainConfig = {
       { blankLine: 'always', prev: '*', next: 'return' }
     ],
     quotes: ['error', 'single'],
+    'jsx-quotes': ['error', 'prefer-double'],
     semi: ['error', 'never'],
+    'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
-    'no-console': 'warn',
-    'no-debugger': 'warn',
-    'react/display-name': 'error',
-    'react/jsx-no-useless-fragment': 'error',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-uses-react': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true }
-    ],
-    '@typescript-eslint/consistent-type-imports': 'error',
+    curly: ['error', 'multi-line'],
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'no-negated-condition': 'error',
+    'no-nested-ternary': 'error',
     'no-restricted-imports': [
       'error',
       {
         paths: [
-          {
-            name: '@context/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@foundations/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@atoms/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@components/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@layouts/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@hooks/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@crud/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@utils/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@global/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@styles/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@images/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          },
-          {
-            name: '@routes/index',
-            message:
-              'Direct import of index file is restricted. Please import specific modules.'
-          }
+          { name: '@context/index', message: 'Import specific modules, not the index.' },
+          { name: '@atoms/index', message: 'Import specific modules, not the index.' },
+          { name: '@molecules/index', message: 'Import specific modules, not the index.' },
+          { name: '@components/index', message: 'Import specific modules, not the index.' },
+          { name: '@layouts/index', message: 'Import specific modules, not the index.' },
+          { name: '@hooks/index', message: 'Import specific modules, not the index.' },
+          { name: '@crud/index', message: 'Import specific modules, not the index.' },
+          { name: '@utils/index', message: 'Import specific modules, not the index.' },
+          { name: '@global/index', message: 'Import specific modules, not the index.' },
+          { name: '@styles/index', message: 'Import specific modules, not the index.' },
+          { name: '@images/index', message: 'Import specific modules, not the index.' },
+          { name: '@routes/index', message: 'Import specific modules, not the index.' },
+          { name: '@pages/index', message: 'Import specific modules, not the index.' }
         ]
       }
     ],
+    'unused-imports/no-unused-imports': 'error',
+    'react/display-name': 'error',
+    'react/jsx-no-useless-fragment': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/no-array-index-key': 'error',
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-refresh/only-export-components': ['error', { allowConstantExport: true }],
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'sonarjs/no-duplicate-string': 'error',
+    'sonarjs/cognitive-complexity': ['error', 15],
+    'sonarjs/no-identical-functions': 'error',
+    'sonarjs/prefer-read-only-props': 'error',
+    'sonarjs/redundant-type-aliases': 'error',
+    'jsx-a11y/alt-text': 'error',
+    'jsx-a11y/no-autofocus': 'error',
+    'jsx-a11y/anchor-is-valid': 'error',
+    'jsx-a11y/interactive-supports-focus': 'error',
+    'jsx-a11y/click-events-have-key-events': 'error',
+    'jsx-a11y/no-static-element-interactions': 'error',
+    'jsx-a11y/aria-props': 'error',
+    'jsx-a11y/aria-proptypes': 'error',
+    'jsx-a11y/aria-unsupported-elements': 'error',
+    'jsx-a11y/role-has-required-aria-props': 'error',
+    'unicorn/prefer-node-protocol': 'error',
+    'unicorn/prefer-dom-node-remove': 'error',
+    'unicorn/prefer-dom-node-append': 'error',
+    'unicorn/prefer-query-selector': 'error',
+    'prettier/prettier': 'error',
+    'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': [
       'error',
       {
         groups: [
           [
+            String.raw`^\u0000`,
             '^react',
-            '^@?\\w',
-            '^\\u0000',
+            '^react-dom',
+            String.raw`^@?\w`,
             '^@context',
             '^@hooks',
             '^@routes',
             '^@crud',
             '^@utils',
             '^@components',
-            '^@foundations',
             '^@atoms',
+            '^@molecules',
             '^@layouts',
-            '^\\.\\.(?!/?$)',
-            '^\\.\\./?$',
-            '^\\./(?=.*/)(?!/?$)',
-            '^\\.(?!/?$)',
-            '^\\./?$',
             '^@global',
-            '^.*\\.types$',
-            '^@?\\w\\.types$',
-            '^.+\\.(svg|png|jpe?g|gif|webp|avif|ico|bmp|tiff?)$',
-            '^classnames',
-            '^.*\\.module\\.scss$',
-            '^.+\\.s?css$'
+            String.raw`^\.\..(?!/?$)`,
+            String.raw`^\.\./?.`,
+            String.raw`^\./(?=.*/)(?!/?$)`,
+            String.raw`^\.(?!/?$)`,
+            String.raw`^\./?.`,
+            String.raw`^.+\.(svg|png|jpe?g|gif|webp|avif|ico|bmp|tiff?)$`,
+            String.raw`.*\u0000$`,
+            String.raw`^.+\.types$`,
+            '^clsx',
+            String.raw`^.*\.module\.scss$`,
+            String.raw`^.+\.css$`
           ]
         ]
       }
@@ -186,5 +174,17 @@ export default [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended'
   ),
-  mainConfig
+  mainConfig,
+  ...storybook.configs['flat/recommended'],
+  {
+    rules: {
+      'storybook/no-renderer-packages': 'off'
+    }
+  },
+  {
+    files: ['**/*.test.ts', '**/*.test.tsx', '**/*.mock.ts'],
+    rules: {
+      'sonarjs/no-duplicate-string': 'off'
+    }
+  }
 ]

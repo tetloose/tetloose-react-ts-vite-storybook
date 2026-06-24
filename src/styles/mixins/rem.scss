@@ -1,10 +1,10 @@
-@use '@styles/settings/variables' as *;
+@use '@styles/settings/tokens' as *;
 @use 'sass:math';
 @use 'sass:meta';
 @use 'sass:list';
 
 @function rem($value) {
-  $baseline: vars(settings, browser-context);
+  $baseline: tokens(settings, browser-context);
 
   @if $value == 0 {
     @return 0;
@@ -22,18 +22,20 @@
   @else {
     $new-value: calc(calc($value / $baseline) * 1rem);
 
-    @return if(
-      meta.type-of($value) == number and math.unit($value) == px,
-      $new-value,
-      $value
-    );
+    @if meta.type-of($value) == number and math.unit($value) == px {
+      @return $new-value;
+    }
+
+    @return $value;
   }
 }
 
 @mixin rem($properties) {
   @each $property, $value in $properties {
     @if meta.type-of($value) == number and $value != 0 {
-      $value: if(math.is-unitless($value), $value * 1px, $value);
+      @if math.is-unitless($value) {
+        $value: $value * 1px;
+      }
     }
 
     #{$property}: rem($value);

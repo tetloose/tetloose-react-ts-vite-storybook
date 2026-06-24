@@ -31,6 +31,8 @@ export default {
     '@stylistic/declaration-block-trailing-semicolon': 'always',
     '@stylistic/declaration-colon-space-before': 'never',
     '@stylistic/max-line-length': 200,
+    'function-no-unknown': null,
+    'no-descending-specificity': null,
     'scss/at-if-closing-brace-newline-after': null,
     'scss/at-if-closing-brace-space-after': null,
     'max-nesting-depth': [

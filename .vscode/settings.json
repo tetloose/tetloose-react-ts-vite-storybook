@@ -11,32 +11,49 @@
   "scss.validate": false,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "eslint.validate": ["typescript", "typescriptreact"],
-  "stylelint.validate": ["css", "scss"],
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
   "files.exclude": {
+    ".claude": true,
     ".d.ts": true,
+    ".github": true,
     ".husky": true,
+    ".plop": true,
     ".scripts": true,
-    ".storybook/images.d.ts": true,
-    ".storybook/main.ts": true,
-    ".storybook/manager.js": true,
-    ".vitest": true,
     ".vscode": true,
+    "build": true,
     "node_modules": true,
+    "storybook-static": true,
     ".editorconfig": true,
     ".gitignore": true,
+    ".nvmrc": true,
+    "commitlint.config.cjs": true,
+    "debug-storybook.log": true,
     "eslint.config.js": true,
-    "package.json": true,
+    "package-lock.json": true,
+    "plopfile.mjs": true,
     "stylelint.config.js": true,
-    "toolkit": true,
-    "tsconfig.app.json": true,
     "tsconfig.json": true,
-    "tsconfig.node.json": true,
+    "tsconfig.tsbuildinfo": true,
     "vite.config.ts": true,
-    "yarn.lock": true
+    "vitest.shims.d.ts": true
   },
   "search.exclude": {
     "node_modules": true,

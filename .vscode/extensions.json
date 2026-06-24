@@ -1,14 +1,18 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "editorconfig.editorconfig",
-    "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
-    "Fooxly.workspace",
+    "stylelint.vscode-stylelint",
+    "editorconfig.editorconfig",
+    "SonarSource.sonarlint-vscode",
+    "vitest.explorer",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
     "dsznajder.es7-react-js-snippets",
-    "infeng.vscode-react-typescript",
-    "burkeholland.simple-react-snippets",
-    "OfHumanBondage.react-proptypes-intellisense",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "Fooxly.workspace",
+    "mrmlnc.vscode-scss",
+    "usernamehw.errorlens",
+    "eamodio.gitlens"
   ]
 }

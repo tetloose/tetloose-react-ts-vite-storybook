@@ -2,17 +2,22 @@ import * as matchers from '@testing-library/jest-dom/matchers'
 import { cleanup } from '@testing-library/react'
 import { afterEach, expect } from 'vitest'
 import '@testing-library/jest-dom'
-import 'vitest-canvas-mock'
 
 expect.extend(matchers)
 
 class ObserverMock {
-  observe() {}
-  disconnect() {}
-  unobserve() {}
+  observe(): void {
+    return undefined
+  }
+  disconnect(): void {
+    return undefined
+  }
+  unobserve(): void {
+    return undefined
+  }
 }
 
-global.ResizeObserver = ObserverMock
+globalThis.ResizeObserver = ObserverMock
 
 afterEach(() => {
   cleanup()
